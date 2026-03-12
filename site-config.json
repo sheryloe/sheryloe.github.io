@@ -1,0 +1,45 @@
+{
+  "username": "sheryloe",
+  "site_name": "Sheryloe Projects",
+  "site_title": "Sheryloe Projects | GitHub Pages 루트 허브, RSS, Sitemap",
+  "site_url": "https://sheryloe.github.io/",
+  "github_profile": "https://github.com/sheryloe",
+  "description": "Sheryloe 공개 저장소와 GitHub Pages 프로젝트를 한 곳에서 모아보는 루트 허브입니다. RSS, Atom feed, sitemap, 라이브 페이지 링크를 함께 제공합니다.",
+  "author_name": "sheryloe",
+  "exclude_repositories": [
+    "sheryloe.github.io"
+  ],
+  "featured_repositories": [
+    "grid-crop-image",
+    "donggri_gagyeobu",
+    "Favorit"
+  ],
+  "repository_overrides": {
+    "AI_BISEO": {
+      "description": "AI 비서 응답, n8n 연동, Notion 로그, 블로그 자동화 흐름을 한 서비스로 묶은 운영형 프로젝트입니다."
+    },
+    "AI_Writer_TISTORY": {
+      "description": "티스토리 발행 자동화와 AI 글쓰기 흐름을 Node.js와 TypeScript로 구성한 백엔드 중심 저장소입니다."
+    },
+    "AutoTrading_ing....-": {
+      "description": "도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다."
+    },
+    "BloManagent": {
+      "description": "티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다."
+    },
+    "donggri_gagyeobu": {
+      "description": "FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다."
+    },
+    "Favorit": {
+      "description": "Win32 API와 CMake로 만든 실행 즐겨찾기 위젯이며, 설정창과 인스톨러, GitHub Pages 소개 페이지까지 갖춘 프로젝트입니다."
+    },
+    "grid-crop-image": {
+      "description": "Tkinter와 Pillow로 만든 Windows 이미지 크롭 도구로, 스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용을 지원합니다."
+    },
+    "Vibe_Cowork_Thinking": {
+      "description": "프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다."
+    }
+  },
+  "max_feed_entries": 30,
+  "max_schema_entries": 20
+}

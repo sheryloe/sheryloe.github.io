@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sheryloe Projects RSS</title>
+    <link>https://sheryloe.github.io/</link>
+    <description>Sheryloe 공개 저장소와 GitHub Pages 프로젝트를 한 곳에서 모아보는 루트 허브입니다. RSS, Atom feed, sitemap, 라이브 페이지 링크를 함께 제공합니다.</description>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 12 Mar 2026 07:51:08 +0000</lastBuildDate>
+    <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Vibe_Cowork_Thinking</title>
+    <link>https://sheryloe.github.io/Vibe_Cowork_Thinking/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/Vibe_Cowork_Thinking#2026-03-12</guid>
+    <pubDate>Thu, 12 Mar 2026 07:51:08 +0000</pubDate>
+    <description><![CDATA[<p><strong>Vibe_Cowork_Thinking</strong></p><p>프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.</p><p>Live page: <a href="https://sheryloe.github.io/Vibe_Cowork_Thinking/">https://sheryloe.github.io/Vibe_Cowork_Thinking/</a></p><p>GitHub: <a href="https://github.com/sheryloe/Vibe_Cowork_Thinking">https://github.com/sheryloe/Vibe_Cowork_Thinking</a></p>]]></description>
+    <category>Python</category>
+  </item>
+  <item>
+    <title>grid-crop-image</title>
+    <link>https://sheryloe.github.io/grid-crop-image/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/grid-crop-image#2026-03-12</guid>
+    <pubDate>Thu, 12 Mar 2026 07:50:52 +0000</pubDate>
+    <description><![CDATA[<p><strong>grid-crop-image</strong></p><p>Tkinter와 Pillow로 만든 Windows 이미지 크롭 도구로, 스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용을 지원합니다.</p><p>Live page: <a href="https://sheryloe.github.io/grid-crop-image/">https://sheryloe.github.io/grid-crop-image/</a></p><p>GitHub: <a href="https://github.com/sheryloe/grid-crop-image">https://github.com/sheryloe/grid-crop-image</a></p>]]></description>
+    <category>Python</category>
+    <category>desktop-app</category>
+    <category>image-cropping</category>
+    <category>image-proceesing</category>
+    <category>pillow</category>
+  </item>
+  <item>
+    <title>donggri_gagyeobu</title>
+    <link>https://sheryloe.github.io/donggri_gagyeobu/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/donggri_gagyeobu#2026-03-12</guid>
+    <pubDate>Thu, 12 Mar 2026 07:50:40 +0000</pubDate>
+    <description><![CDATA[<p><strong>donggri_gagyeobu</strong></p><p>FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다.</p><p>Live page: <a href="https://sheryloe.github.io/donggri_gagyeobu/">https://sheryloe.github.io/donggri_gagyeobu/</a></p><p>GitHub: <a href="https://github.com/sheryloe/donggri_gagyeobu">https://github.com/sheryloe/donggri_gagyeobu</a></p>]]></description>
+    <category>HTML</category>
+  </item>
+  <item>
+    <title>BloManagent</title>
+    <link>https://sheryloe.github.io/BloManagent/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/BloManagent#2026-03-12</guid>
+    <pubDate>Thu, 12 Mar 2026 07:49:45 +0000</pubDate>
+    <description><![CDATA[<p><strong>BloManagent</strong></p><p>티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다.</p><p>Live page: <a href="https://sheryloe.github.io/BloManagent/">https://sheryloe.github.io/BloManagent/</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloManagent">https://github.com/sheryloe/BloManagent</a></p>]]></description>
+    <category>TypeScript</category>
+  </item>
+  <item>
+    <title>AutoTrading_ing....-</title>
+    <link>https://sheryloe.github.io/AutoTrading_ing....-/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/AutoTrading_ing....-#2026-03-12</guid>
+    <pubDate>Thu, 12 Mar 2026 07:49:38 +0000</pubDate>
+    <description><![CDATA[<p><strong>AutoTrading_ing....-</strong></p><p>도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.</p><p>Live page: <a href="https://sheryloe.github.io/AutoTrading_ing....-/">https://sheryloe.github.io/AutoTrading_ing....-/</a></p><p>GitHub: <a href="https://github.com/sheryloe/AutoTrading_ing....-">https://github.com/sheryloe/AutoTrading_ing....-</a></p>]]></description>
+    <category>Python</category>
+  </item>
+  <item>
+    <title>AI_Writer_TISTORY</title>
+    <link>https://sheryloe.github.io/AI_Writer_TISTORY/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/AI_Writer_TISTORY#2026-03-12</guid>
+    <pubDate>Thu, 12 Mar 2026 07:49:33 +0000</pubDate>
+    <description><![CDATA[<p><strong>AI_Writer_TISTORY</strong></p><p>티스토리 발행 자동화와 AI 글쓰기 흐름을 Node.js와 TypeScript로 구성한 백엔드 중심 저장소입니다.</p><p>Live page: <a href="https://sheryloe.github.io/AI_Writer_TISTORY/">https://sheryloe.github.io/AI_Writer_TISTORY/</a></p><p>GitHub: <a href="https://github.com/sheryloe/AI_Writer_TISTORY">https://github.com/sheryloe/AI_Writer_TISTORY</a></p>]]></description>
+    <category>TypeScript</category>
+  </item>
+  <item>
+    <title>AI_BISEO</title>
+    <link>https://sheryloe.github.io/AI_BISEO/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/AI_BISEO#2026-03-12</guid>
+    <pubDate>Thu, 12 Mar 2026 07:49:28 +0000</pubDate>
+    <description><![CDATA[<p><strong>AI_BISEO</strong></p><p>AI 비서 응답, n8n 연동, Notion 로그, 블로그 자동화 흐름을 한 서비스로 묶은 운영형 프로젝트입니다.</p><p>Live page: <a href="https://sheryloe.github.io/AI_BISEO/">https://sheryloe.github.io/AI_BISEO/</a></p><p>GitHub: <a href="https://github.com/sheryloe/AI_BISEO">https://github.com/sheryloe/AI_BISEO</a></p>]]></description>
+    <category>TypeScript</category>
+  </item>
+  <item>
+    <title>Favorit</title>
+    <link>https://sheryloe.github.io/Favorit/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/Favorit#2026-03-12</guid>
+    <pubDate>Thu, 12 Mar 2026 07:26:36 +0000</pubDate>
+    <description><![CDATA[<p><strong>Favorit</strong></p><p>Win32 API와 CMake로 만든 실행 즐겨찾기 위젯이며, 설정창과 인스톨러, GitHub Pages 소개 페이지까지 갖춘 프로젝트입니다.</p><p>Live page: <a href="https://sheryloe.github.io/Favorit/">https://sheryloe.github.io/Favorit/</a></p><p>GitHub: <a href="https://github.com/sheryloe/Favorit">https://github.com/sheryloe/Favorit</a></p>]]></description>
+    <category>C++</category>
+  </item>
+  </channel>
+</rss>

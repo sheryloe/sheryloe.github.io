@@ -3,40 +3,1048 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>sheryloe Projects | GitHub Pages Hub</title>
-  <meta name="description" content="공개 저장소의 랜딩 페이지와 핵심 프로젝트를 한곳에 모아 보여주는 허브 사이트입니다.">
-  <meta name="keywords" content="sheryloe projects, github pages portfolio, developer project hub, 프로젝트 허브, 개발 포트폴리오 사이트">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>Sheryloe Projects | GitHub Pages 루트 허브, RSS, Sitemap</title>
+  <meta name="description" content="Sheryloe 공개 저장소와 GitHub Pages 프로젝트를 한 곳에서 모아보는 루트 허브입니다. RSS, Atom feed, sitemap, 라이브 페이지 링크를 함께 제공합니다.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#111827">
+  <meta name="author" content="sheryloe">
   <link rel="canonical" href="https://sheryloe.github.io/">
+  <link rel="alternate" type="application/rss+xml" title="Sheryloe Projects RSS" href="https://sheryloe.github.io/rss.xml">
+  <link rel="alternate" type="application/atom+xml" title="Sheryloe Projects Atom" href="https://sheryloe.github.io/feed.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://sheryloe.github.io/sitemap.xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="sheryloe Projects">
-  <meta property="og:description" content="공개 저장소의 랜딩 페이지와 핵심 프로젝트를 한곳에 모아 보여주는 허브 사이트입니다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="Sheryloe Projects">
+  <meta property="og:title" content="Sheryloe Projects | GitHub Pages 루트 허브, RSS, Sitemap">
+  <meta property="og:description" content="Sheryloe 공개 저장소와 GitHub Pages 프로젝트를 한 곳에서 모아보는 루트 허브입니다. RSS, Atom feed, sitemap, 라이브 페이지 링크를 함께 제공합니다.">
   <meta property="og:url" content="https://sheryloe.github.io/">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#2563eb">
-  <link rel="stylesheet" href="./styles.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "sheryloe projects", "url": "https://sheryloe.github.io/", "description": "공개 저장소의 랜딩 페이지와 핵심 프로젝트를 한곳에 모아 보여주는 허브 사이트입니다.", "keywords": "sheryloe projects, github pages portfolio, developer project hub, 프로젝트 허브, 개발 포트폴리오 사이트"}</script>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sheryloe Projects | GitHub Pages 루트 허브, RSS, Sitemap">
+  <meta name="twitter:description" content="Sheryloe 공개 저장소와 GitHub Pages 프로젝트를 한 곳에서 모아보는 루트 허브입니다. RSS, Atom feed, sitemap, 라이브 페이지 링크를 함께 제공합니다.">
+  <style>
+    :root {
+      --bg: #edf2f7;
+      --paper: rgba(255, 255, 255, 0.92);
+      --panel: rgba(255, 255, 255, 0.84);
+      --line: rgba(15, 23, 42, 0.1);
+      --text: #172033;
+      --muted: #5d6778;
+      --accent: #d14b36;
+      --accent-deep: #8f2b1d;
+      --navy: #111827;
+      --teal: #1f766e;
+      --shadow: 0 22px 60px rgba(17, 24, 39, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --content: 1200px;
+      --heading-font: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      --body-font: "Aptos", "Segoe UI Variable Text", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--body-font);
+      color: var(--text);
+      line-height: 1.65;
+      background:
+        radial-gradient(circle at top left, rgba(209, 75, 54, 0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(31, 118, 110, 0.18), transparent 25%),
+        linear-gradient(180deg, #f7fafc 0%, #edf2f7 48%, #f8fafc 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(calc(100% - 32px), var(--content));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 28px 0 72px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+
+    .brand-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--teal));
+    }
+
+    .nav,
+    .hero-actions,
+    .meta-row,
+    .stat-grid,
+    .card-grid,
+    .live-grid,
+    .repo-grid,
+    .link-row {
+      display: grid;
+      gap: 14px;
+    }
+
+    .nav {
+      grid-auto-flow: column;
+      justify-content: start;
+    }
+
+    .nav a,
+    .button,
+    .filter-input {
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.84);
+      box-shadow: 0 8px 24px rgba(17, 24, 39, 0.04);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .button.primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .hero-card,
+    .section-card,
+    .repo-card,
+    .stat-card {
+      border-radius: var(--radius-xl);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.88));
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 38px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: rgba(17, 24, 39, 0.06);
+      color: var(--navy);
+    }
+
+    .badge.live {
+      background: rgba(31, 118, 110, 0.12);
+      color: #0f5c55;
+    }
+
+    .badge.repo {
+      background: rgba(209, 75, 54, 0.12);
+      color: var(--accent-deep);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: var(--heading-font);
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      max-width: 11ch;
+      font-size: clamp(3rem, 6vw, 5.4rem);
+      line-height: 0.94;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 3vw, 3.2rem);
+      line-height: 1.02;
+    }
+
+    h3 {
+      font-size: 1.28rem;
+      line-height: 1.18;
+      margin-bottom: 10px;
+    }
+
+    .lead,
+    .section-head p,
+    .repo-card p,
+    .stat-card p,
+    footer p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .lead {
+      max-width: 760px;
+      font-size: 1.08rem;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      grid-template-columns: repeat(4, minmax(0, max-content));
+      margin-bottom: 28px;
+    }
+
+    .meta-row {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .stat-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 28px;
+    }
+
+    .stat-card,
+    .repo-card,
+    .section-card {
+      padding: 22px;
+    }
+
+    .stat-value {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent-deep);
+      font-size: 1.7rem;
+      font-weight: 800;
+    }
+
+    .section {
+      padding: 0 0 64px;
+    }
+
+    .section-head {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-deep);
+    }
+
+    .card-grid,
+    .live-grid,
+    .repo-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .repo-card {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: var(--paper);
+      border-radius: var(--radius-lg);
+    }
+
+    .repo-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .repo-title {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .repo-name {
+      overflow-wrap: anywhere;
+    }
+
+    .subtle {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .repo-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: rgba(17, 24, 39, 0.06);
+      color: var(--navy);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .repo-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .link-row {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: auto;
+    }
+
+    .section-card.filter-box {
+      display: grid;
+      grid-template-columns: 1.3fr auto;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .filter-input {
+      width: 100%;
+      font: inherit;
+      color: var(--text);
+      outline: none;
+    }
+
+    .filter-input::placeholder {
+      color: #8992a1;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    footer {
+      padding: 0 0 42px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding: 24px 28px;
+      border-radius: var(--radius-xl);
+      background: #111827;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .footer a {
+      color: #fff;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-actions,
+      .meta-row,
+      .stat-grid,
+      .card-grid,
+      .live-grid,
+      .repo-grid,
+      .section-card.filter-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        padding: 22px 0 56px;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        grid-auto-flow: row;
+        width: 100%;
+      }
+
+      .nav a,
+      .button {
+        width: 100%;
+      }
+
+      .hero-card,
+      .section-card,
+      .repo-card,
+      .stat-card,
+      .footer {
+        padding: 20px;
+      }
+
+      .link-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Sheryloe Projects",
+      "url": "https://sheryloe.github.io/",
+      "description": "Sheryloe 공개 저장소와 GitHub Pages 프로젝트를 한 곳에서 모아보는 루트 허브입니다. RSS, Atom feed, sitemap, 라이브 페이지 링크를 함께 제공합니다."
+    },
+    {
+      "@type": "Person",
+      "name": "sheryloe",
+      "url": "https://github.com/sheryloe",
+      "sameAs": [
+        "https://github.com/sheryloe"
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Public repositories by sheryloe",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Vibe_Cowork_Thinking",
+          "url": "https://sheryloe.github.io/Vibe_Cowork_Thinking/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "grid-crop-image",
+          "url": "https://sheryloe.github.io/grid-crop-image/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "donggri_gagyeobu",
+          "url": "https://sheryloe.github.io/donggri_gagyeobu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "BloManagent",
+          "url": "https://sheryloe.github.io/BloManagent/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "AutoTrading_ing....-",
+          "url": "https://sheryloe.github.io/AutoTrading_ing....-/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "AI_Writer_TISTORY",
+          "url": "https://sheryloe.github.io/AI_Writer_TISTORY/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "AI_BISEO",
+          "url": "https://sheryloe.github.io/AI_BISEO/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Favorit",
+          "url": "https://sheryloe.github.io/Favorit/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
-  <main class="shell">
-    <section class="hero">
-      <span class="eyebrow">GitHub Pages Hub</span>
-      <div>
-        <h1>sheryloe Projects</h1>
-        <p class="lead">공개 저장소의 랜딩 페이지와 핵심 프로젝트를 한곳에 모아 보여주는 허브 사이트입니다.</p>
+  <header class="hero">
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>Sheryloe Projects</span>
+        </div>
+        <nav class="nav" aria-label="바로가기">
+          <a href="https://github.com/sheryloe">GitHub</a>
+          <a href="https://sheryloe.github.io/rss.xml">RSS</a>
+          <a href="https://sheryloe.github.io/feed.xml">Atom</a>
+          <a href="https://sheryloe.github.io/sitemap.xml">Sitemap</a>
+        </nav>
       </div>
-      <div class="cta-row">
-        <a class="primary" href="https://github.com/sheryloe">GitHub Profile</a>
-        <a href="https://sheryloe.github.io/Favorit/">Featured Page</a>
-      </div>
-      <div class="chip-row"><span class="chip">sheryloe projects</span><span class="chip">github pages portfolio</span><span class="chip">developer project hub</span><span class="chip">프로젝트 허브</span><span class="chip">개발 포트폴리오 사이트</span></div>
-    </section>
+
+      <section class="hero-card" aria-labelledby="hero-title">
+        <div class="badge-row">
+          <span class="badge repo">Repository Hub</span>
+          <span class="badge live">Live Pages Index</span>
+          <span class="badge">RSS + Atom Feed</span>
+        </div>
+        <h1 id="hero-title">프로젝트와 저장소 업데이트를 한 곳에서 관리</h1>
+        <p class="lead">Sheryloe 공개 저장소와 GitHub Pages 프로젝트를 한 곳에서 모아보는 루트 허브입니다. RSS, Atom feed, sitemap, 라이브 페이지 링크를 함께 제공합니다.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#repositories">전체 저장소 보기</a>
+          <a class="button" href="https://sheryloe.github.io/rss.xml">RSS 구독</a>
+          <a class="button" href="https://sheryloe.github.io/feed.xml">Atom 구독</a>
+          <a class="button" href="https://github.com/sheryloe">GitHub 프로필</a>
+        </div>
+        <div class="meta-row">
+          <div class="section-card">
+            <strong>마지막 생성</strong>
+            <p>2026-03-12 07:56 UTC</p>
+          </div>
+          <div class="section-card">
+            <strong>최근 업데이트</strong>
+            <p>2026-03-12 07:51 UTC</p>
+          </div>
+          <div class="section-card">
+            <strong>루트 피드</strong>
+            <p>`/rss.xml`, `/feed.xml` 모두 제공</p>
+          </div>
+        </div>
+        <div class="stat-grid">
+          <article class="stat-card">
+            <span class="stat-value">8</span>
+            <p>루트 허브에 포함한 공개 저장소 수</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">8</span>
+            <p>GitHub Pages가 활성화된 라이브 프로젝트</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-value">8</span>
+            <p>RSS/Atom에 포함되는 최신 업데이트 항목</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main>
     <section class="section">
-      <h2>Public Projects</h2>
-      <p>공개 저장소마다 개별 랜딩 페이지를 두고 README, robots, sitemap, canonical, FAQ 구조를 함께 정리했습니다.</p>
-      <div class="cards"><article class="project-card"><h3>AI_BISEO</h3><p>AI 비서 응답, n8n 연동, Notion 로그, 블로그 자동화 흐름을 한 서비스로 묶은 운영형 프로젝트입니다.</p><div class="links"><a class="primary" href="https://sheryloe.github.io/AI_BISEO/">Open Page</a><a href="https://github.com/sheryloe/AI_BISEO">GitHub</a></div></article><article class="project-card"><h3>AI_Writer_TISTORY</h3><p>티스토리 발행 자동화와 AI 글쓰기 흐름을 Node.js와 TypeScript로 구성한 백엔드 중심 저장소입니다.</p><div class="links"><a class="primary" href="https://sheryloe.github.io/AI_Writer_TISTORY/">Open Page</a><a href="https://github.com/sheryloe/AI_Writer_TISTORY">GitHub</a></div></article><article class="project-card"><h3>AutoTrading_ing....-</h3><p>도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.</p><div class="links"><a class="primary" href="https://sheryloe.github.io/AutoTrading_ing....-/">Open Page</a><a href="https://github.com/sheryloe/AutoTrading_ing....-">GitHub</a></div></article><article class="project-card"><h3>BloManagent</h3><p>티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다.</p><div class="links"><a class="primary" href="https://sheryloe.github.io/BloManagent/">Open Page</a><a href="https://github.com/sheryloe/BloManagent">GitHub</a></div></article><article class="project-card"><h3>donggri_gagyeobu</h3><p>FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다.</p><div class="links"><a class="primary" href="https://sheryloe.github.io/donggri_gagyeobu/">Open Page</a><a href="https://github.com/sheryloe/donggri_gagyeobu">GitHub</a></div></article><article class="project-card"><h3>Favorit</h3><p>Win32 API와 CMake로 만든 실행 즐겨찾기 위젯이며, 설정창과 인스톨러, GitHub Pages 소개 페이지까지 갖춘 프로젝트입니다.</p><div class="links"><a class="primary" href="https://sheryloe.github.io/Favorit/">Open Page</a><a href="https://github.com/sheryloe/Favorit">GitHub</a></div></article><article class="project-card"><h3>grid-crop-image</h3><p>Tkinter와 Pillow로 만든 Windows 이미지 크롭 도구로, 스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용을 지원합니다.</p><div class="links"><a class="primary" href="https://sheryloe.github.io/grid-crop-image/">Open Page</a><a href="https://github.com/sheryloe/grid-crop-image">GitHub</a></div></article><article class="project-card"><h3>Vibe_Cowork_Thinking</h3><p>프로젝트별 설정과 실행 로그를 유지하면서 Codex/Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.</p><div class="links"><a class="primary" href="https://sheryloe.github.io/Vibe_Cowork_Thinking/">Open Page</a><a href="https://github.com/sheryloe/Vibe_Cowork_Thinking">GitHub</a></div></article></div>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Recent Updates</span>
+          <h2>최근 변경된 저장소</h2>
+          <p>코드 푸시 기준으로 최근 변경된 공개 저장소를 우선 노출합니다.</p>
+        </div>
+        <div class="card-grid">
+          <article class="repo-card" data-repo-card data-search="vibe_cowork_thinking 프로젝트별 설정과 실행 로그를 유지하면서 codex와 gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다. python">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">Vibe_Cowork_Thinking</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.</p>
+            <div class="repo-tags"><span class="tag">Python</span><span class="tag">GitHub Pages</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 feat/initial-workflow-baseline</span>
+              <span>스타 0</span>
+              <span>크기 160</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/Vibe_Cowork_Thinking/">바로 보기</a>
+              <a class="button" href="https://github.com/sheryloe/Vibe_Cowork_Thinking">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card" data-repo-card data-search="grid-crop-image tkinter와 pillow로 만든 windows 이미지 크롭 도구로, 스크린샷 붙여넣기, 다중 영역 선택, json 레이아웃 재사용을 지원합니다. python desktop-app image-cropping image-proceesing pillow pyinstaller python tkinter windows">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">grid-crop-image</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>Tkinter와 Pillow로 만든 Windows 이미지 크롭 도구로, 스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용을 지원합니다.</p>
+            <div class="repo-tags"><span class="tag">Python</span><span class="tag">Featured</span><span class="tag">GitHub Pages</span><span class="tag">desktop-app</span><span class="tag">image-cropping</span><span class="tag">image-proceesing</span><span class="tag">pillow</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 main</span>
+              <span>스타 0</span>
+              <span>크기 8848</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/grid-crop-image/">바로 보기</a>
+              <a class="button" href="https://github.com/sheryloe/grid-crop-image">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card" data-repo-card data-search="donggri_gagyeobu fastapi와 sqlite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다. html">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">donggri_gagyeobu</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다.</p>
+            <div class="repo-tags"><span class="tag">HTML</span><span class="tag">Featured</span><span class="tag">GitHub Pages</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 master</span>
+              <span>스타 0</span>
+              <span>크기 144</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/donggri_gagyeobu/">바로 보기</a>
+              <a class="button" href="https://github.com/sheryloe/donggri_gagyeobu">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card" data-repo-card data-search="blomanagent 티스토리, 네이버 블로그, blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다. typescript">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">BloManagent</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다.</p>
+            <div class="repo-tags"><span class="tag">TypeScript</span><span class="tag">GitHub Pages</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 main</span>
+              <span>스타 0</span>
+              <span>크기 110</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/BloManagent/">바로 보기</a>
+              <a class="button" href="https://github.com/sheryloe/BloManagent">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card" data-repo-card data-search="autotrading_ing....- 도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다. python">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">AutoTrading_ing....-</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.</p>
+            <div class="repo-tags"><span class="tag">Python</span><span class="tag">GitHub Pages</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 main</span>
+              <span>스타 0</span>
+              <span>크기 9248</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/AutoTrading_ing....-/">바로 보기</a>
+              <a class="button" href="https://github.com/sheryloe/AutoTrading_ing....-">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card" data-repo-card data-search="ai_writer_tistory 티스토리 발행 자동화와 ai 글쓰기 흐름을 node.js와 typescript로 구성한 백엔드 중심 저장소입니다. typescript">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">AI_Writer_TISTORY</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>티스토리 발행 자동화와 AI 글쓰기 흐름을 Node.js와 TypeScript로 구성한 백엔드 중심 저장소입니다.</p>
+            <div class="repo-tags"><span class="tag">TypeScript</span><span class="tag">GitHub Pages</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 main</span>
+              <span>스타 0</span>
+              <span>크기 77</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/AI_Writer_TISTORY/">바로 보기</a>
+              <a class="button" href="https://github.com/sheryloe/AI_Writer_TISTORY">GitHub Repo</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
-    <p class="footer">Last updated: 2026-03-12 · GitHub Pages project hub</p>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Live Pages</span>
+          <h2>바로 접속 가능한 프로젝트 페이지</h2>
+          <p>GitHub Pages가 활성화된 저장소는 루트 sitemap과 별도로 여기에서도 라이브 링크를 제공합니다.</p>
+        </div>
+        <div class="live-grid">
+          <article class="repo-card">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">Vibe_Cowork_Thinking</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.</p>
+            <div class="repo-tags"><span class="tag">Python</span><span class="tag">GitHub Pages</span></div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/Vibe_Cowork_Thinking/">라이브 페이지</a>
+              <a class="button" href="https://github.com/sheryloe/Vibe_Cowork_Thinking">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">grid-crop-image</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>Tkinter와 Pillow로 만든 Windows 이미지 크롭 도구로, 스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용을 지원합니다.</p>
+            <div class="repo-tags"><span class="tag">Python</span><span class="tag">Featured</span><span class="tag">GitHub Pages</span><span class="tag">desktop-app</span><span class="tag">image-cropping</span><span class="tag">image-proceesing</span></div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/grid-crop-image/">라이브 페이지</a>
+              <a class="button" href="https://github.com/sheryloe/grid-crop-image">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">donggri_gagyeobu</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다.</p>
+            <div class="repo-tags"><span class="tag">HTML</span><span class="tag">Featured</span><span class="tag">GitHub Pages</span></div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/donggri_gagyeobu/">라이브 페이지</a>
+              <a class="button" href="https://github.com/sheryloe/donggri_gagyeobu">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">BloManagent</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다.</p>
+            <div class="repo-tags"><span class="tag">TypeScript</span><span class="tag">GitHub Pages</span></div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/BloManagent/">라이브 페이지</a>
+              <a class="button" href="https://github.com/sheryloe/BloManagent">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">AutoTrading_ing....-</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.</p>
+            <div class="repo-tags"><span class="tag">Python</span><span class="tag">GitHub Pages</span></div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/AutoTrading_ing....-/">라이브 페이지</a>
+              <a class="button" href="https://github.com/sheryloe/AutoTrading_ing....-">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">AI_Writer_TISTORY</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>티스토리 발행 자동화와 AI 글쓰기 흐름을 Node.js와 TypeScript로 구성한 백엔드 중심 저장소입니다.</p>
+            <div class="repo-tags"><span class="tag">TypeScript</span><span class="tag">GitHub Pages</span></div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/AI_Writer_TISTORY/">라이브 페이지</a>
+              <a class="button" href="https://github.com/sheryloe/AI_Writer_TISTORY">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">AI_BISEO</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>AI 비서 응답, n8n 연동, Notion 로그, 블로그 자동화 흐름을 한 서비스로 묶은 운영형 프로젝트입니다.</p>
+            <div class="repo-tags"><span class="tag">TypeScript</span><span class="tag">GitHub Pages</span></div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/AI_BISEO/">라이브 페이지</a>
+              <a class="button" href="https://github.com/sheryloe/AI_BISEO">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">Favorit</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>Win32 API와 CMake로 만든 실행 즐겨찾기 위젯이며, 설정창과 인스톨러, GitHub Pages 소개 페이지까지 갖춘 프로젝트입니다.</p>
+            <div class="repo-tags"><span class="tag">C++</span><span class="tag">Featured</span><span class="tag">GitHub Pages</span></div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/Favorit/">라이브 페이지</a>
+              <a class="button" href="https://github.com/sheryloe/Favorit">GitHub Repo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="repositories">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Repositories</span>
+          <h2>전체 공개 저장소</h2>
+          <p>이름, 설명, 언어, 토픽 기준으로 바로 필터링할 수 있습니다.</p>
+        </div>
+        <div class="section-card filter-box">
+          <input id="repo-filter" class="filter-input" type="search" placeholder="저장소 이름, 설명, 언어, 토픽 검색">
+          <div class="subtle"><span id="visible-count">8</span> / 8 저장소 표시 중</div>
+        </div>
+        <div class="repo-grid" id="repo-grid">
+          <article class="repo-card" data-repo-card data-search="vibe_cowork_thinking 프로젝트별 설정과 실행 로그를 유지하면서 codex와 gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다. python">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">Vibe_Cowork_Thinking</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.</p>
+            <div class="repo-tags"><span class="tag">Python</span><span class="tag">GitHub Pages</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 feat/initial-workflow-baseline</span>
+              <span>스타 0</span>
+              <span>크기 160</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/Vibe_Cowork_Thinking/">열기</a>
+              <a class="button" href="https://github.com/sheryloe/Vibe_Cowork_Thinking">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card" data-repo-card data-search="grid-crop-image tkinter와 pillow로 만든 windows 이미지 크롭 도구로, 스크린샷 붙여넣기, 다중 영역 선택, json 레이아웃 재사용을 지원합니다. python desktop-app image-cropping image-proceesing pillow pyinstaller python tkinter windows">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">grid-crop-image</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>Tkinter와 Pillow로 만든 Windows 이미지 크롭 도구로, 스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용을 지원합니다.</p>
+            <div class="repo-tags"><span class="tag">Python</span><span class="tag">Featured</span><span class="tag">GitHub Pages</span><span class="tag">desktop-app</span><span class="tag">image-cropping</span><span class="tag">image-proceesing</span><span class="tag">pillow</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 main</span>
+              <span>스타 0</span>
+              <span>크기 8848</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/grid-crop-image/">열기</a>
+              <a class="button" href="https://github.com/sheryloe/grid-crop-image">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card" data-repo-card data-search="donggri_gagyeobu fastapi와 sqlite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다. html">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">donggri_gagyeobu</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다.</p>
+            <div class="repo-tags"><span class="tag">HTML</span><span class="tag">Featured</span><span class="tag">GitHub Pages</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 master</span>
+              <span>스타 0</span>
+              <span>크기 144</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/donggri_gagyeobu/">열기</a>
+              <a class="button" href="https://github.com/sheryloe/donggri_gagyeobu">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card" data-repo-card data-search="blomanagent 티스토리, 네이버 블로그, blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다. typescript">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">BloManagent</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다.</p>
+            <div class="repo-tags"><span class="tag">TypeScript</span><span class="tag">GitHub Pages</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 main</span>
+              <span>스타 0</span>
+              <span>크기 110</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/BloManagent/">열기</a>
+              <a class="button" href="https://github.com/sheryloe/BloManagent">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card" data-repo-card data-search="autotrading_ing....- 도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다. python">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">AutoTrading_ing....-</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.</p>
+            <div class="repo-tags"><span class="tag">Python</span><span class="tag">GitHub Pages</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 main</span>
+              <span>스타 0</span>
+              <span>크기 9248</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/AutoTrading_ing....-/">열기</a>
+              <a class="button" href="https://github.com/sheryloe/AutoTrading_ing....-">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card" data-repo-card data-search="ai_writer_tistory 티스토리 발행 자동화와 ai 글쓰기 흐름을 node.js와 typescript로 구성한 백엔드 중심 저장소입니다. typescript">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">AI_Writer_TISTORY</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>티스토리 발행 자동화와 AI 글쓰기 흐름을 Node.js와 TypeScript로 구성한 백엔드 중심 저장소입니다.</p>
+            <div class="repo-tags"><span class="tag">TypeScript</span><span class="tag">GitHub Pages</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 main</span>
+              <span>스타 0</span>
+              <span>크기 77</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/AI_Writer_TISTORY/">열기</a>
+              <a class="button" href="https://github.com/sheryloe/AI_Writer_TISTORY">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card" data-repo-card data-search="ai_biseo ai 비서 응답, n8n 연동, notion 로그, 블로그 자동화 흐름을 한 서비스로 묶은 운영형 프로젝트입니다. typescript">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">AI_BISEO</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>AI 비서 응답, n8n 연동, Notion 로그, 블로그 자동화 흐름을 한 서비스로 묶은 운영형 프로젝트입니다.</p>
+            <div class="repo-tags"><span class="tag">TypeScript</span><span class="tag">GitHub Pages</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 main</span>
+              <span>스타 0</span>
+              <span>크기 176</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/AI_BISEO/">열기</a>
+              <a class="button" href="https://github.com/sheryloe/AI_BISEO">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="repo-card" data-repo-card data-search="favorit win32 api와 cmake로 만든 실행 즐겨찾기 위젯이며, 설정창과 인스톨러, github pages 소개 페이지까지 갖춘 프로젝트입니다. c++">
+            <div class="repo-head">
+              <div class="repo-title">
+                <div class="subtle">2026-03-12 업데이트</div>
+                <h3 class="repo-name">Favorit</h3>
+              </div>
+              <span class="badge live">Live</span>
+            </div>
+            <p>Win32 API와 CMake로 만든 실행 즐겨찾기 위젯이며, 설정창과 인스톨러, GitHub Pages 소개 페이지까지 갖춘 프로젝트입니다.</p>
+            <div class="repo-tags"><span class="tag">C++</span><span class="tag">Featured</span><span class="tag">GitHub Pages</span></div>
+            <div class="repo-meta">
+              <span>기본 브랜치 main</span>
+              <span>스타 0</span>
+              <span>크기 0</span>
+            </div>
+            <div class="link-row">
+              <a class="button primary" href="https://sheryloe.github.io/Favorit/">열기</a>
+              <a class="button" href="https://github.com/sheryloe/Favorit">GitHub Repo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer">
+        <div>
+          <strong>Sheryloe Projects</strong>
+          <p>GitHub Pages 루트 허브, RSS/Atom 피드, sitemap 자동 갱신 구조</p>
+        </div>
+        <div>
+          <a href="https://sheryloe.github.io/rss.xml">RSS</a><br>
+          <a href="https://sheryloe.github.io/feed.xml">Atom</a><br>
+          <a href="https://sheryloe.github.io/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const filterInput = document.getElementById('repo-filter');
+    const cards = Array.from(document.querySelectorAll('[data-repo-card]'));
+    const visibleCount = document.getElementById('visible-count');
+
+    function applyFilter() {
+      const query = filterInput.value.trim().toLowerCase();
+      let visible = 0;
+
+      for (const card of cards) {
+        const searchable = card.dataset.search || '';
+        const matches = searchable.includes(query);
+        card.hidden = !matches;
+        if (matches) {
+          visible += 1;
+        }
+      }
+
+      visibleCount.textContent = String(visible);
+    }
+
+    filterInput.addEventListener('input', applyFilter);
+  </script>
 </body>
 </html>
