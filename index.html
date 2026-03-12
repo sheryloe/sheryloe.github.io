@@ -22,6 +22,9 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Sheryloe Projects | GitHub Pages 루트 허브, RSS, Sitemap">
   <meta name="twitter:description" content="Sheryloe 공개 프로젝트 페이지만 모아둔 루트 허브입니다. 상단은 바로 접속 가능한 페이지를 크게 보여주고, 하단은 최근 변경된 공개 저장소만 날짜와 바로가기로 정리합니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,600..900,100&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #eef2f6;
@@ -42,8 +45,9 @@
       --radius-lg: 24px;
       --radius-md: 18px;
       --content: 1180px;
-      --heading-font: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-      --body-font: "Aptos", "Segoe UI Variable Text", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      --display-font: "Fraunces", "Noto Serif KR", serif;
+      --heading-font: "Noto Serif KR", "Fraunces", serif;
+      --body-font: "IBM Plex Sans KR", "Aptos", "Segoe UI Variable Text", "Noto Sans KR", "Malgun Gothic", sans-serif;
     }
 
     * {
@@ -57,8 +61,13 @@
     body {
       margin: 0;
       font-family: var(--body-font);
+      font-size: 16.5px;
+      letter-spacing: -0.012em;
       color: var(--text);
       line-height: 1.65;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       background:
         radial-gradient(circle at top left, rgba(13, 99, 255, 0.12), transparent 28rem),
         radial-gradient(circle at bottom right, rgba(240, 140, 51, 0.14), transparent 30rem),
@@ -92,8 +101,9 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--accent-deep);
     }
@@ -118,6 +128,7 @@
     .nav a,
     .button,
     .repo-links a {
+      font-family: var(--body-font);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -126,7 +137,9 @@
       border-radius: 999px;
       border: 1px solid var(--line-strong);
       background: rgba(255, 255, 255, 0.84);
-      font-weight: 700;
+      font-size: 0.94rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
       box-shadow: 0 8px 24px rgba(17, 24, 39, 0.04);
     }
 
@@ -175,14 +188,15 @@
     .card-tag,
     .section-kicker,
     .pill {
+      font-family: var(--body-font);
       display: inline-flex;
       align-items: center;
       min-height: 34px;
       padding: 0 12px;
       border-radius: 999px;
-      letter-spacing: 0.02em;
-      font-size: 12px;
-      font-weight: 800;
+      letter-spacing: 0.14em;
+      font-size: 11px;
+      font-weight: 700;
       text-transform: uppercase;
     }
 
@@ -197,23 +211,31 @@
     h3 {
       margin: 0;
       font-family: var(--heading-font);
-      letter-spacing: -0.04em;
+      letter-spacing: -0.045em;
+      text-wrap: balance;
     }
 
     h1 {
       margin: 18px 0 12px;
-      font-size: clamp(2.8rem, 5vw, 5rem);
-      line-height: 0.98;
+      max-width: 12ch;
+      font-family: var(--display-font);
+      font-size: clamp(3.1rem, 5.6vw, 5.5rem);
+      font-weight: 760;
+      line-height: 0.92;
+      font-variation-settings: "SOFT" 100;
     }
 
     h2 {
-      font-size: clamp(2rem, 3vw, 3rem);
-      line-height: 1.04;
+      max-width: 15ch;
+      font-size: clamp(2.1rem, 3.1vw, 3.15rem);
+      font-weight: 700;
+      line-height: 1.02;
     }
 
     h3 {
-      font-size: 1.7rem;
-      line-height: 1.1;
+      font-size: clamp(1.45rem, 2vw, 1.95rem);
+      font-weight: 700;
+      line-height: 1.06;
     }
 
     .lead,
@@ -229,8 +251,10 @@
 
     .lead {
       max-width: 760px;
-      font-size: 1.08rem;
-      line-height: 1.78;
+      font-size: 1.12rem;
+      font-weight: 500;
+      line-height: 1.82;
+      letter-spacing: -0.016em;
     }
 
     .hero-actions {
@@ -263,12 +287,16 @@
 
     .hero-stat span {
       color: rgba(243, 247, 255, 0.72);
-      font-size: 14px;
+      font-size: 13px;
+      letter-spacing: 0.01em;
     }
 
     .hero-stat strong {
-      font-size: 26px;
-      letter-spacing: -0.04em;
+      font-family: var(--display-font);
+      font-size: 28px;
+      font-weight: 720;
+      letter-spacing: -0.05em;
+      font-variation-settings: "SOFT" 90;
     }
 
     .hero-note {
@@ -296,6 +324,7 @@
 
     .section-copy {
       max-width: 420px;
+      font-size: 0.98rem;
       line-height: 1.72;
     }
 
@@ -320,6 +349,12 @@
       align-content: space-between;
       gap: 14px;
       min-height: 248px;
+    }
+
+    .page-card p {
+      font-size: 0.98rem;
+      line-height: 1.74;
+      letter-spacing: -0.012em;
     }
 
     .page-card--hero {
@@ -390,7 +425,13 @@
     }
 
     .quick-item strong {
-      font-size: 16px;
+      font-size: 1.02rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .quick-item span {
+      font-size: 0.93rem;
     }
 
     .repo-list {
@@ -413,12 +454,15 @@
     }
 
     .repo-main strong {
-      font-size: 16px;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
     }
 
     .repo-row time {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 0.92rem;
+      font-weight: 500;
     }
 
     footer {
@@ -488,7 +532,7 @@
       }
 
       h1 {
-        font-size: 36px;
+        font-size: 38px;
       }
 
       .page-grid {
