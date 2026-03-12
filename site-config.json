@@ -4,15 +4,16 @@
   "site_title": "Sheryloe Projects | GitHub Pages 루트 허브, RSS, Sitemap",
   "site_url": "https://sheryloe.github.io/",
   "github_profile": "https://github.com/sheryloe",
-  "description": "Sheryloe 공개 저장소와 GitHub Pages 프로젝트를 한 곳에서 모아보는 루트 허브입니다. RSS, Atom feed, sitemap, 라이브 페이지 링크를 함께 제공합니다.",
+  "description": "Sheryloe 공개 프로젝트 페이지만 모아둔 루트 허브입니다. 상단은 바로 접속 가능한 페이지를 크게 보여주고, 하단은 최근 변경된 공개 저장소만 날짜와 바로가기로 정리합니다.",
   "author_name": "sheryloe",
   "exclude_repositories": [
     "sheryloe.github.io"
   ],
   "featured_repositories": [
+    "Favorit",
     "grid-crop-image",
     "donggri_gagyeobu",
-    "Favorit"
+    "BloManagent"
   ],
   "repository_overrides": {
     "AI_BISEO": {

@@ -145,58 +145,79 @@ def repository_search_text(repository: dict[str, Any]) -> str:
     return " ".join(part.lower() for part in parts if part)
 
 
-def render_repository_card(repository: dict[str, Any], primary_label: str) -> str:
-    title_badge = '<span class="badge live">Live</span>' if repository["has_pages"] else '<span class="badge repo">Repo</span>'
-    primary_url = repository["live_url"] or repository["repo_url"]
-    description = html.escape(repository["description"] or "설명이 아직 없는 저장소입니다.")
-    if repository["has_pages"]:
-        primary_text = primary_label
-        secondary_link = f'<a class="button" href="{html.escape(repository["repo_url"])}">GitHub Repo</a>'
-    else:
-        primary_text = "GitHub Repo"
-        secondary_link = '<span class="button" aria-disabled="true">Live 없음</span>'
-
-    return f"""          <article class="repo-card" data-repo-card data-search="{html.escape(repository_search_text(repository), quote=True)}">
-            <div class="repo-head">
-              <div class="repo-title">
-                <div class="subtle">{repository['sort_label']} 업데이트</div>
-                <h3 class="repo-name">{html.escape(repository['name'])}</h3>
-              </div>
-              {title_badge}
-            </div>
-            <p>{description}</p>
-            <div class="repo-tags">{render_tags(repository)}</div>
-            <div class="repo-meta">
-              <span>기본 브랜치 {html.escape(repository['default_branch'])}</span>
-              <span>스타 {repository['stars']}</span>
-              <span>크기 {repository['size']}</span>
-            </div>
-            <div class="link-row">
-              <a class="button primary" href="{html.escape(primary_url)}">{html.escape(primary_text)}</a>
-              {secondary_link}
-            </div>
-          </article>"""
+def category_label(repository: dict[str, Any]) -> str:
+    labels = {
+        "Favorit": "Desktop Utility",
+        "grid-crop-image": "Image Workflow",
+        "donggri_gagyeobu": "Local Finance",
+        "BloManagent": "Analytics Dashboard",
+        "AI_BISEO": "Automation Ops",
+        "AI_Writer_TISTORY": "Publishing Workflow",
+        "AutoTrading_ing....-": "Trading Console",
+        "Vibe_Cowork_Thinking": "AI Workflow",
+    }
+    return labels.get(repository["name"], repository["language"])
 
 
-def render_live_card(repository: dict[str, Any]) -> str:
-    description = html.escape(repository["description"] or "GitHub Pages가 활성화된 라이브 프로젝트입니다.")
-    live_url = html.escape(repository["live_url"] or repository["pages_url"])
+def quick_subtitle(repository: dict[str, Any]) -> str:
+    subtitles = {
+        "AI_BISEO": "AI 비서 + 블로그 자동화",
+        "AI_Writer_TISTORY": "티스토리 AI 작성 자동화",
+        "AutoTrading_ing....-": "자동매매 운영 콘솔",
+        "Vibe_Cowork_Thinking": "Runner / Orchestrator 실험",
+    }
+    return subtitles.get(repository["name"], repository["description"] or repository["language"])
+
+
+def direct_card_class(repository: dict[str, Any]) -> str:
+    classes = {
+        "Favorit": "page-card page-card--hero tone-blue",
+        "grid-crop-image": "page-card tone-white",
+        "donggri_gagyeobu": "page-card tone-amber",
+        "BloManagent": "page-card page-card--wide tone-slate",
+    }
+    return classes.get(repository["name"], "page-card tone-white")
+
+
+def render_direct_card(repository: dict[str, Any]) -> str:
+    description = html.escape(repository["description"] or "공개 프로젝트 페이지입니다.")
+    live_url = html.escape(repository["live_url"] or repository["pages_url"] or repository["repo_url"])
     repo_url = html.escape(repository["repo_url"])
-    return f"""          <article class="repo-card">
-            <div class="repo-head">
-              <div class="repo-title">
-                <div class="subtle">{repository['sort_label']} 업데이트</div>
-                <h3 class="repo-name">{html.escape(repository['name'])}</h3>
+    card_class = direct_card_class(repository)
+    return f"""            <article class="{card_class}">
+              <p class="card-tag">{html.escape(category_label(repository))}</p>
+              <h3>{html.escape(repository['name'])}</h3>
+              <p>{description}</p>
+              <div class="card-actions">
+                <a class="button primary" href="{live_url}">페이지</a>
+                <a class="button" href="{repo_url}">GitHub</a>
               </div>
-              <span class="badge live">Live</span>
-            </div>
-            <p>{description}</p>
-            <div class="repo-tags">{render_tags(repository, max_topics=3)}</div>
-            <div class="link-row">
-              <a class="button primary" href="{live_url}">라이브 페이지</a>
-              <a class="button" href="{repo_url}">GitHub Repo</a>
-            </div>
-          </article>"""
+            </article>"""
+
+
+def render_quick_link(repository: dict[str, Any]) -> str:
+    live_url = html.escape(repository["live_url"] or repository["pages_url"] or repository["repo_url"])
+    return f"""              <a class="quick-item" href="{live_url}">
+                <strong>{html.escape(repository['name'])}</strong>
+                <span>{html.escape(quick_subtitle(repository))}</span>
+              </a>"""
+
+
+def render_recent_row(repository: dict[str, Any]) -> str:
+    primary_url = html.escape(repository["live_url"] or repository["repo_url"])
+    repo_url = html.escape(repository["repo_url"])
+    primary_text = "페이지" if repository["has_pages"] else "레포"
+    return f"""            <article class="repo-row">
+              <div class="repo-main">
+                <strong>{html.escape(repository['name'])}</strong>
+                <span>{'공개 프로젝트 페이지' if repository['has_pages'] else '공개 저장소'}</span>
+              </div>
+              <time datetime="{repository['sort_at'].date().isoformat()}">{repository['sort_label']}</time>
+              <div class="repo-links">
+                <a href="{primary_url}">{primary_text}</a>
+                <a href="{repo_url}">레포</a>
+              </div>
+            </article>"""
 
 
 def build_schema(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
@@ -240,8 +261,22 @@ def build_schema(config: dict[str, Any], repositories: list[dict[str, Any]]) -> 
 def render_index_html(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
     template = TEMPLATE_PATH.read_text(encoding="utf-8")
     live_repositories = [repo for repo in repositories if repo["has_pages"]]
-    recent_repositories = repositories[:6]
-    feed_limit = int(config.get("max_feed_entries", 30))
+    featured_order = {name: index for index, name in enumerate(config.get("featured_repositories", []))}
+    featured_live = sorted(
+        [repo for repo in live_repositories if repo["name"] in featured_order],
+        key=lambda repo: featured_order[repo["name"]],
+    )
+    direct_repositories = featured_live[:4]
+    used_names = {repo["name"] for repo in direct_repositories}
+    if len(direct_repositories) < min(4, len(live_repositories)):
+        for repository in live_repositories:
+            if repository["name"] in used_names:
+                continue
+            direct_repositories.append(repository)
+            used_names.add(repository["name"])
+            if len(direct_repositories) == min(4, len(live_repositories)):
+                break
+    quick_repositories = [repo for repo in live_repositories if repo["name"] not in used_names]
     generated_at = datetime.now(timezone.utc)
     latest_push = repositories[0]["sort_at"] if repositories else generated_at
 
@@ -254,12 +289,12 @@ def render_index_html(config: dict[str, Any], repositories: list[dict[str, Any]]
         "__GITHUB_PROFILE__": html.escape(str(config["github_profile"])),
         "__GENERATED_LABEL__": generated_at.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "__LATEST_PUSH_LABEL__": latest_push.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "__LATEST_PUSH_SHORT__": latest_push.astimezone(timezone.utc).strftime("%Y-%m-%d"),
         "__PUBLIC_REPO_COUNT__": str(len(repositories)),
         "__LIVE_PAGE_COUNT__": str(len(live_repositories)),
-        "__FEED_ENTRY_COUNT__": str(min(len(repositories), feed_limit)),
-        "__RECENT_CARDS__": "\n".join(render_repository_card(repo, "바로 보기") for repo in recent_repositories),
-        "__LIVE_CARDS__": "\n".join(render_live_card(repo) for repo in live_repositories) or '          <article class="repo-card"><h3>라이브 프로젝트가 아직 없습니다.</h3><p>GitHub Pages가 켜진 저장소가 생기면 여기에 자동으로 표시됩니다.</p></article>',
-        "__ALL_CARDS__": "\n".join(render_repository_card(repo, "열기") for repo in repositories),
+        "__DIRECT_CARDS__": "\n".join(render_direct_card(repo) for repo in direct_repositories),
+        "__QUICK_LINKS__": "\n".join(render_quick_link(repo) for repo in quick_repositories),
+        "__RECENT_ROWS__": "\n".join(render_recent_row(repo) for repo in repositories),
         "__SCHEMA_JSON__": build_schema(config, repositories),
     }
 
