@@ -1,45 +1,9 @@
 {
-  "generated_at": "2026-03-13T07:04:14.733738Z",
+  "generated_at": "2026-03-13T13:15:24.899287Z",
   "site_url": "https://sheryloe.github.io/",
   "repository_count": 8,
   "live_pages_count": 8,
   "repositories": [
-    {
-      "name": "AutoTrading_ing....-",
-      "description": "도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.",
-      "repo_url": "https://github.com/sheryloe/AutoTrading_ing....-",
-      "live_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
-      "pages_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
-      "language": "Python",
-      "topics": [],
-      "has_pages": true,
-      "updated_at": "2026-03-13T02:58:29Z",
-      "pushed_at": "2026-03-13T02:58:26Z"
-    },
-    {
-      "name": "AI_Writer_TISTORY",
-      "description": "티스토리 발행 자동화와 AI 글쓰기 흐름을 Node.js와 TypeScript로 구성한 백엔드 중심 저장소입니다.",
-      "repo_url": "https://github.com/sheryloe/AI_Writer_TISTORY",
-      "live_url": "https://sheryloe.github.io/AI_Writer_TISTORY/",
-      "pages_url": "https://sheryloe.github.io/AI_Writer_TISTORY/",
-      "language": "TypeScript",
-      "topics": [],
-      "has_pages": true,
-      "updated_at": "2026-03-13T02:58:23Z",
-      "pushed_at": "2026-03-13T02:58:20Z"
-    },
-    {
-      "name": "AI_BISEO",
-      "description": "AI 비서 응답, n8n 연동, Notion 로그, 블로그 자동화 흐름을 한 서비스로 묶은 운영형 프로젝트입니다.",
-      "repo_url": "https://github.com/sheryloe/AI_BISEO",
-      "live_url": "https://sheryloe.github.io/AI_BISEO/",
-      "pages_url": "https://sheryloe.github.io/AI_BISEO/",
-      "language": "TypeScript",
-      "topics": [],
-      "has_pages": true,
-      "updated_at": "2026-03-13T02:58:18Z",
-      "pushed_at": "2026-03-13T02:58:14Z"
-    },
     {
       "name": "Vibe_Cowork_Thinking",
       "description": "프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.",
@@ -49,8 +13,8 @@
       "language": "Python",
       "topics": [],
       "has_pages": true,
-      "updated_at": "2026-03-12T07:52:05Z",
-      "pushed_at": "2026-03-12T07:51:08Z"
+      "updated_at": "2026-03-13T12:16:25Z",
+      "pushed_at": "2026-03-13T12:16:21Z"
     },
     {
       "name": "grid-crop-image",
@@ -70,32 +34,8 @@
         "windows"
       ],
       "has_pages": true,
-      "updated_at": "2026-03-12T07:52:02Z",
-      "pushed_at": "2026-03-12T07:50:52Z"
-    },
-    {
-      "name": "donggri_gagyeobu",
-      "description": "FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다.",
-      "repo_url": "https://github.com/sheryloe/donggri_gagyeobu",
-      "live_url": "https://sheryloe.github.io/donggri_gagyeobu/",
-      "pages_url": "https://sheryloe.github.io/donggri_gagyeobu/",
-      "language": "HTML",
-      "topics": [],
-      "has_pages": true,
-      "updated_at": "2026-03-12T07:51:59Z",
-      "pushed_at": "2026-03-12T07:50:40Z"
-    },
-    {
-      "name": "BloManagent",
-      "description": "티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다.",
-      "repo_url": "https://github.com/sheryloe/BloManagent",
-      "live_url": "https://sheryloe.github.io/BloManagent/",
-      "pages_url": "https://sheryloe.github.io/BloManagent/",
-      "language": "TypeScript",
-      "topics": [],
-      "has_pages": true,
-      "updated_at": "2026-03-12T07:51:57Z",
-      "pushed_at": "2026-03-12T07:49:45Z"
+      "updated_at": "2026-03-13T12:16:22Z",
+      "pushed_at": "2026-03-13T12:16:18Z"
     },
     {
       "name": "Favorit",
@@ -106,8 +46,68 @@
       "language": "C++",
       "topics": [],
       "has_pages": true,
-      "updated_at": "2026-03-12T07:52:01Z",
-      "pushed_at": "2026-03-12T07:26:36Z"
+      "updated_at": "2026-03-13T12:16:19Z",
+      "pushed_at": "2026-03-13T12:16:15Z"
+    },
+    {
+      "name": "donggri_gagyeobu",
+      "description": "FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다.",
+      "repo_url": "https://github.com/sheryloe/donggri_gagyeobu",
+      "live_url": "https://sheryloe.github.io/donggri_gagyeobu/",
+      "pages_url": "https://sheryloe.github.io/donggri_gagyeobu/",
+      "language": "HTML",
+      "topics": [],
+      "has_pages": true,
+      "updated_at": "2026-03-13T12:16:17Z",
+      "pushed_at": "2026-03-13T12:16:14Z"
+    },
+    {
+      "name": "BloManagent",
+      "description": "티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다.",
+      "repo_url": "https://github.com/sheryloe/BloManagent",
+      "live_url": "https://sheryloe.github.io/BloManagent/",
+      "pages_url": "https://sheryloe.github.io/BloManagent/",
+      "language": "TypeScript",
+      "topics": [],
+      "has_pages": true,
+      "updated_at": "2026-03-13T12:16:15Z",
+      "pushed_at": "2026-03-13T12:16:12Z"
+    },
+    {
+      "name": "AutoTrading_ing....-",
+      "description": "도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.",
+      "repo_url": "https://github.com/sheryloe/AutoTrading_ing....-",
+      "live_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
+      "pages_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
+      "language": "Python",
+      "topics": [],
+      "has_pages": true,
+      "updated_at": "2026-03-13T12:16:14Z",
+      "pushed_at": "2026-03-13T12:16:09Z"
+    },
+    {
+      "name": "AI_Writer_TISTORY",
+      "description": "티스토리 발행 자동화와 AI 글쓰기 흐름을 Node.js와 TypeScript로 구성한 백엔드 중심 저장소입니다.",
+      "repo_url": "https://github.com/sheryloe/AI_Writer_TISTORY",
+      "live_url": "https://sheryloe.github.io/AI_Writer_TISTORY/",
+      "pages_url": "https://sheryloe.github.io/AI_Writer_TISTORY/",
+      "language": "TypeScript",
+      "topics": [],
+      "has_pages": true,
+      "updated_at": "2026-03-13T12:16:10Z",
+      "pushed_at": "2026-03-13T12:16:07Z"
+    },
+    {
+      "name": "AI_BISEO",
+      "description": "AI 비서 응답, n8n 연동, Notion 로그, 블로그 자동화 흐름을 한 서비스로 묶은 운영형 프로젝트입니다.",
+      "repo_url": "https://github.com/sheryloe/AI_BISEO",
+      "live_url": "https://sheryloe.github.io/AI_BISEO/",
+      "pages_url": "https://sheryloe.github.io/AI_BISEO/",
+      "language": "TypeScript",
+      "topics": [],
+      "has_pages": true,
+      "updated_at": "2026-03-13T12:16:09Z",
+      "pushed_at": "2026-03-13T12:16:05Z"
     }
   ]
 }

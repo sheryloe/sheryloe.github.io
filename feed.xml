@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Sheryloe Projects Atom</title>
   <id>https://sheryloe.github.io/feed.xml</id>
-  <updated>2026-03-13T02:58:26Z</updated>
+  <updated>2026-03-13T12:16:21Z</updated>
   <link href="https://sheryloe.github.io/feed.xml" rel="self" />
   <link href="https://sheryloe.github.io/" rel="alternate" />
   <subtitle>Sheryloe 공개 프로젝트 페이지만 모아둔 루트 허브입니다. 상단은 바로 접속 가능한 페이지를 크게 보여주고, 하단은 최근 변경된 공개 저장소만 날짜와 바로가기로 정리합니다.</subtitle>
@@ -10,34 +10,10 @@
     <name>sheryloe</name>
   </author>
   <entry>
-    <title>AutoTrading_ing....-</title>
-    <id>https://github.com/sheryloe/AutoTrading_ing....-</id>
-    <link href="https://sheryloe.github.io/AutoTrading_ing....-/" />
-    <updated>2026-03-13T02:58:26Z</updated>
-    <published>2026-03-04T12:59:41Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;AutoTrading_ing....-&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/AutoTrading_ing....-/&quot;&gt;https://sheryloe.github.io/AutoTrading_ing....-/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/AutoTrading_ing....-&quot;&gt;https://github.com/sheryloe/AutoTrading_ing....-&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>AI_Writer_TISTORY</title>
-    <id>https://github.com/sheryloe/AI_Writer_TISTORY</id>
-    <link href="https://sheryloe.github.io/AI_Writer_TISTORY/" />
-    <updated>2026-03-13T02:58:20Z</updated>
-    <published>2026-02-23T08:47:25Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;AI_Writer_TISTORY&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;티스토리 발행 자동화와 AI 글쓰기 흐름을 Node.js와 TypeScript로 구성한 백엔드 중심 저장소입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/AI_Writer_TISTORY/&quot;&gt;https://sheryloe.github.io/AI_Writer_TISTORY/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/AI_Writer_TISTORY&quot;&gt;https://github.com/sheryloe/AI_Writer_TISTORY&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>AI_BISEO</title>
-    <id>https://github.com/sheryloe/AI_BISEO</id>
-    <link href="https://sheryloe.github.io/AI_BISEO/" />
-    <updated>2026-03-13T02:58:14Z</updated>
-    <published>2026-02-23T06:30:33Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;AI_BISEO&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;AI 비서 응답, n8n 연동, Notion 로그, 블로그 자동화 흐름을 한 서비스로 묶은 운영형 프로젝트입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/AI_BISEO/&quot;&gt;https://sheryloe.github.io/AI_BISEO/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/AI_BISEO&quot;&gt;https://github.com/sheryloe/AI_BISEO&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
     <title>Vibe_Cowork_Thinking</title>
     <id>https://github.com/sheryloe/Vibe_Cowork_Thinking</id>
     <link href="https://sheryloe.github.io/Vibe_Cowork_Thinking/" />
-    <updated>2026-03-12T07:51:08Z</updated>
+    <updated>2026-03-13T12:16:21Z</updated>
     <published>2020-02-25T14:50:04Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;Vibe_Cowork_Thinking&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Vibe_Cowork_Thinking/&quot;&gt;https://sheryloe.github.io/Vibe_Cowork_Thinking/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Vibe_Cowork_Thinking&quot;&gt;https://github.com/sheryloe/Vibe_Cowork_Thinking&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
@@ -45,15 +21,23 @@
     <title>grid-crop-image</title>
     <id>https://github.com/sheryloe/grid-crop-image</id>
     <link href="https://sheryloe.github.io/grid-crop-image/" />
-    <updated>2026-03-12T07:50:52Z</updated>
+    <updated>2026-03-13T12:16:18Z</updated>
     <published>2026-03-09T01:00:14Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;grid-crop-image&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Tkinter와 Pillow로 만든 Windows 이미지 크롭 도구로, 스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용을 지원합니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/grid-crop-image/&quot;&gt;https://sheryloe.github.io/grid-crop-image/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/grid-crop-image&quot;&gt;https://github.com/sheryloe/grid-crop-image&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>Favorit</title>
+    <id>https://github.com/sheryloe/Favorit</id>
+    <link href="https://sheryloe.github.io/Favorit/" />
+    <updated>2026-03-13T12:16:15Z</updated>
+    <published>2026-03-11T07:21:57Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Favorit&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Win32 API와 CMake로 만든 실행 즐겨찾기 위젯이며, 설정창과 인스톨러, GitHub Pages 소개 페이지까지 갖춘 프로젝트입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Favorit/&quot;&gt;https://sheryloe.github.io/Favorit/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Favorit&quot;&gt;https://github.com/sheryloe/Favorit&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
     <title>donggri_gagyeobu</title>
     <id>https://github.com/sheryloe/donggri_gagyeobu</id>
     <link href="https://sheryloe.github.io/donggri_gagyeobu/" />
-    <updated>2026-03-12T07:50:40Z</updated>
+    <updated>2026-03-13T12:16:14Z</updated>
     <published>2020-04-06T13:05:43Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;donggri_gagyeobu&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/donggri_gagyeobu/&quot;&gt;https://sheryloe.github.io/donggri_gagyeobu/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/donggri_gagyeobu&quot;&gt;https://github.com/sheryloe/donggri_gagyeobu&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
@@ -61,16 +45,32 @@
     <title>BloManagent</title>
     <id>https://github.com/sheryloe/BloManagent</id>
     <link href="https://sheryloe.github.io/BloManagent/" />
-    <updated>2026-03-12T07:49:45Z</updated>
+    <updated>2026-03-13T12:16:12Z</updated>
     <published>2026-03-12T04:59:48Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;BloManagent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/BloManagent/&quot;&gt;https://sheryloe.github.io/BloManagent/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/BloManagent&quot;&gt;https://github.com/sheryloe/BloManagent&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
-    <title>Favorit</title>
-    <id>https://github.com/sheryloe/Favorit</id>
-    <link href="https://sheryloe.github.io/Favorit/" />
-    <updated>2026-03-12T07:26:36Z</updated>
-    <published>2026-03-11T07:21:57Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;Favorit&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Win32 API와 CMake로 만든 실행 즐겨찾기 위젯이며, 설정창과 인스톨러, GitHub Pages 소개 페이지까지 갖춘 프로젝트입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Favorit/&quot;&gt;https://sheryloe.github.io/Favorit/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Favorit&quot;&gt;https://github.com/sheryloe/Favorit&lt;/a&gt;&lt;/p&gt;</summary>
+    <title>AutoTrading_ing....-</title>
+    <id>https://github.com/sheryloe/AutoTrading_ing....-</id>
+    <link href="https://sheryloe.github.io/AutoTrading_ing....-/" />
+    <updated>2026-03-13T12:16:09Z</updated>
+    <published>2026-03-04T12:59:41Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;AutoTrading_ing....-&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/AutoTrading_ing....-/&quot;&gt;https://sheryloe.github.io/AutoTrading_ing....-/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/AutoTrading_ing....-&quot;&gt;https://github.com/sheryloe/AutoTrading_ing....-&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>AI_Writer_TISTORY</title>
+    <id>https://github.com/sheryloe/AI_Writer_TISTORY</id>
+    <link href="https://sheryloe.github.io/AI_Writer_TISTORY/" />
+    <updated>2026-03-13T12:16:07Z</updated>
+    <published>2026-02-23T08:47:25Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;AI_Writer_TISTORY&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;티스토리 발행 자동화와 AI 글쓰기 흐름을 Node.js와 TypeScript로 구성한 백엔드 중심 저장소입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/AI_Writer_TISTORY/&quot;&gt;https://sheryloe.github.io/AI_Writer_TISTORY/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/AI_Writer_TISTORY&quot;&gt;https://github.com/sheryloe/AI_Writer_TISTORY&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>AI_BISEO</title>
+    <id>https://github.com/sheryloe/AI_BISEO</id>
+    <link href="https://sheryloe.github.io/AI_BISEO/" />
+    <updated>2026-03-13T12:16:05Z</updated>
+    <published>2026-02-23T06:30:33Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;AI_BISEO&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;AI 비서 응답, n8n 연동, Notion 로그, 블로그 자동화 흐름을 한 서비스로 묶은 운영형 프로젝트입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/AI_BISEO/&quot;&gt;https://sheryloe.github.io/AI_BISEO/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/AI_BISEO&quot;&gt;https://github.com/sheryloe/AI_BISEO&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
 </feed>
