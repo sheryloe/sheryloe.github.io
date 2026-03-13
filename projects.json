@@ -1,9 +1,45 @@
 {
-  "generated_at": "2026-03-13T02:40:55.820156Z",
+  "generated_at": "2026-03-13T07:04:14.733738Z",
   "site_url": "https://sheryloe.github.io/",
   "repository_count": 8,
   "live_pages_count": 8,
   "repositories": [
+    {
+      "name": "AutoTrading_ing....-",
+      "description": "도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.",
+      "repo_url": "https://github.com/sheryloe/AutoTrading_ing....-",
+      "live_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
+      "pages_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
+      "language": "Python",
+      "topics": [],
+      "has_pages": true,
+      "updated_at": "2026-03-13T02:58:29Z",
+      "pushed_at": "2026-03-13T02:58:26Z"
+    },
+    {
+      "name": "AI_Writer_TISTORY",
+      "description": "티스토리 발행 자동화와 AI 글쓰기 흐름을 Node.js와 TypeScript로 구성한 백엔드 중심 저장소입니다.",
+      "repo_url": "https://github.com/sheryloe/AI_Writer_TISTORY",
+      "live_url": "https://sheryloe.github.io/AI_Writer_TISTORY/",
+      "pages_url": "https://sheryloe.github.io/AI_Writer_TISTORY/",
+      "language": "TypeScript",
+      "topics": [],
+      "has_pages": true,
+      "updated_at": "2026-03-13T02:58:23Z",
+      "pushed_at": "2026-03-13T02:58:20Z"
+    },
+    {
+      "name": "AI_BISEO",
+      "description": "AI 비서 응답, n8n 연동, Notion 로그, 블로그 자동화 흐름을 한 서비스로 묶은 운영형 프로젝트입니다.",
+      "repo_url": "https://github.com/sheryloe/AI_BISEO",
+      "live_url": "https://sheryloe.github.io/AI_BISEO/",
+      "pages_url": "https://sheryloe.github.io/AI_BISEO/",
+      "language": "TypeScript",
+      "topics": [],
+      "has_pages": true,
+      "updated_at": "2026-03-13T02:58:18Z",
+      "pushed_at": "2026-03-13T02:58:14Z"
+    },
     {
       "name": "Vibe_Cowork_Thinking",
       "description": "프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.",
@@ -60,42 +96,6 @@
       "has_pages": true,
       "updated_at": "2026-03-12T07:51:57Z",
       "pushed_at": "2026-03-12T07:49:45Z"
-    },
-    {
-      "name": "AutoTrading_ing....-",
-      "description": "도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.",
-      "repo_url": "https://github.com/sheryloe/AutoTrading_ing....-",
-      "live_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
-      "pages_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
-      "language": "Python",
-      "topics": [],
-      "has_pages": true,
-      "updated_at": "2026-03-12T07:51:56Z",
-      "pushed_at": "2026-03-12T07:49:38Z"
-    },
-    {
-      "name": "AI_Writer_TISTORY",
-      "description": "티스토리 발행 자동화와 AI 글쓰기 흐름을 Node.js와 TypeScript로 구성한 백엔드 중심 저장소입니다.",
-      "repo_url": "https://github.com/sheryloe/AI_Writer_TISTORY",
-      "live_url": "https://sheryloe.github.io/AI_Writer_TISTORY/",
-      "pages_url": "https://sheryloe.github.io/AI_Writer_TISTORY/",
-      "language": "TypeScript",
-      "topics": [],
-      "has_pages": true,
-      "updated_at": "2026-03-12T07:51:54Z",
-      "pushed_at": "2026-03-12T07:49:33Z"
-    },
-    {
-      "name": "AI_BISEO",
-      "description": "AI 비서 응답, n8n 연동, Notion 로그, 블로그 자동화 흐름을 한 서비스로 묶은 운영형 프로젝트입니다.",
-      "repo_url": "https://github.com/sheryloe/AI_BISEO",
-      "live_url": "https://sheryloe.github.io/AI_BISEO/",
-      "pages_url": "https://sheryloe.github.io/AI_BISEO/",
-      "language": "TypeScript",
-      "topics": [],
-      "has_pages": true,
-      "updated_at": "2026-03-12T07:51:52Z",
-      "pushed_at": "2026-03-12T07:49:28Z"
     },
     {
       "name": "Favorit",
