@@ -1,9 +1,33 @@
 {
-  "generated_at": "2026-03-14T13:07:32.281626Z",
+  "generated_at": "2026-03-14T18:50:11.222810Z",
   "site_url": "https://sheryloe.github.io/",
   "repository_count": 8,
   "live_pages_count": 8,
   "repositories": [
+    {
+      "name": "AutoTrading_ing....-",
+      "description": "도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.",
+      "repo_url": "https://github.com/sheryloe/AutoTrading_ing....-",
+      "live_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
+      "pages_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
+      "language": "Python",
+      "topics": [],
+      "has_pages": true,
+      "updated_at": "2026-03-14T17:37:56Z",
+      "pushed_at": "2026-03-14T17:37:52Z"
+    },
+    {
+      "name": "BloManagent",
+      "description": "티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다.",
+      "repo_url": "https://github.com/sheryloe/BloManagent",
+      "live_url": "https://sheryloe.github.io/BloManagent/",
+      "pages_url": "https://sheryloe.github.io/BloManagent/",
+      "language": "TypeScript",
+      "topics": [],
+      "has_pages": true,
+      "updated_at": "2026-03-14T17:34:39Z",
+      "pushed_at": "2026-03-14T17:34:36Z"
+    },
     {
       "name": "Vibe_Cowork_Thinking",
       "description": "프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.",
@@ -60,30 +84,6 @@
       "has_pages": true,
       "updated_at": "2026-03-13T12:16:17Z",
       "pushed_at": "2026-03-13T12:16:14Z"
-    },
-    {
-      "name": "BloManagent",
-      "description": "티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다.",
-      "repo_url": "https://github.com/sheryloe/BloManagent",
-      "live_url": "https://sheryloe.github.io/BloManagent/",
-      "pages_url": "https://sheryloe.github.io/BloManagent/",
-      "language": "TypeScript",
-      "topics": [],
-      "has_pages": true,
-      "updated_at": "2026-03-13T12:16:15Z",
-      "pushed_at": "2026-03-13T12:16:12Z"
-    },
-    {
-      "name": "AutoTrading_ing....-",
-      "description": "도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.",
-      "repo_url": "https://github.com/sheryloe/AutoTrading_ing....-",
-      "live_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
-      "pages_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
-      "language": "Python",
-      "topics": [],
-      "has_pages": true,
-      "updated_at": "2026-03-13T12:16:14Z",
-      "pushed_at": "2026-03-13T12:16:09Z"
     },
     {
       "name": "AI_Writer_TISTORY",
