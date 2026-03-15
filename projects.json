@@ -1,21 +1,9 @@
 {
-  "generated_at": "2026-03-15T07:08:11.416809Z",
+  "generated_at": "2026-03-15T13:08:05.901629Z",
   "site_url": "https://sheryloe.github.io/",
   "repository_count": 9,
   "live_pages_count": 8,
   "repositories": [
-    {
-      "name": "BloggerGent",
-      "description": "",
-      "repo_url": "https://github.com/sheryloe/BloggerGent",
-      "live_url": "",
-      "pages_url": "",
-      "language": "Python",
-      "topics": [],
-      "has_pages": false,
-      "updated_at": "2026-03-15T06:41:40Z",
-      "pushed_at": "2026-03-15T06:41:37Z"
-    },
     {
       "name": "BloManagent",
       "description": "티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다.",
@@ -25,8 +13,20 @@
       "language": "TypeScript",
       "topics": [],
       "has_pages": true,
-      "updated_at": "2026-03-15T06:35:30Z",
-      "pushed_at": "2026-03-15T06:35:27Z"
+      "updated_at": "2026-03-15T12:59:26Z",
+      "pushed_at": "2026-03-15T13:08:03Z"
+    },
+    {
+      "name": "donggri_gagyeobu",
+      "description": "FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다.",
+      "repo_url": "https://github.com/sheryloe/donggri_gagyeobu",
+      "live_url": "https://sheryloe.github.io/donggri_gagyeobu/",
+      "pages_url": "https://sheryloe.github.io/donggri_gagyeobu/",
+      "language": "JavaScript",
+      "topics": [],
+      "has_pages": true,
+      "updated_at": "2026-03-15T12:58:32Z",
+      "pushed_at": "2026-03-15T13:08:02Z"
     },
     {
       "name": "AutoTrading_ing....-",
@@ -37,8 +37,20 @@
       "language": "Python",
       "topics": [],
       "has_pages": true,
-      "updated_at": "2026-03-15T06:26:25Z",
-      "pushed_at": "2026-03-15T06:26:22Z"
+      "updated_at": "2026-03-15T13:02:42Z",
+      "pushed_at": "2026-03-15T13:02:38Z"
+    },
+    {
+      "name": "BloggerGent",
+      "description": "",
+      "repo_url": "https://github.com/sheryloe/BloggerGent",
+      "live_url": "",
+      "pages_url": "",
+      "language": "Python",
+      "topics": [],
+      "has_pages": false,
+      "updated_at": "2026-03-15T11:44:03Z",
+      "pushed_at": "2026-03-15T11:44:00Z"
     },
     {
       "name": "Vibe_Cowork_Thinking",
@@ -84,18 +96,6 @@
       "has_pages": true,
       "updated_at": "2026-03-13T12:16:19Z",
       "pushed_at": "2026-03-13T12:16:15Z"
-    },
-    {
-      "name": "donggri_gagyeobu",
-      "description": "FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다.",
-      "repo_url": "https://github.com/sheryloe/donggri_gagyeobu",
-      "live_url": "https://sheryloe.github.io/donggri_gagyeobu/",
-      "pages_url": "https://sheryloe.github.io/donggri_gagyeobu/",
-      "language": "HTML",
-      "topics": [],
-      "has_pages": true,
-      "updated_at": "2026-03-13T12:16:17Z",
-      "pushed_at": "2026-03-13T12:16:14Z"
     },
     {
       "name": "AI_Writer_TISTORY",
