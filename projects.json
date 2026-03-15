@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-03-15T03:17:23.183871Z",
+  "generated_at": "2026-03-15T07:08:11.416809Z",
   "site_url": "https://sheryloe.github.io/",
-  "repository_count": 8,
+  "repository_count": 9,
   "live_pages_count": 8,
   "repositories": [
     {
-      "name": "AutoTrading_ing....-",
-      "description": "도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.",
-      "repo_url": "https://github.com/sheryloe/AutoTrading_ing....-",
-      "live_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
-      "pages_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
+      "name": "BloggerGent",
+      "description": "",
+      "repo_url": "https://github.com/sheryloe/BloggerGent",
+      "live_url": "",
+      "pages_url": "",
       "language": "Python",
       "topics": [],
-      "has_pages": true,
-      "updated_at": "2026-03-14T17:37:56Z",
-      "pushed_at": "2026-03-14T17:37:52Z"
+      "has_pages": false,
+      "updated_at": "2026-03-15T06:41:40Z",
+      "pushed_at": "2026-03-15T06:41:37Z"
     },
     {
       "name": "BloManagent",
@@ -25,8 +25,20 @@
       "language": "TypeScript",
       "topics": [],
       "has_pages": true,
-      "updated_at": "2026-03-14T17:34:39Z",
-      "pushed_at": "2026-03-14T17:34:36Z"
+      "updated_at": "2026-03-15T06:35:30Z",
+      "pushed_at": "2026-03-15T06:35:27Z"
+    },
+    {
+      "name": "AutoTrading_ing....-",
+      "description": "도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.",
+      "repo_url": "https://github.com/sheryloe/AutoTrading_ing....-",
+      "live_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
+      "pages_url": "https://sheryloe.github.io/AutoTrading_ing....-/",
+      "language": "Python",
+      "topics": [],
+      "has_pages": true,
+      "updated_at": "2026-03-15T06:26:25Z",
+      "pushed_at": "2026-03-15T06:26:22Z"
     },
     {
       "name": "Vibe_Cowork_Thinking",

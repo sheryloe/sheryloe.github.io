@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Sheryloe Projects Atom</title>
   <id>https://sheryloe.github.io/feed.xml</id>
-  <updated>2026-03-14T17:37:52Z</updated>
+  <updated>2026-03-15T06:41:37Z</updated>
   <link href="https://sheryloe.github.io/feed.xml" rel="self" />
   <link href="https://sheryloe.github.io/" rel="alternate" />
   <subtitle>Sheryloe 공개 프로젝트 페이지만 모아둔 루트 허브입니다. 상단은 바로 접속 가능한 페이지를 크게 보여주고, 하단은 최근 변경된 공개 저장소만 날짜와 바로가기로 정리합니다.</subtitle>
@@ -10,20 +10,28 @@
     <name>sheryloe</name>
   </author>
   <entry>
-    <title>AutoTrading_ing....-</title>
-    <id>https://github.com/sheryloe/AutoTrading_ing....-</id>
-    <link href="https://sheryloe.github.io/AutoTrading_ing....-/" />
-    <updated>2026-03-14T17:37:52Z</updated>
-    <published>2026-03-04T12:59:41Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;AutoTrading_ing....-&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/AutoTrading_ing....-/&quot;&gt;https://sheryloe.github.io/AutoTrading_ing....-/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/AutoTrading_ing....-&quot;&gt;https://github.com/sheryloe/AutoTrading_ing....-&lt;/a&gt;&lt;/p&gt;</summary>
+    <title>BloggerGent</title>
+    <id>https://github.com/sheryloe/BloggerGent</id>
+    <link href="https://github.com/sheryloe/BloggerGent" />
+    <updated>2026-03-15T06:41:37Z</updated>
+    <published>2026-03-15T05:48:44Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;BloggerGent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;설명이 아직 없는 저장소입니다.&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/BloggerGent&quot;&gt;https://github.com/sheryloe/BloggerGent&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
     <title>BloManagent</title>
     <id>https://github.com/sheryloe/BloManagent</id>
     <link href="https://sheryloe.github.io/BloManagent/" />
-    <updated>2026-03-14T17:34:36Z</updated>
+    <updated>2026-03-15T06:35:27Z</updated>
     <published>2026-03-12T04:59:48Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;BloManagent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/BloManagent/&quot;&gt;https://sheryloe.github.io/BloManagent/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/BloManagent&quot;&gt;https://github.com/sheryloe/BloManagent&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>AutoTrading_ing....-</title>
+    <id>https://github.com/sheryloe/AutoTrading_ing....-</id>
+    <link href="https://sheryloe.github.io/AutoTrading_ing....-/" />
+    <updated>2026-03-15T06:26:22Z</updated>
+    <published>2026-03-04T12:59:41Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;AutoTrading_ing....-&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/AutoTrading_ing....-/&quot;&gt;https://sheryloe.github.io/AutoTrading_ing....-/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/AutoTrading_ing....-&quot;&gt;https://github.com/sheryloe/AutoTrading_ing....-&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
     <title>Vibe_Cowork_Thinking</title>
