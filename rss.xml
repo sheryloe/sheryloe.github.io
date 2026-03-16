@@ -5,13 +5,29 @@
     <link>https://sheryloe.github.io/</link>
     <description>sheryloe의 공개 저장소와 GitHub Pages를 서비스 기준으로 묶어 보여주는 루트 허브입니다. 중앙 위키, RSS, sitemap, 최근 업데이트를 한곳에서 확인할 수 있습니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 16 Mar 2026 12:43:38 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 12:54:26 +0000</lastBuildDate>
     <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>AI_Writer_TISTORY</title>
+    <link>https://sheryloe.github.io/AI_Writer_TISTORY/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/AI_Writer_TISTORY#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 12:54:26 +0000</pubDate>
+    <description><![CDATA[<p><strong>AI_Writer_TISTORY</strong></p><p>티스토리 발행 준비를 위한 AI 초안 생성, 운영 로그, 발행 전 검수 흐름을 다루는 백엔드 프로젝트입니다.</p><p>Live page: <a href="https://sheryloe.github.io/AI_Writer_TISTORY/">https://sheryloe.github.io/AI_Writer_TISTORY/</a></p><p>GitHub: <a href="https://github.com/sheryloe/AI_Writer_TISTORY">https://github.com/sheryloe/AI_Writer_TISTORY</a></p>]]></description>
+    <category>TypeScript</category>
+  </item>
+  <item>
+    <title>AI_BISEO</title>
+    <link>https://sheryloe.github.io/AI_BISEO/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/AI_BISEO#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 12:54:25 +0000</pubDate>
+    <description><![CDATA[<p><strong>AI_BISEO</strong></p><p>AI 비서 응답, Notion 로그, n8n 연동, 블로그 자동화를 하나의 운영 루프로 묶는 개인 AI 운영 서비스입니다.</p><p>Live page: <a href="https://sheryloe.github.io/AI_BISEO/">https://sheryloe.github.io/AI_BISEO/</a></p><p>GitHub: <a href="https://github.com/sheryloe/AI_BISEO">https://github.com/sheryloe/AI_BISEO</a></p>]]></description>
+    <category>TypeScript</category>
+  </item>
   <item>
     <title>Automethemoney</title>
     <link>https://sheryloe.github.io/Automethemoney/</link>
     <guid isPermaLink="false">https://github.com/sheryloe/Automethemoney#2026-03-16</guid>
-    <pubDate>Mon, 16 Mar 2026 12:43:38 +0000</pubDate>
+    <pubDate>Mon, 16 Mar 2026 12:53:20 +0000</pubDate>
     <description><![CDATA[<p><strong>Automethemoney</strong></p><p>자동매매 전략, 일별 손익, 시그널 진단, Supabase 기반 운영 흐름을 다루는 트레이딩 콘솔입니다.</p><p>Live page: <a href="https://sheryloe.github.io/Automethemoney/">https://sheryloe.github.io/Automethemoney/</a></p><p>GitHub: <a href="https://github.com/sheryloe/Automethemoney">https://github.com/sheryloe/Automethemoney</a></p>]]></description>
     <category>Python</category>
   </item>
@@ -74,22 +90,6 @@
     <pubDate>Fri, 13 Mar 2026 12:16:15 +0000</pubDate>
     <description><![CDATA[<p><strong>Favorit</strong></p><p>Windows 바탕화면에서 자주 쓰는 파일과 URL을 위젯처럼 실행하는 데스크톱 런처입니다.</p><p>Live page: <a href="https://sheryloe.github.io/Favorit/">https://sheryloe.github.io/Favorit/</a></p><p>GitHub: <a href="https://github.com/sheryloe/Favorit">https://github.com/sheryloe/Favorit</a></p>]]></description>
     <category>C++</category>
-  </item>
-  <item>
-    <title>AI_Writer_TISTORY</title>
-    <link>https://sheryloe.github.io/AI_Writer_TISTORY/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/AI_Writer_TISTORY#2026-03-13</guid>
-    <pubDate>Fri, 13 Mar 2026 12:16:07 +0000</pubDate>
-    <description><![CDATA[<p><strong>AI_Writer_TISTORY</strong></p><p>티스토리 발행 준비를 위한 AI 초안 생성, 운영 로그, 발행 전 검수 흐름을 다루는 백엔드 프로젝트입니다.</p><p>Live page: <a href="https://sheryloe.github.io/AI_Writer_TISTORY/">https://sheryloe.github.io/AI_Writer_TISTORY/</a></p><p>GitHub: <a href="https://github.com/sheryloe/AI_Writer_TISTORY">https://github.com/sheryloe/AI_Writer_TISTORY</a></p>]]></description>
-    <category>TypeScript</category>
-  </item>
-  <item>
-    <title>AI_BISEO</title>
-    <link>https://sheryloe.github.io/AI_BISEO/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/AI_BISEO#2026-03-13</guid>
-    <pubDate>Fri, 13 Mar 2026 12:16:05 +0000</pubDate>
-    <description><![CDATA[<p><strong>AI_BISEO</strong></p><p>AI 비서 응답, Notion 로그, n8n 연동, 블로그 자동화를 하나의 운영 루프로 묶는 개인 AI 운영 서비스입니다.</p><p>Live page: <a href="https://sheryloe.github.io/AI_BISEO/">https://sheryloe.github.io/AI_BISEO/</a></p><p>GitHub: <a href="https://github.com/sheryloe/AI_BISEO">https://github.com/sheryloe/AI_BISEO</a></p>]]></description>
-    <category>TypeScript</category>
   </item>
   </channel>
 </rss>
