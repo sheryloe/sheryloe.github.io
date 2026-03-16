@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-03-16T03:19:28.245222Z",
+  "generated_at": "2026-03-16T07:41:21.897562Z",
   "site_url": "https://sheryloe.github.io/",
   "repository_count": 10,
   "live_pages_count": 8,
   "repositories": [
     {
-      "name": "donggeuri-cloudflare-blog",
-      "description": "",
-      "repo_url": "https://github.com/sheryloe/donggeuri-cloudflare-blog",
-      "live_url": "",
-      "pages_url": "",
-      "language": "Unknown",
+      "name": "donggri_gagyeobu",
+      "description": "FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다.",
+      "repo_url": "https://github.com/sheryloe/donggri_gagyeobu",
+      "live_url": "https://sheryloe.github.io/donggri_gagyeobu/",
+      "pages_url": "https://sheryloe.github.io/donggri_gagyeobu/",
+      "language": "JavaScript",
       "topics": [],
-      "has_pages": false,
-      "updated_at": "2026-03-16T02:44:15Z",
-      "pushed_at": "2026-03-16T02:44:12Z"
+      "has_pages": true,
+      "updated_at": "2026-03-16T07:32:45Z",
+      "pushed_at": "2026-03-16T07:32:42Z"
     },
     {
       "name": "Automethemoney",
@@ -25,8 +25,20 @@
       "language": "Python",
       "topics": [],
       "has_pages": true,
-      "updated_at": "2026-03-16T01:20:12Z",
-      "pushed_at": "2026-03-16T00:21:41Z"
+      "updated_at": "2026-03-16T07:22:11Z",
+      "pushed_at": "2026-03-16T07:22:07Z"
+    },
+    {
+      "name": "donggeuri-cloudflare-blog",
+      "description": "",
+      "repo_url": "https://github.com/sheryloe/donggeuri-cloudflare-blog",
+      "live_url": "",
+      "pages_url": "",
+      "language": "TypeScript",
+      "topics": [],
+      "has_pages": false,
+      "updated_at": "2026-03-16T06:36:54Z",
+      "pushed_at": "2026-03-16T06:36:51Z"
     },
     {
       "name": "BloggerGent",
@@ -51,18 +63,6 @@
       "has_pages": true,
       "updated_at": "2026-03-15T16:52:02Z",
       "pushed_at": "2026-03-15T16:51:58Z"
-    },
-    {
-      "name": "donggri_gagyeobu",
-      "description": "FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다.",
-      "repo_url": "https://github.com/sheryloe/donggri_gagyeobu",
-      "live_url": "https://sheryloe.github.io/donggri_gagyeobu/",
-      "pages_url": "https://sheryloe.github.io/donggri_gagyeobu/",
-      "language": "JavaScript",
-      "topics": [],
-      "has_pages": true,
-      "updated_at": "2026-03-15T16:06:25Z",
-      "pushed_at": "2026-03-15T16:06:22Z"
     },
     {
       "name": "Vibe_Cowork_Thinking",
