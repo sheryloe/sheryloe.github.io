@@ -2,13 +2,77 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Sheryloe Projects Atom</title>
   <id>https://sheryloe.github.io/feed.xml</id>
-  <updated>2026-03-16T12:54:26Z</updated>
+  <updated>2026-03-16T13:39:40Z</updated>
   <link href="https://sheryloe.github.io/feed.xml" rel="self" />
   <link href="https://sheryloe.github.io/" rel="alternate" />
   <subtitle>sheryloe의 공개 저장소와 GitHub Pages를 서비스 기준으로 묶어 보여주는 루트 허브입니다. 중앙 위키, RSS, sitemap, 최근 업데이트를 한곳에서 확인할 수 있습니다.</subtitle>
   <author>
     <name>sheryloe</name>
   </author>
+  <entry>
+    <title>Automethemoney</title>
+    <id>https://github.com/sheryloe/Automethemoney</id>
+    <link href="https://sheryloe.github.io/Automethemoney/" />
+    <updated>2026-03-16T13:39:40Z</updated>
+    <published>2026-03-04T12:59:41Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Automethemoney&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;자동매매 전략, 일별 손익, 시그널 진단, Supabase 기반 운영 흐름을 다루는 트레이딩 콘솔입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Automethemoney/&quot;&gt;https://sheryloe.github.io/Automethemoney/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Automethemoney&quot;&gt;https://github.com/sheryloe/Automethemoney&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>donggri_gagyeobu</title>
+    <id>https://github.com/sheryloe/donggri_gagyeobu</id>
+    <link href="https://sheryloe.github.io/donggri_gagyeobu/" />
+    <updated>2026-03-16T12:55:10Z</updated>
+    <published>2020-04-06T13:05:43Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;donggri_gagyeobu&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;자산, 카드 결제 예정, 예산, 소비 흐름을 관리하는 개인 재무 서비스입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/donggri_gagyeobu/&quot;&gt;https://sheryloe.github.io/donggri_gagyeobu/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/donggri_gagyeobu&quot;&gt;https://github.com/sheryloe/donggri_gagyeobu&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>Vibe_Cowork_Thinking</title>
+    <id>https://github.com/sheryloe/Vibe_Cowork_Thinking</id>
+    <link href="https://sheryloe.github.io/Vibe_Cowork_Thinking/" />
+    <updated>2026-03-16T12:55:08Z</updated>
+    <published>2020-02-25T14:50:04Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Vibe_Cowork_Thinking&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Runner와 Orchestrator를 분리해 AI 협업 실험을 추적하는 워크스페이스입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Vibe_Cowork_Thinking/&quot;&gt;https://sheryloe.github.io/Vibe_Cowork_Thinking/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Vibe_Cowork_Thinking&quot;&gt;https://github.com/sheryloe/Vibe_Cowork_Thinking&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>grid-crop-image</title>
+    <id>https://github.com/sheryloe/grid-crop-image</id>
+    <link href="https://sheryloe.github.io/grid-crop-image/" />
+    <updated>2026-03-16T12:55:06Z</updated>
+    <published>2026-03-09T01:00:14Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;grid-crop-image&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;스크린샷을 빠르게 자르고 저장 규칙까지 관리하는 Windows 이미지 작업 유틸리티입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/grid-crop-image/&quot;&gt;https://sheryloe.github.io/grid-crop-image/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/grid-crop-image&quot;&gt;https://github.com/sheryloe/grid-crop-image&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>Favorit</title>
+    <id>https://github.com/sheryloe/Favorit</id>
+    <link href="https://sheryloe.github.io/Favorit/" />
+    <updated>2026-03-16T12:55:04Z</updated>
+    <published>2026-03-11T07:21:57Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Favorit&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Windows 바탕화면에서 자주 쓰는 파일과 URL을 위젯처럼 실행하는 데스크톱 런처입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Favorit/&quot;&gt;https://sheryloe.github.io/Favorit/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Favorit&quot;&gt;https://github.com/sheryloe/Favorit&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>donggeuri-cloudflare-blog</title>
+    <id>https://github.com/sheryloe/donggeuri-cloudflare-blog</id>
+    <link href="https://github.com/sheryloe/donggeuri-cloudflare-blog" />
+    <updated>2026-03-16T12:55:03Z</updated>
+    <published>2026-03-16T02:10:55Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;donggeuri-cloudflare-blog&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Public, Admin, API를 분리한 Cloudflare 기반 블로그 플랫폼 워크스페이스입니다.&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/donggeuri-cloudflare-blog&quot;&gt;https://github.com/sheryloe/donggeuri-cloudflare-blog&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>BloManagent</title>
+    <id>https://github.com/sheryloe/BloManagent</id>
+    <link href="https://sheryloe.github.io/BloManagent/" />
+    <updated>2026-03-16T12:55:01Z</updated>
+    <published>2026-03-12T04:59:48Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;BloManagent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;블로그 URL을 수집하고 주간 비교 리포트로 전환하는 분석 대시보드 프로젝트입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/BloManagent/&quot;&gt;https://sheryloe.github.io/BloManagent/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/BloManagent&quot;&gt;https://github.com/sheryloe/BloManagent&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>BloggerGent</title>
+    <id>https://github.com/sheryloe/BloggerGent</id>
+    <link href="https://github.com/sheryloe/BloggerGent" />
+    <updated>2026-03-16T12:54:59Z</updated>
+    <published>2026-03-15T05:48:44Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;BloggerGent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;여러 Blogger 계열 채널을 서비스처럼 운영하기 위한 AI 발행 스튜디오이자 콘텐츠 운영 허브입니다.&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/BloggerGent&quot;&gt;https://github.com/sheryloe/BloggerGent&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
   <entry>
     <title>AI_Writer_TISTORY</title>
     <id>https://github.com/sheryloe/AI_Writer_TISTORY</id>
@@ -24,69 +88,5 @@
     <updated>2026-03-16T12:54:25Z</updated>
     <published>2026-02-23T06:30:33Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;AI_BISEO&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;AI 비서 응답, Notion 로그, n8n 연동, 블로그 자동화를 하나의 운영 루프로 묶는 개인 AI 운영 서비스입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/AI_BISEO/&quot;&gt;https://sheryloe.github.io/AI_BISEO/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/AI_BISEO&quot;&gt;https://github.com/sheryloe/AI_BISEO&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Automethemoney</title>
-    <id>https://github.com/sheryloe/Automethemoney</id>
-    <link href="https://sheryloe.github.io/Automethemoney/" />
-    <updated>2026-03-16T12:53:20Z</updated>
-    <published>2026-03-04T12:59:41Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;Automethemoney&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;자동매매 전략, 일별 손익, 시그널 진단, Supabase 기반 운영 흐름을 다루는 트레이딩 콘솔입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Automethemoney/&quot;&gt;https://sheryloe.github.io/Automethemoney/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Automethemoney&quot;&gt;https://github.com/sheryloe/Automethemoney&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>donggeuri-cloudflare-blog</title>
-    <id>https://github.com/sheryloe/donggeuri-cloudflare-blog</id>
-    <link href="https://github.com/sheryloe/donggeuri-cloudflare-blog" />
-    <updated>2026-03-16T08:30:43Z</updated>
-    <published>2026-03-16T02:10:55Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;donggeuri-cloudflare-blog&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Public, Admin, API를 분리한 Cloudflare 기반 블로그 플랫폼 워크스페이스입니다.&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/donggeuri-cloudflare-blog&quot;&gt;https://github.com/sheryloe/donggeuri-cloudflare-blog&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>donggri_gagyeobu</title>
-    <id>https://github.com/sheryloe/donggri_gagyeobu</id>
-    <link href="https://sheryloe.github.io/donggri_gagyeobu/" />
-    <updated>2026-03-16T07:47:09Z</updated>
-    <published>2020-04-06T13:05:43Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;donggri_gagyeobu&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;자산, 카드 결제 예정, 예산, 소비 흐름을 관리하는 개인 재무 서비스입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/donggri_gagyeobu/&quot;&gt;https://sheryloe.github.io/donggri_gagyeobu/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/donggri_gagyeobu&quot;&gt;https://github.com/sheryloe/donggri_gagyeobu&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>BloggerGent</title>
-    <id>https://github.com/sheryloe/BloggerGent</id>
-    <link href="https://github.com/sheryloe/BloggerGent" />
-    <updated>2026-03-15T17:06:17Z</updated>
-    <published>2026-03-15T05:48:44Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;BloggerGent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;여러 Blogger 계열 채널을 서비스처럼 운영하기 위한 AI 발행 스튜디오이자 콘텐츠 운영 허브입니다.&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/BloggerGent&quot;&gt;https://github.com/sheryloe/BloggerGent&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>BloManagent</title>
-    <id>https://github.com/sheryloe/BloManagent</id>
-    <link href="https://sheryloe.github.io/BloManagent/" />
-    <updated>2026-03-15T16:51:58Z</updated>
-    <published>2026-03-12T04:59:48Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;BloManagent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;블로그 URL을 수집하고 주간 비교 리포트로 전환하는 분석 대시보드 프로젝트입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/BloManagent/&quot;&gt;https://sheryloe.github.io/BloManagent/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/BloManagent&quot;&gt;https://github.com/sheryloe/BloManagent&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Vibe_Cowork_Thinking</title>
-    <id>https://github.com/sheryloe/Vibe_Cowork_Thinking</id>
-    <link href="https://sheryloe.github.io/Vibe_Cowork_Thinking/" />
-    <updated>2026-03-13T12:16:21Z</updated>
-    <published>2020-02-25T14:50:04Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;Vibe_Cowork_Thinking&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Runner와 Orchestrator를 분리해 AI 협업 실험을 추적하는 워크스페이스입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Vibe_Cowork_Thinking/&quot;&gt;https://sheryloe.github.io/Vibe_Cowork_Thinking/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Vibe_Cowork_Thinking&quot;&gt;https://github.com/sheryloe/Vibe_Cowork_Thinking&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>grid-crop-image</title>
-    <id>https://github.com/sheryloe/grid-crop-image</id>
-    <link href="https://sheryloe.github.io/grid-crop-image/" />
-    <updated>2026-03-13T12:16:18Z</updated>
-    <published>2026-03-09T01:00:14Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;grid-crop-image&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;스크린샷을 빠르게 자르고 저장 규칙까지 관리하는 Windows 이미지 작업 유틸리티입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/grid-crop-image/&quot;&gt;https://sheryloe.github.io/grid-crop-image/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/grid-crop-image&quot;&gt;https://github.com/sheryloe/grid-crop-image&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Favorit</title>
-    <id>https://github.com/sheryloe/Favorit</id>
-    <link href="https://sheryloe.github.io/Favorit/" />
-    <updated>2026-03-13T12:16:15Z</updated>
-    <published>2026-03-11T07:21:57Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;Favorit&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Windows 바탕화면에서 자주 쓰는 파일과 URL을 위젯처럼 실행하는 데스크톱 런처입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Favorit/&quot;&gt;https://sheryloe.github.io/Favorit/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Favorit&quot;&gt;https://github.com/sheryloe/Favorit&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
 </feed>

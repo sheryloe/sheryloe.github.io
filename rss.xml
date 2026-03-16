@@ -5,8 +5,76 @@
     <link>https://sheryloe.github.io/</link>
     <description>sheryloe의 공개 저장소와 GitHub Pages를 서비스 기준으로 묶어 보여주는 루트 허브입니다. 중앙 위키, RSS, sitemap, 최근 업데이트를 한곳에서 확인할 수 있습니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 16 Mar 2026 12:54:26 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 13:39:40 +0000</lastBuildDate>
     <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Automethemoney</title>
+    <link>https://sheryloe.github.io/Automethemoney/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/Automethemoney#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 13:39:40 +0000</pubDate>
+    <description><![CDATA[<p><strong>Automethemoney</strong></p><p>자동매매 전략, 일별 손익, 시그널 진단, Supabase 기반 운영 흐름을 다루는 트레이딩 콘솔입니다.</p><p>Live page: <a href="https://sheryloe.github.io/Automethemoney/">https://sheryloe.github.io/Automethemoney/</a></p><p>GitHub: <a href="https://github.com/sheryloe/Automethemoney">https://github.com/sheryloe/Automethemoney</a></p>]]></description>
+    <category>Python</category>
+  </item>
+  <item>
+    <title>donggri_gagyeobu</title>
+    <link>https://sheryloe.github.io/donggri_gagyeobu/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/donggri_gagyeobu#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 12:55:10 +0000</pubDate>
+    <description><![CDATA[<p><strong>donggri_gagyeobu</strong></p><p>자산, 카드 결제 예정, 예산, 소비 흐름을 관리하는 개인 재무 서비스입니다.</p><p>Live page: <a href="https://sheryloe.github.io/donggri_gagyeobu/">https://sheryloe.github.io/donggri_gagyeobu/</a></p><p>GitHub: <a href="https://github.com/sheryloe/donggri_gagyeobu">https://github.com/sheryloe/donggri_gagyeobu</a></p>]]></description>
+    <category>JavaScript</category>
+  </item>
+  <item>
+    <title>Vibe_Cowork_Thinking</title>
+    <link>https://sheryloe.github.io/Vibe_Cowork_Thinking/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/Vibe_Cowork_Thinking#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 12:55:08 +0000</pubDate>
+    <description><![CDATA[<p><strong>Vibe_Cowork_Thinking</strong></p><p>Runner와 Orchestrator를 분리해 AI 협업 실험을 추적하는 워크스페이스입니다.</p><p>Live page: <a href="https://sheryloe.github.io/Vibe_Cowork_Thinking/">https://sheryloe.github.io/Vibe_Cowork_Thinking/</a></p><p>GitHub: <a href="https://github.com/sheryloe/Vibe_Cowork_Thinking">https://github.com/sheryloe/Vibe_Cowork_Thinking</a></p>]]></description>
+    <category>Python</category>
+  </item>
+  <item>
+    <title>grid-crop-image</title>
+    <link>https://sheryloe.github.io/grid-crop-image/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/grid-crop-image#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 12:55:06 +0000</pubDate>
+    <description><![CDATA[<p><strong>grid-crop-image</strong></p><p>스크린샷을 빠르게 자르고 저장 규칙까지 관리하는 Windows 이미지 작업 유틸리티입니다.</p><p>Live page: <a href="https://sheryloe.github.io/grid-crop-image/">https://sheryloe.github.io/grid-crop-image/</a></p><p>GitHub: <a href="https://github.com/sheryloe/grid-crop-image">https://github.com/sheryloe/grid-crop-image</a></p>]]></description>
+    <category>Python</category>
+    <category>desktop-app</category>
+    <category>image-cropping</category>
+    <category>image-proceesing</category>
+    <category>pillow</category>
+  </item>
+  <item>
+    <title>Favorit</title>
+    <link>https://sheryloe.github.io/Favorit/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/Favorit#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 12:55:04 +0000</pubDate>
+    <description><![CDATA[<p><strong>Favorit</strong></p><p>Windows 바탕화면에서 자주 쓰는 파일과 URL을 위젯처럼 실행하는 데스크톱 런처입니다.</p><p>Live page: <a href="https://sheryloe.github.io/Favorit/">https://sheryloe.github.io/Favorit/</a></p><p>GitHub: <a href="https://github.com/sheryloe/Favorit">https://github.com/sheryloe/Favorit</a></p>]]></description>
+    <category>C++</category>
+  </item>
+  <item>
+    <title>donggeuri-cloudflare-blog</title>
+    <link>https://github.com/sheryloe/donggeuri-cloudflare-blog</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/donggeuri-cloudflare-blog#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 12:55:03 +0000</pubDate>
+    <description><![CDATA[<p><strong>donggeuri-cloudflare-blog</strong></p><p>Public, Admin, API를 분리한 Cloudflare 기반 블로그 플랫폼 워크스페이스입니다.</p><p>GitHub: <a href="https://github.com/sheryloe/donggeuri-cloudflare-blog">https://github.com/sheryloe/donggeuri-cloudflare-blog</a></p>]]></description>
+    <category>TypeScript</category>
+  </item>
+  <item>
+    <title>BloManagent</title>
+    <link>https://sheryloe.github.io/BloManagent/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/BloManagent#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 12:55:01 +0000</pubDate>
+    <description><![CDATA[<p><strong>BloManagent</strong></p><p>블로그 URL을 수집하고 주간 비교 리포트로 전환하는 분석 대시보드 프로젝트입니다.</p><p>Live page: <a href="https://sheryloe.github.io/BloManagent/">https://sheryloe.github.io/BloManagent/</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloManagent">https://github.com/sheryloe/BloManagent</a></p>]]></description>
+    <category>TypeScript</category>
+  </item>
+  <item>
+    <title>BloggerGent</title>
+    <link>https://github.com/sheryloe/BloggerGent</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/BloggerGent#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 12:54:59 +0000</pubDate>
+    <description><![CDATA[<p><strong>BloggerGent</strong></p><p>여러 Blogger 계열 채널을 서비스처럼 운영하기 위한 AI 발행 스튜디오이자 콘텐츠 운영 허브입니다.</p><p>GitHub: <a href="https://github.com/sheryloe/BloggerGent">https://github.com/sheryloe/BloggerGent</a></p>]]></description>
+    <category>Python</category>
+  </item>
   <item>
     <title>AI_Writer_TISTORY</title>
     <link>https://sheryloe.github.io/AI_Writer_TISTORY/</link>
@@ -22,74 +90,6 @@
     <pubDate>Mon, 16 Mar 2026 12:54:25 +0000</pubDate>
     <description><![CDATA[<p><strong>AI_BISEO</strong></p><p>AI 비서 응답, Notion 로그, n8n 연동, 블로그 자동화를 하나의 운영 루프로 묶는 개인 AI 운영 서비스입니다.</p><p>Live page: <a href="https://sheryloe.github.io/AI_BISEO/">https://sheryloe.github.io/AI_BISEO/</a></p><p>GitHub: <a href="https://github.com/sheryloe/AI_BISEO">https://github.com/sheryloe/AI_BISEO</a></p>]]></description>
     <category>TypeScript</category>
-  </item>
-  <item>
-    <title>Automethemoney</title>
-    <link>https://sheryloe.github.io/Automethemoney/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/Automethemoney#2026-03-16</guid>
-    <pubDate>Mon, 16 Mar 2026 12:53:20 +0000</pubDate>
-    <description><![CDATA[<p><strong>Automethemoney</strong></p><p>자동매매 전략, 일별 손익, 시그널 진단, Supabase 기반 운영 흐름을 다루는 트레이딩 콘솔입니다.</p><p>Live page: <a href="https://sheryloe.github.io/Automethemoney/">https://sheryloe.github.io/Automethemoney/</a></p><p>GitHub: <a href="https://github.com/sheryloe/Automethemoney">https://github.com/sheryloe/Automethemoney</a></p>]]></description>
-    <category>Python</category>
-  </item>
-  <item>
-    <title>donggeuri-cloudflare-blog</title>
-    <link>https://github.com/sheryloe/donggeuri-cloudflare-blog</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/donggeuri-cloudflare-blog#2026-03-16</guid>
-    <pubDate>Mon, 16 Mar 2026 08:30:43 +0000</pubDate>
-    <description><![CDATA[<p><strong>donggeuri-cloudflare-blog</strong></p><p>Public, Admin, API를 분리한 Cloudflare 기반 블로그 플랫폼 워크스페이스입니다.</p><p>GitHub: <a href="https://github.com/sheryloe/donggeuri-cloudflare-blog">https://github.com/sheryloe/donggeuri-cloudflare-blog</a></p>]]></description>
-    <category>TypeScript</category>
-  </item>
-  <item>
-    <title>donggri_gagyeobu</title>
-    <link>https://sheryloe.github.io/donggri_gagyeobu/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/donggri_gagyeobu#2026-03-16</guid>
-    <pubDate>Mon, 16 Mar 2026 07:47:09 +0000</pubDate>
-    <description><![CDATA[<p><strong>donggri_gagyeobu</strong></p><p>자산, 카드 결제 예정, 예산, 소비 흐름을 관리하는 개인 재무 서비스입니다.</p><p>Live page: <a href="https://sheryloe.github.io/donggri_gagyeobu/">https://sheryloe.github.io/donggri_gagyeobu/</a></p><p>GitHub: <a href="https://github.com/sheryloe/donggri_gagyeobu">https://github.com/sheryloe/donggri_gagyeobu</a></p>]]></description>
-    <category>JavaScript</category>
-  </item>
-  <item>
-    <title>BloggerGent</title>
-    <link>https://github.com/sheryloe/BloggerGent</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/BloggerGent#2026-03-15</guid>
-    <pubDate>Sun, 15 Mar 2026 17:06:17 +0000</pubDate>
-    <description><![CDATA[<p><strong>BloggerGent</strong></p><p>여러 Blogger 계열 채널을 서비스처럼 운영하기 위한 AI 발행 스튜디오이자 콘텐츠 운영 허브입니다.</p><p>GitHub: <a href="https://github.com/sheryloe/BloggerGent">https://github.com/sheryloe/BloggerGent</a></p>]]></description>
-    <category>Python</category>
-  </item>
-  <item>
-    <title>BloManagent</title>
-    <link>https://sheryloe.github.io/BloManagent/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/BloManagent#2026-03-15</guid>
-    <pubDate>Sun, 15 Mar 2026 16:51:58 +0000</pubDate>
-    <description><![CDATA[<p><strong>BloManagent</strong></p><p>블로그 URL을 수집하고 주간 비교 리포트로 전환하는 분석 대시보드 프로젝트입니다.</p><p>Live page: <a href="https://sheryloe.github.io/BloManagent/">https://sheryloe.github.io/BloManagent/</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloManagent">https://github.com/sheryloe/BloManagent</a></p>]]></description>
-    <category>TypeScript</category>
-  </item>
-  <item>
-    <title>Vibe_Cowork_Thinking</title>
-    <link>https://sheryloe.github.io/Vibe_Cowork_Thinking/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/Vibe_Cowork_Thinking#2026-03-13</guid>
-    <pubDate>Fri, 13 Mar 2026 12:16:21 +0000</pubDate>
-    <description><![CDATA[<p><strong>Vibe_Cowork_Thinking</strong></p><p>Runner와 Orchestrator를 분리해 AI 협업 실험을 추적하는 워크스페이스입니다.</p><p>Live page: <a href="https://sheryloe.github.io/Vibe_Cowork_Thinking/">https://sheryloe.github.io/Vibe_Cowork_Thinking/</a></p><p>GitHub: <a href="https://github.com/sheryloe/Vibe_Cowork_Thinking">https://github.com/sheryloe/Vibe_Cowork_Thinking</a></p>]]></description>
-    <category>Python</category>
-  </item>
-  <item>
-    <title>grid-crop-image</title>
-    <link>https://sheryloe.github.io/grid-crop-image/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/grid-crop-image#2026-03-13</guid>
-    <pubDate>Fri, 13 Mar 2026 12:16:18 +0000</pubDate>
-    <description><![CDATA[<p><strong>grid-crop-image</strong></p><p>스크린샷을 빠르게 자르고 저장 규칙까지 관리하는 Windows 이미지 작업 유틸리티입니다.</p><p>Live page: <a href="https://sheryloe.github.io/grid-crop-image/">https://sheryloe.github.io/grid-crop-image/</a></p><p>GitHub: <a href="https://github.com/sheryloe/grid-crop-image">https://github.com/sheryloe/grid-crop-image</a></p>]]></description>
-    <category>Python</category>
-    <category>desktop-app</category>
-    <category>image-cropping</category>
-    <category>image-proceesing</category>
-    <category>pillow</category>
-  </item>
-  <item>
-    <title>Favorit</title>
-    <link>https://sheryloe.github.io/Favorit/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/Favorit#2026-03-13</guid>
-    <pubDate>Fri, 13 Mar 2026 12:16:15 +0000</pubDate>
-    <description><![CDATA[<p><strong>Favorit</strong></p><p>Windows 바탕화면에서 자주 쓰는 파일과 URL을 위젯처럼 실행하는 데스크톱 런처입니다.</p><p>Live page: <a href="https://sheryloe.github.io/Favorit/">https://sheryloe.github.io/Favorit/</a></p><p>GitHub: <a href="https://github.com/sheryloe/Favorit">https://github.com/sheryloe/Favorit</a></p>]]></description>
-    <category>C++</category>
   </item>
   </channel>
 </rss>
