@@ -28,8 +28,6 @@
   <style>
     :root {
       --bg: #eef2f6;
-      --paper: rgba(255, 255, 255, 0.92);
-      --paper-strong: #ffffff;
       --text: #0f1726;
       --muted: #5c6675;
       --line: rgba(15, 23, 38, 0.1);
@@ -42,21 +40,14 @@
       --teal: #176b66;
       --shadow: 0 24px 80px rgba(17, 27, 45, 0.08);
       --radius-xl: 32px;
-      --radius-lg: 24px;
-      --radius-md: 18px;
       --content: 1180px;
       --display-font: "Fraunces", "Noto Serif KR", serif;
       --heading-font: "Noto Serif KR", "Fraunces", serif;
       --body-font: "IBM Plex Sans KR", "Aptos", "Segoe UI Variable Text", "Noto Sans KR", "Malgun Gothic", sans-serif;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -65,29 +56,20 @@
       letter-spacing: -0.012em;
       color: var(--text);
       line-height: 1.65;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       background:
         radial-gradient(circle at top left, rgba(13, 99, 255, 0.12), transparent 28rem),
         radial-gradient(circle at bottom right, rgba(240, 140, 51, 0.14), transparent 30rem),
         linear-gradient(180deg, #f7f9fc 0%, var(--bg) 56%, #e9eef3 100%);
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
     .wrap {
       width: min(calc(100% - 32px), var(--content));
       margin: 0 auto;
     }
 
-    .hero,
-    .section {
-      padding-bottom: 24px;
-    }
+    .hero, .section { padding-bottom: 24px; }
 
     .topbar {
       display: flex;
@@ -119,7 +101,8 @@
     .hero-actions,
     .hero-badges,
     .card-actions,
-    .repo-links {
+    .repo-links,
+    .wiki-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -127,8 +110,8 @@
 
     .nav a,
     .button,
-    .repo-links a {
-      font-family: var(--body-font);
+    .repo-links a,
+    .wiki-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -139,12 +122,12 @@
       background: rgba(255, 255, 255, 0.84);
       font-size: 0.94rem;
       font-weight: 600;
-      letter-spacing: -0.01em;
       box-shadow: 0 8px 24px rgba(17, 24, 39, 0.04);
     }
 
     .button.primary,
-    .repo-links a:first-child {
+    .repo-links a:first-child,
+    .wiki-link.primary {
       background: var(--accent);
       border-color: var(--accent);
       color: #fff;
@@ -165,17 +148,9 @@
       padding: 30px;
     }
 
-    .hero-copy,
-    .hero-panel {
-      border-radius: 28px;
-    }
-
-    .hero-copy {
-      padding: 10px 6px 6px;
-    }
-
     .hero-panel {
       padding: 22px;
+      border-radius: 28px;
       background:
         linear-gradient(160deg, rgba(9, 36, 77, 0.96), rgba(17, 52, 101, 0.92)),
         var(--accent-deep);
@@ -187,8 +162,8 @@
     .hero-panel-label,
     .card-tag,
     .section-kicker,
-    .pill {
-      font-family: var(--body-font);
+    .pill,
+    .wiki-card span {
       display: inline-flex;
       align-items: center;
       min-height: 34px;
@@ -201,14 +176,18 @@
     }
 
     .eyebrow,
-    .section-kicker {
+    .section-kicker,
+    .wiki-card span {
       color: var(--accent);
       background: var(--accent-soft);
     }
 
-    h1,
-    h2,
-    h3 {
+    .hero-panel-label {
+      color: #9fc0ff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    h1, h2, h3 {
       margin: 0;
       font-family: var(--heading-font);
       letter-spacing: -0.045em;
@@ -244,7 +223,8 @@
     .hero-note,
     .quick-item span,
     .repo-main span,
-    .footer-copy {
+    .footer-copy,
+    .wiki-card p {
       color: var(--muted);
       margin: 0;
     }
@@ -254,26 +234,15 @@
       font-size: 1.12rem;
       font-weight: 500;
       line-height: 1.82;
-      letter-spacing: -0.016em;
     }
 
-    .hero-actions {
-      margin-top: 24px;
-    }
-
-    .hero-badges {
-      margin-top: 18px;
-    }
+    .hero-actions { margin-top: 24px; }
+    .hero-badges { margin-top: 18px; }
 
     .pill {
       background: rgba(255, 255, 255, 0.72);
       border: 1px solid rgba(15, 23, 38, 0.08);
       color: var(--accent-deep);
-    }
-
-    .hero-panel-label {
-      color: #9fc0ff;
-      background: rgba(255, 255, 255, 0.08);
     }
 
     .hero-stat {
@@ -288,7 +257,6 @@
     .hero-stat span {
       color: rgba(243, 247, 255, 0.72);
       font-size: 13px;
-      letter-spacing: 0.01em;
     }
 
     .hero-stat strong {
@@ -296,7 +264,6 @@
       font-size: 28px;
       font-weight: 720;
       letter-spacing: -0.05em;
-      font-variation-settings: "SOFT" 90;
     }
 
     .hero-note {
@@ -306,9 +273,7 @@
       line-height: 1.72;
     }
 
-    .section-shell {
-      padding: 28px;
-    }
+    .section-shell { padding: 28px; }
 
     .section-head {
       display: flex;
@@ -318,22 +283,22 @@
       margin-bottom: 22px;
     }
 
-    .section-kicker {
-      margin: 0 0 10px;
-    }
+    .section-kicker { margin: 0 0 10px; }
 
     .section-copy {
-      max-width: 420px;
+      max-width: 460px;
       font-size: 0.98rem;
       line-height: 1.72;
     }
 
+    .wiki-grid,
     .page-grid {
       display: grid;
       grid-template-columns: repeat(12, minmax(0, 1fr));
       gap: 16px;
     }
 
+    .wiki-card,
     .page-card,
     .quick-sheet,
     .repo-row {
@@ -342,28 +307,30 @@
       background: rgba(255, 255, 255, 0.86);
     }
 
+    .wiki-card,
     .page-card {
-      grid-column: span 4;
       padding: 24px;
       display: grid;
-      align-content: space-between;
       gap: 14px;
-      min-height: 248px;
+      align-content: space-between;
     }
 
-    .page-card p {
+    .wiki-card { grid-column: span 4; min-height: 230px; }
+    .page-card { grid-column: span 4; min-height: 248px; }
+    .page-card--hero { grid-column: span 7; min-height: 320px; }
+    .page-card--wide { grid-column: span 7; }
+    .wiki-card--wide { grid-column: span 6; min-height: 230px; }
+
+    .wiki-card--wide {
+      background:
+        linear-gradient(160deg, rgba(13, 99, 255, 0.12), rgba(255, 255, 255, 0.94) 56%),
+        #fff;
+    }
+
+    .page-card p,
+    .wiki-card p {
       font-size: 0.98rem;
       line-height: 1.74;
-      letter-spacing: -0.012em;
-    }
-
-    .page-card--hero {
-      grid-column: span 7;
-      min-height: 320px;
-    }
-
-    .page-card--wide {
-      grid-column: span 7;
     }
 
     .card-tag {
@@ -405,13 +372,8 @@
         #fff;
     }
 
-    .quick-head {
-      margin-bottom: 14px;
-    }
-
-    .quick-head .section-kicker {
-      margin-bottom: 8px;
-    }
+    .quick-head { margin-bottom: 14px; }
+    .quick-head .section-kicker { margin-bottom: 8px; }
 
     .quick-item {
       display: grid;
@@ -420,18 +382,12 @@
       border-top: 1px solid var(--line);
     }
 
-    .quick-item:first-of-type {
-      border-top: 0;
-    }
+    .quick-item:first-of-type { border-top: 0; }
 
     .quick-item strong {
       font-size: 1.02rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-    }
-
-    .quick-item span {
-      font-size: 0.93rem;
     }
 
     .repo-list {
@@ -456,7 +412,6 @@
     .repo-main strong {
       font-size: 1rem;
       font-weight: 700;
-      letter-spacing: -0.02em;
     }
 
     .repo-row time {
@@ -465,9 +420,7 @@
       font-weight: 500;
     }
 
-    footer {
-      padding-bottom: 42px;
-    }
+    footer { padding-bottom: 42px; }
 
     .footer-shell {
       padding: 24px 28px;
@@ -480,24 +433,14 @@
       gap: 18px;
     }
 
-    .footer-shell a {
-      color: #fff;
-    }
+    .footer-shell a { color: #fff; }
 
     @media (max-width: 1080px) {
-      .hero-shell {
-        grid-template-columns: 1fr;
-      }
-
-      .section-head {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .section-copy {
-        max-width: none;
-      }
-
+      .hero-shell { grid-template-columns: 1fr; }
+      .section-head { flex-direction: column; align-items: flex-start; }
+      .section-copy { max-width: none; }
+      .wiki-card,
+      .wiki-card--wide,
       .page-card--hero,
       .page-card--wide,
       .page-card,
@@ -507,38 +450,15 @@
     }
 
     @media (max-width: 760px) {
-      .wrap {
-        width: min(100% - 18px, 100%);
-      }
-
-      .topbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav {
-        width: 100%;
-      }
-
-      .nav a,
-      .button {
-        flex: 1 1 0;
-      }
-
-      .hero-shell,
-      .section-shell,
-      .footer-shell {
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 38px;
-      }
-
-      .page-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .wrap { width: min(100% - 18px, 100%); }
+      .topbar { flex-direction: column; align-items: flex-start; }
+      .nav { width: 100%; }
+      .nav a, .button { flex: 1 1 0; }
+      .hero-shell, .section-shell, .footer-shell { padding: 20px; }
+      h1 { font-size: 38px; }
+      .wiki-grid, .page-grid { grid-template-columns: 1fr; }
+      .wiki-card,
+      .wiki-card--wide,
       .page-card--hero,
       .page-card--wide,
       .page-card,
@@ -546,18 +466,9 @@
         grid-column: auto;
         min-height: 0;
       }
-
-      .repo-row {
-        grid-template-columns: 1fr;
-      }
-
-      .repo-links {
-        width: 100%;
-      }
-
-      .repo-links a {
-        flex: 1 1 0;
-      }
+      .repo-row { grid-template-columns: 1fr; }
+      .repo-links { width: 100%; }
+      .repo-links a { flex: 1 1 0; }
     }
   </style>
   <script type="application/ld+json">
@@ -572,10 +483,10 @@ __SCHEMA_JSON__
           <span class="brand-dot" aria-hidden="true"></span>
           <span>__SITE_NAME__</span>
         </div>
-        <nav class="nav" aria-label="바로가기">
+        <nav class="nav" aria-label="주요 바로가기">
           <a href="__GITHUB_PROFILE__">GitHub</a>
+          <a href="__SITE_URL__wiki/">Central Wiki</a>
           <a href="__SITE_URL__rss.xml">RSS</a>
-          <a href="__SITE_URL__feed.xml">Atom</a>
           <a href="__SITE_URL__sitemap.xml">Sitemap</a>
         </nav>
       </div>
@@ -583,42 +494,84 @@ __SCHEMA_JSON__
       <section class="hero-shell" aria-labelledby="hero-title">
         <div class="hero-copy">
           <span class="eyebrow">Public Project Hub</span>
-          <h1 id="hero-title">공개 프로젝트만 바로 보이게 정리한 허브</h1>
+          <h1 id="hero-title">공개 프로젝트와 중앙 위키를 한곳에서 보는 루트 허브</h1>
           <p class="lead">__DESCRIPTION__</p>
           <div class="hero-actions">
-            <a class="button primary" href="#direct-access">프로젝트 페이지 보기</a>
-            <a class="button" href="#recent-updates">최근 변경 저장소</a>
-            <a class="button" href="__SITE_URL__rss.xml">RSS 구독</a>
+            <a class="button primary" href="__SITE_URL__wiki/">중앙 위키 보기</a>
+            <a class="button" href="#direct-access">프로젝트 페이지 보기</a>
+            <a class="button" href="#recent-updates">최근 업데이트</a>
             <a class="button" href="__GITHUB_PROFILE__">GitHub 프로필</a>
           </div>
           <div class="hero-badges">
             <span class="pill">__LIVE_PAGE_COUNT__ public project pages</span>
             <span class="pill">updated __LATEST_PUSH_LABEL__</span>
-            <span class="pill">private repositories hidden</span>
+            <span class="pill">public repositories only</span>
           </div>
         </div>
 
         <aside class="hero-panel">
           <p class="hero-panel-label">Page Guide</p>
           <div class="hero-stat">
-            <span>바로 접속 가능한 프로젝트</span>
+            <span>바로 접속 가능한 프로젝트 페이지</span>
             <strong>__LIVE_PAGE_COUNT__</strong>
           </div>
           <div class="hero-stat">
-            <span>최근 변경 표시 기준</span>
+            <span>최근 변경 기준일</span>
             <strong>__LATEST_PUSH_SHORT__</strong>
           </div>
           <div class="hero-stat">
-            <span>루트 피드</span>
-            <strong>RSS + Atom</strong>
+            <span>중앙 문서 허브</span>
+            <strong>Wiki + RSS</strong>
           </div>
-          <p class="hero-note">상단은 실제로 들어가 볼 페이지를 강조하고, 하단은 최근 변경된 공개 저장소만 날짜와 바로가기로 얇게 보여줍니다.</p>
+          <p class="hero-note">루트 허브에서는 서비스 성격이 분명한 프로젝트를 먼저 보여주고, 중앙 위키에서 레포별 정리와 날짜별 작업 기록, 다음 TODO를 이어서 볼 수 있게 구성했습니다.</p>
         </aside>
       </section>
     </div>
   </header>
 
   <main>
+    <section class="section" id="wiki-center">
+      <div class="wrap">
+        <div class="section-shell">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Central Wiki</p>
+              <h2>서비스 문서와 로드맵을 중앙에서 정리한 위키</h2>
+            </div>
+            <p class="section-copy">루트 허브에서 바로 중앙 위키로 이동해 저장소 역할, 날짜별 DO, 보안과 기능 TODO를 확인할 수 있도록 연결했습니다.</p>
+          </div>
+
+          <div class="wiki-grid">
+            <article class="wiki-card wiki-card--wide">
+              <span>Hub</span>
+              <h3>Central Wiki Landing</h3>
+              <p>서비스 맵, 날짜별 DO, 서비스 TODO, 레포별 wiki 링크를 한 페이지에서 확인할 수 있는 중앙 인덱스입니다.</p>
+              <div class="wiki-actions">
+                <a class="wiki-link primary" href="__SITE_URL__wiki/">Pages 보기</a>
+                <a class="wiki-link" href="__WIKI_REPO_URL__">GitHub 문서 폴더</a>
+              </div>
+            </article>
+            <article class="wiki-card">
+              <span>Map</span>
+              <h3>Repository Service Map</h3>
+              <p>각 저장소의 역할과 서비스화 방향, 다음 개선 포인트를 묶은 중앙 문서입니다.</p>
+              <div class="wiki-actions">
+                <a class="wiki-link primary" href="__SITE_URL__wiki/">위키에서 보기</a>
+              </div>
+            </article>
+            <article class="wiki-card">
+              <span>Backlog</span>
+              <h3>Timeline DO + Service TODO</h3>
+              <p>최근 완료 작업과 다음 보안, 기능, 운영 TODO를 중앙 허브에서 이어서 볼 수 있게 구성했습니다.</p>
+              <div class="wiki-actions">
+                <a class="wiki-link primary" href="__SITE_URL__wiki/">위키에서 보기</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="direct-access">
       <div class="wrap">
         <div class="section-shell">
@@ -627,7 +580,7 @@ __SCHEMA_JSON__
               <p class="section-kicker">Direct Access</p>
               <h2>바로 접속 가능한 프로젝트 페이지</h2>
             </div>
-            <p class="section-copy">모든 카드를 같은 크기로 두지 않고, 사용자용 툴과 운영형 프로젝트를 가중치에 따라 다르게 배치했습니다.</p>
+            <p class="section-copy">Automethemoney와 donggri_gagyeobu처럼 서비스 방향이 분명한 프로젝트를 앞에 두고, 나머지 페이지도 주제에 맞는 톤으로 연결했습니다.</p>
           </div>
 
           <div class="page-grid">
@@ -635,8 +588,12 @@ __DIRECT_CARDS__
             <aside class="quick-sheet">
               <div class="quick-head">
                 <p class="section-kicker">Quick Rail</p>
-                <h3>운영형 / 실험형 페이지</h3>
+                <h3>운영용 빠른 링크</h3>
               </div>
+              <a class="quick-item" href="__SITE_URL__wiki/">
+                <strong>Central Wiki</strong>
+                <span>서비스 맵, 날짜별 DO, 레포별 TODO를 모아둔 문서 허브</span>
+              </a>
 __QUICK_LINKS__
             </aside>
           </div>
@@ -652,7 +609,7 @@ __QUICK_LINKS__
               <p class="section-kicker">Recent Updates</p>
               <h2>최근 변경된 공개 저장소</h2>
             </div>
-            <p class="section-copy">중복 설명은 빼고, 저장소명과 업데이트 날짜, 바로가기만 보이도록 정리했습니다.</p>
+            <p class="section-copy">최근 푸시 기준으로 정렬해 루트 허브에서 바로 프로젝트 페이지나 저장소로 이동할 수 있게 정리했습니다.</p>
           </div>
 
           <div class="repo-list">
@@ -668,9 +625,10 @@ __RECENT_ROWS__
       <div class="footer-shell">
         <div>
           <strong>__SITE_NAME__</strong>
-          <p class="footer-copy">공개 프로젝트 페이지 허브, RSS/Atom 피드, sitemap 자동 갱신 구조</p>
+          <p class="footer-copy">공개 프로젝트 허브, 중앙 위키 랜딩, RSS/Atom 피드, sitemap 자동 갱신 구조</p>
         </div>
         <div>
+          <a href="__SITE_URL__wiki/">Central Wiki</a><br>
           <a href="__SITE_URL__rss.xml">RSS</a><br>
           <a href="__SITE_URL__feed.xml">Atom</a><br>
           <a href="__SITE_URL__sitemap.xml">Sitemap</a>

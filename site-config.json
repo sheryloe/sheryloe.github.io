@@ -1,44 +1,51 @@
 {
   "username": "sheryloe",
   "site_name": "Sheryloe Projects",
-  "site_title": "Sheryloe Projects | GitHub Pages 루트 허브, RSS, Sitemap",
+  "site_title": "Sheryloe Projects | 공개 프로젝트 허브와 중앙 위키",
   "site_url": "https://sheryloe.github.io/",
   "github_profile": "https://github.com/sheryloe",
-  "description": "Sheryloe 공개 프로젝트 페이지만 모아둔 루트 허브입니다. 상단은 바로 접속 가능한 페이지를 크게 보여주고, 하단은 최근 변경된 공개 저장소만 날짜와 바로가기로 정리합니다.",
+  "wiki_repo_url": "https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki",
+  "description": "sheryloe의 공개 저장소와 GitHub Pages를 서비스 기준으로 묶어 보여주는 루트 허브입니다. 중앙 위키, RSS, sitemap, 최근 업데이트를 한곳에서 확인할 수 있습니다.",
   "author_name": "sheryloe",
   "exclude_repositories": [
     "sheryloe.github.io"
   ],
   "featured_repositories": [
-    "Favorit",
-    "grid-crop-image",
+    "Automethemoney",
     "donggri_gagyeobu",
+    "Favorit",
     "BloManagent"
   ],
   "repository_overrides": {
     "AI_BISEO": {
-      "description": "AI 비서 응답, n8n 연동, Notion 로그, 블로그 자동화 흐름을 한 서비스로 묶은 운영형 프로젝트입니다."
+      "description": "AI 비서 응답, Notion 로그, n8n 연동, 블로그 자동화를 하나의 운영 루프로 묶는 개인 AI 운영 서비스입니다."
     },
     "AI_Writer_TISTORY": {
-      "description": "티스토리 발행 자동화와 AI 글쓰기 흐름을 Node.js와 TypeScript로 구성한 백엔드 중심 저장소입니다."
+      "description": "티스토리 발행 준비를 위한 AI 초안 생성, 운영 로그, 발행 전 검수 흐름을 다루는 백엔드 프로젝트입니다."
     },
-    "AutoTrading_ing....-": {
-      "description": "도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다."
+    "Automethemoney": {
+      "description": "자동매매 전략, 일별 손익, 시그널 진단, Supabase 기반 운영 흐름을 다루는 트레이딩 콘솔입니다."
+    },
+    "BloggerGent": {
+      "description": "여러 Blogger 계열 채널을 서비스처럼 운영하기 위한 AI 발행 스튜디오이자 콘텐츠 운영 허브입니다."
     },
     "BloManagent": {
-      "description": "티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다."
+      "description": "블로그 URL을 수집하고 주간 비교 리포트로 전환하는 분석 대시보드 프로젝트입니다."
+    },
+    "donggeuri-cloudflare-blog": {
+      "description": "Public, Admin, API를 분리한 Cloudflare 기반 블로그 플랫폼 워크스페이스입니다."
     },
     "donggri_gagyeobu": {
-      "description": "FastAPI와 SQLite 기반으로 동작하는 개인용 가계부이며, 실행 후 브라우저에서 바로 사용하는 구조입니다."
+      "description": "자산, 카드 결제 예정, 예산, 소비 흐름을 관리하는 개인 재무 서비스입니다."
     },
     "Favorit": {
-      "description": "Win32 API와 CMake로 만든 실행 즐겨찾기 위젯이며, 설정창과 인스톨러, GitHub Pages 소개 페이지까지 갖춘 프로젝트입니다."
+      "description": "Windows 바탕화면에서 자주 쓰는 파일과 URL을 위젯처럼 실행하는 데스크톱 런처입니다."
     },
     "grid-crop-image": {
-      "description": "Tkinter와 Pillow로 만든 Windows 이미지 크롭 도구로, 스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용을 지원합니다."
+      "description": "스크린샷을 빠르게 자르고 저장 규칙까지 관리하는 Windows 이미지 작업 유틸리티입니다."
     },
     "Vibe_Cowork_Thinking": {
-      "description": "프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다."
+      "description": "Runner와 Orchestrator를 분리해 AI 협업 실험을 추적하는 워크스페이스입니다."
     }
   },
   "max_feed_entries": 30,

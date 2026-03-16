@@ -114,9 +114,6 @@ def normalize_repositories(config: dict[str, Any], repositories: list[dict[str, 
                 "updated_at": updated_at,
                 "sort_at": pushed_at,
                 "sort_label": pushed_at.astimezone(timezone.utc).strftime("%Y-%m-%d"),
-                "stars": int(repo.get("stargazers_count") or 0),
-                "size": int(repo.get("size") or 0),
-                "default_branch": str(repo.get("default_branch") or "main"),
             }
         )
 
@@ -124,63 +121,46 @@ def normalize_repositories(config: dict[str, Any], repositories: list[dict[str, 
     return normalized
 
 
-def render_tags(repository: dict[str, Any], max_topics: int = 4) -> str:
-    tags = [f'<span class="tag">{html.escape(repository["language"])}</span>']
-    if repository["featured"]:
-        tags.append('<span class="tag">Featured</span>')
-    if repository["has_pages"]:
-        tags.append('<span class="tag">GitHub Pages</span>')
-    for topic in repository["topics"][:max_topics]:
-        tags.append(f'<span class="tag">{html.escape(topic)}</span>')
-    return "".join(tags)
-
-
-def repository_search_text(repository: dict[str, Any]) -> str:
-    parts = [
-        repository["name"],
-        repository["description"],
-        repository["language"],
-        " ".join(repository["topics"]),
-    ]
-    return " ".join(part.lower() for part in parts if part)
-
-
 def category_label(repository: dict[str, Any]) -> str:
     labels = {
+        "Automethemoney": "Trading Console",
         "Favorit": "Desktop Utility",
         "grid-crop-image": "Image Workflow",
         "donggri_gagyeobu": "Local Finance",
         "BloManagent": "Analytics Dashboard",
+        "BloggerGent": "Publishing Studio",
         "AI_BISEO": "Automation Ops",
         "AI_Writer_TISTORY": "Publishing Workflow",
-        "AutoTrading_ing....-": "Trading Console",
         "Vibe_Cowork_Thinking": "AI Workflow",
+        "donggeuri-cloudflare-blog": "Cloud Platform",
     }
     return labels.get(repository["name"], repository["language"])
 
 
 def quick_subtitle(repository: dict[str, Any]) -> str:
     subtitles = {
-        "AI_BISEO": "AI 비서 + 블로그 자동화",
-        "AI_Writer_TISTORY": "티스토리 AI 작성 자동화",
-        "AutoTrading_ing....-": "자동매매 운영 콘솔",
-        "Vibe_Cowork_Thinking": "Runner / Orchestrator 실험",
+        "AI_BISEO": "AI 비서 응답과 블로그 자동화를 묶은 운영 루프",
+        "AI_Writer_TISTORY": "티스토리 발행 준비용 AI 글쓰기 백엔드",
+        "Automethemoney": "자동매매 전략과 손익 흐름을 보는 콘솔",
+        "Vibe_Cowork_Thinking": "Runner와 Orchestrator를 분리한 AI 실험실",
+        "donggeuri-cloudflare-blog": "Public, Admin, API를 나눈 블로그 플랫폼",
+        "BloggerGent": "멀티 채널 블로그 발행 스튜디오",
     }
     return subtitles.get(repository["name"], repository["description"] or repository["language"])
 
 
 def direct_card_class(repository: dict[str, Any]) -> str:
     classes = {
-        "Favorit": "page-card page-card--hero tone-blue",
-        "grid-crop-image": "page-card tone-white",
+        "Automethemoney": "page-card page-card--hero tone-blue",
         "donggri_gagyeobu": "page-card tone-amber",
+        "Favorit": "page-card tone-white",
         "BloManagent": "page-card page-card--wide tone-slate",
     }
     return classes.get(repository["name"], "page-card tone-white")
 
 
 def render_direct_card(repository: dict[str, Any]) -> str:
-    description = html.escape(repository["description"] or "공개 프로젝트 페이지입니다.")
+    description = html.escape(repository["description"] or "공개 프로젝트 소개 페이지입니다.")
     live_url = html.escape(repository["live_url"] or repository["pages_url"] or repository["repo_url"])
     repo_url = html.escape(repository["repo_url"])
     card_class = direct_card_class(repository)
@@ -206,16 +186,17 @@ def render_quick_link(repository: dict[str, Any]) -> str:
 def render_recent_row(repository: dict[str, Any]) -> str:
     primary_url = html.escape(repository["live_url"] or repository["repo_url"])
     repo_url = html.escape(repository["repo_url"])
-    primary_text = "페이지" if repository["has_pages"] else "레포"
+    primary_text = "페이지" if repository["has_pages"] else "저장소"
+    secondary_text = "공개 프로젝트 페이지" if repository["has_pages"] else "공개 저장소"
     return f"""            <article class="repo-row">
               <div class="repo-main">
                 <strong>{html.escape(repository['name'])}</strong>
-                <span>{'공개 프로젝트 페이지' if repository['has_pages'] else '공개 저장소'}</span>
+                <span>{secondary_text}</span>
               </div>
               <time datetime="{repository['sort_at'].date().isoformat()}">{repository['sort_label']}</time>
               <div class="repo-links">
                 <a href="{primary_url}">{primary_text}</a>
-                <a href="{repo_url}">레포</a>
+                <a href="{repo_url}">GitHub</a>
               </div>
             </article>"""
 
@@ -287,10 +268,9 @@ def render_index_html(config: dict[str, Any], repositories: list[dict[str, Any]]
         "__AUTHOR_NAME__": html.escape(str(config["author_name"])),
         "__SITE_URL__": html.escape(str(config["site_url"])),
         "__GITHUB_PROFILE__": html.escape(str(config["github_profile"])),
-        "__GENERATED_LABEL__": generated_at.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "__WIKI_REPO_URL__": html.escape(str(config["wiki_repo_url"])),
         "__LATEST_PUSH_LABEL__": latest_push.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "__LATEST_PUSH_SHORT__": latest_push.astimezone(timezone.utc).strftime("%Y-%m-%d"),
-        "__PUBLIC_REPO_COUNT__": str(len(repositories)),
         "__LIVE_PAGE_COUNT__": str(len(live_repositories)),
         "__DIRECT_CARDS__": "\n".join(render_direct_card(repo) for repo in direct_repositories),
         "__QUICK_LINKS__": "\n".join(render_quick_link(repo) for repo in quick_repositories),
@@ -306,14 +286,21 @@ def render_index_html(config: dict[str, Any], repositories: list[dict[str, Any]]
 
 def render_sitemap_xml(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
     site_url = str(config["site_url"])
+    today = datetime.now(timezone.utc).date().isoformat()
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
         "  <url>",
         f"    <loc>{site_url}</loc>",
-        f"    <lastmod>{datetime.now(timezone.utc).date().isoformat()}</lastmod>",
+        f"    <lastmod>{today}</lastmod>",
         "    <changefreq>daily</changefreq>",
         "    <priority>1.0</priority>",
+        "  </url>",
+        "  <url>",
+        f"    <loc>{site_url}wiki/</loc>",
+        f"    <lastmod>{today}</lastmod>",
+        "    <changefreq>weekly</changefreq>",
+        "    <priority>0.9</priority>",
         "  </url>",
     ]
 

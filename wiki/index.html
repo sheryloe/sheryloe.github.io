@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Central Wiki | Sheryloe Projects</title>
+  <meta name="description" content="sheryloe 공개 저장소의 서비스 맵, 날짜별 DO, TODO, 레포별 wiki 링크를 모아둔 중앙 위키 랜딩 페이지">
+  <meta name="theme-color" content="#183153">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <style>
+    :root {
+      --pico-font-family: "IBM Plex Sans KR", sans-serif;
+      --pico-background-color: #edf3fb;
+      --pico-color: #122033;
+      --pico-primary: #1b5cff;
+      --pico-primary-background: #1b5cff;
+      --pico-primary-hover: #1649cb;
+      --pico-primary-hover-background: #1649cb;
+      --pico-card-background-color: rgba(255, 255, 255, 0.88);
+      --pico-card-border-color: rgba(18, 32, 51, 0.08);
+      --pico-muted-color: #5d6a7d;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(27, 92, 255, 0.16), transparent 22rem),
+        radial-gradient(circle at bottom right, rgba(14, 165, 145, 0.14), transparent 24rem),
+        linear-gradient(180deg, #f8fbff 0%, #edf3fb 58%, #e6edf7 100%);
+    }
+
+    h1, h2, h3 {
+      font-family: "Fraunces", "IBM Plex Sans KR", serif;
+      letter-spacing: -0.03em;
+    }
+
+    .hero {
+      padding: 3rem 0 1.5rem;
+    }
+
+    .hero-grid,
+    .doc-grid,
+    .repo-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .hero-grid {
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      align-items: stretch;
+    }
+
+    .doc-grid,
+    .repo-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .panel,
+    .stat,
+    .doc-card,
+    .repo-card {
+      border: 1px solid rgba(18, 32, 51, 0.08);
+      border-radius: 1.5rem;
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 50px rgba(20, 33, 51, 0.08);
+    }
+
+    .panel {
+      padding: 2rem;
+    }
+
+    .hero-panel {
+      background: linear-gradient(160deg, rgba(16, 38, 70, 0.96), rgba(20, 54, 99, 0.92));
+      color: #eff6ff;
+    }
+
+    .hero-panel p {
+      color: rgba(239, 246, 255, 0.8);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2rem;
+      padding: 0 0.8rem;
+      border-radius: 999px;
+      background: rgba(27, 92, 255, 0.12);
+      color: #1b5cff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .hero-panel .eyebrow {
+      background: rgba(255, 255, 255, 0.08);
+      color: #b7d4ff;
+    }
+
+    .actions,
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .actions {
+      margin-top: 1.5rem;
+    }
+
+    .stat {
+      padding: 1rem 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.4rem;
+      margin-top: 0.3rem;
+    }
+
+    .doc-card,
+    .repo-card {
+      padding: 1.4rem;
+    }
+
+    .doc-card p,
+    .repo-card p {
+      color: #5d6a7d;
+      margin-bottom: 1rem;
+    }
+
+    .repo-card small {
+      display: block;
+      margin-bottom: 0.6rem;
+      color: #1b5cff;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .doc-grid,
+      .repo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <article class="panel">
+          <span class="eyebrow">Central Wiki</span>
+          <h1>공개 저장소 문서를 서비스 기준으로 다시 모아둔 중앙 허브</h1>
+          <p>README만 읽어서는 잘 드러나지 않는 서비스 방향, 날짜별 작업 기록, 다음 TODO를 루트 허브에서 바로 확인할 수 있게 정리했습니다. 공개 저장소만 다루며, 각 레포의 `wiki/` 문서를 여기서 다시 연결합니다.</p>
+          <div class="actions">
+            <a href="https://sheryloe.github.io/">루트 허브 홈</a>
+            <a href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki" class="secondary">GitHub 문서 폴더</a>
+          </div>
+        </article>
+        <aside class="panel hero-panel">
+          <span class="eyebrow">What Is Here</span>
+          <div class="stat">
+            <span>중앙 문서</span>
+            <strong>4 core docs</strong>
+          </div>
+          <div class="stat">
+            <span>레포별 wiki 링크</span>
+            <strong>10 public repos</strong>
+          </div>
+          <div class="stat">
+            <span>정리 기준</span>
+            <strong>서비스 관점</strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <h2>중앙 문서</h2>
+      <div class="doc-grid">
+        <article class="doc-card">
+          <h3>Portfolio Wiki Home</h3>
+          <p>현재 포트폴리오 축과 정리 원칙을 한 문서에서 보는 입구입니다.</p>
+          <a href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Home.md">문서 열기</a>
+        </article>
+        <article class="doc-card">
+          <h3>Repository Service Map</h3>
+          <p>각 저장소의 역할과 서비스화 방향, 다음 개선 포인트를 묶었습니다.</p>
+          <a href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Repository-Service-Map.md">문서 열기</a>
+        </article>
+        <article class="doc-card">
+          <h3>Timeline DO / Service TODO</h3>
+          <p>최근 완료 작업과 다음 보안, 기능, 운영 TODO를 함께 볼 수 있습니다.</p>
+          <div class="link-row">
+            <a href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Timeline-DO.md">Timeline DO</a>
+            <a href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Service-TODO.md" class="secondary">Service TODO</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>레포별 wiki</h2>
+      <div class="repo-grid">
+        <article class="repo-card">
+          <small>AI Ops</small>
+          <h3>AI_BISEO</h3>
+          <p>AI 비서 운영 루프와 로드맵을 정리한 wiki입니다.</p>
+          <a href="https://github.com/sheryloe/AI_BISEO/tree/main/wiki">wiki 폴더</a>
+        </article>
+        <article class="repo-card">
+          <small>Publishing</small>
+          <h3>AI_Writer_TISTORY</h3>
+          <p>티스토리 AI 발행 백엔드의 서비스 방향과 TODO를 정리했습니다.</p>
+          <a href="https://github.com/sheryloe/AI_Writer_TISTORY/tree/main/wiki">wiki 폴더</a>
+        </article>
+        <article class="repo-card">
+          <small>Trading</small>
+          <h3>Automethemoney</h3>
+          <p>자동매매 콘솔의 서비스 개요와 위험 관리 TODO를 연결합니다.</p>
+          <a href="https://github.com/sheryloe/Automethemoney/tree/main/wiki">wiki 폴더</a>
+        </article>
+        <article class="repo-card">
+          <small>Studio</small>
+          <h3>BloggerGent</h3>
+          <p>멀티 채널 블로그 발행 스튜디오 문서와 서비스 로드맵입니다.</p>
+          <a href="https://github.com/sheryloe/BloggerGent/tree/main/wiki">wiki 폴더</a>
+        </article>
+        <article class="repo-card">
+          <small>Analytics</small>
+          <h3>BloManagent</h3>
+          <p>블로그 분석 대시보드의 제품 방향과 공유형 리포트 계획입니다.</p>
+          <a href="https://github.com/sheryloe/BloManagent/tree/main/wiki">wiki 폴더</a>
+        </article>
+        <article class="repo-card">
+          <small>Platform</small>
+          <h3>donggeuri-cloudflare-blog</h3>
+          <p>Cloudflare 기반 블로그 플랫폼 구조와 운영 백로그입니다.</p>
+          <a href="https://github.com/sheryloe/donggeuri-cloudflare-blog/tree/main/wiki">wiki 폴더</a>
+        </article>
+        <article class="repo-card">
+          <small>Finance</small>
+          <h3>donggri_gagyeobu</h3>
+          <p>가계부 서비스 위키와 서비스 로드맵을 함께 볼 수 있습니다.</p>
+          <a href="https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki">wiki 폴더</a>
+        </article>
+        <article class="repo-card">
+          <small>Desktop</small>
+          <h3>Favorit</h3>
+          <p>Windows 위젯 스타일 런처의 제품 방향과 UI TODO를 정리했습니다.</p>
+          <a href="https://github.com/sheryloe/Favorit/tree/main/wiki">wiki 폴더</a>
+        </article>
+        <article class="repo-card">
+          <small>Utility</small>
+          <h3>grid-crop-image</h3>
+          <p>이미지 작업 유틸리티의 사용 흐름과 다음 기능 계획입니다.</p>
+          <a href="https://github.com/sheryloe/grid-crop-image/tree/main/wiki">wiki 폴더</a>
+        </article>
+        <article class="repo-card">
+          <small>R&amp;D</small>
+          <h3>Vibe_Cowork_Thinking</h3>
+          <p>AI 협업 실험 워크스페이스의 목표와 운영 로드맵을 정리했습니다.</p>
+          <a href="https://github.com/sheryloe/Vibe_Cowork_Thinking/tree/main/wiki">wiki 폴더</a>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
