@@ -5,8 +5,24 @@
     <link>https://sheryloe.github.io/</link>
     <description>Sheryloe 공개 프로젝트 페이지만 모아둔 루트 허브입니다. 상단은 바로 접속 가능한 페이지를 크게 보여주고, 하단은 최근 변경된 공개 저장소만 날짜와 바로가기로 정리합니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Sun, 15 Mar 2026 17:06:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 02:44:12 +0000</lastBuildDate>
     <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>donggeuri-cloudflare-blog</title>
+    <link>https://github.com/sheryloe/donggeuri-cloudflare-blog</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/donggeuri-cloudflare-blog#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 02:44:12 +0000</pubDate>
+    <description><![CDATA[<p><strong>donggeuri-cloudflare-blog</strong></p><p>설명이 아직 없는 저장소입니다.</p><p>GitHub: <a href="https://github.com/sheryloe/donggeuri-cloudflare-blog">https://github.com/sheryloe/donggeuri-cloudflare-blog</a></p>]]></description>
+    <category>Unknown</category>
+  </item>
+  <item>
+    <title>Automethemoney</title>
+    <link>https://sheryloe.github.io/AutoTrading_ing....-/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/Automethemoney#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 00:21:41 +0000</pubDate>
+    <description><![CDATA[<p><strong>Automethemoney</strong></p><p>크립토 자동매매 개선중</p><p>Live page: <a href="https://sheryloe.github.io/AutoTrading_ing....-/">https://sheryloe.github.io/AutoTrading_ing....-/</a></p><p>GitHub: <a href="https://github.com/sheryloe/Automethemoney">https://github.com/sheryloe/Automethemoney</a></p>]]></description>
+    <category>Python</category>
+  </item>
   <item>
     <title>BloggerGent</title>
     <link>https://github.com/sheryloe/BloggerGent</link>
@@ -22,14 +38,6 @@
     <pubDate>Sun, 15 Mar 2026 16:51:58 +0000</pubDate>
     <description><![CDATA[<p><strong>BloManagent</strong></p><p>티스토리, 네이버 블로그, Blogger 계열 블로그를 수집하고 주간 단위로 비교 분석하기 위한 로컬 우선 대시보드입니다.</p><p>Live page: <a href="https://sheryloe.github.io/BloManagent/">https://sheryloe.github.io/BloManagent/</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloManagent">https://github.com/sheryloe/BloManagent</a></p>]]></description>
     <category>TypeScript</category>
-  </item>
-  <item>
-    <title>AutoTrading_ing....-</title>
-    <link>https://sheryloe.github.io/AutoTrading_ing....-/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/AutoTrading_ing....-#2026-03-15</guid>
-    <pubDate>Sun, 15 Mar 2026 16:24:17 +0000</pubDate>
-    <description><![CDATA[<p><strong>AutoTrading_ing....-</strong></p><p>도커 기반 앱과 리포터를 함께 띄워 자동매매 상태, 리포트, 런타임 설정을 운영하는 프로젝트입니다.</p><p>Live page: <a href="https://sheryloe.github.io/AutoTrading_ing....-/">https://sheryloe.github.io/AutoTrading_ing....-/</a></p><p>GitHub: <a href="https://github.com/sheryloe/AutoTrading_ing....-">https://github.com/sheryloe/AutoTrading_ing....-</a></p>]]></description>
-    <category>Python</category>
   </item>
   <item>
     <title>donggri_gagyeobu</title>
