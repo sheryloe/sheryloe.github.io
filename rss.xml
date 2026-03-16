@@ -5,13 +5,37 @@
     <link>https://sheryloe.github.io/</link>
     <description>sheryloe의 공개 저장소와 GitHub Pages를 서비스 기준으로 묶어 보여주는 루트 허브입니다. 중앙 위키, RSS, sitemap, 최근 업데이트를 한곳에서 확인할 수 있습니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 16 Mar 2026 13:39:40 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 16:39:44 +0000</lastBuildDate>
     <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>BloggerGent</title>
+    <link>https://sheryloe.github.io/BloggerGent/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/BloggerGent#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 16:39:44 +0000</pubDate>
+    <description><![CDATA[<p><strong>BloggerGent</strong></p><p>여러 Blogger 계열 채널을 서비스처럼 운영하기 위한 AI 발행 스튜디오이자 콘텐츠 운영 허브입니다.</p><p>Live page: <a href="https://sheryloe.github.io/BloggerGent/">https://sheryloe.github.io/BloggerGent/</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloggerGent">https://github.com/sheryloe/BloggerGent</a></p>]]></description>
+    <category>Python</category>
+  </item>
+  <item>
+    <title>BloManagent</title>
+    <link>https://sheryloe.github.io/BloManagent/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/BloManagent#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 16:38:56 +0000</pubDate>
+    <description><![CDATA[<p><strong>BloManagent</strong></p><p>블로그 URL을 수집하고 주간 비교 리포트로 전환하는 분석 대시보드 프로젝트입니다.</p><p>Live page: <a href="https://sheryloe.github.io/BloManagent/">https://sheryloe.github.io/BloManagent/</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloManagent">https://github.com/sheryloe/BloManagent</a></p>]]></description>
+    <category>TypeScript</category>
+  </item>
+  <item>
+    <title>donggeuri-cloudflare-blog</title>
+    <link>https://github.com/sheryloe/donggeuri-cloudflare-blog</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/donggeuri-cloudflare-blog#2026-03-16</guid>
+    <pubDate>Mon, 16 Mar 2026 16:12:32 +0000</pubDate>
+    <description><![CDATA[<p><strong>donggeuri-cloudflare-blog</strong></p><p>Public, Admin, API를 분리한 Cloudflare 기반 블로그 플랫폼 워크스페이스입니다.</p><p>GitHub: <a href="https://github.com/sheryloe/donggeuri-cloudflare-blog">https://github.com/sheryloe/donggeuri-cloudflare-blog</a></p>]]></description>
+    <category>TypeScript</category>
+  </item>
   <item>
     <title>Automethemoney</title>
     <link>https://sheryloe.github.io/Automethemoney/</link>
     <guid isPermaLink="false">https://github.com/sheryloe/Automethemoney#2026-03-16</guid>
-    <pubDate>Mon, 16 Mar 2026 13:39:40 +0000</pubDate>
+    <pubDate>Mon, 16 Mar 2026 16:01:58 +0000</pubDate>
     <description><![CDATA[<p><strong>Automethemoney</strong></p><p>자동매매 전략, 일별 손익, 시그널 진단, Supabase 기반 운영 흐름을 다루는 트레이딩 콘솔입니다.</p><p>Live page: <a href="https://sheryloe.github.io/Automethemoney/">https://sheryloe.github.io/Automethemoney/</a></p><p>GitHub: <a href="https://github.com/sheryloe/Automethemoney">https://github.com/sheryloe/Automethemoney</a></p>]]></description>
     <category>Python</category>
   </item>
@@ -50,30 +74,6 @@
     <pubDate>Mon, 16 Mar 2026 12:55:04 +0000</pubDate>
     <description><![CDATA[<p><strong>Favorit</strong></p><p>Windows 바탕화면에서 자주 쓰는 파일과 URL을 위젯처럼 실행하는 데스크톱 런처입니다.</p><p>Live page: <a href="https://sheryloe.github.io/Favorit/">https://sheryloe.github.io/Favorit/</a></p><p>GitHub: <a href="https://github.com/sheryloe/Favorit">https://github.com/sheryloe/Favorit</a></p>]]></description>
     <category>C++</category>
-  </item>
-  <item>
-    <title>donggeuri-cloudflare-blog</title>
-    <link>https://github.com/sheryloe/donggeuri-cloudflare-blog</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/donggeuri-cloudflare-blog#2026-03-16</guid>
-    <pubDate>Mon, 16 Mar 2026 12:55:03 +0000</pubDate>
-    <description><![CDATA[<p><strong>donggeuri-cloudflare-blog</strong></p><p>Public, Admin, API를 분리한 Cloudflare 기반 블로그 플랫폼 워크스페이스입니다.</p><p>GitHub: <a href="https://github.com/sheryloe/donggeuri-cloudflare-blog">https://github.com/sheryloe/donggeuri-cloudflare-blog</a></p>]]></description>
-    <category>TypeScript</category>
-  </item>
-  <item>
-    <title>BloManagent</title>
-    <link>https://sheryloe.github.io/BloManagent/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/BloManagent#2026-03-16</guid>
-    <pubDate>Mon, 16 Mar 2026 12:55:01 +0000</pubDate>
-    <description><![CDATA[<p><strong>BloManagent</strong></p><p>블로그 URL을 수집하고 주간 비교 리포트로 전환하는 분석 대시보드 프로젝트입니다.</p><p>Live page: <a href="https://sheryloe.github.io/BloManagent/">https://sheryloe.github.io/BloManagent/</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloManagent">https://github.com/sheryloe/BloManagent</a></p>]]></description>
-    <category>TypeScript</category>
-  </item>
-  <item>
-    <title>BloggerGent</title>
-    <link>https://github.com/sheryloe/BloggerGent</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/BloggerGent#2026-03-16</guid>
-    <pubDate>Mon, 16 Mar 2026 12:54:59 +0000</pubDate>
-    <description><![CDATA[<p><strong>BloggerGent</strong></p><p>여러 Blogger 계열 채널을 서비스처럼 운영하기 위한 AI 발행 스튜디오이자 콘텐츠 운영 허브입니다.</p><p>GitHub: <a href="https://github.com/sheryloe/BloggerGent">https://github.com/sheryloe/BloggerGent</a></p>]]></description>
-    <category>Python</category>
   </item>
   <item>
     <title>AI_Writer_TISTORY</title>
