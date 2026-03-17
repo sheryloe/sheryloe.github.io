@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Timeline DO | Sheryloe Projects</title>
+  <meta name="description" content="날짜 기준으로 묶은 완료 작업 기록으로, 전체 포트폴리오의 흐름을 빠르게 훑을 수 있습니다.">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://sheryloe.github.io/wiki/timeline-do.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Timeline DO | Sheryloe Projects">
+  <meta property="og:description" content="날짜 기준으로 묶은 완료 작업 기록으로, 전체 포트폴리오의 흐름을 빠르게 훑을 수 있습니다.">
+  <meta property="og:url" content="https://sheryloe.github.io/wiki/timeline-do.html">
+  <meta property="og:image" content="https://sheryloe.github.io/assets/meta/root-hub-social.png">
+  <meta property="og:image:alt" content="Sheryloe Projects 첫 화면 미리보기">
+  <link rel="icon" type="image/svg+xml" href="https://sheryloe.github.io/assets/meta/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <style type="text/tailwindcss">
+    :root {
+      --border: #e2e8f0;
+      --card: #ffffff;
+      --primary: #0f172a;
+      --primary-foreground: #ffffff;
+      --secondary: #f8fafc;
+    }
+
+    body {
+      @apply min-h-screen bg-slate-50 text-slate-950 antialiased;
+      font-family: "Inter", "Noto Sans KR", sans-serif;
+      background-image:
+        radial-gradient(circle at top, rgba(148, 163, 184, 0.12), transparent 30rem),
+        linear-gradient(180deg, #f8fafc 0%, #f8fafc 100%);
+    }
+
+    .shell {
+      @apply rounded-2xl border bg-white shadow-sm;
+      border-color: var(--border);
+    }
+
+    .button {
+      @apply inline-flex items-center justify-center rounded-lg border px-3.5 py-2 text-sm font-medium transition-colors;
+      border-color: var(--border);
+      background: var(--card);
+      color: #0f172a;
+    }
+
+    .button:hover {
+      @apply bg-slate-50;
+    }
+
+    .button-primary {
+      background: var(--primary);
+      color: var(--primary-foreground);
+      border-color: var(--primary);
+    }
+
+    .button-primary:hover {
+      background: #020617;
+    }
+
+    .section-label,
+    .doc-badge {
+      @apply inline-flex items-center rounded-md border px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.14em];
+      border-color: var(--border);
+      background: var(--secondary);
+      color: #334155;
+    }
+
+    .doc-nav-link {
+      @apply block rounded-lg border px-3 py-2 text-sm text-slate-600 transition-colors;
+      border-color: transparent;
+    }
+
+    .doc-nav-link:hover {
+      @apply bg-slate-50 text-slate-950;
+    }
+
+    .doc-nav-link.is-active {
+      @apply border-slate-200 bg-slate-100 text-slate-950;
+    }
+
+    .doc-content h1 {
+      @apply mt-8 text-2xl font-semibold tracking-[-0.04em] text-slate-950 first:mt-0;
+    }
+
+    .doc-content h2 {
+      @apply mt-8 text-xl font-semibold tracking-[-0.03em] text-slate-950;
+    }
+
+    .doc-content h3 {
+      @apply mt-6 text-lg font-semibold tracking-[-0.02em] text-slate-950;
+    }
+
+    .doc-content p,
+    .doc-content li {
+      @apply mt-3 text-sm leading-7 text-slate-700;
+    }
+
+    .doc-content ul {
+      @apply mt-3 list-disc space-y-1 pl-5;
+    }
+
+    .doc-content a {
+      @apply font-medium text-slate-900 underline underline-offset-4;
+    }
+
+    .doc-content code {
+      @apply rounded bg-slate-100 px-1.5 py-0.5 text-[0.9em] text-slate-900;
+    }
+
+    .doc-table-wrap {
+      @apply mt-4 overflow-x-auto rounded-xl border;
+      border-color: var(--border);
+    }
+
+    .doc-table-wrap table {
+      @apply min-w-full border-collapse text-sm;
+    }
+
+    .doc-table-wrap th,
+    .doc-table-wrap td {
+      @apply border-b px-4 py-3 text-left align-top;
+      border-color: var(--border);
+    }
+
+    .doc-table-wrap th {
+      @apply bg-slate-50 font-semibold text-slate-900;
+    }
+
+    .note-card {
+      @apply rounded-xl border bg-white p-4;
+      border-color: var(--border);
+    }
+  </style>
+</head>
+<body>
+  <header class="mx-auto w-[min(calc(100%-24px),1220px)] py-6">
+    <div class="shell px-5 py-4">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <span class="section-label">Wiki Document</span>
+          <h1 class="mt-3 text-2xl font-semibold tracking-[-0.04em] text-slate-950 md:text-3xl">Timeline DO</h1>
+          <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-600">날짜 기준으로 묶은 완료 작업 기록으로, 전체 포트폴리오의 흐름을 빠르게 훑을 수 있습니다.</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a class="button" href="./">Central Wiki</a>
+          <a class="button" href="https://sheryloe.github.io/">Project Hub</a>
+          <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki/Timeline-DO.md">Source</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto grid w-[min(calc(100%-24px),1220px)] gap-4 pb-10 xl:grid-cols-[260px_minmax(0,1fr)]">
+    <aside class="space-y-4">
+      <section class="shell p-4 xl:sticky xl:top-6">
+        <div class="flex items-center justify-between">
+          <span class="section-label">Documents</span>
+          <span class="text-xs text-slate-500">auto html</span>
+        </div>
+        <nav class="mt-4 space-y-2">
+              <a class="doc-nav-link" href="./">Central Wiki</a>
+              <a class="doc-nav-link" href="home.html">Portfolio Home</a>
+              <a class="doc-nav-link" href="repository-service-map.html">Repository Service Map</a>
+              <a class="doc-nav-link is-active" href="timeline-do.html">Timeline DO</a>
+              <a class="doc-nav-link" href="service-todo.html">Service TODO</a>
+        </nav>
+      </section>
+
+      <section class="note-card">
+        <span class="section-label">Published From</span>
+        <p>원본 Markdown은 저장소에 유지하고, 현재 페이지는 정적 HTML로 생성되어 중앙 위키에서 바로 연결됩니다.</p>
+      </section>
+
+      <section class="note-card">
+        <span class="section-label">Snapshot</span>
+        <p>공개 저장소 수: 10</p>
+        <p>생성 시각: 2026-03-17 02:38 UTC</p>
+      </section>
+    </aside>
+
+    <section class="shell p-5 md:p-6">
+      <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <div class="flex flex-wrap gap-2">
+          <span class="doc-badge">Execution Log</span>
+          <span class="doc-badge">HTML Published</span>
+        </div>
+        <p class="text-xs text-slate-500">generated 2026-03-17 02:38 UTC</p>
+      </div>
+
+      <div class="mt-5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-6 text-slate-700">
+        날짜 기준으로 묶은 완료 작업 기록으로, 전체 포트폴리오의 흐름을 빠르게 훑을 수 있습니다.
+      </div>
+
+      <article class="doc-content mt-6">
+<p>최근 커밋 흐름을 기준으로 날짜별 완료 작업을 묶었습니다.</p>
+<h2>2026-02-26</h2>
+<ul><li><code>Vibe_Cowork_Thinking</code>에서 Runner와 Orchestrator 구조를 나누는 워크스페이스 골격을 정리했습니다.</li><li>AI 작업 로그와 프로젝트 단위 실행 기록을 남기기 위한 기본 흐름이 잡히기 시작했습니다.</li></ul>
+<h2>2026-02-27</h2>
+<ul><li><code>AI_BISEO</code>, <code>AI_Writer_TISTORY</code>에서 명령 처리와 Notion 연동 흐름을 정리했습니다.</li><li>AI 비서와 AI 글쓰기 자동화의 초기 README와 로그 구조가 잡혔습니다.</li></ul>
+<h2>2026-03-02 ~ 2026-03-04</h2>
+<ul><li><code>AI_BISEO</code>에 Telegram 명령, 운영 대시보드, 프로젝트 로그, Docker 보안 강화가 반영됐습니다.</li><li>운영 문서와 UI가 실제 사용 흐름을 설명하는 방향으로 움직이기 시작했습니다.</li></ul>
+<h2>2026-03-09 ~ 2026-03-13</h2>
+<ul><li><code>grid-crop-image</code>를 README, SEO, GitHub Pages까지 갖춘 공개 도구 구조로 정리했습니다.</li><li><code>Favorit</code>의 초기 릴리스 자산과 Pages, 배포 소개 구조가 만들어졌습니다.</li><li><code>AI_BISEO</code>, <code>AI_Writer_TISTORY</code>, <code>Vibe_Cowork_Thinking</code>의 README와 GitHub Pages 소개 페이지를 정리했습니다.</li><li><code>sheryloe.github.io</code> 루트 허브에 RSS, Atom, sitemap 자동 생성 흐름을 붙였습니다.</li></ul>
+<h2>2026-03-15</h2>
+<ul><li><code>BloggerGent</code>에서 발행 워크플로와 SEO 검수 관점의 운영 문서 방향이 분명해졌습니다.</li><li><code>BloManagent</code>에서 분석 결과를 보여주는 리포트형 대시보드 방향이 강화됐습니다.</li><li><code>donggri_gagyeobu</code>에서 README와 wiki, 빌드 스토리 문서를 정리하며 서비스 설명 자산이 확장됐습니다.</li><li><code>donggri_gagyeobu_wiki_publish</code>를 통해 위키 배포 자동화 테스트 흐름을 시작했습니다.</li></ul>
+<h2>2026-03-16</h2>
+<ul><li>공개 저장소 전체를 기준으로 README를 한국어 서비스 설명 중심으로 재구성했습니다.</li><li>중앙 위키에 서비스 맵, 날짜별 DO, 서비스 TODO를 묶어 정리했습니다.</li><li><code>Automethemoney</code>, <code>donggeuri-cloudflare-blog</code>를 최신 상태로 가져와 작업 대상에 포함했습니다.</li><li><code>AI_BISEO</code>, <code>AI_Writer_TISTORY</code>, <code>BloggerGent</code>, <code>BloManagent</code>, <code>Favorit</code>, <code>grid-crop-image</code>, <code>Vibe_Cowork_Thinking</code>, <code>donggeuri-cloudflare-blog</code>의 GitHub Pages를 주제별 테마로 다시 구성했습니다.</li><li><code>sheryloe.github.io</code> 루트 허브에 중앙 wiki 랜딩과 문서 허브를 노출하는 구조를 추가했습니다.</li><li>각 공개 저장소에 <code>wiki/</code> 문서를 보강해 서비스 개요와 로드맵을 repo 단위로도 읽을 수 있게 정리했습니다.</li></ul>
+<h2>지금까지의 해석</h2>
+<ul><li>전체 흐름은 저장소 나열에서 끝나는 포트폴리오가 아니라 서비스 묶음처럼 보이게 만드는 방향으로 움직이고 있습니다.</li><li>다음 단계는 새 기능을 급하게 늘리기보다 보안, 운영 문서, 배포 검증, 사용자 시나리오를 더 단단히 만드는 쪽이 우선입니다.</li></ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="mx-auto w-[min(calc(100%-24px),1220px)] pb-8">
+    <div class="shell px-5 py-4">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div>
+          <strong class="text-sm font-semibold tracking-[-0.02em] text-slate-950">Sheryloe Projects</strong>
+          <p class="mt-1 text-sm text-slate-600">중앙 위키 문서를 정적 HTML 페이지로 퍼블리시한 문서 뷰입니다.</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a class="button" href="./">Wiki</a>
+          <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki">Source Folder</a>
+          <a class="button" href="https://github.com/sheryloe">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

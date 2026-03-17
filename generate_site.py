@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parent
 CONFIG_PATH = ROOT / "site-config.json"
 HOME_TEMPLATE_PATH = ROOT / "templates" / "index.template.html"
 WIKI_TEMPLATE_PATH = ROOT / "templates" / "wiki.template.html"
+WIKI_DOC_TEMPLATE_PATH = ROOT / "templates" / "wiki-doc.template.html"
 
 
 def load_config() -> dict[str, Any]:
@@ -153,6 +154,30 @@ def default_accent(track: str) -> str:
 
 def track_map(config: dict[str, Any]) -> dict[str, dict[str, Any]]:
     return {str(track["slug"]): track for track in config.get("portfolio_tracks", [])}
+
+
+def wiki_documents(config: dict[str, Any]) -> list[dict[str, Any]]:
+    return [dict(document) for document in config.get("wiki_documents", [])]
+
+
+def generated_wiki_documents(config: dict[str, Any]) -> list[dict[str, Any]]:
+    return [
+        dict(document)
+        for document in wiki_documents(config)
+        if document.get("source_path") and document.get("output_path")
+    ]
+
+
+def wiki_doc_lookup(config: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    mapping: dict[str, dict[str, Any]] = {}
+    for document in generated_wiki_documents(config):
+        source_path = str(document["source_path"]).replace("\\", "/")
+        output_path = str(document["output_path"]).replace("\\", "/")
+        mapping[source_path] = document
+        mapping[Path(source_path).name] = document
+        mapping[output_path] = document
+        mapping[Path(output_path).name] = document
+    return mapping
 
 
 def repository_search_text(repository: dict[str, Any]) -> str:
@@ -377,9 +402,6 @@ def render_track_card(track: dict[str, Any], repositories_by_name: dict[str, dic
     repo_names = " · ".join(html.escape(repository["name"]) for repository in matched[:4]) or "문서와 루트 허브"
     accent = slugify(str(track.get("accent", "slate")))
     return f"""            <article class="track-card accent-{accent} reveal">
-              <div class="track-icon">
-                <iconify-icon icon="{html.escape(str(track.get("icon", "solar:layers-linear")))}"></iconify-icon>
-              </div>
               <div class="track-copy">
                 <p class="eyebrow eyebrow-small">{html.escape(track["title"])}</p>
                 <h3>{html.escape(track["title"])}</h3>
@@ -398,22 +420,20 @@ def render_track_card(track: dict[str, Any], repositories_by_name: dict[str, dic
 
 
 def render_document_card(document: dict[str, Any]) -> str:
-    secondary = ""
+    buttons = [
+        f'<a class="button button-primary" href="{html.escape(str(document["href"]))}">{html.escape(str(document["label"]))}</a>'
+    ]
     if document.get("secondary_href") and document.get("secondary_label"):
-        secondary = (
+        buttons.append(
             f'<a class="button" href="{html.escape(str(document["secondary_href"]))}">'
             f'{html.escape(str(document["secondary_label"]))}</a>'
         )
     return f"""            <article class="doc-card reveal">
-              <div class="doc-icon">
-                <iconify-icon icon="{html.escape(str(document.get("icon", "solar:document-linear")))}"></iconify-icon>
-              </div>
               <p class="eyebrow eyebrow-small">{html.escape(str(document.get("badge", "Document")))}</p>
               <h3>{html.escape(str(document["title"]))}</h3>
               <p>{html.escape(str(document["summary"]))}</p>
               <div class="button-row">
-                <a class="button button-primary" href="{html.escape(str(document["href"]))}">{html.escape(str(document["label"]))}</a>
-                {secondary}
+                {' '.join(buttons)}
               </div>
             </article>"""
 
@@ -430,35 +450,33 @@ def render_wiki_link(repository: dict[str, Any]) -> str:
 
 def render_project_card(repository: dict[str, Any]) -> str:
     preview = render_preview_media(repository, "project-media")
-    return f"""            <article class="project-card {accent_class(repository)} reveal" data-project-card data-id="{html.escape(repository["id"])}" data-track="{html.escape(repository["track"])}" data-availability="{html.escape(repository["availability"])}">
-              <a class="project-link" href="{html.escape(repository["live_url"] or repository["repo_url"])}" aria-label="{html.escape(repository["name"])} 열기">
-                {preview}
-              </a>
-              <div class="project-body">
-                <div class="project-head">
-                  <div>
-                    <p class="eyebrow eyebrow-small">{html.escape(repository["track_title"])}</p>
-                    <h3>{html.escape(repository["name"])}</h3>
+    primary_href = repository["live_url"] or repository["repo_url"]
+    primary_label = primary_link_label(repository)
+    return f"""            <article class="project-row reveal" data-project-card data-id="{html.escape(repository["id"])}" data-track="{html.escape(repository["track"])}" data-availability="{html.escape(repository["availability"])}">
+              <div class="project-row-main">
+                <a class="project-link" href="{html.escape(primary_href)}" aria-label="{html.escape(repository["name"])} 열기">
+                  {preview}
+                </a>
+                <div class="project-row-copy">
+                  <div class="project-row-head">
+                    <div>
+                      <strong>{html.escape(repository["name"])}</strong>
+                      <p>{html.escape(repository["subtitle"])}</p>
+                    </div>
+                    <span class="status-pill">{html.escape(repository["availability_label"])}</span>
                   </div>
-                  <span class="status-pill">{html.escape(repository["availability_label"])}</span>
+                  <div class="meta-row">
+                    <span class="meta-pill">{html.escape(repository["track_title"])}</span>
+                    {render_tags(repository, max_topics=2)}
+                  </div>
                 </div>
-                <p class="project-subtitle">{html.escape(repository["subtitle"])}</p>
-                <p class="project-desc">{html.escape(repository["description"])}</p>
-                <div class="meta-row">
-                  {render_tags(repository)}
-                </div>
-                <dl class="detail-grid detail-grid--compact">
-                  <div>
-                    <dt>Status</dt>
-                    <dd>{html.escape(repository["status"])} · {html.escape(repository["stage"])}</dd>
-                  </div>
-                  <div>
-                    <dt>Next</dt>
-                    <dd>{html.escape(repository["next_focus"])}</dd>
-                  </div>
-                </dl>
-                <div class="button-row">
-                  {render_action_group(repository)}
+              </div>
+              <div class="project-row-side">
+                <p class="project-row-next">{html.escape(repository["next_focus"])}</p>
+                <div class="project-row-actions">
+                  <button class="button button-ghost" type="button" data-open-project="{html.escape(repository["id"])}">Detail</button>
+                  <a class="button" href="{html.escape(repository["wiki_url"])}">Wiki</a>
+                  <a class="button button-primary" href="{html.escape(primary_href)}">{primary_label}</a>
                 </div>
               </div>
             </article>"""
@@ -483,10 +501,16 @@ def render_recent_row(repository: dict[str, Any]) -> str:
 
 def render_timeline_item(item: dict[str, Any]) -> str:
     highlights = "".join(f"<li>{html.escape(str(entry))}</li>" for entry in item.get("highlights", []))
+    timeline_id = slugify(str(item["date"]) + "-" + str(item["title"]))
     return f"""            <article class="timeline-card reveal">
-              <div class="timeline-date">{html.escape(str(item["date"]))}</div>
-              <div class="timeline-body">
-                <h3>{html.escape(str(item["title"]))}</h3>
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-{timeline_id}">
+                <div class="accordion-copy">
+                  <span class="timeline-date">{html.escape(str(item["date"]))}</span>
+                  <strong>{html.escape(str(item["title"]))}</strong>
+                </div>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-panel" id="panel-{timeline_id}" hidden>
                 <p>{html.escape(str(item["summary"]))}</p>
                 <ul class="timeline-points">{highlights}</ul>
               </div>
@@ -628,10 +652,208 @@ def project_search_index(repositories: list[dict[str, Any]]) -> str:
             "audience": repository["audience"],
             "next_focus": repository["next_focus"],
             "availability": repository["availability"],
+            "repo_url": repository["repo_url"],
+            "live_url": repository["live_url"],
+            "wiki_url": repository["wiki_url"],
+            "preview_path": repository["preview_path"] if repository["has_preview"] else "",
+            "preview_alt": repository["preview_alt"],
         }
         for repository in repositories
     ]
     return json.dumps(payload, ensure_ascii=False)
+
+
+TABLE_SEPARATOR_RE = re.compile(r"^\s*\|?(?:\s*:?-+:?\s*\|)+\s*:?-+:?\s*\|?\s*$")
+INLINE_MARKDOWN_RE = re.compile(r"`([^`]+)`|\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*")
+
+
+def split_markdown_table_row(line: str) -> list[str]:
+    row = line.strip().strip("|")
+    return [cell.strip() for cell in row.split("|")]
+
+
+def relative_doc_href(from_output: str, to_output: str) -> str:
+    return os.path.relpath(to_output, start=str(Path(from_output).parent)).replace("\\", "/")
+
+
+def resolve_markdown_href(href: str, document: dict[str, Any], lookup: dict[str, dict[str, Any]]) -> str:
+    if not href or href.startswith(("http://", "https://", "mailto:", "#")):
+        return href
+
+    path_part, _, anchor = href.partition("#")
+    path_value = path_part.strip()
+    if not path_value:
+        return f"#{anchor}" if anchor else href
+
+    normalized = path_value.replace("\\", "/")
+    if not normalized.startswith("/"):
+        source_parent = Path(str(document["source_path"])).parent
+        normalized = (source_parent / normalized).as_posix()
+    else:
+        normalized = normalized.lstrip("/")
+
+    target = lookup.get(normalized) or lookup.get(Path(normalized).name)
+    if target:
+        resolved = relative_doc_href(str(document["output_path"]), str(target["output_path"]))
+        return f"{resolved}#{anchor}" if anchor else resolved
+
+    return href
+
+
+def render_inline_markdown(text: str, document: dict[str, Any], lookup: dict[str, dict[str, Any]]) -> str:
+    chunks: list[str] = []
+    cursor = 0
+    for match in INLINE_MARKDOWN_RE.finditer(text):
+        chunks.append(html.escape(text[cursor:match.start()]))
+        code_text, link_text, link_href, bold_text = match.groups()
+        if code_text is not None:
+            chunks.append(f"<code>{html.escape(code_text)}</code>")
+        elif link_text is not None and link_href is not None:
+            resolved = resolve_markdown_href(link_href, document, lookup)
+            chunks.append(f'<a href="{html.escape(resolved)}">{html.escape(link_text)}</a>')
+        elif bold_text is not None:
+            chunks.append(f"<strong>{html.escape(bold_text)}</strong>")
+        cursor = match.end()
+    chunks.append(html.escape(text[cursor:]))
+    return "".join(chunks)
+
+
+def render_markdown_document(markdown_text: str, document: dict[str, Any], lookup: dict[str, dict[str, Any]]) -> str:
+    lines = markdown_text.splitlines()
+    blocks: list[str] = []
+    index = 0
+
+    while index < len(lines):
+        line = lines[index]
+        stripped = line.strip()
+        if not stripped:
+            index += 1
+            continue
+
+        heading_match = re.match(r"^(#{1,6})\s+(.+)$", stripped)
+        if heading_match:
+            level = len(heading_match.group(1))
+            if level == 1 and not blocks and heading_match.group(2).strip() == str(document["title"]).strip():
+                index += 1
+                continue
+            blocks.append(f"<h{level}>{render_inline_markdown(heading_match.group(2), document, lookup)}</h{level}>")
+            index += 1
+            continue
+
+        if stripped.startswith("|") and index + 1 < len(lines) and TABLE_SEPARATOR_RE.match(lines[index + 1].strip()):
+            header_cells = split_markdown_table_row(lines[index])
+            table_rows: list[list[str]] = []
+            index += 2
+            while index < len(lines) and lines[index].strip().startswith("|"):
+                table_rows.append(split_markdown_table_row(lines[index]))
+                index += 1
+
+            header_html = "".join(
+                f"<th>{render_inline_markdown(cell, document, lookup)}</th>" for cell in header_cells
+            )
+            row_html = "".join(
+                "<tr>" + "".join(
+                    f"<td>{render_inline_markdown(cell, document, lookup)}</td>" for cell in row
+                ) + "</tr>"
+                for row in table_rows
+            )
+            blocks.append(
+                '<div class="doc-table-wrap"><table><thead><tr>'
+                + header_html
+                + "</tr></thead><tbody>"
+                + row_html
+                + "</tbody></table></div>"
+            )
+            continue
+
+        if stripped.startswith("- "):
+            items: list[str] = []
+            while index < len(lines) and lines[index].strip().startswith("- "):
+                item_text = lines[index].strip()[2:].strip()
+                items.append(f"<li>{render_inline_markdown(item_text, document, lookup)}</li>")
+                index += 1
+            blocks.append("<ul>" + "".join(items) + "</ul>")
+            continue
+
+        paragraph_lines = [stripped]
+        index += 1
+        while index < len(lines):
+            probe = lines[index].strip()
+            if not probe:
+                break
+            if probe.startswith("- ") or probe.startswith("|") or re.match(r"^(#{1,6})\s+(.+)$", probe):
+                break
+            paragraph_lines.append(probe)
+            index += 1
+        blocks.append(
+            "<p>" + render_inline_markdown(" ".join(paragraph_lines), document, lookup) + "</p>"
+        )
+
+    return "\n".join(blocks)
+
+
+def render_wiki_doc_nav(config: dict[str, Any], active_document: dict[str, Any]) -> str:
+    entries = [
+        {
+            "title": "Central Wiki",
+            "href": "./",
+            "active": False,
+        }
+    ]
+    for document in generated_wiki_documents(config):
+        entries.append(
+            {
+                "title": str(document["title"]),
+                "href": relative_doc_href(str(active_document["output_path"]), str(document["output_path"])),
+                "active": str(document["output_path"]) == str(active_document["output_path"]),
+            }
+        )
+
+    return "\n".join(
+        f'              <a class="doc-nav-link{" is-active" if entry["active"] else ""}" href="{html.escape(entry["href"])}">{html.escape(entry["title"])}</a>'
+        for entry in entries
+    )
+
+
+def render_wiki_doc_html(config: dict[str, Any], document: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
+    template = WIKI_DOC_TEMPLATE_PATH.read_text(encoding="utf-8")
+    lookup = wiki_doc_lookup(config)
+    source_path = ROOT / str(document["source_path"])
+    markdown_text = source_path.read_text(encoding="utf-8")
+    rendered_markdown = render_markdown_document(markdown_text, document, lookup)
+    generated_at = datetime.now(timezone.utc)
+    social_image = dict(config.get("social_image", {}))
+    social_image_path = relative_asset_path(str(social_image.get("path", "assets/meta/root-hub-social.png")))
+    output_path = str(document["output_path"]).replace("\\", "/")
+    doc_canonical_url = urllib.parse.urljoin(str(config["site_url"]), output_path)
+    doc_source_url = (
+        str(config["wiki_repo_url"]).rstrip("/") + "/" + urllib.parse.quote(Path(str(document["source_path"])).name)
+    )
+
+    replacements = {
+        "__SITE_NAME__": html.escape(str(config["site_name"])),
+        "__SITE_URL__": html.escape(str(config["site_url"])),
+        "__SITE_TITLE__": html.escape(str(config["site_title"])),
+        "__DESCRIPTION__": html.escape(str(config["description"])),
+        "__DOC_TITLE__": html.escape(str(document["title"])),
+        "__DOC_BADGE__": html.escape(str(document.get("badge", "Document"))),
+        "__DOC_SUMMARY__": html.escape(str(document.get("summary", ""))),
+        "__DOC_CANONICAL_URL__": html.escape(doc_canonical_url),
+        "__DOC_SOURCE_URL__": html.escape(doc_source_url),
+        "__DOC_CONTENT__": rendered_markdown,
+        "__DOC_NAV__": render_wiki_doc_nav(config, document),
+        "__GENERATED_LABEL__": generated_at.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "__GITHUB_PROFILE__": html.escape(str(config["github_profile"])),
+        "__WIKI_REPO_URL__": html.escape(str(config["wiki_repo_url"])),
+        "__PUBLIC_REPO_COUNT__": str(len(repositories)),
+        "__SOCIAL_IMAGE_URL__": html.escape(absolute_asset_url(config, social_image_path)),
+        "__SOCIAL_IMAGE_ALT__": html.escape(str(social_image.get("alt", "Sheryloe Projects 대표 이미지"))),
+    }
+
+    rendered = template
+    for key, value in replacements.items():
+        rendered = rendered.replace(key, value)
+    return rendered
 
 
 def render_index_html(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
@@ -701,7 +923,7 @@ def render_index_html(config: dict[str, Any], repositories: list[dict[str, Any]]
         "__PROJECT_SEARCH_INDEX__": project_search_index(repositories),
         "__SCHEMA_JSON__": build_schema(config, repositories),
         "__SOCIAL_IMAGE_URL__": html.escape(absolute_asset_url(config, social_image_path)),
-        "__SOCIAL_IMAGE_ALT__": html.escape(str(social_image.get("alt", "Sheryloe Project Atlas 대표 이미지"))),
+        "__SOCIAL_IMAGE_ALT__": html.escape(str(social_image.get("alt", "Sheryloe Projects 대표 이미지"))),
     }
 
     rendered = template
@@ -733,15 +955,12 @@ def render_wiki_repo_card(repository: dict[str, Any]) -> str:
 def render_wiki_track_card(track: dict[str, Any], repositories_by_name: dict[str, dict[str, Any]]) -> str:
     matched = [repositories_by_name[name] for name in track.get("repositories", []) if name in repositories_by_name]
     return f"""            <article class="wiki-track-card accent-{slugify(str(track.get("accent", "slate")))} reveal">
-              <div class="track-icon">
-                <iconify-icon icon="{html.escape(str(track.get("icon", "solar:layers-linear")))}"></iconify-icon>
-              </div>
               <div>
                 <p class="eyebrow eyebrow-small">{html.escape(str(track["title"]))}</p>
                 <h3>{html.escape(str(track["title"]))}</h3>
                 <p>{html.escape(str(track["summary"]))}</p>
               </div>
-              <strong>{len(matched)}</strong>
+              <strong class="track-count">{len(matched)} tracked repos</strong>
             </article>"""
 
 
@@ -776,7 +995,7 @@ def render_wiki_index_html(config: dict[str, Any], repositories: list[dict[str, 
         ),
         "__SCHEMA_JSON__": build_schema(config, repositories),
         "__SOCIAL_IMAGE_URL__": html.escape(absolute_asset_url(config, social_image_path)),
-        "__SOCIAL_IMAGE_ALT__": html.escape(str(social_image.get("alt", "Sheryloe Project Atlas 대표 이미지"))),
+        "__SOCIAL_IMAGE_ALT__": html.escape(str(social_image.get("alt", "Sheryloe Projects 대표 이미지"))),
     }
 
     rendered = template
@@ -841,6 +1060,26 @@ def render_sitemap_xml(config: dict[str, Any], repositories: list[dict[str, Any]
         caption="Central wiki landing",
     )
     lines.append("  </url>")
+
+    for document in generated_wiki_documents(config):
+        output_path = str(document["output_path"]).replace("\\", "/")
+        doc_url = urllib.parse.urljoin(site_url, output_path)
+        lines.extend(
+            [
+                "  <url>",
+                f"    <loc>{doc_url}</loc>",
+                f"    <lastmod>{today}</lastmod>",
+                "    <changefreq>weekly</changefreq>",
+                "    <priority>0.6</priority>",
+            ]
+        )
+        append_image_metadata(
+            lines,
+            social_image_url,
+            title=str(document["title"]),
+            caption=str(document.get("summary", document["title"])),
+        )
+        lines.append("  </url>")
 
     for repository in repositories:
         if not repository["has_pages"]:
@@ -1064,6 +1303,8 @@ def main() -> int:
 
     write_file(ROOT / "index.html", render_index_html(config, repositories))
     write_file(ROOT / "wiki" / "index.html", render_wiki_index_html(config, repositories))
+    for document in generated_wiki_documents(config):
+        write_file(ROOT / str(document["output_path"]), render_wiki_doc_html(config, document, repositories))
     write_file(ROOT / "sitemap.xml", render_sitemap_xml(config, repositories))
     write_file(ROOT / "rss.xml", render_rss_xml(config, repositories))
     write_file(ROOT / "feed.xml", render_atom_xml(config, repositories))
@@ -1073,8 +1314,8 @@ def main() -> int:
     write_file(ROOT / ".nojekyll", "\n")
 
     print(
-        "Generated: index.html, wiki/index.html, sitemap.xml, rss.xml, feed.xml, robots.txt, "
-        "projects.json, site.webmanifest, .nojekyll"
+        "Generated: index.html, wiki/index.html, wiki/*.html, sitemap.xml, rss.xml, feed.xml, "
+        "robots.txt, projects.json, site.webmanifest, .nojekyll"
     )
     print(
         f"Repositories: {len(repositories)} total, "

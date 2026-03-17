@@ -1,12 +1,12 @@
-# Portfolio Wiki
+# Portfolio Home
 
 이 문서는 `sheryloe.github.io`를 기준으로 현재 공개 저장소 전체를 서비스 관점에서 묶어 정리한 중앙 위키입니다.
 
 ## 문서 구성
 
-- [Repository-Service-Map.md](./Repository-Service-Map.md): 저장소별 현재 역할과 서비스 방향
-- [Timeline-DO.md](./Timeline-DO.md): 날짜 기준으로 정리한 최근 완료 작업
-- [Service-TODO.md](./Service-TODO.md): 보안, 기능, 운영 관점에서 이어질 다음 작업
+- [Repository Service Map](./Repository-Service-Map.md): 저장소별 현재 역할과 서비스 방향
+- [Timeline DO](./Timeline-DO.md): 날짜 기준으로 정리한 최근 완료 작업
+- [Service TODO](./Service-TODO.md): 보안, 기능, 운영 관점에서 이어질 다음 작업
 
 ## 현재 포트폴리오 축
 

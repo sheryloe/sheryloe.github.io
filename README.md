@@ -9,10 +9,11 @@
 
 ## 생성 구조
 
-- `generate_site.py`: GitHub API를 읽어 루트 허브와 위키 랜딩, 피드 파일을 생성합니다.
+- `generate_site.py`: GitHub API를 읽어 루트 허브, 중앙 위키 랜딩, 개별 HTML 문서, 피드 파일을 생성합니다.
 - `site-config.json`: 영문/국문 설명, 포트폴리오 트랙, 위키 문서 카드, 저장소별 설명 오버라이드를 관리합니다.
 - `templates/index.template.html`: 루트 허브 템플릿
 - `templates/wiki.template.html`: 중앙 위키 랜딩 템플릿
+- `templates/wiki-doc.template.html`: `wiki/*.md`를 퍼블리시하는 HTML 문서 템플릿
 - `projects.json`: 현재 공개 저장소 메타데이터 캐시
 - `wiki/*.md`: 서비스 맵, Timeline DO, Service TODO 등 중앙 문서
 
@@ -20,6 +21,7 @@
 
 - `index.html`
 - `wiki/index.html`
+- `wiki/*.html`
 - `projects.json`
 - `rss.xml`
 - `feed.xml`
@@ -51,16 +53,16 @@ python generate_site.py
 ```
 
 첫 번째 생성은 최신 공개 저장소 목록과 HTML을 만들고, 두 번째 명령은 각 라이브 페이지와 루트 허브를 스크린샷으로 캡처합니다.
-마지막 생성은 새 썸네일을 포함한 최종 `index.html`, `wiki/index.html`, `projects.json`, `sitemap.xml`을 다시 빌드합니다.
+마지막 생성은 새 썸네일을 포함한 최종 `index.html`, `wiki/index.html`, `wiki/*.html`, `projects.json`, `sitemap.xml`을 다시 빌드합니다.
 
 ## 이번 리디자인 포인트
 
-- 공개 저장소를 `AI & Automation`, `Service Products`, `Desktop Utilities`, `Platform & Docs` 네 축으로 재구성
-- 중앙 위키와 저장소별 `wiki/` 진입점을 홈에서 바로 탐색 가능하도록 연결
-- Tailwind CSS, Fuse.js, Chart.js, Iconify를 조합해 탐색성과 시각 밀도를 강화
-- 프로젝트 카드에 단계, 상태, 다음 포커스, 위키 링크를 추가해 내용 밀도를 높임
+- 공개 저장소를 `AI Automation`, `Service Products`, `Desktop Utilities`, `Platform Docs` 네 축으로 재구성
+- 홈은 `Overview / Projects / Docs / Activity` 탭 중심의 compact 허브로 구성
+- 중앙 위키 문서를 `wiki/*.html`로 퍼블리시해 완성형 문서처럼 연결
+- shadcn/ui 스타일의 카드, 탭, 시트, 배지 패턴과 Fuse.js, Iconify를 조합해 탐색성과 가독성을 함께 강화
 
 ## 자동 갱신
 
 GitHub Actions는 `main` 브랜치에서 생성기, 설정, 템플릿이 바뀌거나 스케줄이 돌 때 루트 허브를 다시 생성합니다.
-자동 커밋 대상에는 `wiki/index.html`도 포함됩니다.
+자동 커밋 대상에는 `wiki/index.html`과 `wiki/*.html`도 포함됩니다.

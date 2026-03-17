@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Home | Sheryloe Projects</title>
+  <meta name="description" content="전체 포트폴리오 축과 작업 원칙을 짧게 정리한 소개 문서입니다.">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://sheryloe.github.io/wiki/home.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Portfolio Home | Sheryloe Projects">
+  <meta property="og:description" content="전체 포트폴리오 축과 작업 원칙을 짧게 정리한 소개 문서입니다.">
+  <meta property="og:url" content="https://sheryloe.github.io/wiki/home.html">
+  <meta property="og:image" content="https://sheryloe.github.io/assets/meta/root-hub-social.png">
+  <meta property="og:image:alt" content="Sheryloe Projects 첫 화면 미리보기">
+  <link rel="icon" type="image/svg+xml" href="https://sheryloe.github.io/assets/meta/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <style type="text/tailwindcss">
+    :root {
+      --border: #e2e8f0;
+      --card: #ffffff;
+      --primary: #0f172a;
+      --primary-foreground: #ffffff;
+      --secondary: #f8fafc;
+    }
+
+    body {
+      @apply min-h-screen bg-slate-50 text-slate-950 antialiased;
+      font-family: "Inter", "Noto Sans KR", sans-serif;
+      background-image:
+        radial-gradient(circle at top, rgba(148, 163, 184, 0.12), transparent 30rem),
+        linear-gradient(180deg, #f8fafc 0%, #f8fafc 100%);
+    }
+
+    .shell {
+      @apply rounded-2xl border bg-white shadow-sm;
+      border-color: var(--border);
+    }
+
+    .button {
+      @apply inline-flex items-center justify-center rounded-lg border px-3.5 py-2 text-sm font-medium transition-colors;
+      border-color: var(--border);
+      background: var(--card);
+      color: #0f172a;
+    }
+
+    .button:hover {
+      @apply bg-slate-50;
+    }
+
+    .button-primary {
+      background: var(--primary);
+      color: var(--primary-foreground);
+      border-color: var(--primary);
+    }
+
+    .button-primary:hover {
+      background: #020617;
+    }
+
+    .section-label,
+    .doc-badge {
+      @apply inline-flex items-center rounded-md border px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.14em];
+      border-color: var(--border);
+      background: var(--secondary);
+      color: #334155;
+    }
+
+    .doc-nav-link {
+      @apply block rounded-lg border px-3 py-2 text-sm text-slate-600 transition-colors;
+      border-color: transparent;
+    }
+
+    .doc-nav-link:hover {
+      @apply bg-slate-50 text-slate-950;
+    }
+
+    .doc-nav-link.is-active {
+      @apply border-slate-200 bg-slate-100 text-slate-950;
+    }
+
+    .doc-content h1 {
+      @apply mt-8 text-2xl font-semibold tracking-[-0.04em] text-slate-950 first:mt-0;
+    }
+
+    .doc-content h2 {
+      @apply mt-8 text-xl font-semibold tracking-[-0.03em] text-slate-950;
+    }
+
+    .doc-content h3 {
+      @apply mt-6 text-lg font-semibold tracking-[-0.02em] text-slate-950;
+    }
+
+    .doc-content p,
+    .doc-content li {
+      @apply mt-3 text-sm leading-7 text-slate-700;
+    }
+
+    .doc-content ul {
+      @apply mt-3 list-disc space-y-1 pl-5;
+    }
+
+    .doc-content a {
+      @apply font-medium text-slate-900 underline underline-offset-4;
+    }
+
+    .doc-content code {
+      @apply rounded bg-slate-100 px-1.5 py-0.5 text-[0.9em] text-slate-900;
+    }
+
+    .doc-table-wrap {
+      @apply mt-4 overflow-x-auto rounded-xl border;
+      border-color: var(--border);
+    }
+
+    .doc-table-wrap table {
+      @apply min-w-full border-collapse text-sm;
+    }
+
+    .doc-table-wrap th,
+    .doc-table-wrap td {
+      @apply border-b px-4 py-3 text-left align-top;
+      border-color: var(--border);
+    }
+
+    .doc-table-wrap th {
+      @apply bg-slate-50 font-semibold text-slate-900;
+    }
+
+    .note-card {
+      @apply rounded-xl border bg-white p-4;
+      border-color: var(--border);
+    }
+  </style>
+</head>
+<body>
+  <header class="mx-auto w-[min(calc(100%-24px),1220px)] py-6">
+    <div class="shell px-5 py-4">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <span class="section-label">Wiki Document</span>
+          <h1 class="mt-3 text-2xl font-semibold tracking-[-0.04em] text-slate-950 md:text-3xl">Portfolio Home</h1>
+          <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-600">전체 포트폴리오 축과 작업 원칙을 짧게 정리한 소개 문서입니다.</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a class="button" href="./">Central Wiki</a>
+          <a class="button" href="https://sheryloe.github.io/">Project Hub</a>
+          <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki/Home.md">Source</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto grid w-[min(calc(100%-24px),1220px)] gap-4 pb-10 xl:grid-cols-[260px_minmax(0,1fr)]">
+    <aside class="space-y-4">
+      <section class="shell p-4 xl:sticky xl:top-6">
+        <div class="flex items-center justify-between">
+          <span class="section-label">Documents</span>
+          <span class="text-xs text-slate-500">auto html</span>
+        </div>
+        <nav class="mt-4 space-y-2">
+              <a class="doc-nav-link" href="./">Central Wiki</a>
+              <a class="doc-nav-link is-active" href="home.html">Portfolio Home</a>
+              <a class="doc-nav-link" href="repository-service-map.html">Repository Service Map</a>
+              <a class="doc-nav-link" href="timeline-do.html">Timeline DO</a>
+              <a class="doc-nav-link" href="service-todo.html">Service TODO</a>
+        </nav>
+      </section>
+
+      <section class="note-card">
+        <span class="section-label">Published From</span>
+        <p>원본 Markdown은 저장소에 유지하고, 현재 페이지는 정적 HTML로 생성되어 중앙 위키에서 바로 연결됩니다.</p>
+      </section>
+
+      <section class="note-card">
+        <span class="section-label">Snapshot</span>
+        <p>공개 저장소 수: 10</p>
+        <p>생성 시각: 2026-03-17 02:38 UTC</p>
+      </section>
+    </aside>
+
+    <section class="shell p-5 md:p-6">
+      <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <div class="flex flex-wrap gap-2">
+          <span class="doc-badge">Overview</span>
+          <span class="doc-badge">HTML Published</span>
+        </div>
+        <p class="text-xs text-slate-500">generated 2026-03-17 02:38 UTC</p>
+      </div>
+
+      <div class="mt-5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-6 text-slate-700">
+        전체 포트폴리오 축과 작업 원칙을 짧게 정리한 소개 문서입니다.
+      </div>
+
+      <article class="doc-content mt-6">
+<p>이 문서는 <code>sheryloe.github.io</code>를 기준으로 현재 공개 저장소 전체를 서비스 관점에서 묶어 정리한 중앙 위키입니다.</p>
+<h2>문서 구성</h2>
+<ul><li><a href="repository-service-map.html">Repository Service Map</a>: 저장소별 현재 역할과 서비스 방향</li><li><a href="timeline-do.html">Timeline DO</a>: 날짜 기준으로 정리한 최근 완료 작업</li><li><a href="service-todo.html">Service TODO</a>: 보안, 기능, 운영 관점에서 이어질 다음 작업</li></ul>
+<h2>현재 포트폴리오 축</h2>
+<ul><li>AI 운영 자동화: <code>AI_BISEO</code>, <code>AI_Writer_TISTORY</code>, <code>BloggerGent</code></li><li>분석과 운영 도구: <code>BloManagent</code>, <code>Vibe_Cowork_Thinking</code></li><li>개인 서비스: <code>donggri_gagyeobu</code>, <code>Automethemoney</code></li><li>데스크톱 유틸리티: <code>Favorit</code>, <code>grid-crop-image</code></li><li>플랫폼 워크스페이스: <code>donggeuri-cloudflare-blog</code></li><li>공개 허브와 문서: <code>sheryloe.github.io</code></li></ul>
+<h2>지금 보이는 방향</h2>
+<ul><li>README, GitHub Pages, wiki를 각각 따로 두지 않고 서비스 설명이 이어지는 구조로 묶는 중입니다.</li><li><code>Automethemoney</code>, <code>donggri_gagyeobu</code>, <code>BloggerGent</code>, <code>BloManagent</code>는 서비스형 제품처럼 보이게 만드는 축으로 정리합니다.</li><li>나머지 저장소는 도구형, 운영형, R&amp;D형으로 묶고 배포 문서와 운영 문서를 보강합니다.</li></ul>
+<h2>작업 원칙</h2>
+<ul><li>비공개 저장소는 제외하고 공개 저장소만 정리합니다.</li><li>각 저장소마다 <code>wiki/</code> 문서를 두고 루트 허브에서 다시 한 번 모아 보이게 구성합니다.</li><li>TODO는 단순 아이디어 목록이 아니라 서비스 제공 관점에서 우선순위를 나누어 적습니다.</li></ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="mx-auto w-[min(calc(100%-24px),1220px)] pb-8">
+    <div class="shell px-5 py-4">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div>
+          <strong class="text-sm font-semibold tracking-[-0.02em] text-slate-950">Sheryloe Projects</strong>
+          <p class="mt-1 text-sm text-slate-600">중앙 위키 문서를 정적 HTML 페이지로 퍼블리시한 문서 뷰입니다.</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a class="button" href="./">Wiki</a>
+          <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki">Source Folder</a>
+          <a class="button" href="https://github.com/sheryloe">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

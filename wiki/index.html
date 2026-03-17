@@ -3,89 +3,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Central Wiki | Sheryloe Project Atlas</title>
-  <meta name="description" content="AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 sheryloe의 공개 저장소를 서비스 관점으로 다시 묶은 루트 허브입니다. 라이브 Pages, 중앙 위키, 최근 변경, 다음 로드맵을 한곳에서 읽을 수 있습니다.">
-  <meta name="theme-color" content="#193630">
+  <title>Central Wiki | Sheryloe Projects</title>
+  <meta name="description" content="AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.">
+  <meta name="theme-color" content="#0f172a">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="https://sheryloe.github.io/wiki/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Central Wiki | Sheryloe Project Atlas">
-  <meta property="og:description" content="AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 sheryloe의 공개 저장소를 서비스 관점으로 다시 묶은 루트 허브입니다. 라이브 Pages, 중앙 위키, 최근 변경, 다음 로드맵을 한곳에서 읽을 수 있습니다.">
+  <meta property="og:title" content="Central Wiki | Sheryloe Projects">
+  <meta property="og:description" content="AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.">
   <meta property="og:url" content="https://sheryloe.github.io/wiki/">
   <meta property="og:image" content="https://sheryloe.github.io/assets/meta/root-hub-social.png">
-  <meta property="og:image:alt" content="Sheryloe Project Atlas 첫 화면 미리보기">
+  <meta property="og:image:alt" content="Sheryloe Projects 첫 화면 미리보기">
   <link rel="icon" type="image/svg+xml" href="https://sheryloe.github.io/assets/meta/icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['IBM Plex Sans KR', 'sans-serif'],
-            display: ['Fraunces', 'IBM Plex Sans KR', 'serif'],
-          },
-          boxShadow: {
-            glow: '0 24px 60px rgba(22, 32, 42, 0.12)',
-          },
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="https://code.iconify.design/iconify-icon/3.1.1/iconify-icon.min.js"></script>
   <style type="text/tailwindcss">
     :root {
-      --shell: rgba(255, 251, 246, 0.9);
-      --line: rgba(26, 34, 42, 0.12);
-      --ink: #182127;
-      --ink-soft: #5e676f;
-      --teal: #1f8a72;
-      --amber: #d88c3a;
-      --ocean: #3a6fd8;
-      --slate: #556271;
-      --rose: #d46363;
+      --border: #e2e8f0;
+      --card: #ffffff;
+      --primary: #0f172a;
+      --primary-foreground: #ffffff;
+      --secondary: #f8fafc;
+      --teal: #0f766e;
+      --amber: #b45309;
+      --ocean: #1d4ed8;
+      --slate: #475569;
+      --rose: #be123c;
     }
 
     body {
-      @apply min-h-screen font-sans text-[var(--ink)] antialiased;
-      background:
-        radial-gradient(circle at 10% 12%, rgba(31, 138, 114, 0.16), transparent 28rem),
-        radial-gradient(circle at 86% 14%, rgba(216, 140, 58, 0.16), transparent 24rem),
-        linear-gradient(180deg, #f8f2ea 0%, #f1e6d8 60%, #eadfce 100%);
+      @apply min-h-screen bg-slate-50 text-slate-950 antialiased;
+      font-family: "Inter", "Noto Sans KR", sans-serif;
+      background-image:
+        radial-gradient(circle at top, rgba(148, 163, 184, 0.12), transparent 30rem),
+        linear-gradient(180deg, #f8fafc 0%, #f8fafc 100%);
     }
 
     .shell {
-      @apply rounded-[28px] border shadow-glow backdrop-blur-xl;
-      background: var(--shell);
-      border-color: var(--line);
-    }
-
-    .eyebrow {
-      @apply inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em];
-      background: rgba(25, 54, 48, 0.08);
-      color: var(--teal);
+      @apply rounded-2xl border bg-white shadow-sm;
+      border-color: var(--border);
     }
 
     .button {
-      @apply inline-flex min-h-11 items-center justify-center rounded-full border px-4 text-sm font-semibold transition duration-200;
-      background: rgba(255, 255, 255, 0.78);
-      border-color: rgba(26, 34, 42, 0.16);
+      @apply inline-flex items-center justify-center rounded-lg border px-3.5 py-2 text-sm font-medium transition-colors;
+      border-color: var(--border);
+      background: var(--card);
+      color: #0f172a;
+    }
+
+    .button:hover {
+      @apply bg-slate-50;
     }
 
     .button-primary {
-      @apply text-white;
-      background: linear-gradient(135deg, #163d36, #214f46);
-      border-color: transparent;
+      background: var(--primary);
+      color: var(--primary-foreground);
+      border-color: var(--primary);
+    }
+
+    .button-primary:hover {
+      background: #020617;
+    }
+
+    .badge,
+    .status-pill,
+    .meta-pill,
+    .eyebrow {
+      @apply inline-flex items-center rounded-md border px-2.5 py-1 text-[11px] font-medium;
+      border-color: var(--border);
+      background: var(--secondary);
+      color: #334155;
+    }
+
+    .eyebrow-small {
+      @apply text-[10px];
+    }
+
+    .status-pill {
+      @apply bg-slate-100 text-slate-700;
+    }
+
+    .tabs-list {
+      @apply inline-flex rounded-xl border bg-slate-100 p-1;
+      border-color: var(--border);
+    }
+
+    .tab-trigger {
+      @apply rounded-lg px-3.5 py-2 text-sm font-medium text-slate-600 transition-colors;
+    }
+
+    .tab-trigger.is-active {
+      @apply bg-white text-slate-950 shadow-sm;
+    }
+
+    .section-label {
+      @apply text-xs font-semibold uppercase tracking-[0.18em] text-slate-500;
     }
 
     .doc-card,
     .wiki-track-card,
     .wiki-repo-card,
-    .timeline-card {
-      @apply rounded-[26px] border bg-white/76 p-6;
-      border-color: var(--line);
-      box-shadow: 0 18px 36px rgba(23, 31, 40, 0.06);
+    .timeline-card,
+    .info-card,
+    .note-card {
+      @apply rounded-xl border bg-white;
+      border-color: var(--border);
+    }
+
+    .accent-teal,
+    .accent-amber,
+    .accent-ocean,
+    .accent-slate,
+    .accent-rose {
+      @apply relative overflow-hidden;
     }
 
     .accent-teal::before,
@@ -94,7 +127,7 @@
     .accent-slate::before,
     .accent-rose::before {
       content: "";
-      @apply mb-5 block h-1.5 w-full rounded-full;
+      @apply absolute inset-x-0 top-0 h-0.5;
     }
 
     .accent-teal::before { background: var(--teal); }
@@ -103,47 +136,35 @@
     .accent-slate::before { background: var(--slate); }
     .accent-rose::before { background: var(--rose); }
 
-    .track-icon,
-    .doc-icon {
-      @apply mb-5 flex h-14 w-14 items-center justify-center rounded-2xl text-3xl;
-      background: rgba(25, 54, 48, 0.08);
-      color: var(--teal);
+    .doc-card,
+    .wiki-track-card,
+    .wiki-repo-card,
+    .info-card,
+    .note-card {
+      @apply p-4;
     }
 
-    .meta-pill,
-    .status-pill {
-      @apply inline-flex items-center justify-center rounded-full border px-3 py-1 text-[11px] font-semibold;
-      border-color: var(--line);
-      background: rgba(255, 255, 255, 0.72);
-      color: var(--ink-soft);
-    }
-
-    .status-pill {
-      background: rgba(25, 54, 48, 0.08);
-      color: var(--teal);
-    }
-
-    .button-row,
-    .meta-row {
-      @apply mt-4 flex flex-wrap gap-2;
-    }
-
-    .button-row .button {
-      @apply flex-1;
+    .doc-icon,
+    .track-icon {
+      @apply flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 text-xl text-slate-700;
     }
 
     .doc-card h3,
     .wiki-track-card h3,
-    .wiki-repo-card h3,
-    .timeline-body h3 {
-      @apply font-display text-2xl tracking-[-0.04em];
+    .wiki-repo-card h3 {
+      @apply mt-3 text-lg font-semibold tracking-[-0.03em] text-slate-950;
     }
 
     .doc-card p,
     .wiki-track-card p,
     .wiki-repo-card p,
-    .timeline-body p {
-      @apply mt-3 text-sm leading-7 text-[var(--ink-soft)];
+    .note-card p {
+      @apply mt-2 text-sm leading-6 text-slate-600;
+    }
+
+    .meta-row,
+    .button-row {
+      @apply mt-3 flex flex-wrap gap-2;
     }
 
     .wiki-repo-head {
@@ -151,30 +172,40 @@
     }
 
     .timeline-card {
-      @apply grid gap-5 md:grid-cols-[120px_minmax(0,1fr)];
+      @apply p-0;
+    }
+
+    .accordion-trigger {
+      @apply flex w-full items-center justify-between gap-4 px-4 py-4 text-left;
+    }
+
+    .accordion-copy strong {
+      @apply mt-1 block text-sm font-semibold text-slate-950;
+    }
+
+    .accordion-panel {
+      @apply border-t px-4 pb-4 pt-3;
+      border-color: var(--border);
+    }
+
+    .accordion-icon {
+      @apply text-xl text-slate-400;
     }
 
     .timeline-date {
-      @apply text-sm font-semibold uppercase tracking-[0.2em] text-[var(--teal)];
+      @apply text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500;
     }
 
     .timeline-points {
-      @apply mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-[var(--ink-soft)];
+      @apply mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-600;
+    }
+
+    .track-count {
+      @apply mt-4 block text-2xl font-semibold tracking-[-0.04em] text-slate-950;
     }
 
     .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .reveal.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; transition: none; }
+      @apply opacity-100;
     }
   </style>
   <script type="application/ld+json">
@@ -183,15 +214,15 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "name": "Sheryloe Project Atlas",
+      "name": "Sheryloe Projects",
       "url": "https://sheryloe.github.io/",
-      "description": "AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 sheryloe의 공개 저장소를 서비스 관점으로 다시 묶은 루트 허브입니다. 라이브 Pages, 중앙 위키, 최근 변경, 다음 로드맵을 한곳에서 읽을 수 있습니다."
+      "description": "AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다."
     },
     {
       "@type": "CollectionPage",
-      "name": "Sheryloe Project Atlas | 운영형 서비스와 도구를 엮는 프로젝트 허브",
+      "name": "Sheryloe Projects | 공개 프로젝트 허브와 문서 아카이브",
       "url": "https://sheryloe.github.io/",
-      "description": "AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 sheryloe의 공개 저장소를 서비스 관점으로 다시 묶은 루트 허브입니다. 라이브 Pages, 중앙 위키, 최근 변경, 다음 로드맵을 한곳에서 읽을 수 있습니다.",
+      "description": "AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.",
       "image": "https://sheryloe.github.io/assets/meta/root-hub-social.png"
     },
     {
@@ -291,166 +322,148 @@
 }
   </script>
 </head>
-<body class="selection:bg-emerald-200/70 selection:text-slate-900">
-  <script src="https://code.iconify.design/iconify-icon/3.1.1/iconify-icon.min.js"></script>
-
-  <header class="sticky top-4 z-50 mx-auto w-[min(calc(100%-24px),1280px)]">
-    <div class="shell px-5 py-4 md:px-7">
-      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <div class="flex items-center gap-3">
-          <div class="h-3 w-3 rounded-full bg-emerald-500 shadow-[0_0_18px_rgba(16,185,129,0.6)]"></div>
-          <span class="text-sm font-semibold uppercase tracking-[0.28em]">Central Wiki</span>
+<body>
+  <header class="mx-auto w-[min(calc(100%-24px),1220px)] py-6">
+    <div class="shell px-5 py-4">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <p class="section-label">Central Wiki</p>
+          <h1 class="mt-2 text-2xl font-semibold tracking-[-0.04em] text-slate-950 md:text-3xl">문서, 저장소별 wiki, 작업 흐름을 한 번에 보는 문서 허브</h1>
+          <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-600">Markdown 원본은 저장소에 유지하고, 사용자에게 보이는 문서는 HTML 페이지로 다시 묶었습니다. 긴 나열 대신 탭 중심 구조로 핵심 문서와 repo wiki를 빠르게 오갈 수 있게 정리했습니다.</p>
         </div>
         <div class="flex flex-wrap gap-2">
-          <a class="button" href="https://sheryloe.github.io/">Back to Hub</a>
+          <a class="button" href="https://sheryloe.github.io/">Project Hub</a>
           <a class="button" href="https://github.com/sheryloe">GitHub</a>
           <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki">Wiki Source</a>
         </div>
       </div>
+      <div class="mt-5 grid gap-3 sm:grid-cols-3">
+        <article class="info-card">
+          <span class="section-label">Public Repos</span>
+          <strong class="mt-2 block text-2xl font-semibold tracking-[-0.04em] text-slate-950">10</strong>
+        </article>
+        <article class="info-card">
+          <span class="section-label">Live Pages</span>
+          <strong class="mt-2 block text-2xl font-semibold tracking-[-0.04em] text-slate-950">9</strong>
+        </article>
+        <article class="info-card">
+          <span class="section-label">HTML Docs</span>
+          <strong class="mt-2 block text-2xl font-semibold tracking-[-0.04em] text-slate-950">5</strong>
+        </article>
+      </div>
     </div>
   </header>
 
-  <main class="mx-auto w-[min(calc(100%-24px),1280px)] pb-16 pt-8 md:pt-10">
-    <section class="grid gap-5 xl:grid-cols-[minmax(0,1.5fr)_380px]">
-      <div class="shell p-6 md:p-8 xl:p-10 reveal">
-        <span class="eyebrow">Documentation Operating Layer</span>
-        <h1 class="mt-6 max-w-4xl font-display text-[clamp(2.8rem,5vw,5rem)] leading-[0.95] tracking-[-0.06em]">README를 넘어 서비스 설명과 의사결정 기록을 이어 읽는 중앙 위키</h1>
-        <p class="mt-6 max-w-3xl text-lg leading-9 text-[var(--ink-soft)]">서비스 맵, 날짜별 실행 로그, 다음 작업 백로그를 루트 허브와 연결해 저장소 설명이 한 군데에서 끊기지 않도록 구성했습니다.</p>
-        <div class="button-row mt-8">
-          <a class="button button-primary" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki">GitHub 문서 열기</a>
-          <a class="button" href="#repo-wikis">저장소별 위키 보기</a>
+  <main class="mx-auto w-[min(calc(100%-24px),1220px)] pb-10">
+    <section class="shell p-4 md:p-5">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div class="tabs-list" role="tablist" aria-label="위키 탭">
+          <button class="tab-trigger is-active" type="button" role="tab" aria-selected="true" data-tab-target="documents">Documents</button>
+          <button class="tab-trigger" type="button" role="tab" aria-selected="false" data-tab-target="repositories">Repo Wikis</button>
+          <button class="tab-trigger" type="button" role="tab" aria-selected="false" data-tab-target="timeline">Timeline</button>
         </div>
+        <p class="text-xs text-slate-500">generated 2026-03-17 02:38 UTC</p>
       </div>
-      <aside class="shell p-6 md:p-8 reveal">
-        <span class="eyebrow">Wiki Snapshot</span>
-        <div class="mt-6 grid gap-3">
-          <article class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
-            <span class="text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">Public Repos</span>
-            <strong class="mt-2 block font-display text-4xl tracking-[-0.05em]">10</strong>
-          </article>
-          <article class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
-            <span class="text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">Live Pages</span>
-            <strong class="mt-2 block font-display text-4xl tracking-[-0.05em]">9</strong>
-          </article>
-          <article class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
-            <span class="text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">Core Docs</span>
-            <strong class="mt-2 block font-display text-4xl tracking-[-0.05em]">4</strong>
-          </article>
-        </div>
-        <p class="mt-5 text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">generated 2026-03-17 01:54 UTC</p>
-      </aside>
-    </section>
 
-    <section class="mt-8 shell p-6 md:p-8 xl:p-10">
-      <span class="eyebrow">Core Documents</span>
-      <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">중앙 위키의 핵심 문서</h2>
-      <div class="mt-8 grid gap-4 md:grid-cols-2">
+      <div class="mt-5" data-tab-panel="documents">
+        <div class="grid gap-4 xl:grid-cols-[minmax(0,1fr)_320px]">
+          <section>
+            <div class="flex items-center justify-between">
+              <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Published HTML Docs</h2>
+              <a class="button" href="https://sheryloe.github.io/">루트 허브로 이동</a>
+            </div>
+            <div class="mt-4 grid gap-3 md:grid-cols-2">
             <article class="doc-card reveal">
-              <div class="doc-icon">
-                <iconify-icon icon="solar:book-bookmark-linear"></iconify-icon>
-              </div>
-              <p class="eyebrow eyebrow-small">Entry Point</p>
-              <h3>Central Wiki Landing</h3>
-              <p>루트 허브 전체를 어떤 서비스 축으로 읽어야 하는지 보여주는 중앙 문서 인덱스입니다.</p>
+              <p class="eyebrow eyebrow-small">Hub</p>
+              <h3>Central Wiki</h3>
+              <p>문서 인덱스, 저장소별 wiki 진입점, 최근 문서 흐름을 한곳에 모은 중앙 허브입니다.</p>
               <div class="button-row">
-                <a class="button button-primary" href="https://sheryloe.github.io/wiki/">Open Wiki</a>
-                <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki">GitHub Source</a>
+                <a class="button button-primary" href="https://sheryloe.github.io/wiki/">Open Hub</a> <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki">GitHub Source</a>
               </div>
             </article>
             <article class="doc-card reveal">
-              <div class="doc-icon">
-                <iconify-icon icon="solar:map-point-wave-linear"></iconify-icon>
+              <p class="eyebrow eyebrow-small">Overview</p>
+              <h3>Portfolio Home</h3>
+              <p>전체 포트폴리오 축과 작업 원칙을 짧게 정리한 소개 문서입니다.</p>
+              <div class="button-row">
+                <a class="button button-primary" href="https://sheryloe.github.io/wiki/home.html">Open Doc</a>
               </div>
+            </article>
+            <article class="doc-card reveal">
               <p class="eyebrow eyebrow-small">Architecture</p>
               <h3>Repository Service Map</h3>
               <p>저장소별 역할, 서비스 설명, 다음 개선 포인트를 한 장으로 묶은 포지셔닝 문서입니다.</p>
               <div class="button-row">
-                <a class="button button-primary" href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Repository-Service-Map.md">Read Map</a>
-                
+                <a class="button button-primary" href="https://sheryloe.github.io/wiki/repository-service-map.html">Open Doc</a>
               </div>
             </article>
             <article class="doc-card reveal">
-              <div class="doc-icon">
-                <iconify-icon icon="solar:clock-circle-linear"></iconify-icon>
-              </div>
               <p class="eyebrow eyebrow-small">Execution Log</p>
               <h3>Timeline DO</h3>
               <p>날짜 기준으로 묶은 완료 작업 기록으로, 전체 포트폴리오의 흐름을 빠르게 훑을 수 있습니다.</p>
               <div class="button-row">
-                <a class="button button-primary" href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Timeline-DO.md">Read Timeline</a>
-                
+                <a class="button button-primary" href="https://sheryloe.github.io/wiki/timeline-do.html">Open Doc</a>
               </div>
             </article>
             <article class="doc-card reveal">
-              <div class="doc-icon">
-                <iconify-icon icon="solar:checklist-minimalistic-linear"></iconify-icon>
-              </div>
               <p class="eyebrow eyebrow-small">Roadmap</p>
               <h3>Service TODO</h3>
               <p>보안, 기능, 운영 관점에서 어떤 저장소를 다음에 어떻게 다듬어야 하는지 정리한 백로그입니다.</p>
               <div class="button-row">
-                <a class="button button-primary" href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Service-TODO.md">Read Backlog</a>
-                
+                <a class="button button-primary" href="https://sheryloe.github.io/wiki/service-todo.html">Open Doc</a>
               </div>
             </article>
-      </div>
-    </section>
-
-    <section class="mt-8 shell p-6 md:p-8 xl:p-10">
-      <span class="eyebrow">Portfolio Tracks</span>
-      <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">문서를 읽는 관점도 서비스 축으로 맞췄습니다</h2>
-      <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            </div>
+          </section>
+          <aside class="space-y-3">
+            <section class="note-card">
+              <span class="section-label">Reading Path</span>
+              <p>Portfolio Home으로 전체 방향을 먼저 보고, Repository Service Map에서 역할을 확인한 뒤, Timeline DO와 Service TODO로 실행 흐름을 읽는 구조를 권장합니다.</p>
+            </section>
+            <section class="grid gap-3">
             <article class="wiki-track-card accent-teal reveal">
-              <div class="track-icon">
-                <iconify-icon icon="solar:cpu-bolt-linear"></iconify-icon>
-              </div>
               <div>
-                <p class="eyebrow eyebrow-small">AI &amp; Automation</p>
-                <h3>AI &amp; Automation</h3>
+                <p class="eyebrow eyebrow-small">AI Automation</p>
+                <h3>AI Automation</h3>
                 <p>AI 비서, 글쓰기 자동화, 멀티 채널 발행, 협업 오케스트레이션까지 지식 작업을 자동화하는 축입니다.</p>
               </div>
-              <strong>4</strong>
+              <strong class="track-count">4 tracked repos</strong>
             </article>
             <article class="wiki-track-card accent-amber reveal">
-              <div class="track-icon">
-                <iconify-icon icon="solar:layers-minimalistic-linear"></iconify-icon>
-              </div>
               <div>
                 <p class="eyebrow eyebrow-small">Service Products</p>
                 <h3>Service Products</h3>
                 <p>거래, 개인 재무, 분석 대시보드처럼 실제 사용 시나리오가 분명한 서비스형 프로젝트를 묶었습니다.</p>
               </div>
-              <strong>3</strong>
+              <strong class="track-count">3 tracked repos</strong>
             </article>
             <article class="wiki-track-card accent-ocean reveal">
-              <div class="track-icon">
-                <iconify-icon icon="solar:widget-5-linear"></iconify-icon>
-              </div>
               <div>
                 <p class="eyebrow eyebrow-small">Desktop Utilities</p>
                 <h3>Desktop Utilities</h3>
                 <p>자주 쓰는 작업을 빠르게 끝내는 Windows 중심 도구를 제품 감각으로 정리하는 축입니다.</p>
               </div>
-              <strong>2</strong>
+              <strong class="track-count">2 tracked repos</strong>
             </article>
             <article class="wiki-track-card accent-slate reveal">
-              <div class="track-icon">
-                <iconify-icon icon="solar:book-bookmark-linear"></iconify-icon>
-              </div>
               <div>
-                <p class="eyebrow eyebrow-small">Platform &amp; Docs</p>
-                <h3>Platform &amp; Docs</h3>
+                <p class="eyebrow eyebrow-small">Platform Docs</p>
+                <h3>Platform Docs</h3>
                 <p>플랫폼 워크스페이스와 중앙 위키를 통해 전체 저장소의 구조와 운영 원칙을 설명하는 축입니다.</p>
               </div>
-              <strong>1</strong>
+              <strong class="track-count">1 tracked repos</strong>
             </article>
+            </section>
+          </aside>
+        </div>
       </div>
-    </section>
 
-    <section id="repo-wikis" class="mt-8 shell p-6 md:p-8 xl:p-10">
-      <span class="eyebrow">Repository Wiki Index</span>
-      <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">저장소별 `wiki/` 진입점</h2>
-      <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div class="mt-5 hidden" data-tab-panel="repositories">
+        <div class="flex items-center justify-between">
+          <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Repository Wiki Entry Points</h2>
+          <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki">원본 폴더 보기</a>
+        </div>
+        <div class="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             <article class="wiki-repo-card accent-amber reveal">
               <div class="wiki-repo-head">
                 <div>
@@ -471,7 +484,7 @@
             <article class="wiki-repo-card accent-rose reveal">
               <div class="wiki-repo-head">
                 <div>
-                  <p class="eyebrow eyebrow-small">AI &amp; Automation</p>
+                  <p class="eyebrow eyebrow-small">AI Automation</p>
                   <h3>BloggerGent</h3>
                 </div>
                 <span class="status-pill">Scale</span>
@@ -505,7 +518,7 @@
             <article class="wiki-repo-card accent-slate reveal">
               <div class="wiki-repo-head">
                 <div>
-                  <p class="eyebrow eyebrow-small">Platform &amp; Docs</p>
+                  <p class="eyebrow eyebrow-small">Platform Docs</p>
                   <h3>donggeuri-cloudflare-blog</h3>
                 </div>
                 <span class="status-pill">Build</span>
@@ -539,7 +552,7 @@
             <article class="wiki-repo-card accent-teal reveal">
               <div class="wiki-repo-head">
                 <div>
-                  <p class="eyebrow eyebrow-small">AI &amp; Automation</p>
+                  <p class="eyebrow eyebrow-small">AI Automation</p>
                   <h3>Vibe_Cowork_Thinking</h3>
                 </div>
                 <span class="status-pill">Explore</span>
@@ -590,7 +603,7 @@
             <article class="wiki-repo-card accent-teal reveal">
               <div class="wiki-repo-head">
                 <div>
-                  <p class="eyebrow eyebrow-small">AI &amp; Automation</p>
+                  <p class="eyebrow eyebrow-small">AI Automation</p>
                   <h3>AI_Writer_TISTORY</h3>
                 </div>
                 <span class="status-pill">Scale</span>
@@ -607,7 +620,7 @@
             <article class="wiki-repo-card accent-teal reveal">
               <div class="wiki-repo-head">
                 <div>
-                  <p class="eyebrow eyebrow-small">AI &amp; Automation</p>
+                  <p class="eyebrow eyebrow-small">AI Automation</p>
                   <h3>AI_BISEO</h3>
                 </div>
                 <span class="status-pill">Operate</span>
@@ -621,60 +634,96 @@
                 <a class="button" href="https://sheryloe.github.io/AI_BISEO/">Live Page</a>
               </div>
             </article>
+        </div>
       </div>
-    </section>
 
-    <section class="mt-8 shell p-6 md:p-8 xl:p-10">
-      <span class="eyebrow">Timeline Highlights</span>
-      <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">최근 실행 로그에서 읽히는 흐름</h2>
-      <div class="mt-8 grid gap-4">
+      <div class="mt-5 hidden" data-tab-panel="timeline">
+        <div class="grid gap-4 xl:grid-cols-[minmax(0,1fr)_320px]">
+          <section>
+            <div class="flex items-center justify-between">
+              <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Documentation Timeline</h2>
+              <span class="text-xs text-slate-500">accordion</span>
+            </div>
+            <div class="mt-4 grid gap-3">
             <article class="timeline-card reveal">
-              <div class="timeline-date">2026-02-26</div>
-              <div class="timeline-body">
-                <h3>AI 협업 실험실의 기본 구조를 세웠습니다</h3>
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-2026-02-26-ai">
+                <div class="accordion-copy">
+                  <span class="timeline-date">2026-02-26</span>
+                  <strong>AI 협업 실험실의 기본 구조를 세웠습니다</strong>
+                </div>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-panel" id="panel-2026-02-26-ai" hidden>
                 <p>Runner와 Orchestrator를 나누고, 실행 흐름을 추적하는 워크스페이스 패턴을 만들기 시작한 구간입니다.</p>
                 <ul class="timeline-points"><li>Vibe_Cowork_Thinking에서 프로젝트 단위 실행 기록의 뼈대를 마련했습니다.</li><li>AI 작업 로그를 단순 메모가 아니라 운영 기록으로 남기는 관점이 잡혔습니다.</li></ul>
               </div>
             </article>
             <article class="timeline-card reveal">
-              <div class="timeline-date">2026-03-02</div>
-              <div class="timeline-body">
-                <h3>AI 운영 자동화 축이 본격적으로 확장됐습니다</h3>
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-2026-03-02-ai">
+                <div class="accordion-copy">
+                  <span class="timeline-date">2026-03-02</span>
+                  <strong>AI 운영 자동화 축이 본격적으로 확장됐습니다</strong>
+                </div>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-panel" id="panel-2026-03-02-ai" hidden>
                 <p>AI 비서, 티스토리 글쓰기, Notion 로그, 운영 문서가 서로 연결되는 백엔드 축이 정리된 시기입니다.</p>
                 <ul class="timeline-points"><li>AI_BISEO에 Telegram 명령, 대시보드, 로그 흐름이 강화됐습니다.</li><li>AI_Writer_TISTORY는 발행 전 검수와 운영 로그를 중심으로 서비스 문맥을 갖추기 시작했습니다.</li></ul>
               </div>
             </article>
             <article class="timeline-card reveal">
-              <div class="timeline-date">2026-03-09</div>
-              <div class="timeline-body">
-                <h3>도구형 저장소들이 제품처럼 보이기 시작했습니다</h3>
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-2026-03-09">
+                <div class="accordion-copy">
+                  <span class="timeline-date">2026-03-09</span>
+                  <strong>도구형 저장소들이 제품처럼 보이기 시작했습니다</strong>
+                </div>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-panel" id="panel-2026-03-09" hidden>
                 <p>스크린샷, 소개 페이지, 릴리스 자산이 붙으면서 데스크톱 유틸리티와 분석 도구의 품질 인상이 크게 올라갔습니다.</p>
                 <ul class="timeline-points"><li>grid-crop-image는 README와 Pages, 릴리스 자산을 갖춘 공개 유틸리티로 정돈됐습니다.</li><li>Favorit은 위젯형 제품 톤을 살릴 수 있는 배포 기반을 확보했습니다.</li></ul>
               </div>
             </article>
             <article class="timeline-card reveal">
-              <div class="timeline-date">2026-03-15</div>
-              <div class="timeline-body">
-                <h3>서비스 문서와 위키가 포트폴리오의 중심으로 올라왔습니다</h3>
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-2026-03-15">
+                <div class="accordion-copy">
+                  <span class="timeline-date">2026-03-15</span>
+                  <strong>서비스 문서와 위키가 포트폴리오의 중심으로 올라왔습니다</strong>
+                </div>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-panel" id="panel-2026-03-15" hidden>
                 <p>서비스 맵, 날짜별 DO, TODO를 중앙 위키로 묶어 저장소 설명의 톤을 통일하는 흐름이 생겼습니다.</p>
                 <ul class="timeline-points"><li>BloggerGent, BloManagent, donggri_gagyeobu의 서비스 설명 자산이 확장됐습니다.</li><li>README와 wiki를 별개가 아니라 서비스 소개의 연장선으로 읽게 만드는 방향이 분명해졌습니다.</li></ul>
               </div>
             </article>
+            </div>
+          </section>
+          <aside class="space-y-3">
+            <section class="note-card">
+              <span class="section-label">Why HTML</span>
+              <p>원본 문서는 계속 `wiki/*.md`로 관리하지만, 방문자는 완성형 문서처럼 보이는 HTML 경로를 통해 읽도록 분리했습니다.</p>
+            </section>
+            <section class="note-card">
+              <span class="section-label">Next Step</span>
+              <p>루트 허브의 프로젝트 상세 시트와 위키 문서의 문맥을 더 촘촘하게 연결해 저장소 탐색에서 문서 읽기로 이어지는 흐름을 강화합니다.</p>
+            </section>
+          </aside>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="mx-auto mb-8 w-[min(calc(100%-24px),1280px)]">
-    <div class="shell px-6 py-6 md:px-8">
-      <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+  <footer class="mx-auto w-[min(calc(100%-24px),1220px)] pb-8">
+    <div class="shell px-5 py-4">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
-          <strong class="block text-sm font-semibold uppercase tracking-[0.24em]">Sheryloe Project Atlas Wiki</strong>
-          <p class="mt-2 text-sm leading-7 text-[var(--ink-soft)]">중앙 문서, 저장소별 위키, 실행 로그를 한곳에 묶는 문서 허브.</p>
+          <strong class="text-sm font-semibold tracking-[-0.02em] text-slate-950">Sheryloe Projects Central Wiki</strong>
+          <p class="mt-1 text-sm text-slate-600">중앙 문서 허브와 저장소별 wiki 진입점을 같은 UI로 정리한 compact 아카이브입니다.</p>
         </div>
         <div class="flex flex-wrap gap-2">
-          <a class="button" href="https://sheryloe.github.io/">Project Hub</a>
-          <a class="button" href="https://sheryloe.github.io/rss.xml">RSS</a>
-          <a class="button" href="https://sheryloe.github.io/sitemap.xml">Sitemap</a>
+          <a class="button" href="https://sheryloe.github.io/">Hub</a>
+          <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki">Source</a>
         </div>
       </div>
     </div>
@@ -682,21 +731,33 @@
 
   <script>
     (() => {
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const revealItems = Array.from(document.querySelectorAll('.reveal'));
-      if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.14 });
-        revealItems.forEach((item) => observer.observe(item));
-      } else {
-        revealItems.forEach((item) => item.classList.add('is-visible'));
-      }
+      const tabs = Array.from(document.querySelectorAll('[data-tab-target]'));
+      const tabPanels = Array.from(document.querySelectorAll('[data-tab-panel]'));
+      const switchTab = (target) => {
+        tabs.forEach((button) => {
+          const active = button.dataset.tabTarget === target;
+          button.classList.toggle('is-active', active);
+          button.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        tabPanels.forEach((panel) => {
+          panel.classList.toggle('hidden', panel.dataset.tabPanel !== target);
+        });
+      };
+
+      tabs.forEach((button) => {
+        button.addEventListener('click', () => switchTab(button.dataset.tabTarget || 'documents'));
+      });
+
+      Array.from(document.querySelectorAll('.accordion-trigger')).forEach((button) => {
+        button.addEventListener('click', () => {
+          const panel = button.parentElement?.querySelector('.accordion-panel');
+          const expanded = button.getAttribute('aria-expanded') === 'true';
+          button.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          const icon = button.querySelector('.accordion-icon');
+          if (icon) icon.textContent = expanded ? '+' : '−';
+          if (panel) panel.hidden = expanded;
+        });
+      });
     })();
   </script>
 </body>
