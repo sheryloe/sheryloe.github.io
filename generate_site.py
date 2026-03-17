@@ -90,6 +90,27 @@ def absolute_asset_url(config: dict[str, Any], path: str) -> str:
     return urllib.parse.urljoin(str(config["site_url"]), relative_asset_path(path))
 
 
+def render_google_analytics_snippet(config: dict[str, Any]) -> str:
+    analytics = config.get("analytics", {})
+    if not isinstance(analytics, dict):
+        return ""
+
+    measurement_id = str(analytics.get("google_measurement_id", "")).strip()
+    if not measurement_id:
+        return ""
+
+    escaped_id = html.escape(measurement_id, quote=True)
+    return (
+        f'  <script async src="https://www.googletagmanager.com/gtag/js?id={escaped_id}"></script>\n'
+        "  <script>\n"
+        "    window.dataLayer = window.dataLayer || [];\n"
+        "    function gtag(){dataLayer.push(arguments);}\n"
+        "    gtag('js', new Date());\n"
+        f"    gtag('config', '{escaped_id}');\n"
+        "  </script>"
+    )
+
+
 def default_category(name: str, language: str) -> str:
     labels = {
         "AI_BISEO": "Automation Ops",
@@ -837,6 +858,7 @@ def render_wiki_doc_html(config: dict[str, Any], document: dict[str, Any], repos
         "__SITE_URL__": html.escape(str(config["site_url"])),
         "__SITE_TITLE__": html.escape(str(config["site_title"])),
         "__DESCRIPTION__": html.escape(str(config["description"])),
+        "__GOOGLE_ANALYTICS_SNIPPET__": render_google_analytics_snippet(config),
         "__DOC_TITLE__": html.escape(str(document["title"])),
         "__DOC_BADGE__": html.escape(str(document.get("badge", "Document"))),
         "__DOC_SUMMARY__": html.escape(str(document.get("summary", ""))),
@@ -890,6 +912,7 @@ def render_index_html(config: dict[str, Any], repositories: list[dict[str, Any]]
         "__DESCRIPTION__": html.escape(str(config["description"])),
         "__AUTHOR_NAME__": html.escape(str(config["author_name"])),
         "__SITE_URL__": html.escape(str(config["site_url"])),
+        "__GOOGLE_ANALYTICS_SNIPPET__": render_google_analytics_snippet(config),
         "__GITHUB_PROFILE__": html.escape(str(config["github_profile"])),
         "__WIKI_REPO_URL__": html.escape(str(config["wiki_repo_url"])),
         "__GENERATED_LABEL__": generated_at.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
@@ -979,6 +1002,7 @@ def render_wiki_index_html(config: dict[str, Any], repositories: list[dict[str, 
         "__SITE_URL__": html.escape(str(config["site_url"])),
         "__SITE_TITLE__": html.escape(str(config["site_title"])),
         "__DESCRIPTION__": html.escape(str(config["description"])),
+        "__GOOGLE_ANALYTICS_SNIPPET__": render_google_analytics_snippet(config),
         "__GITHUB_PROFILE__": html.escape(str(config["github_profile"])),
         "__WIKI_REPO_URL__": html.escape(str(config["wiki_repo_url"])),
         "__PUBLIC_REPO_COUNT__": str(len(repositories)),
