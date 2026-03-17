@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Sheryloe Projects Atom</title>
   <id>https://sheryloe.github.io/feed.xml</id>
-  <updated>2026-03-17T06:40:55Z</updated>
+  <updated>2026-03-17T07:26:46Z</updated>
   <link href="https://sheryloe.github.io/feed.xml" rel="self" />
   <link href="https://sheryloe.github.io/" rel="alternate" />
   <subtitle>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</subtitle>
@@ -13,7 +13,7 @@
     <title>donggeuri-cloudflare-blog</title>
     <id>https://github.com/sheryloe/donggeuri-cloudflare-blog</id>
     <link href="https://github.com/sheryloe/donggeuri-cloudflare-blog" />
-    <updated>2026-03-17T06:40:55Z</updated>
+    <updated>2026-03-17T07:26:46Z</updated>
     <published>2026-03-16T02:10:55Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;donggeuri-cloudflare-blog&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Public, Admin, API를 분리한 블로그 플랫폼 워크스페이스&lt;/p&gt;&lt;p&gt;Cloudflare 기반 블로그 플랫폼을 Public, Admin, API 레이어로 분리해 운영 UX를 다듬는 워크스페이스입니다.&lt;/p&gt;&lt;p&gt;Track: Platform Docs · Stage: Build · Status: Platform Repo&lt;/p&gt;&lt;p&gt;Next focus: 권한 분리, 미리보기, 맞춤 도메인 가이드&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/donggeuri-cloudflare-blog/tree/main/wiki&quot;&gt;https://github.com/sheryloe/donggeuri-cloudflare-blog/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/donggeuri-cloudflare-blog&quot;&gt;https://github.com/sheryloe/donggeuri-cloudflare-blog&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
