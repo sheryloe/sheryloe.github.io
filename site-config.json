@@ -1,51 +1,415 @@
 {
   "username": "sheryloe",
-  "site_name": "Sheryloe Projects",
-  "site_title": "Sheryloe Projects | 공개 프로젝트 허브와 중앙 위키",
+  "site_name": "Sheryloe Project Atlas",
+  "site_title": "Sheryloe Project Atlas | 운영형 서비스와 도구를 엮는 프로젝트 허브",
   "site_url": "https://sheryloe.github.io/",
   "github_profile": "https://github.com/sheryloe",
   "wiki_repo_url": "https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki",
-  "description": "sheryloe의 공개 저장소와 GitHub Pages를 서비스 기준으로 묶어 보여주는 루트 허브입니다. 중앙 위키, RSS, sitemap, 최근 업데이트를 한곳에서 확인할 수 있습니다.",
+  "description": "AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 sheryloe의 공개 저장소를 서비스 관점으로 다시 묶은 루트 허브입니다. 라이브 Pages, 중앙 위키, 최근 변경, 다음 로드맵을 한곳에서 읽을 수 있습니다.",
   "author_name": "sheryloe",
+  "social_image": {
+    "path": "assets/meta/root-hub-social.png",
+    "alt": "Sheryloe Project Atlas 첫 화면 미리보기"
+  },
   "exclude_repositories": [
     "sheryloe.github.io"
   ],
   "featured_repositories": [
     "Automethemoney",
-    "donggri_gagyeobu",
+    "AI_BISEO",
+    "BloManagent",
     "Favorit",
-    "BloManagent"
+    "BloggerGent"
+  ],
+  "hero": {
+    "eyebrow": "Portfolio Operating System",
+    "title": "프로젝트를 단순 목록이 아니라 운영 가능한 제품군으로 정리합니다",
+    "summary": "각 저장소를 서비스 목적, 사용자 흐름, 다음 개선 포인트, 위키 문서와 함께 연결해 포트폴리오가 아니라 실제 운영 체계처럼 보이도록 재구성했습니다."
+  },
+  "current_focus": [
+    "권한 분리, 운영 알림, 복구 로그처럼 서비스 운영에 필요한 장치를 우선 보강합니다.",
+    "README, Pages, wiki 설명을 같은 서비스 언어로 맞춰 탐색 맥락이 끊기지 않게 유지합니다.",
+    "미리보기 이미지, 구조화 데이터, 피드, 위키 인덱스를 함께 관리해 검색성과 가독성을 동시에 챙깁니다."
+  ],
+  "portfolio_tracks": [
+    {
+      "slug": "ai-automation",
+      "title": "AI & Automation",
+      "summary": "AI 비서, 글쓰기 자동화, 멀티 채널 발행, 협업 오케스트레이션까지 지식 작업을 자동화하는 축입니다.",
+      "outcome": "자동화 루프, 승인 단계, 운영 로그, 에이전트 실험",
+      "icon": "solar:cpu-bolt-linear",
+      "accent": "teal",
+      "repositories": [
+        "AI_BISEO",
+        "AI_Writer_TISTORY",
+        "BloggerGent",
+        "Vibe_Cowork_Thinking"
+      ]
+    },
+    {
+      "slug": "service-products",
+      "title": "Service Products",
+      "summary": "거래, 개인 재무, 분석 대시보드처럼 실제 사용 시나리오가 분명한 서비스형 프로젝트를 묶었습니다.",
+      "outcome": "운영 콘솔, 데이터 검증, 리포트, 사용자 피드백 루프",
+      "icon": "solar:layers-minimalistic-linear",
+      "accent": "amber",
+      "repositories": [
+        "Automethemoney",
+        "donggri_gagyeobu",
+        "BloManagent"
+      ]
+    },
+    {
+      "slug": "desktop-utilities",
+      "title": "Desktop Utilities",
+      "summary": "자주 쓰는 작업을 빠르게 끝내는 Windows 중심 도구를 제품 감각으로 정리하는 축입니다.",
+      "outcome": "실행 런처, 이미지 워크플로, 설치/배포 경험",
+      "icon": "solar:widget-5-linear",
+      "accent": "ocean",
+      "repositories": [
+        "Favorit",
+        "grid-crop-image"
+      ]
+    },
+    {
+      "slug": "platform-docs",
+      "title": "Platform & Docs",
+      "summary": "플랫폼 워크스페이스와 중앙 위키를 통해 전체 저장소의 구조와 운영 원칙을 설명하는 축입니다.",
+      "outcome": "플랫폼 분리, 문서 허브, 메타데이터, 포트폴리오 아틀라스",
+      "icon": "solar:book-bookmark-linear",
+      "accent": "slate",
+      "repositories": [
+        "donggeuri-cloudflare-blog",
+        "sheryloe.github.io"
+      ]
+    }
+  ],
+  "wiki_documents": [
+    {
+      "badge": "Entry Point",
+      "title": "Central Wiki Landing",
+      "summary": "루트 허브 전체를 어떤 서비스 축으로 읽어야 하는지 보여주는 중앙 문서 인덱스입니다.",
+      "href": "https://sheryloe.github.io/wiki/",
+      "label": "Open Wiki",
+      "secondary_href": "https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki",
+      "secondary_label": "GitHub Source",
+      "icon": "solar:book-bookmark-linear"
+    },
+    {
+      "badge": "Architecture",
+      "title": "Repository Service Map",
+      "summary": "저장소별 역할, 서비스 설명, 다음 개선 포인트를 한 장으로 묶은 포지셔닝 문서입니다.",
+      "href": "https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Repository-Service-Map.md",
+      "label": "Read Map",
+      "icon": "solar:map-point-wave-linear"
+    },
+    {
+      "badge": "Execution Log",
+      "title": "Timeline DO",
+      "summary": "날짜 기준으로 묶은 완료 작업 기록으로, 전체 포트폴리오의 흐름을 빠르게 훑을 수 있습니다.",
+      "href": "https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Timeline-DO.md",
+      "label": "Read Timeline",
+      "icon": "solar:clock-circle-linear"
+    },
+    {
+      "badge": "Roadmap",
+      "title": "Service TODO",
+      "summary": "보안, 기능, 운영 관점에서 어떤 저장소를 다음에 어떻게 다듬어야 하는지 정리한 백로그입니다.",
+      "href": "https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Service-TODO.md",
+      "label": "Read Backlog",
+      "icon": "solar:checklist-minimalistic-linear"
+    }
+  ],
+  "timeline_highlights": [
+    {
+      "date": "2026-02-26",
+      "title": "AI 협업 실험실의 기본 구조를 세웠습니다",
+      "summary": "Runner와 Orchestrator를 나누고, 실행 흐름을 추적하는 워크스페이스 패턴을 만들기 시작한 구간입니다.",
+      "highlights": [
+        "Vibe_Cowork_Thinking에서 프로젝트 단위 실행 기록의 뼈대를 마련했습니다.",
+        "AI 작업 로그를 단순 메모가 아니라 운영 기록으로 남기는 관점이 잡혔습니다."
+      ]
+    },
+    {
+      "date": "2026-03-02",
+      "title": "AI 운영 자동화 축이 본격적으로 확장됐습니다",
+      "summary": "AI 비서, 티스토리 글쓰기, Notion 로그, 운영 문서가 서로 연결되는 백엔드 축이 정리된 시기입니다.",
+      "highlights": [
+        "AI_BISEO에 Telegram 명령, 대시보드, 로그 흐름이 강화됐습니다.",
+        "AI_Writer_TISTORY는 발행 전 검수와 운영 로그를 중심으로 서비스 문맥을 갖추기 시작했습니다."
+      ]
+    },
+    {
+      "date": "2026-03-09",
+      "title": "도구형 저장소들이 제품처럼 보이기 시작했습니다",
+      "summary": "스크린샷, 소개 페이지, 릴리스 자산이 붙으면서 데스크톱 유틸리티와 분석 도구의 품질 인상이 크게 올라갔습니다.",
+      "highlights": [
+        "grid-crop-image는 README와 Pages, 릴리스 자산을 갖춘 공개 유틸리티로 정돈됐습니다.",
+        "Favorit은 위젯형 제품 톤을 살릴 수 있는 배포 기반을 확보했습니다."
+      ]
+    },
+    {
+      "date": "2026-03-15",
+      "title": "서비스 문서와 위키가 포트폴리오의 중심으로 올라왔습니다",
+      "summary": "서비스 맵, 날짜별 DO, TODO를 중앙 위키로 묶어 저장소 설명의 톤을 통일하는 흐름이 생겼습니다.",
+      "highlights": [
+        "BloggerGent, BloManagent, donggri_gagyeobu의 서비스 설명 자산이 확장됐습니다.",
+        "README와 wiki를 별개가 아니라 서비스 소개의 연장선으로 읽게 만드는 방향이 분명해졌습니다."
+      ]
+    },
+    {
+      "date": "2026-03-17",
+      "title": "루트 허브를 프로젝트 아틀라스 형태로 다시 설계했습니다",
+      "summary": "중앙 위키, 트랙 분류, 지능형 탐색, 시각적 미리보기, 피드 메타데이터를 하나의 전문 허브 경험으로 묶었습니다.",
+      "highlights": [
+        "라이브 Pages와 repo-only 플랫폼을 함께 설명하는 탐색 체계를 추가했습니다.",
+        "오픈소스 UI 스택을 활용해 검색, 아이콘, 차트, 애니메이션 경험을 보강했습니다."
+      ]
+    }
+  ],
+  "oss_stack": [
+    {
+      "name": "Tailwind CSS",
+      "summary": "토큰 기반 레이아웃과 컴포넌트 스타일을 빠르게 구성하는 UI 파운데이션"
+    },
+    {
+      "name": "Fuse.js",
+      "summary": "프로젝트명, 설명, 스택, 다음 포커스까지 아우르는 퍼지 탐색 엔진"
+    },
+    {
+      "name": "Chart.js",
+      "summary": "포트폴리오 트랙 구성을 한눈에 보여주는 시각화 레이어"
+    },
+    {
+      "name": "Iconify",
+      "summary": "섹션별 의미를 분명하게 전달하는 아이콘 시스템"
+    }
   ],
   "repository_overrides": {
     "AI_BISEO": {
-      "description": "AI 비서 응답, Notion 로그, n8n 연동, 블로그 자동화를 하나의 운영 루프로 묶는 개인 AI 운영 서비스입니다."
+      "track": "ai-automation",
+      "category": "Automation Ops",
+      "subtitle": "AI 비서 응답과 운영 자동화를 묶는 개인 Ops 루프",
+      "description": "AI 비서 응답, Notion 로그, n8n 자동화, Telegram 알림 흐름을 하나의 운영 서비스로 엮는 프로젝트입니다.",
+      "preview_alt": "AI_BISEO 소개 페이지 첫 화면. AI 비서 운영 대시보드와 자동화 흐름 설명이 보입니다.",
+      "repo_topics": [
+        "ai-assistant",
+        "automation-dashboard",
+        "n8n",
+        "notion",
+        "telegram-bot",
+        "typescript"
+      ],
+      "status": "Live Ops",
+      "next_focus": "운영용 키 분리, 실패 알림, 버전 비교 로그",
+      "audience": "운영자 / AI 자동화 워크플로",
+      "stage": "Operate",
+      "accent": "teal",
+      "featured": true
     },
     "AI_Writer_TISTORY": {
-      "description": "티스토리 발행 준비를 위한 AI 초안 생성, 운영 로그, 발행 전 검수 흐름을 다루는 백엔드 프로젝트입니다."
+      "track": "ai-automation",
+      "category": "Publishing Workflow",
+      "subtitle": "AI 초안 생성부터 발행 전 검수까지 잇는 백엔드",
+      "description": "티스토리 발행 자동화, AI 글쓰기, 검수 전 단계, 운영 로그를 정리하는 출판 워크플로 프로젝트입니다.",
+      "preview_alt": "AI_Writer_TISTORY 소개 페이지 첫 화면. AI 글쓰기와 티스토리 발행 흐름이 보입니다.",
+      "repo_topics": [
+        "ai-writing",
+        "blog-automation",
+        "openai",
+        "seo",
+        "tistory",
+        "typescript"
+      ],
+      "status": "Live Workflow",
+      "next_focus": "발행 승인 단계, SEO 검수, 실패 복구 로그",
+      "audience": "콘텐츠 운영 / 발행 파이프라인",
+      "stage": "Scale",
+      "accent": "teal"
     },
     "Automethemoney": {
-      "description": "자동매매 전략, 일별 손익, 시그널 진단, Supabase 기반 운영 흐름을 다루는 트레이딩 콘솔입니다."
+      "track": "service-products",
+      "category": "Trading Ops",
+      "subtitle": "전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔",
+      "description": "자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.",
+      "preview_alt": "Automethemoney 소개 페이지 첫 화면. 자동매매 전략과 운영 리포트 구조가 보입니다.",
+      "repo_topics": [
+        "algorithmic-trading",
+        "dashboard",
+        "python",
+        "risk-control",
+        "supabase",
+        "trading-console"
+      ],
+      "status": "Live Console",
+      "next_focus": "paper/live 권한 분리, 손실 경보, 전략별 비교",
+      "audience": "트레이딩 운영 / 실험 관리",
+      "stage": "Operate",
+      "accent": "amber",
+      "featured": true
     },
     "BloggerGent": {
-      "description": "여러 Blogger 계열 채널을 서비스처럼 운영하기 위한 AI 발행 스튜디오이자 콘텐츠 운영 허브입니다."
+      "track": "ai-automation",
+      "category": "Publishing Studio",
+      "subtitle": "멀티 채널 블로그 운영을 위한 AI 발행 스튜디오",
+      "description": "여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.",
+      "preview_alt": "BloggerGent 소개 페이지 첫 화면. 멀티 채널 블로그 발행 스튜디오 설명이 보입니다.",
+      "repo_topics": [
+        "ai-publishing",
+        "blogger",
+        "content-ops",
+        "editorial-workflow",
+        "python",
+        "seo"
+      ],
+      "status": "Live Studio",
+      "next_focus": "승인 단계, 콘텐츠 캘린더, 발행 QA 체크리스트",
+      "audience": "콘텐츠 팀 / 멀티 채널 운영",
+      "stage": "Scale",
+      "accent": "rose",
+      "featured": true
     },
     "BloManagent": {
-      "description": "블로그 URL을 수집하고 주간 비교 리포트로 전환하는 분석 대시보드 프로젝트입니다."
+      "track": "service-products",
+      "category": "Analytics Dashboard",
+      "subtitle": "URL 수집과 비교 리포트를 잇는 분석 대시보드",
+      "description": "블로그 URL 수집, 등급 산출, 주간 비교 리포트, 시각적 설명을 연결하는 분석 제품 실험입니다.",
+      "preview_alt": "BloManagent 소개 페이지 첫 화면. 블로그 수집과 비교 분석 대시보드 흐름이 보입니다.",
+      "repo_topics": [
+        "analytics-dashboard",
+        "blog-analytics",
+        "ollama",
+        "openai",
+        "reporting",
+        "typescript"
+      ],
+      "status": "Live Dashboard",
+      "next_focus": "비동기 수집, 공유 리포트, 등급 근거 시각화",
+      "audience": "콘텐츠 운영 / 분석 리포트",
+      "stage": "Operate",
+      "accent": "amber",
+      "featured": true
     },
     "donggeuri-cloudflare-blog": {
-      "description": "Public, Admin, API를 분리한 Cloudflare 기반 블로그 플랫폼 워크스페이스입니다."
+      "track": "platform-docs",
+      "category": "Cloud Platform",
+      "subtitle": "Public, Admin, API를 분리한 블로그 플랫폼 워크스페이스",
+      "description": "Cloudflare 기반 블로그 플랫폼을 Public, Admin, API 레이어로 분리해 운영 UX를 다듬는 워크스페이스입니다.",
+      "preview_alt": "donggeuri-cloudflare-blog 프로젝트 플레이스홀더. Cloudflare 기반 블로그 플랫폼 설명을 보여주는 카드입니다.",
+      "repo_topics": [
+        "cloudflare",
+        "platform",
+        "rss",
+        "seo",
+        "typescript",
+        "worker"
+      ],
+      "status": "Platform Repo",
+      "next_focus": "권한 분리, 미리보기, 맞춤 도메인 가이드",
+      "audience": "플랫폼 설계 / CMS 운영",
+      "stage": "Build",
+      "accent": "slate"
     },
     "donggri_gagyeobu": {
-      "description": "자산, 카드 결제 예정, 예산, 소비 흐름을 관리하는 개인 재무 서비스입니다."
+      "track": "service-products",
+      "category": "Local Finance",
+      "subtitle": "자산 흐름과 예산을 브라우저에서 관리하는 개인 가계부",
+      "description": "자산, 카드 결제 예정, 예산, 소비 흐름을 브라우저에서 바로 관리할 수 있게 정리한 개인 재무 서비스입니다.",
+      "preview_alt": "donggri_gagyeobu 소개 페이지 첫 화면. 개인 가계부 웹앱 구조와 사용 흐름이 보입니다.",
+      "repo_topics": [
+        "budgeting",
+        "expense-tracker",
+        "finance-app",
+        "javascript",
+        "personal-finance",
+        "sqlite"
+      ],
+      "status": "Live Service",
+      "next_focus": "예산 알림, 가족 공유 모드, 백업 검증 자동화",
+      "audience": "개인 재무 / 생활 운영",
+      "stage": "Operate",
+      "accent": "amber",
+      "featured": true
     },
     "Favorit": {
-      "description": "Windows 바탕화면에서 자주 쓰는 파일과 URL을 위젯처럼 실행하는 데스크톱 런처입니다."
+      "track": "desktop-utilities",
+      "category": "Desktop Utility",
+      "subtitle": "파일과 URL을 위젯처럼 여는 실행 즐겨찾기 런처",
+      "description": "Windows 바탕화면에서 자주 쓰는 파일, 폴더, URL을 위젯처럼 빠르게 실행하도록 만든 데스크톱 런처입니다.",
+      "preview_alt": "Favorit 소개 페이지 첫 화면. 실행 즐겨찾기 위젯과 설치 흐름 설명이 보입니다.",
+      "repo_topics": [
+        "cmake",
+        "cpp",
+        "launcher",
+        "productivity",
+        "widget",
+        "windows"
+      ],
+      "status": "Live Widget",
+      "next_focus": "검색, 그룹 정렬, 설정 백업, SmartScreen 대응 문서",
+      "audience": "Windows 사용자 / 생산성 도구",
+      "stage": "Refine",
+      "accent": "ocean",
+      "featured": true
     },
     "grid-crop-image": {
-      "description": "스크린샷을 빠르게 자르고 저장 규칙까지 관리하는 Windows 이미지 작업 유틸리티입니다."
+      "track": "desktop-utilities",
+      "category": "Image Workflow",
+      "subtitle": "스크린샷 자르기와 분할 저장을 빠르게 끝내는 유틸리티",
+      "description": "스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용까지 지원하는 Windows 이미지 워크플로 도구입니다.",
+      "preview_alt": "grid-crop-image 소개 페이지 첫 화면. 이미지 자르기와 분할 저장 기능이 보입니다.",
+      "repo_topics": [
+        "desktop-app",
+        "image-cropping",
+        "image-processing",
+        "pillow",
+        "python",
+        "tkinter"
+      ],
+      "status": "Live Utility",
+      "next_focus": "배치 처리, OCR 보조, Undo/Redo",
+      "audience": "문서 작업 / 이미지 편집",
+      "stage": "Refine",
+      "accent": "ocean"
     },
     "Vibe_Cowork_Thinking": {
-      "description": "Runner와 Orchestrator를 분리해 AI 협업 실험을 추적하는 워크스페이스입니다."
+      "track": "ai-automation",
+      "category": "AI Workflow Lab",
+      "subtitle": "Runner와 Orchestrator를 분리한 협업 실험실",
+      "description": "프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.",
+      "preview_alt": "Vibe_Cowork_Thinking 소개 페이지 첫 화면. AI 협업 오케스트레이션 실험 설명이 보입니다.",
+      "repo_topics": [
+        "ai-workflow",
+        "automation",
+        "codex",
+        "gemini",
+        "orchestration",
+        "python"
+      ],
+      "status": "Live Lab",
+      "next_focus": "diff 뷰, 권한 모델, 결과 비교 리포트",
+      "audience": "AI 협업 / 실험 환경",
+      "stage": "Explore",
+      "accent": "teal"
+    },
+    "sheryloe.github.io": {
+      "track": "platform-docs",
+      "category": "Project Hub",
+      "subtitle": "루트 허브와 중앙 위키를 묶는 포트폴리오 아틀라스",
+      "description": "공개 저장소, GitHub Pages, 위키 문서, 피드, 구조화 데이터를 한곳에서 엮는 루트 허브입니다.",
+      "repo_topics": [
+        "github-pages",
+        "portfolio-site",
+        "project-gallery",
+        "rss",
+        "sitemap",
+        "wiki"
+      ],
+      "status": "Hub",
+      "next_focus": "카드 상태 자동화, 문서 탐색 개선, 미리보기 동기화",
+      "audience": "포트폴리오 방문자 / 검색엔진",
+      "stage": "Operate",
+      "accent": "slate"
     }
   },
   "max_feed_entries": 30,

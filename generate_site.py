@@ -3,8 +3,10 @@ from __future__ import annotations
 import html
 import json
 import os
+import re
 import urllib.parse
 import urllib.request
+from collections import Counter
 from datetime import datetime, timezone
 from email.utils import format_datetime
 from pathlib import Path
@@ -13,7 +15,8 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent
 CONFIG_PATH = ROOT / "site-config.json"
-TEMPLATE_PATH = ROOT / "templates" / "index.template.html"
+HOME_TEMPLATE_PATH = ROOT / "templates" / "index.template.html"
+WIKI_TEMPLATE_PATH = ROOT / "templates" / "wiki.template.html"
 
 
 def load_config() -> dict[str, Any]:
@@ -21,11 +24,13 @@ def load_config() -> dict[str, Any]:
 
 
 def github_headers() -> dict[str, str]:
-    headers = {"User-Agent": "sheryloe-root-site-generator"}
+    headers = {
+        "User-Agent": "sheryloe-root-site-generator",
+        "Accept": "application/vnd.github+json",
+    }
     token = os.getenv("GITHUB_TOKEN")
     if token:
         headers["Authorization"] = f"Bearer {token}"
-        headers["Accept"] = "application/vnd.github+json"
     return headers
 
 
@@ -71,10 +76,107 @@ def quote_repo_path(name: str) -> str:
     return urllib.parse.quote(name, safe="")
 
 
+def slugify(value: str) -> str:
+    slug = re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
+    return slug or "project"
+
+
+def relative_asset_path(path: str) -> str:
+    return path.replace("\\", "/").lstrip("/")
+
+
+def absolute_asset_url(config: dict[str, Any], path: str) -> str:
+    return urllib.parse.urljoin(str(config["site_url"]), relative_asset_path(path))
+
+
+def default_category(name: str, language: str) -> str:
+    labels = {
+        "AI_BISEO": "Automation Ops",
+        "AI_Writer_TISTORY": "Publishing Workflow",
+        "Automethemoney": "Trading Ops",
+        "BloggerGent": "Publishing Studio",
+        "BloManagent": "Analytics Dashboard",
+        "donggeuri-cloudflare-blog": "Cloud Platform",
+        "donggri_gagyeobu": "Local Finance",
+        "Favorit": "Desktop Utility",
+        "grid-crop-image": "Image Workflow",
+        "Vibe_Cowork_Thinking": "AI Workflow Lab",
+    }
+    return labels.get(name, language)
+
+
+def default_track(name: str) -> str:
+    labels = {
+        "AI_BISEO": "ai-automation",
+        "AI_Writer_TISTORY": "ai-automation",
+        "Automethemoney": "service-products",
+        "BloggerGent": "ai-automation",
+        "BloManagent": "service-products",
+        "donggeuri-cloudflare-blog": "platform-docs",
+        "donggri_gagyeobu": "service-products",
+        "Favorit": "desktop-utilities",
+        "grid-crop-image": "desktop-utilities",
+        "Vibe_Cowork_Thinking": "ai-automation",
+    }
+    return labels.get(name, "platform-docs")
+
+
+def default_subtitle(name: str, description: str, language: str) -> str:
+    subtitles = {
+        "AI_BISEO": "AI 비서와 운영 자동화를 묶는 개인 Ops 루프",
+        "AI_Writer_TISTORY": "AI 초안 생성부터 발행 전 검수까지",
+        "Automethemoney": "전략과 리스크를 잇는 자동매매 콘솔",
+        "BloggerGent": "멀티 채널 발행을 위한 AI 스튜디오",
+        "BloManagent": "블로그 수집과 리포트를 잇는 분석 대시보드",
+        "donggeuri-cloudflare-blog": "Public, Admin, API를 분리한 플랫폼",
+        "donggri_gagyeobu": "브라우저 기반 개인 가계부 서비스",
+        "Favorit": "실행 즐겨찾기를 위젯처럼 여는 런처",
+        "grid-crop-image": "스크린샷 자르기와 분할 저장 유틸리티",
+        "Vibe_Cowork_Thinking": "Runner와 Orchestrator를 분리한 협업 실험실",
+    }
+    return subtitles.get(name, description or language)
+
+
+def default_stage(has_pages: bool) -> str:
+    return "Operate" if has_pages else "Build"
+
+
+def default_accent(track: str) -> str:
+    labels = {
+        "ai-automation": "teal",
+        "service-products": "amber",
+        "desktop-utilities": "ocean",
+        "platform-docs": "slate",
+    }
+    return labels.get(track, "slate")
+
+
+def track_map(config: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    return {str(track["slug"]): track for track in config.get("portfolio_tracks", [])}
+
+
+def repository_search_text(repository: dict[str, Any]) -> str:
+    parts = [
+        repository["name"],
+        repository["description"],
+        repository["subtitle"],
+        repository["category"],
+        repository["track_title"],
+        repository["language"],
+        repository["status"],
+        repository["stage"],
+        repository["audience"],
+        repository["next_focus"],
+        " ".join(repository["topics"]),
+    ]
+    return " ".join(part.lower() for part in parts if part)
+
+
 def normalize_repositories(config: dict[str, Any], repositories: list[dict[str, Any]]) -> list[dict[str, Any]]:
     excluded = set(config.get("exclude_repositories", []))
     featured = set(config.get("featured_repositories", []))
     overrides = dict(config.get("repository_overrides", {}))
+    tracks = track_map(config)
     site_url = str(config["site_url"])
     normalized: list[dict[str, Any]] = []
 
@@ -89,139 +191,409 @@ def normalize_repositories(config: dict[str, Any], repositories: list[dict[str, 
         updated_at = parse_dt(repo.get("updated_at") or repo.get("created_at"))
         created_at = parse_dt(repo.get("created_at"))
         override = dict(overrides.get(name, {}))
+
+        has_pages = bool(repo.get("has_pages"))
         description = str(override.get("description") or (repo.get("description") or "").strip())
+        language = str(repo.get("language") or "Unknown")
+        category = str(override.get("category") or default_category(name, language))
+        subtitle = str(override.get("subtitle") or default_subtitle(name, description, language))
+        track = str(override.get("track") or default_track(name))
+        track_title = str(tracks.get(track, {}).get("title", track.replace("-", " ").title()))
+        accent = str(override.get("accent") or default_accent(track))
         homepage = str(override.get("live_url") or (repo.get("homepage") or "").strip())
         derived_page_url = f"{site_url}{quote_repo_path(name)}/"
-        live_url = ""
-        if repo.get("has_pages"):
-            live_url = homepage or derived_page_url
-
-        topics = [str(topic) for topic in (repo.get("topics") or []) if topic]
-        language = str(repo.get("language") or "Unknown")
+        live_url = homepage or derived_page_url if has_pages else ""
+        topics_source = override.get("repo_topics") or repo.get("topics") or []
+        topics = [str(topic) for topic in topics_source if topic]
+        preview_path = relative_asset_path(
+            str(override.get("preview_image") or f"assets/previews/{slugify(name)}.png")
+        )
+        default_branch = str(repo.get("default_branch") or "main")
+        preview_alt = str(override.get("preview_alt") or f"{name} 프로젝트 미리보기")
+        wiki_url = str(override.get("wiki_url") or f"{repo['html_url']}/tree/{default_branch}/wiki")
+        status = str(override.get("status") or ("Live Pages" if has_pages else "Repository"))
+        stage = str(override.get("stage") or default_stage(has_pages))
+        audience = str(override.get("audience") or "사용자와 운영자를 위한 공개 저장소")
+        next_focus = str(override.get("next_focus") or "다음 개선 포인트를 문서화 중입니다.")
 
         normalized.append(
             {
+                "id": slugify(name),
                 "name": name,
                 "description": description,
+                "subtitle": subtitle,
+                "category": category,
+                "track": track,
+                "track_title": track_title,
                 "repo_url": str(repo["html_url"]),
                 "live_url": live_url,
-                "pages_url": derived_page_url if repo.get("has_pages") else "",
+                "pages_url": derived_page_url if has_pages else "",
+                "wiki_url": wiki_url,
                 "language": language,
                 "topics": topics,
-                "has_pages": bool(repo.get("has_pages")),
+                "has_pages": has_pages,
+                "availability": "live" if has_pages else "repo",
+                "availability_label": "Live Pages" if has_pages else "Repository",
                 "featured": bool(override.get("featured", name in featured)),
                 "created_at": created_at,
                 "updated_at": updated_at,
                 "sort_at": pushed_at,
                 "sort_label": pushed_at.astimezone(timezone.utc).strftime("%Y-%m-%d"),
+                "updated_label": updated_at.astimezone(timezone.utc).strftime("%Y-%m-%d"),
+                "stars": int(repo.get("stargazers_count") or 0),
+                "size": int(repo.get("size") or 0),
+                "default_branch": default_branch,
+                "status": status,
+                "stage": stage,
+                "audience": audience,
+                "next_focus": next_focus,
+                "accent": accent,
+                "preview_path": preview_path,
+                "preview_url": absolute_asset_url(config, preview_path),
+                "preview_alt": preview_alt,
+                "has_preview": (ROOT / preview_path).exists(),
             }
         )
 
     normalized.sort(key=lambda item: item["sort_at"], reverse=True)
+
+    for repository in normalized:
+        repository["search_text"] = repository_search_text(repository)
+
     return normalized
 
 
-def category_label(repository: dict[str, Any]) -> str:
-    labels = {
-        "Automethemoney": "Trading Console",
-        "Favorit": "Desktop Utility",
-        "grid-crop-image": "Image Workflow",
-        "donggri_gagyeobu": "Local Finance",
-        "BloManagent": "Analytics Dashboard",
-        "BloggerGent": "Publishing Studio",
-        "AI_BISEO": "Automation Ops",
-        "AI_Writer_TISTORY": "Publishing Workflow",
-        "Vibe_Cowork_Thinking": "AI Workflow",
-        "donggeuri-cloudflare-blog": "Cloud Platform",
-    }
-    return labels.get(repository["name"], repository["language"])
+def format_title_html(text: str) -> str:
+    lines = [html.escape(line.strip()) for line in text.splitlines() if line.strip()]
+    if not lines:
+        return ""
+    if len(lines) == 1:
+        return lines[0]
+    return "".join(f'<span class="block">{line}</span>' for line in lines)
 
 
-def quick_subtitle(repository: dict[str, Any]) -> str:
-    subtitles = {
-        "AI_BISEO": "AI 비서 응답과 블로그 자동화를 묶은 운영 루프",
-        "AI_Writer_TISTORY": "티스토리 발행 준비용 AI 글쓰기 백엔드",
-        "Automethemoney": "자동매매 전략과 손익 흐름을 보는 콘솔",
-        "Vibe_Cowork_Thinking": "Runner와 Orchestrator를 분리한 AI 실험실",
-        "donggeuri-cloudflare-blog": "Public, Admin, API를 나눈 블로그 플랫폼",
-        "BloggerGent": "멀티 채널 블로그 발행 스튜디오",
-    }
-    return subtitles.get(repository["name"], repository["description"] or repository["language"])
+def accent_class(repository: dict[str, Any]) -> str:
+    return f"accent-{slugify(repository['accent'])}"
 
 
-def direct_card_class(repository: dict[str, Any]) -> str:
-    classes = {
-        "Automethemoney": "page-card page-card--hero tone-blue",
-        "donggri_gagyeobu": "page-card tone-amber",
-        "Favorit": "page-card tone-white",
-        "BloManagent": "page-card page-card--wide tone-slate",
-    }
-    return classes.get(repository["name"], "page-card tone-white")
+def render_tags(repository: dict[str, Any], max_topics: int = 3) -> str:
+    tags = [
+        f'<span class="meta-pill">{html.escape(repository["language"])}</span>',
+        f'<span class="meta-pill">{html.escape(repository["stage"])}</span>',
+    ]
+    if repository["has_pages"]:
+        tags.append('<span class="meta-pill">Live</span>')
+    for topic in repository["topics"][:max_topics]:
+        tags.append(f'<span class="meta-pill">{html.escape(topic)}</span>')
+    return "".join(tags)
 
 
-def render_direct_card(repository: dict[str, Any]) -> str:
-    description = html.escape(repository["description"] or "공개 프로젝트 소개 페이지입니다.")
-    live_url = html.escape(repository["live_url"] or repository["pages_url"] or repository["repo_url"])
-    repo_url = html.escape(repository["repo_url"])
-    card_class = direct_card_class(repository)
-    return f"""            <article class="{card_class}">
-              <p class="card-tag">{html.escape(category_label(repository))}</p>
-              <h3>{html.escape(repository['name'])}</h3>
-              <p>{description}</p>
-              <div class="card-actions">
-                <a class="button primary" href="{live_url}">페이지</a>
-                <a class="button" href="{repo_url}">GitHub</a>
+def render_preview_media(repository: dict[str, Any], figure_class: str, *, eager: bool = False) -> str:
+    if repository["has_preview"]:
+        loading = "eager" if eager else "lazy"
+        fetchpriority = ' fetchpriority="high"' if eager else ""
+        return (
+            f'<figure class="{figure_class}">'
+            f'<img src="{html.escape(repository["preview_path"])}" '
+            f'alt="{html.escape(repository["preview_alt"])}" '
+            f'width="1280" height="900" loading="{loading}" decoding="async"{fetchpriority}>'
+            "</figure>"
+        )
+
+    return (
+        f'<figure class="{figure_class} preview-empty">'
+        '<div class="preview-empty-inner">'
+        '<iconify-icon icon="solar:window-frame-linear"></iconify-icon>'
+        f'<span>{html.escape(repository["name"])}</span>'
+        "</div>"
+        "</figure>"
+    )
+
+
+def primary_link_label(repository: dict[str, Any]) -> str:
+    return "Live Page" if repository["has_pages"] else "Repository"
+
+
+def render_action_group(repository: dict[str, Any], *, primary_class: str = "button button-primary") -> str:
+    primary_href = repository["live_url"] or repository["repo_url"]
+    actions = [
+        f'<a class="{primary_class}" href="{html.escape(primary_href)}">{primary_link_label(repository)}</a>',
+        f'<a class="button" href="{html.escape(repository["wiki_url"])}">Wiki</a>',
+        f'<a class="button" href="{html.escape(repository["repo_url"])}">GitHub</a>',
+    ]
+    return "".join(actions)
+
+
+def featured_card_class(index: int) -> str:
+    if index == 0:
+        return "feature-card feature-card--xl"
+    if index == 1:
+        return "feature-card feature-card--wide"
+    return "feature-card"
+
+
+def render_featured_card(repository: dict[str, Any], index: int) -> str:
+    preview = render_preview_media(repository, "feature-media", eager=index < 2)
+    return f"""            <article class="{featured_card_class(index)} {accent_class(repository)} reveal">
+              <div class="feature-shell">
+                <a class="feature-link" href="{html.escape(repository["live_url"] or repository["repo_url"])}" aria-label="{html.escape(repository["name"])} 열기">
+                  {preview}
+                </a>
+                <div class="feature-body">
+                  <div class="feature-head">
+                    <div>
+                      <p class="eyebrow eyebrow-small">{html.escape(repository["category"])}</p>
+                      <h3>{html.escape(repository["name"])}</h3>
+                    </div>
+                    <span class="status-pill">{html.escape(repository["status"])}</span>
+                  </div>
+                  <p class="feature-subtitle">{html.escape(repository["subtitle"])}</p>
+                  <p class="feature-desc">{html.escape(repository["description"])}</p>
+                  <div class="meta-row">
+                    {render_tags(repository, max_topics=2)}
+                  </div>
+                  <dl class="detail-grid">
+                    <div>
+                      <dt>Audience</dt>
+                      <dd>{html.escape(repository["audience"])}</dd>
+                    </div>
+                    <div>
+                      <dt>Next Focus</dt>
+                      <dd>{html.escape(repository["next_focus"])}</dd>
+                    </div>
+                  </dl>
+                  <div class="button-row">
+                    {render_action_group(repository)}
+                  </div>
+                </div>
               </div>
             </article>"""
 
 
-def render_quick_link(repository: dict[str, Any]) -> str:
-    live_url = html.escape(repository["live_url"] or repository["pages_url"] or repository["repo_url"])
-    return f"""              <a class="quick-item" href="{live_url}">
-                <strong>{html.escape(repository['name'])}</strong>
-                <span>{html.escape(quick_subtitle(repository))}</span>
+def render_track_card(track: dict[str, Any], repositories_by_name: dict[str, dict[str, Any]]) -> str:
+    matched = [repositories_by_name[name] for name in track.get("repositories", []) if name in repositories_by_name]
+    repo_count = len(matched)
+    live_count = sum(1 for repository in matched if repository["has_pages"])
+    repo_names = " · ".join(html.escape(repository["name"]) for repository in matched[:4]) or "문서와 루트 허브"
+    accent = slugify(str(track.get("accent", "slate")))
+    return f"""            <article class="track-card accent-{accent} reveal">
+              <div class="track-icon">
+                <iconify-icon icon="{html.escape(str(track.get("icon", "solar:layers-linear")))}"></iconify-icon>
+              </div>
+              <div class="track-copy">
+                <p class="eyebrow eyebrow-small">{html.escape(track["title"])}</p>
+                <h3>{html.escape(track["title"])}</h3>
+                <p>{html.escape(str(track["summary"]))}</p>
+              </div>
+              <div class="track-metrics">
+                <strong>{repo_count}</strong>
+                <span>tracked repos · {live_count} live pages</span>
+              </div>
+              <p class="track-outcome">{html.escape(str(track["outcome"]))}</p>
+              <p class="track-repos">{repo_names}</p>
+              <button class="button button-ghost" type="button" data-track-jump="{html.escape(str(track["slug"]))}">
+                Explorer에서 보기
+              </button>
+            </article>"""
+
+
+def render_document_card(document: dict[str, Any]) -> str:
+    secondary = ""
+    if document.get("secondary_href") and document.get("secondary_label"):
+        secondary = (
+            f'<a class="button" href="{html.escape(str(document["secondary_href"]))}">'
+            f'{html.escape(str(document["secondary_label"]))}</a>'
+        )
+    return f"""            <article class="doc-card reveal">
+              <div class="doc-icon">
+                <iconify-icon icon="{html.escape(str(document.get("icon", "solar:document-linear")))}"></iconify-icon>
+              </div>
+              <p class="eyebrow eyebrow-small">{html.escape(str(document.get("badge", "Document")))}</p>
+              <h3>{html.escape(str(document["title"]))}</h3>
+              <p>{html.escape(str(document["summary"]))}</p>
+              <div class="button-row">
+                <a class="button button-primary" href="{html.escape(str(document["href"]))}">{html.escape(str(document["label"]))}</a>
+                {secondary}
+              </div>
+            </article>"""
+
+
+def render_wiki_link(repository: dict[str, Any]) -> str:
+    return f"""              <a class="wiki-link" href="{html.escape(repository["wiki_url"])}">
+                <div>
+                  <strong>{html.escape(repository["name"])}</strong>
+                  <span>{html.escape(repository["track_title"])} · {html.escape(repository["stage"])}</span>
+                </div>
+                <iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon>
               </a>"""
 
 
-def render_recent_row(repository: dict[str, Any]) -> str:
-    primary_url = html.escape(repository["live_url"] or repository["repo_url"])
-    repo_url = html.escape(repository["repo_url"])
-    primary_text = "페이지" if repository["has_pages"] else "저장소"
-    secondary_text = "공개 프로젝트 페이지" if repository["has_pages"] else "공개 저장소"
-    return f"""            <article class="repo-row">
-              <div class="repo-main">
-                <strong>{html.escape(repository['name'])}</strong>
-                <span>{secondary_text}</span>
-              </div>
-              <time datetime="{repository['sort_at'].date().isoformat()}">{repository['sort_label']}</time>
-              <div class="repo-links">
-                <a href="{primary_url}">{primary_text}</a>
-                <a href="{repo_url}">GitHub</a>
+def render_project_card(repository: dict[str, Any]) -> str:
+    preview = render_preview_media(repository, "project-media")
+    return f"""            <article class="project-card {accent_class(repository)} reveal" data-project-card data-id="{html.escape(repository["id"])}" data-track="{html.escape(repository["track"])}" data-availability="{html.escape(repository["availability"])}">
+              <a class="project-link" href="{html.escape(repository["live_url"] or repository["repo_url"])}" aria-label="{html.escape(repository["name"])} 열기">
+                {preview}
+              </a>
+              <div class="project-body">
+                <div class="project-head">
+                  <div>
+                    <p class="eyebrow eyebrow-small">{html.escape(repository["track_title"])}</p>
+                    <h3>{html.escape(repository["name"])}</h3>
+                  </div>
+                  <span class="status-pill">{html.escape(repository["availability_label"])}</span>
+                </div>
+                <p class="project-subtitle">{html.escape(repository["subtitle"])}</p>
+                <p class="project-desc">{html.escape(repository["description"])}</p>
+                <div class="meta-row">
+                  {render_tags(repository)}
+                </div>
+                <dl class="detail-grid detail-grid--compact">
+                  <div>
+                    <dt>Status</dt>
+                    <dd>{html.escape(repository["status"])} · {html.escape(repository["stage"])}</dd>
+                  </div>
+                  <div>
+                    <dt>Next</dt>
+                    <dd>{html.escape(repository["next_focus"])}</dd>
+                  </div>
+                </dl>
+                <div class="button-row">
+                  {render_action_group(repository)}
+                </div>
               </div>
             </article>"""
+
+
+def render_recent_row(repository: dict[str, Any]) -> str:
+    primary_href = repository["live_url"] or repository["repo_url"]
+    primary_label = primary_link_label(repository)
+    return f"""            <article class="recent-row reveal">
+              <div class="recent-main">
+                <strong>{html.escape(repository["name"])}</strong>
+                <span>{html.escape(repository["category"])} · {html.escape(repository["track_title"])}</span>
+              </div>
+              <p class="recent-note">{html.escape(repository["next_focus"])}</p>
+              <time datetime="{repository["sort_at"].date().isoformat()}">{repository["sort_label"]}</time>
+              <div class="recent-actions">
+                <a class="button button-primary" href="{html.escape(primary_href)}">{primary_label}</a>
+                <a class="button" href="{html.escape(repository["wiki_url"])}">Wiki</a>
+              </div>
+            </article>"""
+
+
+def render_timeline_item(item: dict[str, Any]) -> str:
+    highlights = "".join(f"<li>{html.escape(str(entry))}</li>" for entry in item.get("highlights", []))
+    return f"""            <article class="timeline-card reveal">
+              <div class="timeline-date">{html.escape(str(item["date"]))}</div>
+              <div class="timeline-body">
+                <h3>{html.escape(str(item["title"]))}</h3>
+                <p>{html.escape(str(item["summary"]))}</p>
+                <ul class="timeline-points">{highlights}</ul>
+              </div>
+            </article>"""
+
+
+def render_oss_card(tool: dict[str, Any]) -> str:
+    return f"""            <article class="stack-card reveal">
+              <strong>{html.escape(str(tool["name"]))}</strong>
+              <p>{html.escape(str(tool["summary"]))}</p>
+            </article>"""
+
+
+def render_focus_items(items: list[str]) -> str:
+    return "".join(f"                <li>{html.escape(item)}</li>" for item in items)
+
+
+def render_filter_buttons(config: dict[str, Any]) -> str:
+    buttons = ['<button class="filter-chip is-active" type="button" data-track-filter="all">전체</button>']
+    for track in config.get("portfolio_tracks", []):
+        buttons.append(
+            f'<button class="filter-chip" type="button" data-track-filter="{html.escape(str(track["slug"]))}">'
+            f'{html.escape(str(track["title"]))}</button>'
+        )
+    return "\n".join(f"              {button}" for button in buttons)
+
+
+def render_track_legend(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
+    counts = Counter(repository["track"] for repository in repositories)
+    cards = []
+    for track in config.get("portfolio_tracks", []):
+        slug = str(track["slug"])
+        cards.append(
+            f"""                <article class="legend-item accent-{slugify(str(track.get("accent", "slate")))}">
+                  <strong>{counts.get(slug, 0)}</strong>
+                  <span>{html.escape(str(track["title"]))}</span>
+                </article>"""
+        )
+    return "\n".join(cards)
+
+
+def build_track_chart_data(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
+    color_map = {
+        "teal": "#1f8a72",
+        "amber": "#d88c3a",
+        "ocean": "#3a6fd8",
+        "slate": "#556271",
+        "rose": "#d46363",
+    }
+    counts = Counter(repository["track"] for repository in repositories)
+    labels: list[str] = []
+    values: list[int] = []
+    colors: list[str] = []
+    for track in config.get("portfolio_tracks", []):
+        slug = str(track["slug"])
+        labels.append(str(track["title"]))
+        values.append(counts.get(slug, 0))
+        colors.append(color_map.get(str(track.get("accent", "slate")), "#556271"))
+    payload = {
+        "labels": labels,
+        "datasets": [
+            {
+                "label": "Tracked repositories",
+                "data": values,
+                "backgroundColor": colors,
+                "borderColor": "#f4ede4",
+                "borderWidth": 3,
+                "hoverOffset": 6,
+            }
+        ],
+    }
+    return json.dumps(payload, ensure_ascii=False)
 
 
 def build_schema(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
     max_schema_entries = int(config.get("max_schema_entries", 20))
-    items = []
+    social_image = dict(config.get("social_image", {}))
+    social_image_url = absolute_asset_url(config, str(social_image.get("path", "assets/meta/root-hub-social.png")))
+
+    item_list: list[dict[str, Any]] = []
     for position, repository in enumerate(repositories[:max_schema_entries], start=1):
-        items.append(
-            {
-                "@type": "ListItem",
-                "position": position,
-                "name": repository["name"],
-                "url": repository["live_url"] or repository["repo_url"],
-            }
-        )
+        entry: dict[str, Any] = {
+            "@type": "ListItem",
+            "position": position,
+            "name": repository["name"],
+            "url": repository["live_url"] or repository["repo_url"],
+            "description": repository["description"],
+        }
+        if repository["has_preview"]:
+            entry["image"] = repository["preview_url"]
+        item_list.append(entry)
 
     schema = {
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "CollectionPage",
+                "@type": "WebSite",
                 "name": str(config["site_name"]),
                 "url": str(config["site_url"]),
                 "description": str(config["description"]),
+            },
+            {
+                "@type": "CollectionPage",
+                "name": str(config["site_title"]),
+                "url": str(config["site_url"]),
+                "description": str(config["description"]),
+                "image": social_image_url,
             },
             {
                 "@type": "Person",
@@ -232,34 +604,61 @@ def build_schema(config: dict[str, Any], repositories: list[dict[str, Any]]) -> 
             {
                 "@type": "ItemList",
                 "name": "Public repositories by sheryloe",
-                "itemListElement": items,
+                "itemListElement": item_list,
             },
         ],
     }
     return json.dumps(schema, ensure_ascii=False, indent=2)
 
 
+def project_search_index(repositories: list[dict[str, Any]]) -> str:
+    payload = [
+        {
+            "id": repository["id"],
+            "name": repository["name"],
+            "subtitle": repository["subtitle"],
+            "description": repository["description"],
+            "category": repository["category"],
+            "track": repository["track"],
+            "track_title": repository["track_title"],
+            "language": repository["language"],
+            "topics": repository["topics"],
+            "stage": repository["stage"],
+            "status": repository["status"],
+            "audience": repository["audience"],
+            "next_focus": repository["next_focus"],
+            "availability": repository["availability"],
+        }
+        for repository in repositories
+    ]
+    return json.dumps(payload, ensure_ascii=False)
+
+
 def render_index_html(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
-    template = TEMPLATE_PATH.read_text(encoding="utf-8")
+    template = HOME_TEMPLATE_PATH.read_text(encoding="utf-8")
+    tracks = config.get("portfolio_tracks", [])
+    hero = dict(config.get("hero", {}))
     live_repositories = [repo for repo in repositories if repo["has_pages"]]
     featured_order = {name: index for index, name in enumerate(config.get("featured_repositories", []))}
     featured_live = sorted(
         [repo for repo in live_repositories if repo["name"] in featured_order],
         key=lambda repo: featured_order[repo["name"]],
-    )
-    direct_repositories = featured_live[:4]
-    used_names = {repo["name"] for repo in direct_repositories}
-    if len(direct_repositories) < min(4, len(live_repositories)):
+    )[: min(5, len(live_repositories))]
+    if len(featured_live) < min(5, len(live_repositories)):
+        used = {repo["name"] for repo in featured_live}
         for repository in live_repositories:
-            if repository["name"] in used_names:
+            if repository["name"] in used:
                 continue
-            direct_repositories.append(repository)
-            used_names.add(repository["name"])
-            if len(direct_repositories) == min(4, len(live_repositories)):
+            featured_live.append(repository)
+            used.add(repository["name"])
+            if len(featured_live) == min(5, len(live_repositories)):
                 break
-    quick_repositories = [repo for repo in live_repositories if repo["name"] not in used_names]
+
     generated_at = datetime.now(timezone.utc)
     latest_push = repositories[0]["sort_at"] if repositories else generated_at
+    repositories_by_name = {repository["name"]: repository for repository in repositories}
+    social_image = dict(config.get("social_image", {}))
+    social_image_path = relative_asset_path(str(social_image.get("path", "assets/meta/root-hub-social.png")))
 
     replacements = {
         "__SITE_TITLE__": html.escape(str(config["site_title"])),
@@ -269,13 +668,40 @@ def render_index_html(config: dict[str, Any], repositories: list[dict[str, Any]]
         "__SITE_URL__": html.escape(str(config["site_url"])),
         "__GITHUB_PROFILE__": html.escape(str(config["github_profile"])),
         "__WIKI_REPO_URL__": html.escape(str(config["wiki_repo_url"])),
+        "__GENERATED_LABEL__": generated_at.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "__LATEST_PUSH_LABEL__": latest_push.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "__LATEST_PUSH_SHORT__": latest_push.astimezone(timezone.utc).strftime("%Y-%m-%d"),
+        "__PUBLIC_REPO_COUNT__": str(len(repositories)),
         "__LIVE_PAGE_COUNT__": str(len(live_repositories)),
-        "__DIRECT_CARDS__": "\n".join(render_direct_card(repo) for repo in direct_repositories),
-        "__QUICK_LINKS__": "\n".join(render_quick_link(repo) for repo in quick_repositories),
-        "__RECENT_ROWS__": "\n".join(render_recent_row(repo) for repo in repositories),
+        "__TRACK_COUNT__": str(len(tracks)),
+        "__WIKI_DOC_COUNT__": str(len(config.get("wiki_documents", []))),
+        "__HERO_EYEBROW__": html.escape(str(hero.get("eyebrow", "Project Atlas"))),
+        "__HERO_TITLE_HTML__": format_title_html(str(hero.get("title", str(config["site_name"])))),
+        "__HERO_SUMMARY__": html.escape(str(hero.get("summary", config["description"]))),
+        "__FOCUS_ITEMS__": render_focus_items(list(config.get("current_focus", []))),
+        "__PORTFOLIO_TRACKS__": "\n".join(
+            render_track_card(track, repositories_by_name) for track in tracks
+        ),
+        "__FEATURED_CARDS__": "\n".join(
+            render_featured_card(repository, index) for index, repository in enumerate(featured_live)
+        ),
+        "__DOCUMENTATION_CARDS__": "\n".join(
+            render_document_card(document) for document in config.get("wiki_documents", [])
+        ),
+        "__WIKI_LINKS__": "\n".join(render_wiki_link(repository) for repository in repositories),
+        "__FILTER_CHIPS__": render_filter_buttons(config),
+        "__PROJECT_CARDS__": "\n".join(render_project_card(repository) for repository in repositories),
+        "__TIMELINE_ITEMS__": "\n".join(
+            render_timeline_item(item) for item in config.get("timeline_highlights", [])
+        ),
+        "__OSS_STACK_CARDS__": "\n".join(render_oss_card(tool) for tool in config.get("oss_stack", [])),
+        "__RECENT_ROWS__": "\n".join(render_recent_row(repository) for repository in repositories),
+        "__TRACK_LEGEND__": render_track_legend(config, repositories),
+        "__TRACK_CHART_DATA__": build_track_chart_data(config, repositories),
+        "__PROJECT_SEARCH_INDEX__": project_search_index(repositories),
         "__SCHEMA_JSON__": build_schema(config, repositories),
+        "__SOCIAL_IMAGE_URL__": html.escape(absolute_asset_url(config, social_image_path)),
+        "__SOCIAL_IMAGE_ALT__": html.escape(str(social_image.get("alt", "Sheryloe Project Atlas 대표 이미지"))),
     }
 
     rendered = template
@@ -284,25 +710,137 @@ def render_index_html(config: dict[str, Any], repositories: list[dict[str, Any]]
     return rendered
 
 
+def render_wiki_repo_card(repository: dict[str, Any]) -> str:
+    return f"""            <article class="wiki-repo-card {accent_class(repository)} reveal">
+              <div class="wiki-repo-head">
+                <div>
+                  <p class="eyebrow eyebrow-small">{html.escape(repository["track_title"])}</p>
+                  <h3>{html.escape(repository["name"])}</h3>
+                </div>
+                <span class="status-pill">{html.escape(repository["stage"])}</span>
+              </div>
+              <p>{html.escape(repository["subtitle"])}</p>
+              <div class="meta-row">
+                {render_tags(repository, max_topics=2)}
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="{html.escape(repository["wiki_url"])}">Repo Wiki</a>
+                <a class="button" href="{html.escape(repository["live_url"] or repository["repo_url"])}">{primary_link_label(repository)}</a>
+              </div>
+            </article>"""
+
+
+def render_wiki_track_card(track: dict[str, Any], repositories_by_name: dict[str, dict[str, Any]]) -> str:
+    matched = [repositories_by_name[name] for name in track.get("repositories", []) if name in repositories_by_name]
+    return f"""            <article class="wiki-track-card accent-{slugify(str(track.get("accent", "slate")))} reveal">
+              <div class="track-icon">
+                <iconify-icon icon="{html.escape(str(track.get("icon", "solar:layers-linear")))}"></iconify-icon>
+              </div>
+              <div>
+                <p class="eyebrow eyebrow-small">{html.escape(str(track["title"]))}</p>
+                <h3>{html.escape(str(track["title"]))}</h3>
+                <p>{html.escape(str(track["summary"]))}</p>
+              </div>
+              <strong>{len(matched)}</strong>
+            </article>"""
+
+
+def render_wiki_index_html(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
+    template = WIKI_TEMPLATE_PATH.read_text(encoding="utf-8")
+    generated_at = datetime.now(timezone.utc)
+    live_repositories = [repo for repo in repositories if repo["has_pages"]]
+    repositories_by_name = {repository["name"]: repository for repository in repositories}
+    social_image = dict(config.get("social_image", {}))
+    social_image_path = relative_asset_path(str(social_image.get("path", "assets/meta/root-hub-social.png")))
+
+    replacements = {
+        "__SITE_NAME__": html.escape(str(config["site_name"])),
+        "__SITE_URL__": html.escape(str(config["site_url"])),
+        "__SITE_TITLE__": html.escape(str(config["site_title"])),
+        "__DESCRIPTION__": html.escape(str(config["description"])),
+        "__GITHUB_PROFILE__": html.escape(str(config["github_profile"])),
+        "__WIKI_REPO_URL__": html.escape(str(config["wiki_repo_url"])),
+        "__PUBLIC_REPO_COUNT__": str(len(repositories)),
+        "__LIVE_PAGE_COUNT__": str(len(live_repositories)),
+        "__WIKI_DOC_COUNT__": str(len(config.get("wiki_documents", []))),
+        "__GENERATED_LABEL__": generated_at.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "__DOCUMENTATION_CARDS__": "\n".join(
+            render_document_card(document) for document in config.get("wiki_documents", [])
+        ),
+        "__WIKI_TRACK_CARDS__": "\n".join(
+            render_wiki_track_card(track, repositories_by_name) for track in config.get("portfolio_tracks", [])
+        ),
+        "__WIKI_REPO_CARDS__": "\n".join(render_wiki_repo_card(repository) for repository in repositories),
+        "__TIMELINE_ITEMS__": "\n".join(
+            render_timeline_item(item) for item in config.get("timeline_highlights", [])[:4]
+        ),
+        "__SCHEMA_JSON__": build_schema(config, repositories),
+        "__SOCIAL_IMAGE_URL__": html.escape(absolute_asset_url(config, social_image_path)),
+        "__SOCIAL_IMAGE_ALT__": html.escape(str(social_image.get("alt", "Sheryloe Project Atlas 대표 이미지"))),
+    }
+
+    rendered = template
+    for key, value in replacements.items():
+        rendered = rendered.replace(key, value)
+    return rendered
+
+
+def append_image_metadata(
+    lines: list[str],
+    image_url: str | None,
+    *,
+    title: str | None = None,
+    caption: str | None = None,
+) -> None:
+    if not image_url:
+        return
+    lines.append("    <image:image>")
+    lines.append(f"      <image:loc>{html.escape(image_url)}</image:loc>")
+    if title:
+        lines.append(f"      <image:title>{html.escape(title)}</image:title>")
+    if caption:
+        lines.append(f"      <image:caption>{html.escape(caption)}</image:caption>")
+    lines.append("    </image:image>")
+
+
 def render_sitemap_xml(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
     site_url = str(config["site_url"])
+    social_image = dict(config.get("social_image", {}))
+    social_image_url = absolute_asset_url(config, str(social_image.get("path", "assets/meta/root-hub-social.png")))
     today = datetime.now(timezone.utc).date().isoformat()
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
         "  <url>",
         f"    <loc>{site_url}</loc>",
         f"    <lastmod>{today}</lastmod>",
         "    <changefreq>daily</changefreq>",
         "    <priority>1.0</priority>",
-        "  </url>",
-        "  <url>",
-        f"    <loc>{site_url}wiki/</loc>",
-        f"    <lastmod>{today}</lastmod>",
-        "    <changefreq>weekly</changefreq>",
-        "    <priority>0.9</priority>",
-        "  </url>",
     ]
+    append_image_metadata(
+        lines,
+        social_image_url,
+        title=str(config["site_name"]),
+        caption=str(social_image.get("alt", config["site_name"])),
+    )
+    lines.append("  </url>")
+
+    lines.extend(
+        [
+            "  <url>",
+            f"    <loc>{site_url}wiki/</loc>",
+            f"    <lastmod>{today}</lastmod>",
+            "    <changefreq>weekly</changefreq>",
+            "    <priority>0.7</priority>",
+        ]
+    )
+    append_image_metadata(
+        lines,
+        social_image_url,
+        title=f"{config['site_name']} Wiki",
+        caption="Central wiki landing",
+    )
+    lines.append("  </url>")
 
     for repository in repositories:
         if not repository["has_pages"]:
@@ -314,24 +852,40 @@ def render_sitemap_xml(config: dict[str, Any], repositories: list[dict[str, Any]
                 f"    <lastmod>{repository['sort_at'].date().isoformat()}</lastmod>",
                 "    <changefreq>weekly</changefreq>",
                 "    <priority>0.8</priority>",
-                "  </url>",
             ]
         )
+        append_image_metadata(
+            lines,
+            repository["preview_url"] if repository["has_preview"] else None,
+            title=repository["name"],
+            caption=repository["preview_alt"],
+        )
+        lines.append("  </url>")
 
     lines.append("</urlset>")
     return "\n".join(lines) + "\n"
 
 
 def summary_html(repository: dict[str, Any]) -> str:
-    description = html.escape(repository["description"] or "설명이 아직 없는 저장소입니다.")
+    description = repository["description"] or "설명이 아직 정리되지 않은 저장소입니다."
     parts = [
         f"<p><strong>{html.escape(repository['name'])}</strong></p>",
-        f"<p>{description}</p>",
+        f"<p>{html.escape(repository['subtitle'])}</p>",
+        f"<p>{html.escape(description)}</p>",
+        (
+            f"<p>Track: {html.escape(repository['track_title'])} · "
+            f"Stage: {html.escape(repository['stage'])} · "
+            f"Status: {html.escape(repository['status'])}</p>"
+        ),
+        f"<p>Next focus: {html.escape(repository['next_focus'])}</p>",
     ]
     if repository["has_pages"]:
         parts.append(
             f"<p>Live page: <a href=\"{html.escape(repository['live_url'])}\">{html.escape(repository['live_url'])}</a></p>"
         )
+    parts.append(
+        f"<p>Wiki: <a href=\"{html.escape(repository['wiki_url'])}\">{html.escape(repository['wiki_url'])}</a></p>"
+    )
     parts.append(
         f"<p>GitHub: <a href=\"{html.escape(repository['repo_url'])}\">{html.escape(repository['repo_url'])}</a></p>"
     )
@@ -351,7 +905,11 @@ def render_rss_xml(config: dict[str, Any], repositories: list[dict[str, Any]]) -
 
     for repository in entries:
         primary_url = repository["live_url"] or repository["repo_url"]
-        categories = []
+        categories = [
+            f"    <category>{html.escape(repository['track_title'])}</category>",
+            f"    <category>{html.escape(repository['category'])}</category>",
+            f"    <category>{html.escape(repository['stage'])}</category>",
+        ]
         if repository["language"]:
             categories.append(f"    <category>{html.escape(repository['language'])}</category>")
         for topic in repository["topics"][:4]:
@@ -433,6 +991,29 @@ def render_robots_txt(config: dict[str, Any]) -> str:
     return f"User-agent: *\nAllow: /\n\nSitemap: {config['site_url']}sitemap.xml\n"
 
 
+def render_site_webmanifest(config: dict[str, Any]) -> str:
+    icon_path = relative_asset_path("assets/meta/icon.svg")
+    payload = {
+        "name": config["site_name"],
+        "short_name": "Sheryloe",
+        "description": config["description"],
+        "start_url": config["site_url"],
+        "scope": config["site_url"],
+        "display": "standalone",
+        "background_color": "#f4ede4",
+        "theme_color": "#193630",
+        "icons": [
+            {
+                "src": absolute_asset_url(config, icon_path),
+                "sizes": "any",
+                "type": "image/svg+xml",
+                "purpose": "any",
+            }
+        ],
+    }
+    return json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+
+
 def render_projects_json(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
     payload = {
         "generated_at": isoformat_z(datetime.now(timezone.utc)),
@@ -442,13 +1023,27 @@ def render_projects_json(config: dict[str, Any], repositories: list[dict[str, An
         "repositories": [
             {
                 "name": repository["name"],
+                "track": repository["track"],
+                "track_title": repository["track_title"],
+                "category": repository["category"],
+                "subtitle": repository["subtitle"],
                 "description": repository["description"],
                 "repo_url": repository["repo_url"],
                 "live_url": repository["live_url"],
                 "pages_url": repository["pages_url"],
+                "wiki_url": repository["wiki_url"],
                 "language": repository["language"],
                 "topics": repository["topics"],
+                "status": repository["status"],
+                "stage": repository["stage"],
+                "audience": repository["audience"],
+                "next_focus": repository["next_focus"],
                 "has_pages": repository["has_pages"],
+                "availability": repository["availability"],
+                "featured": repository["featured"],
+                "preview_path": repository["preview_path"],
+                "preview_image": repository["preview_url"] if repository["has_preview"] else "",
+                "preview_alt": repository["preview_alt"],
                 "updated_at": isoformat_z(repository["updated_at"]),
                 "pushed_at": isoformat_z(repository["sort_at"]),
             }
@@ -459,6 +1054,7 @@ def render_projects_json(config: dict[str, Any], repositories: list[dict[str, An
 
 
 def write_file(path: Path, content: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8", newline="\n")
 
 
@@ -467,15 +1063,23 @@ def main() -> int:
     repositories = normalize_repositories(config, fetch_public_repositories(str(config["username"])))
 
     write_file(ROOT / "index.html", render_index_html(config, repositories))
+    write_file(ROOT / "wiki" / "index.html", render_wiki_index_html(config, repositories))
     write_file(ROOT / "sitemap.xml", render_sitemap_xml(config, repositories))
     write_file(ROOT / "rss.xml", render_rss_xml(config, repositories))
     write_file(ROOT / "feed.xml", render_atom_xml(config, repositories))
     write_file(ROOT / "robots.txt", render_robots_txt(config))
     write_file(ROOT / "projects.json", render_projects_json(config, repositories))
+    write_file(ROOT / "site.webmanifest", render_site_webmanifest(config))
     write_file(ROOT / ".nojekyll", "\n")
 
-    print("Generated: index.html, sitemap.xml, rss.xml, feed.xml, robots.txt, projects.json, .nojekyll")
-    print(f"Repositories: {len(repositories)} total, {sum(1 for repository in repositories if repository['has_pages'])} live pages")
+    print(
+        "Generated: index.html, wiki/index.html, sitemap.xml, rss.xml, feed.xml, robots.txt, "
+        "projects.json, site.webmanifest, .nojekyll"
+    )
+    print(
+        f"Repositories: {len(repositories)} total, "
+        f"{sum(1 for repository in repositories if repository['has_pages'])} live pages"
+    )
     return 0
 
 

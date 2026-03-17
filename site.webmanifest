@@ -1,0 +1,18 @@
+{
+  "name": "Sheryloe Project Atlas",
+  "short_name": "Sheryloe",
+  "description": "AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 sheryloe의 공개 저장소를 서비스 관점으로 다시 묶은 루트 허브입니다. 라이브 Pages, 중앙 위키, 최근 변경, 다음 로드맵을 한곳에서 읽을 수 있습니다.",
+  "start_url": "https://sheryloe.github.io/",
+  "scope": "https://sheryloe.github.io/",
+  "display": "standalone",
+  "background_color": "#f4ede4",
+  "theme_color": "#193630",
+  "icons": [
+    {
+      "src": "https://sheryloe.github.io/assets/meta/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

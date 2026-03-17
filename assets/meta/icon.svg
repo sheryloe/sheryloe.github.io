@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Sheryloe Projects icon</title>
+  <desc id="desc">Blue and orange blocks forming an abstract project shelf.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#163d77"/>
+      <stop offset="100%" stop-color="#1f6f67"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#f3eee6"/>
+  <rect x="18" y="22" width="44" height="84" rx="14" fill="url(#bg)"/>
+  <rect x="67" y="22" width="43" height="34" rx="12" fill="#c66a35"/>
+  <rect x="67" y="61" width="43" height="45" rx="12" fill="#ffffff" stroke="#163d77" stroke-opacity="0.18"/>
+  <rect x="30" y="36" width="20" height="8" rx="4" fill="#ffffff" fill-opacity="0.72"/>
+  <rect x="30" y="50" width="20" height="8" rx="4" fill="#ffffff" fill-opacity="0.52"/>
+  <rect x="30" y="64" width="20" height="8" rx="4" fill="#ffffff" fill-opacity="0.72"/>
+  <rect x="30" y="78" width="12" height="8" rx="4" fill="#ffffff" fill-opacity="0.52"/>
+  <path d="M79 83h19" stroke="#163d77" stroke-width="8" stroke-linecap="round"/>
+  <path d="M79 95h11" stroke="#163d77" stroke-width="8" stroke-linecap="round" stroke-opacity="0.55"/>
+</svg>

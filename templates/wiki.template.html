@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Central Wiki | __SITE_NAME__</title>
+  <meta name="description" content="__DESCRIPTION__">
+  <meta name="theme-color" content="#193630">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="__SITE_URL__wiki/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Central Wiki | __SITE_NAME__">
+  <meta property="og:description" content="__DESCRIPTION__">
+  <meta property="og:url" content="__SITE_URL__wiki/">
+  <meta property="og:image" content="__SOCIAL_IMAGE_URL__">
+  <meta property="og:image:alt" content="__SOCIAL_IMAGE_ALT__">
+  <link rel="icon" type="image/svg+xml" href="__SITE_URL__assets/meta/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['IBM Plex Sans KR', 'sans-serif'],
+            display: ['Fraunces', 'IBM Plex Sans KR', 'serif'],
+          },
+          boxShadow: {
+            glow: '0 24px 60px rgba(22, 32, 42, 0.12)',
+          },
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    :root {
+      --shell: rgba(255, 251, 246, 0.9);
+      --line: rgba(26, 34, 42, 0.12);
+      --ink: #182127;
+      --ink-soft: #5e676f;
+      --teal: #1f8a72;
+      --amber: #d88c3a;
+      --ocean: #3a6fd8;
+      --slate: #556271;
+      --rose: #d46363;
+    }
+
+    body {
+      @apply min-h-screen font-sans text-[var(--ink)] antialiased;
+      background:
+        radial-gradient(circle at 10% 12%, rgba(31, 138, 114, 0.16), transparent 28rem),
+        radial-gradient(circle at 86% 14%, rgba(216, 140, 58, 0.16), transparent 24rem),
+        linear-gradient(180deg, #f8f2ea 0%, #f1e6d8 60%, #eadfce 100%);
+    }
+
+    .shell {
+      @apply rounded-[28px] border shadow-glow backdrop-blur-xl;
+      background: var(--shell);
+      border-color: var(--line);
+    }
+
+    .eyebrow {
+      @apply inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em];
+      background: rgba(25, 54, 48, 0.08);
+      color: var(--teal);
+    }
+
+    .button {
+      @apply inline-flex min-h-11 items-center justify-center rounded-full border px-4 text-sm font-semibold transition duration-200;
+      background: rgba(255, 255, 255, 0.78);
+      border-color: rgba(26, 34, 42, 0.16);
+    }
+
+    .button-primary {
+      @apply text-white;
+      background: linear-gradient(135deg, #163d36, #214f46);
+      border-color: transparent;
+    }
+
+    .doc-card,
+    .wiki-track-card,
+    .wiki-repo-card,
+    .timeline-card {
+      @apply rounded-[26px] border bg-white/76 p-6;
+      border-color: var(--line);
+      box-shadow: 0 18px 36px rgba(23, 31, 40, 0.06);
+    }
+
+    .accent-teal::before,
+    .accent-amber::before,
+    .accent-ocean::before,
+    .accent-slate::before,
+    .accent-rose::before {
+      content: "";
+      @apply mb-5 block h-1.5 w-full rounded-full;
+    }
+
+    .accent-teal::before { background: var(--teal); }
+    .accent-amber::before { background: var(--amber); }
+    .accent-ocean::before { background: var(--ocean); }
+    .accent-slate::before { background: var(--slate); }
+    .accent-rose::before { background: var(--rose); }
+
+    .track-icon,
+    .doc-icon {
+      @apply mb-5 flex h-14 w-14 items-center justify-center rounded-2xl text-3xl;
+      background: rgba(25, 54, 48, 0.08);
+      color: var(--teal);
+    }
+
+    .meta-pill,
+    .status-pill {
+      @apply inline-flex items-center justify-center rounded-full border px-3 py-1 text-[11px] font-semibold;
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--ink-soft);
+    }
+
+    .status-pill {
+      background: rgba(25, 54, 48, 0.08);
+      color: var(--teal);
+    }
+
+    .button-row,
+    .meta-row {
+      @apply mt-4 flex flex-wrap gap-2;
+    }
+
+    .button-row .button {
+      @apply flex-1;
+    }
+
+    .doc-card h3,
+    .wiki-track-card h3,
+    .wiki-repo-card h3,
+    .timeline-body h3 {
+      @apply font-display text-2xl tracking-[-0.04em];
+    }
+
+    .doc-card p,
+    .wiki-track-card p,
+    .wiki-repo-card p,
+    .timeline-body p {
+      @apply mt-3 text-sm leading-7 text-[var(--ink-soft)];
+    }
+
+    .wiki-repo-head {
+      @apply flex items-start justify-between gap-4;
+    }
+
+    .timeline-card {
+      @apply grid gap-5 md:grid-cols-[120px_minmax(0,1fr)];
+    }
+
+    .timeline-date {
+      @apply text-sm font-semibold uppercase tracking-[0.2em] text-[var(--teal)];
+    }
+
+    .timeline-points {
+      @apply mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-[var(--ink-soft)];
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+__SCHEMA_JSON__
+  </script>
+</head>
+<body class="selection:bg-emerald-200/70 selection:text-slate-900">
+  <script src="https://code.iconify.design/iconify-icon/3.1.1/iconify-icon.min.js"></script>
+
+  <header class="sticky top-4 z-50 mx-auto w-[min(calc(100%-24px),1280px)]">
+    <div class="shell px-5 py-4 md:px-7">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div class="flex items-center gap-3">
+          <div class="h-3 w-3 rounded-full bg-emerald-500 shadow-[0_0_18px_rgba(16,185,129,0.6)]"></div>
+          <span class="text-sm font-semibold uppercase tracking-[0.28em]">Central Wiki</span>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a class="button" href="__SITE_URL__">Back to Hub</a>
+          <a class="button" href="__GITHUB_PROFILE__">GitHub</a>
+          <a class="button" href="__WIKI_REPO_URL__">Wiki Source</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto w-[min(calc(100%-24px),1280px)] pb-16 pt-8 md:pt-10">
+    <section class="grid gap-5 xl:grid-cols-[minmax(0,1.5fr)_380px]">
+      <div class="shell p-6 md:p-8 xl:p-10 reveal">
+        <span class="eyebrow">Documentation Operating Layer</span>
+        <h1 class="mt-6 max-w-4xl font-display text-[clamp(2.8rem,5vw,5rem)] leading-[0.95] tracking-[-0.06em]">README를 넘어 서비스 설명과 의사결정 기록을 이어 읽는 중앙 위키</h1>
+        <p class="mt-6 max-w-3xl text-lg leading-9 text-[var(--ink-soft)]">서비스 맵, 날짜별 실행 로그, 다음 작업 백로그를 루트 허브와 연결해 저장소 설명이 한 군데에서 끊기지 않도록 구성했습니다.</p>
+        <div class="button-row mt-8">
+          <a class="button button-primary" href="__WIKI_REPO_URL__">GitHub 문서 열기</a>
+          <a class="button" href="#repo-wikis">저장소별 위키 보기</a>
+        </div>
+      </div>
+      <aside class="shell p-6 md:p-8 reveal">
+        <span class="eyebrow">Wiki Snapshot</span>
+        <div class="mt-6 grid gap-3">
+          <article class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
+            <span class="text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">Public Repos</span>
+            <strong class="mt-2 block font-display text-4xl tracking-[-0.05em]">__PUBLIC_REPO_COUNT__</strong>
+          </article>
+          <article class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
+            <span class="text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">Live Pages</span>
+            <strong class="mt-2 block font-display text-4xl tracking-[-0.05em]">__LIVE_PAGE_COUNT__</strong>
+          </article>
+          <article class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
+            <span class="text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">Core Docs</span>
+            <strong class="mt-2 block font-display text-4xl tracking-[-0.05em]">__WIKI_DOC_COUNT__</strong>
+          </article>
+        </div>
+        <p class="mt-5 text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">generated __GENERATED_LABEL__</p>
+      </aside>
+    </section>
+
+    <section class="mt-8 shell p-6 md:p-8 xl:p-10">
+      <span class="eyebrow">Core Documents</span>
+      <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">중앙 위키의 핵심 문서</h2>
+      <div class="mt-8 grid gap-4 md:grid-cols-2">
+__DOCUMENTATION_CARDS__
+      </div>
+    </section>
+
+    <section class="mt-8 shell p-6 md:p-8 xl:p-10">
+      <span class="eyebrow">Portfolio Tracks</span>
+      <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">문서를 읽는 관점도 서비스 축으로 맞췄습니다</h2>
+      <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+__WIKI_TRACK_CARDS__
+      </div>
+    </section>
+
+    <section id="repo-wikis" class="mt-8 shell p-6 md:p-8 xl:p-10">
+      <span class="eyebrow">Repository Wiki Index</span>
+      <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">저장소별 `wiki/` 진입점</h2>
+      <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+__WIKI_REPO_CARDS__
+      </div>
+    </section>
+
+    <section class="mt-8 shell p-6 md:p-8 xl:p-10">
+      <span class="eyebrow">Timeline Highlights</span>
+      <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">최근 실행 로그에서 읽히는 흐름</h2>
+      <div class="mt-8 grid gap-4">
+__TIMELINE_ITEMS__
+      </div>
+    </section>
+  </main>
+
+  <footer class="mx-auto mb-8 w-[min(calc(100%-24px),1280px)]">
+    <div class="shell px-6 py-6 md:px-8">
+      <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+        <div>
+          <strong class="block text-sm font-semibold uppercase tracking-[0.24em]">__SITE_NAME__ Wiki</strong>
+          <p class="mt-2 text-sm leading-7 text-[var(--ink-soft)]">중앙 문서, 저장소별 위키, 실행 로그를 한곳에 묶는 문서 허브.</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a class="button" href="__SITE_URL__">Project Hub</a>
+          <a class="button" href="__SITE_URL__rss.xml">RSS</a>
+          <a class="button" href="__SITE_URL__sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const revealItems = Array.from(document.querySelectorAll('.reveal'));
+      if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.14 });
+        revealItems.forEach((item) => observer.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add('is-visible'));
+      }
+    })();
+  </script>
+</body>
+</html>

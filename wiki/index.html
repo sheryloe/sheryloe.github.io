@@ -3,185 +3,701 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Central Wiki | Sheryloe Projects</title>
-  <meta name="description" content="sheryloe 공개 저장소의 서비스 맵, 날짜별 DO, TODO, 레포별 wiki 링크를 모아둔 중앙 위키 랜딩 페이지">
-  <meta name="theme-color" content="#0f172a">
-  
+  <title>Central Wiki | Sheryloe Project Atlas</title>
+  <meta name="description" content="AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 sheryloe의 공개 저장소를 서비스 관점으로 다시 묶은 루트 허브입니다. 라이브 Pages, 중앙 위키, 최근 변경, 다음 로드맵을 한곳에서 읽을 수 있습니다.">
+  <meta name="theme-color" content="#193630">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://sheryloe.github.io/wiki/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Central Wiki | Sheryloe Project Atlas">
+  <meta property="og:description" content="AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 sheryloe의 공개 저장소를 서비스 관점으로 다시 묶은 루트 허브입니다. 라이브 Pages, 중앙 위키, 최근 변경, 다음 로드맵을 한곳에서 읽을 수 있습니다.">
+  <meta property="og:url" content="https://sheryloe.github.io/wiki/">
+  <meta property="og:image" content="https://sheryloe.github.io/assets/meta/root-hub-social.png">
+  <meta property="og:image:alt" content="Sheryloe Project Atlas 첫 화면 미리보기">
+  <link rel="icon" type="image/svg+xml" href="https://sheryloe.github.io/assets/meta/icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-  
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'Noto Sans KR', 'sans-serif'],
-          }
+            sans: ['IBM Plex Sans KR', 'sans-serif'],
+            display: ['Fraunces', 'IBM Plex Sans KR', 'serif'],
+          },
+          boxShadow: {
+            glow: '0 24px 60px rgba(22, 32, 42, 0.12)',
+          },
         }
       }
     }
   </script>
-  
   <style type="text/tailwindcss">
-    body { @apply bg-slate-50 text-slate-800 antialiased; }
-    .glass-card { @apply bg-white/80 border border-slate-200 backdrop-blur-md rounded-2xl shadow-sm hover:shadow-md transition-all duration-300; }
-    .btn-primary { @apply px-5 py-2.5 bg-indigo-600 text-white text-sm font-bold rounded-xl hover:bg-indigo-700 transition-colors shadow-sm; }
-    .btn-secondary { @apply px-5 py-2.5 bg-white border border-slate-200 text-slate-700 text-sm font-bold rounded-xl hover:bg-slate-50 transition-colors; }
-    .badge { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest bg-indigo-100 text-indigo-700; }
-  </style>
-</head>
-<body>
+    :root {
+      --shell: rgba(255, 251, 246, 0.9);
+      --line: rgba(26, 34, 42, 0.12);
+      --ink: #182127;
+      --ink-soft: #5e676f;
+      --teal: #1f8a72;
+      --amber: #d88c3a;
+      --ocean: #3a6fd8;
+      --slate: #556271;
+      --rose: #d46363;
+    }
 
-  <header class="sticky top-0 z-50 bg-slate-900 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-2.5 h-2.5 rounded-full bg-indigo-500 animate-pulse"></div>
-        <span class="text-white font-bold text-sm tracking-widest uppercase">Sheryloe System</span>
+    body {
+      @apply min-h-screen font-sans text-[var(--ink)] antialiased;
+      background:
+        radial-gradient(circle at 10% 12%, rgba(31, 138, 114, 0.16), transparent 28rem),
+        radial-gradient(circle at 86% 14%, rgba(216, 140, 58, 0.16), transparent 24rem),
+        linear-gradient(180deg, #f8f2ea 0%, #f1e6d8 60%, #eadfce 100%);
+    }
+
+    .shell {
+      @apply rounded-[28px] border shadow-glow backdrop-blur-xl;
+      background: var(--shell);
+      border-color: var(--line);
+    }
+
+    .eyebrow {
+      @apply inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em];
+      background: rgba(25, 54, 48, 0.08);
+      color: var(--teal);
+    }
+
+    .button {
+      @apply inline-flex min-h-11 items-center justify-center rounded-full border px-4 text-sm font-semibold transition duration-200;
+      background: rgba(255, 255, 255, 0.78);
+      border-color: rgba(26, 34, 42, 0.16);
+    }
+
+    .button-primary {
+      @apply text-white;
+      background: linear-gradient(135deg, #163d36, #214f46);
+      border-color: transparent;
+    }
+
+    .doc-card,
+    .wiki-track-card,
+    .wiki-repo-card,
+    .timeline-card {
+      @apply rounded-[26px] border bg-white/76 p-6;
+      border-color: var(--line);
+      box-shadow: 0 18px 36px rgba(23, 31, 40, 0.06);
+    }
+
+    .accent-teal::before,
+    .accent-amber::before,
+    .accent-ocean::before,
+    .accent-slate::before,
+    .accent-rose::before {
+      content: "";
+      @apply mb-5 block h-1.5 w-full rounded-full;
+    }
+
+    .accent-teal::before { background: var(--teal); }
+    .accent-amber::before { background: var(--amber); }
+    .accent-ocean::before { background: var(--ocean); }
+    .accent-slate::before { background: var(--slate); }
+    .accent-rose::before { background: var(--rose); }
+
+    .track-icon,
+    .doc-icon {
+      @apply mb-5 flex h-14 w-14 items-center justify-center rounded-2xl text-3xl;
+      background: rgba(25, 54, 48, 0.08);
+      color: var(--teal);
+    }
+
+    .meta-pill,
+    .status-pill {
+      @apply inline-flex items-center justify-center rounded-full border px-3 py-1 text-[11px] font-semibold;
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--ink-soft);
+    }
+
+    .status-pill {
+      background: rgba(25, 54, 48, 0.08);
+      color: var(--teal);
+    }
+
+    .button-row,
+    .meta-row {
+      @apply mt-4 flex flex-wrap gap-2;
+    }
+
+    .button-row .button {
+      @apply flex-1;
+    }
+
+    .doc-card h3,
+    .wiki-track-card h3,
+    .wiki-repo-card h3,
+    .timeline-body h3 {
+      @apply font-display text-2xl tracking-[-0.04em];
+    }
+
+    .doc-card p,
+    .wiki-track-card p,
+    .wiki-repo-card p,
+    .timeline-body p {
+      @apply mt-3 text-sm leading-7 text-[var(--ink-soft)];
+    }
+
+    .wiki-repo-head {
+      @apply flex items-start justify-between gap-4;
+    }
+
+    .timeline-card {
+      @apply grid gap-5 md:grid-cols-[120px_minmax(0,1fr)];
+    }
+
+    .timeline-date {
+      @apply text-sm font-semibold uppercase tracking-[0.2em] text-[var(--teal)];
+    }
+
+    .timeline-points {
+      @apply mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-[var(--ink-soft)];
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Sheryloe Project Atlas",
+      "url": "https://sheryloe.github.io/",
+      "description": "AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 sheryloe의 공개 저장소를 서비스 관점으로 다시 묶은 루트 허브입니다. 라이브 Pages, 중앙 위키, 최근 변경, 다음 로드맵을 한곳에서 읽을 수 있습니다."
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Sheryloe Project Atlas | 운영형 서비스와 도구를 엮는 프로젝트 허브",
+      "url": "https://sheryloe.github.io/",
+      "description": "AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 sheryloe의 공개 저장소를 서비스 관점으로 다시 묶은 루트 허브입니다. 라이브 Pages, 중앙 위키, 최근 변경, 다음 로드맵을 한곳에서 읽을 수 있습니다.",
+      "image": "https://sheryloe.github.io/assets/meta/root-hub-social.png"
+    },
+    {
+      "@type": "Person",
+      "name": "sheryloe",
+      "url": "https://github.com/sheryloe",
+      "sameAs": [
+        "https://github.com/sheryloe"
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Public repositories by sheryloe",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Automethemoney",
+          "url": "https://sheryloe.github.io/Automethemoney/",
+          "description": "자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/automethemoney.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "BloggerGent",
+          "url": "https://sheryloe.github.io/BloggerGent/",
+          "description": "여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/bloggergent.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "BloManagent",
+          "url": "https://sheryloe.github.io/BloManagent/",
+          "description": "블로그 URL 수집, 등급 산출, 주간 비교 리포트, 시각적 설명을 연결하는 분석 제품 실험입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/blomanagent.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "donggeuri-cloudflare-blog",
+          "url": "https://github.com/sheryloe/donggeuri-cloudflare-blog",
+          "description": "Cloudflare 기반 블로그 플랫폼을 Public, Admin, API 레이어로 분리해 운영 UX를 다듬는 워크스페이스입니다."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "donggri_gagyeobu",
+          "url": "https://sheryloe.github.io/donggri_gagyeobu/",
+          "description": "자산, 카드 결제 예정, 예산, 소비 흐름을 브라우저에서 바로 관리할 수 있게 정리한 개인 재무 서비스입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/donggri-gagyeobu.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Vibe_Cowork_Thinking",
+          "url": "https://sheryloe.github.io/Vibe_Cowork_Thinking/",
+          "description": "프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/vibe-cowork-thinking.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "grid-crop-image",
+          "url": "https://sheryloe.github.io/grid-crop-image/",
+          "description": "스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용까지 지원하는 Windows 이미지 워크플로 도구입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/grid-crop-image.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Favorit",
+          "url": "https://sheryloe.github.io/Favorit/",
+          "description": "Windows 바탕화면에서 자주 쓰는 파일, 폴더, URL을 위젯처럼 빠르게 실행하도록 만든 데스크톱 런처입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/favorit.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "AI_Writer_TISTORY",
+          "url": "https://sheryloe.github.io/AI_Writer_TISTORY/",
+          "description": "티스토리 발행 자동화, AI 글쓰기, 검수 전 단계, 운영 로그를 정리하는 출판 워크플로 프로젝트입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/ai-writer-tistory.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "AI_BISEO",
+          "url": "https://sheryloe.github.io/AI_BISEO/",
+          "description": "AI 비서 응답, Notion 로그, n8n 자동화, Telegram 알림 흐름을 하나의 운영 서비스로 엮는 프로젝트입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/ai-biseo.png"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="selection:bg-emerald-200/70 selection:text-slate-900">
+  <script src="https://code.iconify.design/iconify-icon/3.1.1/iconify-icon.min.js"></script>
+
+  <header class="sticky top-4 z-50 mx-auto w-[min(calc(100%-24px),1280px)]">
+    <div class="shell px-5 py-4 md:px-7">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div class="flex items-center gap-3">
+          <div class="h-3 w-3 rounded-full bg-emerald-500 shadow-[0_0_18px_rgba(16,185,129,0.6)]"></div>
+          <span class="text-sm font-semibold uppercase tracking-[0.28em]">Central Wiki</span>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a class="button" href="https://sheryloe.github.io/">Back to Hub</a>
+          <a class="button" href="https://github.com/sheryloe">GitHub</a>
+          <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki">Wiki Source</a>
+        </div>
       </div>
-      <a href="https://sheryloe.github.io/" class="text-slate-300 hover:text-white text-xs font-bold uppercase tracking-wider transition-colors">← Back to Hub</a>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-6 py-12">
-    <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-      <div class="lg:col-span-2 flex flex-col justify-center">
-        <span class="badge mb-4">Central Wiki Hub</span>
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 leading-[1.1]">
-          공개 프로젝트를 서비스 관점으로 <span class="text-indigo-600">다시 정의하다.</span>
-        </h1>
-        <p class="text-lg text-slate-500 leading-relaxed mb-8 max-w-2xl">
-          README에 담기지 않는 프로젝트의 핵심 가치, 기술적 의사결정 기록, 그리고 미래 로드맵을 한눈에 관리합니다. 모든 문서는 각 저장소의 <code>wiki/</code> 경로와 실시간으로 동기화됩니다.
-        </p>
-        <div class="flex gap-4">
-          <a href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki" class="btn-primary">GitHub 문서 저장소</a>
-          <a href="#repos" class="btn-secondary">레포별 위키 탐색</a>
+  <main class="mx-auto w-[min(calc(100%-24px),1280px)] pb-16 pt-8 md:pt-10">
+    <section class="grid gap-5 xl:grid-cols-[minmax(0,1.5fr)_380px]">
+      <div class="shell p-6 md:p-8 xl:p-10 reveal">
+        <span class="eyebrow">Documentation Operating Layer</span>
+        <h1 class="mt-6 max-w-4xl font-display text-[clamp(2.8rem,5vw,5rem)] leading-[0.95] tracking-[-0.06em]">README를 넘어 서비스 설명과 의사결정 기록을 이어 읽는 중앙 위키</h1>
+        <p class="mt-6 max-w-3xl text-lg leading-9 text-[var(--ink-soft)]">서비스 맵, 날짜별 실행 로그, 다음 작업 백로그를 루트 허브와 연결해 저장소 설명이 한 군데에서 끊기지 않도록 구성했습니다.</p>
+        <div class="button-row mt-8">
+          <a class="button button-primary" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki">GitHub 문서 열기</a>
+          <a class="button" href="#repo-wikis">저장소별 위키 보기</a>
         </div>
       </div>
-      
-      <div class="bg-slate-900 rounded-3xl p-8 text-white flex flex-col justify-between shadow-2xl relative overflow-hidden">
-        <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl"></div>
-        <div>
-          <h2 class="text-slate-400 text-xs font-bold uppercase tracking-[0.2em] mb-8">System Metrics</h2>
-          <div class="space-y-6">
-            <div class="flex justify-between items-end border-b border-slate-800 pb-4">
-              <span class="text-sm text-slate-400 font-medium">Core Docs</span>
-              <span class="text-2xl font-bold font-mono text-indigo-400">04</span>
-            </div>
-            <div class="flex justify-between items-end border-b border-slate-800 pb-4">
-              <span class="text-sm text-slate-400 font-medium">Public Repos</span>
-              <span class="text-2xl font-bold font-mono text-indigo-400">10</span>
-            </div>
-            <div class="flex justify-between items-end">
-              <span class="text-sm text-slate-400 font-medium">Sync Status</span>
-              <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest bg-emerald-400/10 px-2 py-1 rounded">Active</span>
-            </div>
-          </div>
+      <aside class="shell p-6 md:p-8 reveal">
+        <span class="eyebrow">Wiki Snapshot</span>
+        <div class="mt-6 grid gap-3">
+          <article class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
+            <span class="text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">Public Repos</span>
+            <strong class="mt-2 block font-display text-4xl tracking-[-0.05em]">10</strong>
+          </article>
+          <article class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
+            <span class="text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">Live Pages</span>
+            <strong class="mt-2 block font-display text-4xl tracking-[-0.05em]">9</strong>
+          </article>
+          <article class="rounded-3xl border border-[var(--line)] bg-white/70 p-4">
+            <span class="text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">Core Docs</span>
+            <strong class="mt-2 block font-display text-4xl tracking-[-0.05em]">4</strong>
+          </article>
         </div>
-        <p class="text-xs text-slate-500 leading-relaxed mt-8 italic">
-          * 서비스 관점의 문서는 포트폴리오의 질적 성장을 위해 지속적으로 업데이트됩니다.
-        </p>
+        <p class="mt-5 text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">generated 2026-03-17 01:27 UTC</p>
+      </aside>
+    </section>
+
+    <section class="mt-8 shell p-6 md:p-8 xl:p-10">
+      <span class="eyebrow">Core Documents</span>
+      <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">중앙 위키의 핵심 문서</h2>
+      <div class="mt-8 grid gap-4 md:grid-cols-2">
+            <article class="doc-card reveal">
+              <div class="doc-icon">
+                <iconify-icon icon="solar:book-bookmark-linear"></iconify-icon>
+              </div>
+              <p class="eyebrow eyebrow-small">Entry Point</p>
+              <h3>Central Wiki Landing</h3>
+              <p>루트 허브 전체를 어떤 서비스 축으로 읽어야 하는지 보여주는 중앙 문서 인덱스입니다.</p>
+              <div class="button-row">
+                <a class="button button-primary" href="https://sheryloe.github.io/wiki/">Open Wiki</a>
+                <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki">GitHub Source</a>
+              </div>
+            </article>
+            <article class="doc-card reveal">
+              <div class="doc-icon">
+                <iconify-icon icon="solar:map-point-wave-linear"></iconify-icon>
+              </div>
+              <p class="eyebrow eyebrow-small">Architecture</p>
+              <h3>Repository Service Map</h3>
+              <p>저장소별 역할, 서비스 설명, 다음 개선 포인트를 한 장으로 묶은 포지셔닝 문서입니다.</p>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Repository-Service-Map.md">Read Map</a>
+                
+              </div>
+            </article>
+            <article class="doc-card reveal">
+              <div class="doc-icon">
+                <iconify-icon icon="solar:clock-circle-linear"></iconify-icon>
+              </div>
+              <p class="eyebrow eyebrow-small">Execution Log</p>
+              <h3>Timeline DO</h3>
+              <p>날짜 기준으로 묶은 완료 작업 기록으로, 전체 포트폴리오의 흐름을 빠르게 훑을 수 있습니다.</p>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Timeline-DO.md">Read Timeline</a>
+                
+              </div>
+            </article>
+            <article class="doc-card reveal">
+              <div class="doc-icon">
+                <iconify-icon icon="solar:checklist-minimalistic-linear"></iconify-icon>
+              </div>
+              <p class="eyebrow eyebrow-small">Roadmap</p>
+              <h3>Service TODO</h3>
+              <p>보안, 기능, 운영 관점에서 어떤 저장소를 다음에 어떻게 다듬어야 하는지 정리한 백로그입니다.</p>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Service-TODO.md">Read Backlog</a>
+                
+              </div>
+            </article>
       </div>
     </section>
 
-    <section class="mb-20">
-      <div class="flex items-center gap-4 mb-8">
-        <h2 class="text-2xl font-bold text-slate-900 tracking-tight">핵심 중앙 문서</h2>
-        <div class="h-px bg-slate-200 grow"></div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <article class="glass-card p-8 flex flex-col hover:-translate-y-1">
-          <h3 class="text-lg font-bold text-slate-900 mb-3">Portfolio Home</h3>
-          <p class="text-sm text-slate-500 leading-relaxed grow mb-6">포트폴리오 전체의 설계 원칙과 서비스 구성도를 다루는 최상위 문서입니다.</p>
-          <a href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Home.md" class="text-indigo-600 text-sm font-bold hover:underline">문서 열람 →</a>
-        </article>
-        <article class="glass-card p-8 flex flex-col hover:-translate-y-1">
-          <h3 class="text-lg font-bold text-slate-900 mb-3">Service Map</h3>
-          <p class="text-sm text-slate-500 leading-relaxed grow mb-6">개별 레포지토리가 어떤 가치를 창출하는지 서비스 관점에서 매핑한 지도입니다.</p>
-          <a href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Repository-Service-Map.md" class="text-indigo-600 text-sm font-bold hover:underline">문서 열람 →</a>
-        </article>
-        <article class="glass-card p-8 flex flex-col hover:-translate-y-1">
-          <h3 class="text-lg font-bold text-slate-900 mb-3">Roadmap & TODO</h3>
-          <p class="text-sm text-slate-500 leading-relaxed grow mb-6">최근 개발 내역과 차기 기능 구현, 보안 패치 계획을 통합 관리합니다.</p>
-          <div class="flex gap-4">
-            <a href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Timeline-DO.md" class="text-indigo-600 text-sm font-bold hover:underline">DO</a>
-            <a href="https://github.com/sheryloe/sheryloe.github.io/blob/main/wiki/Service-TODO.md" class="text-slate-400 text-sm font-bold hover:underline">TODO</a>
-          </div>
-        </article>
+    <section class="mt-8 shell p-6 md:p-8 xl:p-10">
+      <span class="eyebrow">Portfolio Tracks</span>
+      <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">문서를 읽는 관점도 서비스 축으로 맞췄습니다</h2>
+      <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <article class="wiki-track-card accent-teal reveal">
+              <div class="track-icon">
+                <iconify-icon icon="solar:cpu-bolt-linear"></iconify-icon>
+              </div>
+              <div>
+                <p class="eyebrow eyebrow-small">AI &amp; Automation</p>
+                <h3>AI &amp; Automation</h3>
+                <p>AI 비서, 글쓰기 자동화, 멀티 채널 발행, 협업 오케스트레이션까지 지식 작업을 자동화하는 축입니다.</p>
+              </div>
+              <strong>4</strong>
+            </article>
+            <article class="wiki-track-card accent-amber reveal">
+              <div class="track-icon">
+                <iconify-icon icon="solar:layers-minimalistic-linear"></iconify-icon>
+              </div>
+              <div>
+                <p class="eyebrow eyebrow-small">Service Products</p>
+                <h3>Service Products</h3>
+                <p>거래, 개인 재무, 분석 대시보드처럼 실제 사용 시나리오가 분명한 서비스형 프로젝트를 묶었습니다.</p>
+              </div>
+              <strong>3</strong>
+            </article>
+            <article class="wiki-track-card accent-ocean reveal">
+              <div class="track-icon">
+                <iconify-icon icon="solar:widget-5-linear"></iconify-icon>
+              </div>
+              <div>
+                <p class="eyebrow eyebrow-small">Desktop Utilities</p>
+                <h3>Desktop Utilities</h3>
+                <p>자주 쓰는 작업을 빠르게 끝내는 Windows 중심 도구를 제품 감각으로 정리하는 축입니다.</p>
+              </div>
+              <strong>2</strong>
+            </article>
+            <article class="wiki-track-card accent-slate reveal">
+              <div class="track-icon">
+                <iconify-icon icon="solar:book-bookmark-linear"></iconify-icon>
+              </div>
+              <div>
+                <p class="eyebrow eyebrow-small">Platform &amp; Docs</p>
+                <h3>Platform &amp; Docs</h3>
+                <p>플랫폼 워크스페이스와 중앙 위키를 통해 전체 저장소의 구조와 운영 원칙을 설명하는 축입니다.</p>
+              </div>
+              <strong>1</strong>
+            </article>
       </div>
     </section>
 
-    <section id="repos">
-      <div class="flex items-center gap-4 mb-8">
-        <h2 class="text-2xl font-bold text-slate-900 tracking-tight">저장소별 상세 위키</h2>
-        <div class="h-px bg-slate-200 grow"></div>
+    <section id="repo-wikis" class="mt-8 shell p-6 md:p-8 xl:p-10">
+      <span class="eyebrow">Repository Wiki Index</span>
+      <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">저장소별 `wiki/` 진입점</h2>
+      <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <article class="wiki-repo-card accent-amber reveal">
+              <div class="wiki-repo-head">
+                <div>
+                  <p class="eyebrow eyebrow-small">Service Products</p>
+                  <h3>Automethemoney</h3>
+                </div>
+                <span class="status-pill">Operate</span>
+              </div>
+              <p>전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔</p>
+              <div class="meta-row">
+                <span class="meta-pill">Python</span><span class="meta-pill">Operate</span><span class="meta-pill">Live</span><span class="meta-pill">algorithmic-trading</span><span class="meta-pill">dashboard</span>
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/Automethemoney/tree/main/wiki">Repo Wiki</a>
+                <a class="button" href="https://sheryloe.github.io/Automethemoney/">Live Page</a>
+              </div>
+            </article>
+            <article class="wiki-repo-card accent-rose reveal">
+              <div class="wiki-repo-head">
+                <div>
+                  <p class="eyebrow eyebrow-small">AI &amp; Automation</p>
+                  <h3>BloggerGent</h3>
+                </div>
+                <span class="status-pill">Scale</span>
+              </div>
+              <p>멀티 채널 블로그 운영을 위한 AI 발행 스튜디오</p>
+              <div class="meta-row">
+                <span class="meta-pill">Python</span><span class="meta-pill">Scale</span><span class="meta-pill">Live</span><span class="meta-pill">ai-publishing</span><span class="meta-pill">blogger</span>
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/BloggerGent/tree/main/wiki">Repo Wiki</a>
+                <a class="button" href="https://sheryloe.github.io/BloggerGent/">Live Page</a>
+              </div>
+            </article>
+            <article class="wiki-repo-card accent-amber reveal">
+              <div class="wiki-repo-head">
+                <div>
+                  <p class="eyebrow eyebrow-small">Service Products</p>
+                  <h3>BloManagent</h3>
+                </div>
+                <span class="status-pill">Operate</span>
+              </div>
+              <p>URL 수집과 비교 리포트를 잇는 분석 대시보드</p>
+              <div class="meta-row">
+                <span class="meta-pill">TypeScript</span><span class="meta-pill">Operate</span><span class="meta-pill">Live</span><span class="meta-pill">analytics-dashboard</span><span class="meta-pill">blog-analytics</span>
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/BloManagent/tree/main/wiki">Repo Wiki</a>
+                <a class="button" href="https://sheryloe.github.io/BloManagent/">Live Page</a>
+              </div>
+            </article>
+            <article class="wiki-repo-card accent-slate reveal">
+              <div class="wiki-repo-head">
+                <div>
+                  <p class="eyebrow eyebrow-small">Platform &amp; Docs</p>
+                  <h3>donggeuri-cloudflare-blog</h3>
+                </div>
+                <span class="status-pill">Build</span>
+              </div>
+              <p>Public, Admin, API를 분리한 블로그 플랫폼 워크스페이스</p>
+              <div class="meta-row">
+                <span class="meta-pill">TypeScript</span><span class="meta-pill">Build</span><span class="meta-pill">cloudflare</span><span class="meta-pill">platform</span>
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/donggeuri-cloudflare-blog/tree/main/wiki">Repo Wiki</a>
+                <a class="button" href="https://github.com/sheryloe/donggeuri-cloudflare-blog">Repository</a>
+              </div>
+            </article>
+            <article class="wiki-repo-card accent-amber reveal">
+              <div class="wiki-repo-head">
+                <div>
+                  <p class="eyebrow eyebrow-small">Service Products</p>
+                  <h3>donggri_gagyeobu</h3>
+                </div>
+                <span class="status-pill">Operate</span>
+              </div>
+              <p>자산 흐름과 예산을 브라우저에서 관리하는 개인 가계부</p>
+              <div class="meta-row">
+                <span class="meta-pill">JavaScript</span><span class="meta-pill">Operate</span><span class="meta-pill">Live</span><span class="meta-pill">budgeting</span><span class="meta-pill">expense-tracker</span>
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki">Repo Wiki</a>
+                <a class="button" href="https://sheryloe.github.io/donggri_gagyeobu/">Live Page</a>
+              </div>
+            </article>
+            <article class="wiki-repo-card accent-teal reveal">
+              <div class="wiki-repo-head">
+                <div>
+                  <p class="eyebrow eyebrow-small">AI &amp; Automation</p>
+                  <h3>Vibe_Cowork_Thinking</h3>
+                </div>
+                <span class="status-pill">Explore</span>
+              </div>
+              <p>Runner와 Orchestrator를 분리한 협업 실험실</p>
+              <div class="meta-row">
+                <span class="meta-pill">Python</span><span class="meta-pill">Explore</span><span class="meta-pill">Live</span><span class="meta-pill">ai-workflow</span><span class="meta-pill">automation</span>
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/Vibe_Cowork_Thinking/tree/feat/initial-workflow-baseline/wiki">Repo Wiki</a>
+                <a class="button" href="https://sheryloe.github.io/Vibe_Cowork_Thinking/">Live Page</a>
+              </div>
+            </article>
+            <article class="wiki-repo-card accent-ocean reveal">
+              <div class="wiki-repo-head">
+                <div>
+                  <p class="eyebrow eyebrow-small">Desktop Utilities</p>
+                  <h3>grid-crop-image</h3>
+                </div>
+                <span class="status-pill">Refine</span>
+              </div>
+              <p>스크린샷 자르기와 분할 저장을 빠르게 끝내는 유틸리티</p>
+              <div class="meta-row">
+                <span class="meta-pill">Python</span><span class="meta-pill">Refine</span><span class="meta-pill">Live</span><span class="meta-pill">desktop-app</span><span class="meta-pill">image-cropping</span>
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/grid-crop-image/tree/main/wiki">Repo Wiki</a>
+                <a class="button" href="https://sheryloe.github.io/grid-crop-image/">Live Page</a>
+              </div>
+            </article>
+            <article class="wiki-repo-card accent-ocean reveal">
+              <div class="wiki-repo-head">
+                <div>
+                  <p class="eyebrow eyebrow-small">Desktop Utilities</p>
+                  <h3>Favorit</h3>
+                </div>
+                <span class="status-pill">Refine</span>
+              </div>
+              <p>파일과 URL을 위젯처럼 여는 실행 즐겨찾기 런처</p>
+              <div class="meta-row">
+                <span class="meta-pill">C++</span><span class="meta-pill">Refine</span><span class="meta-pill">Live</span><span class="meta-pill">cmake</span><span class="meta-pill">cpp</span>
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/Favorit/tree/main/wiki">Repo Wiki</a>
+                <a class="button" href="https://sheryloe.github.io/Favorit/">Live Page</a>
+              </div>
+            </article>
+            <article class="wiki-repo-card accent-teal reveal">
+              <div class="wiki-repo-head">
+                <div>
+                  <p class="eyebrow eyebrow-small">AI &amp; Automation</p>
+                  <h3>AI_Writer_TISTORY</h3>
+                </div>
+                <span class="status-pill">Scale</span>
+              </div>
+              <p>AI 초안 생성부터 발행 전 검수까지 잇는 백엔드</p>
+              <div class="meta-row">
+                <span class="meta-pill">TypeScript</span><span class="meta-pill">Scale</span><span class="meta-pill">Live</span><span class="meta-pill">ai-writing</span><span class="meta-pill">blog-automation</span>
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/AI_Writer_TISTORY/tree/main/wiki">Repo Wiki</a>
+                <a class="button" href="https://sheryloe.github.io/AI_Writer_TISTORY/">Live Page</a>
+              </div>
+            </article>
+            <article class="wiki-repo-card accent-teal reveal">
+              <div class="wiki-repo-head">
+                <div>
+                  <p class="eyebrow eyebrow-small">AI &amp; Automation</p>
+                  <h3>AI_BISEO</h3>
+                </div>
+                <span class="status-pill">Operate</span>
+              </div>
+              <p>AI 비서 응답과 운영 자동화를 묶는 개인 Ops 루프</p>
+              <div class="meta-row">
+                <span class="meta-pill">TypeScript</span><span class="meta-pill">Operate</span><span class="meta-pill">Live</span><span class="meta-pill">ai-assistant</span><span class="meta-pill">automation-dashboard</span>
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/AI_BISEO/tree/main/wiki">Repo Wiki</a>
+                <a class="button" href="https://sheryloe.github.io/AI_BISEO/">Live Page</a>
+              </div>
+            </article>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <article class="bg-white border border-slate-200 rounded-xl p-5 hover:border-indigo-300 hover:bg-indigo-50/20 transition-all group">
-          <span class="text-[10px] font-bold text-indigo-500 uppercase tracking-widest mb-2 block">AI Ops</span>
-          <h4 class="font-bold text-slate-900 group-hover:text-indigo-600 mb-1">AI_BISEO</h4>
-          <p class="text-[12px] text-slate-500 line-clamp-2 mb-4">비서 운영 루프 및 자동화 로드맵</p>
-          <a href="https://github.com/sheryloe/AI_BISEO/tree/main/wiki" class="text-[11px] font-bold text-slate-400 group-hover:text-indigo-600">WIKI FOLDER →</a>
-        </article>
+    </section>
 
-        <article class="bg-white border border-slate-200 rounded-xl p-5 hover:border-indigo-300 hover:bg-indigo-50/20 transition-all group">
-          <span class="text-[10px] font-bold text-indigo-500 uppercase tracking-widest mb-2 block">Publishing</span>
-          <h4 class="font-bold text-slate-900 group-hover:text-indigo-600 mb-1">AI_Writer_TISTORY</h4>
-          <p class="text-[12px] text-slate-500 line-clamp-2 mb-4">티스토리 AI 발행 백엔드 전략</p>
-          <a href="https://github.com/sheryloe/AI_Writer_TISTORY/tree/main/wiki" class="text-[11px] font-bold text-slate-400 group-hover:text-indigo-600">WIKI FOLDER →</a>
-        </article>
-
-        <article class="bg-white border border-slate-200 rounded-xl p-5 hover:border-indigo-300 hover:bg-indigo-50/20 transition-all group">
-          <span class="text-[10px] font-bold text-indigo-500 uppercase tracking-widest mb-2 block">Trading</span>
-          <h4 class="font-bold text-slate-900 group-hover:text-indigo-600 mb-1">Automethemoney</h4>
-          <p class="text-[12px] text-slate-500 line-clamp-2 mb-4">자동매매 콘솔 및 리스크 관리</p>
-          <a href="https://github.com/sheryloe/Automethemoney/tree/main/wiki" class="text-[11px] font-bold text-slate-400 group-hover:text-indigo-600">WIKI FOLDER →</a>
-        </article>
-
-        <article class="bg-white border border-slate-200 rounded-xl p-5 hover:border-indigo-300 hover:bg-indigo-50/20 transition-all group">
-          <span class="text-[10px] font-bold text-indigo-500 uppercase tracking-widest mb-2 block">Studio</span>
-          <h4 class="font-bold text-slate-900 group-hover:text-indigo-600 mb-1">BloggerGent</h4>
-          <p class="text-[12px] text-slate-500 line-clamp-2 mb-4">멀티 채널 블로그 스튜디오 가이드</p>
-          <a href="https://github.com/sheryloe/BloggerGent/tree/main/wiki" class="text-[11px] font-bold text-slate-400 group-hover:text-indigo-600">WIKI FOLDER →</a>
-        </article>
-
-        <article class="bg-white border border-slate-200 rounded-xl p-5 hover:border-indigo-300 hover:bg-indigo-50/20 transition-all group">
-          <span class="text-[10px] font-bold text-indigo-500 uppercase tracking-widest mb-2 block">Analytics</span>
-          <h4 class="font-bold text-slate-900 group-hover:text-indigo-600 mb-1">BloManagent</h4>
-          <p class="text-[12px] text-slate-500 line-clamp-2 mb-4">블로그 분석 제품 방향성 문서</p>
-          <a href="https://github.com/sheryloe/BloManagent/tree/main/wiki" class="text-[11px] font-bold text-slate-400 group-hover:text-indigo-600">WIKI FOLDER →</a>
-        </article>
-
-        <article class="bg-white border border-slate-200 rounded-xl p-5 hover:border-indigo-300 hover:bg-indigo-50/20 transition-all group">
-          <span class="text-[10px] font-bold text-indigo-500 uppercase tracking-widest mb-2 block">Finance</span>
-          <h4 class="font-bold text-slate-900 group-hover:text-indigo-600 mb-1">donggri_gagyeobu</h4>
-          <p class="text-[12px] text-slate-500 line-clamp-2 mb-4">개인 가계부 서비스 로드맵</p>
-          <a href="https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki" class="text-[11px] font-bold text-slate-400 group-hover:text-indigo-600">WIKI FOLDER →</a>
-        </article>
-
-        <article class="bg-white border border-slate-200 rounded-xl p-5 hover:border-indigo-300 hover:bg-indigo-50/20 transition-all group">
-          <span class="text-[10px] font-bold text-indigo-500 uppercase tracking-widest mb-2 block">Desktop</span>
-          <h4 class="font-bold text-slate-900 group-hover:text-indigo-600 mb-1">Favorit</h4>
-          <p class="text-[12px] text-slate-500 line-clamp-2 mb-4">바탕화면 위젯 제품 기능 정의</p>
-          <a href="https://github.com/sheryloe/Favorit/tree/main/wiki" class="text-[11px] font-bold text-slate-400 group-hover:text-indigo-600">WIKI FOLDER →</a>
-        </article>
-
-        <article class="bg-white border border-slate-200 rounded-xl p-5 hover:border-indigo-300 hover:bg-indigo-50/20 transition-all group">
-          <span class="text-[10px] font-bold text-indigo-500 uppercase tracking-widest mb-2 block">R&D</span>
-          <h4 class="font-bold text-slate-900 group-hover:text-indigo-600 mb-1">Vibe_Cowork_Thinking</h4>
-          <p class="text-[12px] text-slate-500 line-clamp-2 mb-4">AI 협업 실험 워크스페이스 목표</p>
-          <a href="https://github.com/sheryloe/Vibe_Cowork_Thinking/tree/main/wiki" class="text-[11px] font-bold text-slate-400 group-hover:text-indigo-600">WIKI FOLDER →</a>
-        </article>
+    <section class="mt-8 shell p-6 md:p-8 xl:p-10">
+      <span class="eyebrow">Timeline Highlights</span>
+      <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">최근 실행 로그에서 읽히는 흐름</h2>
+      <div class="mt-8 grid gap-4">
+            <article class="timeline-card reveal">
+              <div class="timeline-date">2026-02-26</div>
+              <div class="timeline-body">
+                <h3>AI 협업 실험실의 기본 구조를 세웠습니다</h3>
+                <p>Runner와 Orchestrator를 나누고, 실행 흐름을 추적하는 워크스페이스 패턴을 만들기 시작한 구간입니다.</p>
+                <ul class="timeline-points"><li>Vibe_Cowork_Thinking에서 프로젝트 단위 실행 기록의 뼈대를 마련했습니다.</li><li>AI 작업 로그를 단순 메모가 아니라 운영 기록으로 남기는 관점이 잡혔습니다.</li></ul>
+              </div>
+            </article>
+            <article class="timeline-card reveal">
+              <div class="timeline-date">2026-03-02</div>
+              <div class="timeline-body">
+                <h3>AI 운영 자동화 축이 본격적으로 확장됐습니다</h3>
+                <p>AI 비서, 티스토리 글쓰기, Notion 로그, 운영 문서가 서로 연결되는 백엔드 축이 정리된 시기입니다.</p>
+                <ul class="timeline-points"><li>AI_BISEO에 Telegram 명령, 대시보드, 로그 흐름이 강화됐습니다.</li><li>AI_Writer_TISTORY는 발행 전 검수와 운영 로그를 중심으로 서비스 문맥을 갖추기 시작했습니다.</li></ul>
+              </div>
+            </article>
+            <article class="timeline-card reveal">
+              <div class="timeline-date">2026-03-09</div>
+              <div class="timeline-body">
+                <h3>도구형 저장소들이 제품처럼 보이기 시작했습니다</h3>
+                <p>스크린샷, 소개 페이지, 릴리스 자산이 붙으면서 데스크톱 유틸리티와 분석 도구의 품질 인상이 크게 올라갔습니다.</p>
+                <ul class="timeline-points"><li>grid-crop-image는 README와 Pages, 릴리스 자산을 갖춘 공개 유틸리티로 정돈됐습니다.</li><li>Favorit은 위젯형 제품 톤을 살릴 수 있는 배포 기반을 확보했습니다.</li></ul>
+              </div>
+            </article>
+            <article class="timeline-card reveal">
+              <div class="timeline-date">2026-03-15</div>
+              <div class="timeline-body">
+                <h3>서비스 문서와 위키가 포트폴리오의 중심으로 올라왔습니다</h3>
+                <p>서비스 맵, 날짜별 DO, TODO를 중앙 위키로 묶어 저장소 설명의 톤을 통일하는 흐름이 생겼습니다.</p>
+                <ul class="timeline-points"><li>BloggerGent, BloManagent, donggri_gagyeobu의 서비스 설명 자산이 확장됐습니다.</li><li>README와 wiki를 별개가 아니라 서비스 소개의 연장선으로 읽게 만드는 방향이 분명해졌습니다.</li></ul>
+              </div>
+            </article>
       </div>
     </section>
   </main>
 
-  <footer class="bg-white border-t border-slate-200 py-12">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <p class="text-xs text-slate-400 uppercase tracking-[0.2em] font-bold">Sheryloe Projects Wiki &copy; 2026</p>
+  <footer class="mx-auto mb-8 w-[min(calc(100%-24px),1280px)]">
+    <div class="shell px-6 py-6 md:px-8">
+      <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+        <div>
+          <strong class="block text-sm font-semibold uppercase tracking-[0.24em]">Sheryloe Project Atlas Wiki</strong>
+          <p class="mt-2 text-sm leading-7 text-[var(--ink-soft)]">중앙 문서, 저장소별 위키, 실행 로그를 한곳에 묶는 문서 허브.</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a class="button" href="https://sheryloe.github.io/">Project Hub</a>
+          <a class="button" href="https://sheryloe.github.io/rss.xml">RSS</a>
+          <a class="button" href="https://sheryloe.github.io/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
     </div>
   </footer>
 
+  <script>
+    (() => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const revealItems = Array.from(document.querySelectorAll('.reveal'));
+      if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.14 });
+        revealItems.forEach((item) => observer.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add('is-visible'));
+      }
+    })();
+  </script>
 </body>
 </html>

@@ -7,226 +7,750 @@
   <meta name="description" content="__DESCRIPTION__">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#193630">
   <meta name="author" content="__AUTHOR_NAME__">
   <link rel="canonical" href="__SITE_URL__">
   <link rel="alternate" type="application/rss+xml" title="__SITE_NAME__ RSS" href="__SITE_URL__rss.xml">
   <link rel="alternate" type="application/atom+xml" title="__SITE_NAME__ Atom" href="__SITE_URL__feed.xml">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="__SITE_URL__sitemap.xml">
+  <link rel="icon" type="image/svg+xml" href="__SITE_URL__assets/meta/icon.svg">
+  <link rel="manifest" href="__SITE_URL__site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:site_name" content="__SITE_NAME__">
   <meta property="og:title" content="__SITE_TITLE__">
   <meta property="og:description" content="__DESCRIPTION__">
   <meta property="og:url" content="__SITE_URL__">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="__SOCIAL_IMAGE_URL__">
+  <meta property="og:image:alt" content="__SOCIAL_IMAGE_ALT__">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="__SITE_TITLE__">
   <meta name="twitter:description" content="__DESCRIPTION__">
-  
+  <meta name="twitter:image" content="__SOCIAL_IMAGE_URL__">
+  <meta name="twitter:image:alt" content="__SOCIAL_IMAGE_ALT__">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-  
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'Noto Sans KR', 'sans-serif'],
-            mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+            sans: ['IBM Plex Sans KR', 'sans-serif'],
+            display: ['Fraunces', 'IBM Plex Sans KR', 'serif'],
+          },
+          boxShadow: {
+            glow: '0 24px 60px rgba(22, 32, 42, 0.12)',
           },
         }
       }
     }
   </script>
-  
   <style type="text/tailwindcss">
+    :root {
+      --bg: #f4ede4;
+      --shell: rgba(255, 251, 246, 0.84);
+      --shell-strong: rgba(255, 251, 246, 0.94);
+      --line: rgba(26, 34, 42, 0.12);
+      --line-strong: rgba(26, 34, 42, 0.2);
+      --ink: #182127;
+      --ink-soft: #5e676f;
+      --teal: #1f8a72;
+      --amber: #d88c3a;
+      --ocean: #3a6fd8;
+      --slate: #556271;
+      --rose: #d46363;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      @apply bg-slate-50 text-slate-800 antialiased;
+      @apply min-h-screen text-[var(--ink)] font-sans antialiased;
+      background:
+        radial-gradient(circle at 8% 10%, rgba(31, 138, 114, 0.18), transparent 28rem),
+        radial-gradient(circle at 86% 14%, rgba(216, 140, 58, 0.18), transparent 24rem),
+        linear-gradient(180deg, #f8f2ea 0%, #f1e6d8 56%, #eadfce 100%);
     }
-    .page-card { 
-      @apply bg-white border border-slate-200 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3 relative overflow-hidden; 
+
+    body::before {
+      content: "";
+      @apply fixed inset-0 pointer-events-none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.24) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.24) 1px, transparent 1px);
+      background-size: 22px 22px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 90%);
+      opacity: 0.3;
     }
-    .page-card--hero, .page-card--wide {
-      @apply sm:col-span-2;
+
+    .shell {
+      @apply border rounded-[28px] shadow-glow backdrop-blur-xl;
+      background: linear-gradient(180deg, var(--shell-strong), var(--shell));
+      border-color: var(--line);
     }
-    .tone-blue { border-top: 4px solid #3b82f6 !important; }
-    .tone-amber { border-top: 4px solid #f59e0b !important; }
-    .tone-slate { border-top: 4px solid #64748b !important; }
-    .tone-white { border-top: 4px solid #cbd5e1 !important; }
-    .card-tag { 
-      @apply inline-flex items-center px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold rounded uppercase tracking-widest w-fit; 
+
+    .eyebrow {
+      @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em];
+      background: rgba(25, 54, 48, 0.08);
+      color: var(--teal);
     }
-    .page-card h3 { 
-      @apply text-lg font-bold text-slate-900 m-0 tracking-tight; 
+
+    .eyebrow-small {
+      @apply text-[10px];
     }
-    .page-card p { 
-      @apply text-slate-500 text-[13px] leading-relaxed grow m-0; 
+
+    .button {
+      @apply inline-flex min-h-11 items-center justify-center rounded-full border px-4 text-sm font-semibold transition duration-200;
+      border-color: var(--line-strong);
+      background: rgba(255, 255, 255, 0.72);
     }
-    .card-actions { 
-      @apply flex gap-2 mt-4 pt-4 border-t border-slate-100; 
+
+    .button:hover {
+      @apply -translate-y-0.5;
+      border-color: rgba(25, 54, 48, 0.25);
     }
-    .card-actions .button { 
-      @apply flex-1 inline-flex justify-center items-center px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider rounded border transition-colors focus:outline-none focus:ring-2 focus:ring-offset-1 text-center; 
+
+    .button-primary {
+      @apply text-white;
+      background: linear-gradient(135deg, #163d36, #214f46);
+      border-color: transparent;
     }
-    .card-actions .button.primary { 
-      @apply bg-indigo-600 text-white border-transparent hover:bg-indigo-700 focus:ring-indigo-600; 
+
+    .button-ghost {
+      background: rgba(25, 54, 48, 0.08);
+      color: var(--teal);
+      border-color: rgba(25, 54, 48, 0.12);
     }
-    .card-actions .button:not(.primary) { 
-      @apply bg-white text-slate-700 border-slate-300 hover:bg-slate-50 focus:ring-slate-500; 
+
+    .meta-pill,
+    .status-pill,
+    .filter-chip,
+    .availability-chip {
+      @apply inline-flex items-center justify-center rounded-full border px-3 py-1 text-[11px] font-semibold;
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.7);
+      color: var(--ink-soft);
     }
-    .quick-item { 
-      @apply flex flex-col gap-1 p-3 border border-slate-200 rounded-lg hover:border-indigo-400 hover:bg-indigo-50/30 transition-all mb-2 bg-white; 
+
+    .status-pill {
+      background: rgba(25, 54, 48, 0.08);
+      color: var(--teal);
     }
-    .quick-item strong { 
-      @apply text-slate-900 text-sm font-semibold tracking-tight; 
+
+    .filter-chip.is-active,
+    .availability-chip.is-active {
+      @apply text-white;
+      background: var(--ink);
+      border-color: var(--ink);
     }
-    .quick-item span { 
-      @apply text-slate-500 text-[12px] leading-snug; 
+
+    .feature-card,
+    .project-card,
+    .doc-card,
+    .track-card,
+    .timeline-card,
+    .stack-card,
+    .recent-row,
+    .wiki-link,
+    .legend-item {
+      @apply border transition duration-200;
+      border-color: var(--line);
     }
-    .repo-list { @apply flex flex-col gap-3; }
-    .repo-row { 
-      @apply flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-white border border-slate-200 rounded-lg hover:shadow-sm transition-shadow gap-4; 
+
+    .feature-card,
+    .project-card,
+    .doc-card,
+    .track-card,
+    .timeline-card,
+    .stack-card,
+    .recent-row {
+      @apply rounded-[26px];
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: 0 18px 36px rgba(23, 31, 40, 0.06);
     }
-    .repo-main { @apply flex flex-col gap-0.5; }
-    .repo-main strong { @apply text-slate-900 font-semibold text-sm; }
-    .repo-main span { @apply text-slate-500 text-[11px] uppercase tracking-wide font-bold; }
-    .repo-row time { 
-      @apply text-slate-600 text-[11px] font-mono bg-slate-100 px-2.5 py-1 rounded border border-slate-200 self-start sm:self-auto; 
+
+    .feature-card,
+    .project-card,
+    .doc-card,
+    .track-card,
+    .timeline-card,
+    .stack-card {
+      @apply overflow-hidden;
     }
-    .repo-links { @apply flex gap-2 w-full sm:w-auto; }
-    .repo-links a { 
-      @apply flex-1 sm:flex-none text-center px-3 py-1.5 text-[11px] uppercase tracking-wider font-bold rounded border border-slate-300 text-slate-700 bg-white hover:bg-slate-50 transition-colors; 
+
+    .accent-teal { --accent: var(--teal); }
+    .accent-amber { --accent: var(--amber); }
+    .accent-ocean { --accent: var(--ocean); }
+    .accent-slate { --accent: var(--slate); }
+    .accent-rose { --accent: var(--rose); }
+
+    .accent-teal,
+    .accent-amber,
+    .accent-ocean,
+    .accent-slate,
+    .accent-rose {
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 18px 36px rgba(23, 31, 40, 0.06);
     }
-    .repo-links a:first-child { 
-      @apply bg-slate-800 text-white border-transparent hover:bg-slate-900; 
+
+    .accent-teal::before,
+    .accent-amber::before,
+    .accent-ocean::before,
+    .accent-slate::before,
+    .accent-rose::before {
+      content: "";
+      @apply block h-1.5 w-full;
+      background: var(--accent);
+    }
+
+    .feature-shell,
+    .project-body,
+    .doc-card,
+    .track-card,
+    .timeline-card,
+    .stack-card {
+      @apply flex flex-col;
+    }
+
+    .feature-card {
+      @apply xl:col-span-4;
+    }
+
+    .feature-card--xl {
+      @apply xl:col-span-7;
+    }
+
+    .feature-card--wide {
+      @apply xl:col-span-5;
+    }
+
+    .feature-shell {
+      @apply h-full;
+    }
+
+    .feature-link,
+    .project-link {
+      @apply block;
+    }
+
+    .feature-media,
+    .project-media {
+      @apply overflow-hidden bg-slate-200/60;
+    }
+
+    .feature-media {
+      @apply aspect-[16/10];
+    }
+
+    .project-media {
+      @apply aspect-[16/11];
+    }
+
+    .feature-media img,
+    .project-media img {
+      @apply h-full w-full object-cover transition duration-500;
+    }
+
+    .feature-link:hover img,
+    .project-link:hover img {
+      transform: scale(1.03);
+    }
+
+    .preview-empty {
+      @apply flex min-h-[240px] items-center justify-center;
+      background:
+        radial-gradient(circle at top, rgba(58, 111, 216, 0.16), transparent 18rem),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(240, 234, 226, 0.88));
+    }
+
+    .preview-empty-inner {
+      @apply flex flex-col items-center gap-3 text-center text-[var(--ink-soft)];
+    }
+
+    .preview-empty-inner iconify-icon {
+      @apply text-4xl;
+      color: var(--teal);
+    }
+
+    .feature-body,
+    .project-body,
+    .doc-card,
+    .track-card,
+    .timeline-card,
+    .stack-card,
+    .recent-row {
+      @apply p-6;
+    }
+
+    .feature-head,
+    .project-head,
+    .wiki-repo-head {
+      @apply flex items-start justify-between gap-4;
+    }
+
+    .feature-body h3,
+    .project-body h3,
+    .doc-card h3,
+    .track-card h3,
+    .timeline-body h3 {
+      @apply font-display text-2xl leading-tight tracking-[-0.04em];
+    }
+
+    .feature-subtitle,
+    .project-subtitle {
+      @apply mt-3 text-base font-medium text-[var(--ink)];
+    }
+
+    .feature-desc,
+    .project-desc,
+    .doc-card p,
+    .track-card p,
+    .timeline-body p,
+    .stack-card p,
+    .recent-note {
+      @apply mt-3 text-sm leading-7 text-[var(--ink-soft)];
+    }
+
+    .meta-row,
+    .button-row,
+    .filter-row,
+    .availability-row {
+      @apply mt-4 flex flex-wrap gap-2;
+    }
+
+    .button-row .button {
+      @apply flex-1;
+    }
+
+    .detail-grid {
+      @apply mt-5 grid gap-3 md:grid-cols-2;
+    }
+
+    .detail-grid--compact {
+      @apply grid-cols-1;
+    }
+
+    .detail-grid dt {
+      @apply text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--ink-soft)];
+    }
+
+    .detail-grid dd {
+      @apply mt-1 text-sm leading-6 text-[var(--ink)];
+    }
+
+    .track-icon,
+    .doc-icon {
+      @apply mb-5 flex h-14 w-14 items-center justify-center rounded-2xl text-3xl;
+      background: rgba(25, 54, 48, 0.08);
+      color: var(--teal);
+    }
+
+    .track-metrics {
+      @apply mt-5 flex items-end gap-3;
+    }
+
+    .track-metrics strong,
+    .legend-item strong {
+      @apply font-display text-3xl tracking-[-0.05em];
+    }
+
+    .track-outcome,
+    .track-repos {
+      @apply text-sm;
+    }
+
+    .timeline-card {
+      @apply grid gap-5 md:grid-cols-[120px_minmax(0,1fr)];
+    }
+
+    .timeline-date {
+      @apply text-sm font-semibold uppercase tracking-[0.2em] text-[var(--teal)];
+    }
+
+    .timeline-points {
+      @apply mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-[var(--ink-soft)];
+    }
+
+    .stack-card strong {
+      @apply text-lg font-semibold tracking-[-0.03em];
+    }
+
+    .recent-row {
+      @apply grid gap-4 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)_120px_auto] md:items-center;
+    }
+
+    .recent-main strong {
+      @apply block text-base font-semibold;
+    }
+
+    .recent-main span {
+      @apply mt-1 block text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)];
+    }
+
+    .recent-actions {
+      @apply flex flex-wrap gap-2;
+    }
+
+    .wiki-link {
+      @apply flex items-center justify-between gap-4 rounded-2xl px-4 py-3;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .wiki-link strong {
+      @apply block text-sm font-semibold;
+    }
+
+    .wiki-link span {
+      @apply mt-1 block text-[11px] uppercase tracking-[0.16em] text-[var(--ink-soft)];
+    }
+
+    .wiki-link iconify-icon {
+      @apply text-xl;
+      color: var(--teal);
+    }
+
+    .legend-item {
+      @apply rounded-2xl p-4;
+      background: rgba(255, 255, 255, 0.62);
+    }
+
+    .legend-item span {
+      @apply mt-1 block text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)];
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
     }
   </style>
   <script type="application/ld+json">
 __SCHEMA_JSON__
   </script>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
-  <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-14">
+<body class="selection:bg-emerald-200/70 selection:text-slate-900">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
+  <script src="https://code.iconify.design/iconify-icon/3.1.1/iconify-icon.min.js"></script>
+
+  <header class="sticky top-4 z-50 mx-auto w-[min(calc(100%-24px),1280px)]">
+    <div class="shell px-5 py-4 md:px-7">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div class="flex items-center gap-3">
-          <div class="w-3 h-3 rounded-full bg-indigo-500 shadow-[0_0_10px_rgba(99,102,241,0.5)]"></div>
-          <span class="text-white font-bold text-sm tracking-widest uppercase">__SITE_NAME__</span>
+          <div class="h-3 w-3 rounded-full bg-emerald-500 shadow-[0_0_18px_rgba(16,185,129,0.6)]"></div>
+          <span class="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--ink)]">__SITE_NAME__</span>
         </div>
-        <nav class="flex gap-4 sm:gap-6 text-sm font-medium">
-          <a href="__GITHUB_PROFILE__" class="text-slate-300 hover:text-white transition-colors">GitHub</a>
-          <a href="__SITE_URL__wiki/" class="text-slate-300 hover:text-white transition-colors">Central Wiki</a>
-          <a href="__SITE_URL__rss.xml" class="text-slate-300 hover:text-white transition-colors hidden sm:block font-mono text-[11px]">RSS</a>
+        <nav class="flex flex-wrap gap-2 text-sm">
+          <a class="button" href="#tracks">Tracks</a>
+          <a class="button" href="#featured">Featured</a>
+          <a class="button" href="#documentation">Wiki</a>
+          <a class="button" href="#explorer">Explorer</a>
+          <a class="button" href="__GITHUB_PROFILE__">GitHub</a>
         </nav>
       </div>
     </div>
   </header>
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <section class="mb-10">
-      <h1 class="text-2xl font-bold text-slate-900 mb-2 tracking-tight">공개 프로젝트 통합 관리 허브</h1>
-      <p class="text-slate-500 text-sm max-w-3xl leading-relaxed mb-6">__DESCRIPTION__</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm flex flex-col justify-between border-l-4 border-l-indigo-500">
-          <span class="text-slate-500 text-[11px] font-bold uppercase tracking-widest">Live Pages</span>
-          <strong class="text-3xl font-bold text-slate-900 mt-2 tracking-tighter">__LIVE_PAGE_COUNT__</strong>
+
+  <main class="mx-auto w-[min(calc(100%-24px),1280px)] pb-16 pt-8 md:pt-10">
+    <section class="grid gap-5 xl:grid-cols-[minmax(0,1.6fr)_380px]">
+      <div class="shell p-6 md:p-8 xl:p-10 reveal">
+        <span class="eyebrow">__HERO_EYEBROW__</span>
+        <h1 class="mt-6 max-w-4xl font-display text-[clamp(2.8rem,6vw,5.5rem)] leading-[0.95] tracking-[-0.06em] text-[var(--ink)]">__HERO_TITLE_HTML__</h1>
+        <p class="mt-6 max-w-3xl text-lg leading-9 text-[var(--ink-soft)]">__HERO_SUMMARY__</p>
+        <div class="button-row mt-8">
+          <a class="button button-primary" href="#featured">대표 프로젝트 보기</a>
+          <a class="button" href="#documentation">Central Wiki 보기</a>
+          <a class="button" href="#explorer">전체 탐색 열기</a>
         </div>
-        <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm flex flex-col justify-between border-l-4 border-l-emerald-500">
-          <span class="text-slate-500 text-[11px] font-bold uppercase tracking-widest">Last Sync</span>
-          <strong class="text-2xl font-bold text-slate-900 mt-2 font-mono tracking-tighter">__LATEST_PUSH_SHORT__</strong>
-          <span class="text-[10px] text-slate-400 mt-1 uppercase font-mono">__LATEST_PUSH_LABEL__</span>
+        <div class="mt-10 grid gap-3 md:grid-cols-4">
+          <article class="rounded-3xl border border-[var(--line)] bg-white/60 p-4">
+            <span class="text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">Public Repos</span>
+            <strong class="mt-2 block font-display text-4xl tracking-[-0.05em]">__PUBLIC_REPO_COUNT__</strong>
+          </article>
+          <article class="rounded-3xl border border-[var(--line)] bg-white/60 p-4">
+            <span class="text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">Live Pages</span>
+            <strong class="mt-2 block font-display text-4xl tracking-[-0.05em]">__LIVE_PAGE_COUNT__</strong>
+          </article>
+          <article class="rounded-3xl border border-[var(--line)] bg-white/60 p-4">
+            <span class="text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">Portfolio Tracks</span>
+            <strong class="mt-2 block font-display text-4xl tracking-[-0.05em]">__TRACK_COUNT__</strong>
+          </article>
+          <article class="rounded-3xl border border-[var(--line)] bg-white/60 p-4">
+            <span class="text-[11px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">Wiki Docs</span>
+            <strong class="mt-2 block font-display text-4xl tracking-[-0.05em]">__WIKI_DOC_COUNT__</strong>
+          </article>
         </div>
-        <div class="bg-slate-800 p-5 rounded-lg border border-slate-700 shadow-sm flex flex-col justify-between text-white border-l-4 border-l-slate-400">
-          <span class="text-slate-400 text-[11px] font-bold uppercase tracking-widest">Operations</span>
-          <div class="flex flex-col gap-2 mt-3">
-            <a href="__SITE_URL__wiki/" class="text-xs font-bold text-indigo-300 hover:text-indigo-200 uppercase tracking-wider">→ Wiki & Roadmaps</a>
-            <a href="#direct-access" class="text-xs font-bold text-slate-300 hover:text-white uppercase tracking-wider">↓ Projects Explorer</a>
+      </div>
+
+      <aside class="shell p-6 md:p-8 reveal">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="eyebrow eyebrow-small">Portfolio Mix</p>
+            <h2 class="mt-4 font-display text-3xl tracking-[-0.05em]">현재 포트폴리오 구성</h2>
           </div>
+          <span class="status-pill">updated __LATEST_PUSH_SHORT__</span>
         </div>
+        <div class="mt-6 rounded-[24px] border border-[var(--line)] bg-white/70 p-4">
+          <canvas id="portfolio-chart" height="220" aria-label="포트폴리오 트랙 분포 차트"></canvas>
+        </div>
+        <div class="mt-5 grid gap-3 sm:grid-cols-2">
+__TRACK_LEGEND__
+        </div>
+        <div class="mt-6 rounded-[24px] border border-[var(--line)] bg-slate-900/95 p-5 text-white">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-slate-400">Current Focus</p>
+          <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-200">
+__FOCUS_ITEMS__
+          </ul>
+          <p class="mt-4 text-[11px] uppercase tracking-[0.16em] text-slate-500">generated __GENERATED_LABEL__</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="tracks" class="mt-8 shell p-6 md:p-8 xl:p-10">
+      <div class="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <span class="eyebrow">Strategy Tracks</span>
+          <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">공개 저장소를 네 가지 운영 축으로 다시 묶었습니다</h2>
+        </div>
+        <p class="max-w-2xl text-sm leading-7 text-[var(--ink-soft)]">카테고리가 아니라 역할 중심으로 정리해서, 방문자가 어떤 문제를 어떤 종류의 프로젝트로 풀고 있는지 빠르게 이해할 수 있게 했습니다.</p>
+      </div>
+      <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+__PORTFOLIO_TRACKS__
       </div>
     </section>
-    <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 xl:gap-12">
-      <div class="xl:col-span-2 space-y-12">
-        <section id="wiki-center">
-          <div class="flex items-end justify-between mb-5 border-b border-slate-200 pb-2">
-            <div>
-              <h2 class="text-lg font-bold text-slate-900 tracking-tight text-[11px] uppercase tracking-widest text-slate-400 mb-1">Documentation</h2>
-              <h3 class="text-xl font-bold text-slate-900">시스템 문서 및 로드맵 (Wiki)</h3>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <article class="bg-white border border-slate-200 p-6 rounded-lg hover:border-indigo-400 hover:shadow-md transition-all sm:col-span-2 flex flex-col sm:flex-row gap-6 sm:items-center justify-between">
-              <div>
-                <span class="inline-block px-2 py-0.5 bg-indigo-50 text-indigo-700 text-[10px] font-bold uppercase rounded mb-2 tracking-widest">Core Index</span>
-                <h3 class="text-lg font-bold text-slate-900 mb-1">Central Wiki Landing</h3>
-                <p class="text-sm text-slate-500 m-0">서비스 맵, 작업 내역, 로드맵을 한곳에서 관리하는 중앙 인덱스입니다.</p>
-              </div>
-              <div class="flex sm:flex-col gap-2 shrink-0 w-full sm:w-auto">
-                <a href="__SITE_URL__wiki/" class="flex-1 text-center px-4 py-2 bg-indigo-600 text-white text-[11px] font-bold uppercase tracking-widest rounded hover:bg-indigo-700 transition-colors">Open Wiki</a>
-                <a href="__WIKI_REPO_URL__" class="flex-1 text-center px-4 py-2 bg-white border border-slate-300 text-slate-700 text-[11px] font-bold uppercase tracking-widest rounded hover:bg-slate-50 transition-colors">GitHub Source</a>
-              </div>
-            </article>
-            <article class="bg-white border border-slate-200 p-5 rounded-lg flex flex-col">
-              <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded mb-3 w-fit tracking-widest">Service Map</span>
-              <h3 class="text-[15px] font-bold text-slate-900 mb-2">Repository Service Map</h3>
-              <p class="text-[13px] text-slate-500 mb-5 grow leading-relaxed">저장소별 역할과 서비스화 방향, 개선 포인트를 통합 정리한 문서입니다.</p>
-              <a href="__SITE_URL__wiki/" class="text-[11px] font-bold text-indigo-600 hover:text-indigo-800 uppercase tracking-widest">Read Map →</a>
-            </article>
-            <article class="bg-white border border-slate-200 p-5 rounded-lg flex flex-col">
-              <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded mb-3 w-fit tracking-widest">Backlog</span>
-              <h3 class="text-[15px] font-bold text-slate-900 mb-2">Timeline DO + Service TODO</h3>
-              <p class="text-[13px] text-slate-500 mb-5 grow leading-relaxed">최근 완료 작업 기록과 보안/기능별 차기 작업 백로그입니다.</p>
-              <a href="__SITE_URL__wiki/" class="text-[11px] font-bold text-indigo-600 hover:text-indigo-800 uppercase tracking-widest">View Backlog →</a>
-            </article>
-          </div>
-        </section>
-        <section id="direct-access">
-          <div class="flex items-end justify-between mb-5 border-b border-slate-200 pb-2">
-            <div>
-              <h2 class="text-lg font-bold text-slate-900 tracking-tight text-[11px] uppercase tracking-widest text-slate-400 mb-1">Applications</h2>
-              <h3 class="text-xl font-bold text-slate-900">활성 서비스 콘솔 (Direct Access)</h3>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">__DIRECT_CARDS__</div>
-        </section>
-        <section id="recent-updates">
-          <div class="flex items-end justify-between mb-5 border-b border-slate-200 pb-2">
-            <div>
-              <h2 class="text-lg font-bold text-slate-900 tracking-tight text-[11px] uppercase tracking-widest text-slate-400 mb-1">System Logs</h2>
-              <h3 class="text-xl font-bold text-slate-900">최근 시스템 변경 로그</h3>
-            </div>
-          </div>
-          <div class="repo-list">__RECENT_ROWS__</div>
-        </section>
+
+    <section id="featured" class="mt-8 shell p-6 md:p-8 xl:p-10">
+      <div class="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <span class="eyebrow">Featured Builds</span>
+          <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">대표 프로젝트는 첫 화면만 봐도 성격이 드러나게 구성했습니다</h2>
+        </div>
+        <p class="max-w-2xl text-sm leading-7 text-[var(--ink-soft)]">트레이딩 콘솔, 운영 자동화, 분석 대시보드, 데스크톱 유틸리티처럼 성격이 다른 프로젝트를 섞어 전체 포트폴리오의 폭을 보여줍니다.</p>
       </div>
-      <div class="xl:col-span-1">
-        <aside class="bg-slate-100/50 border border-slate-200 rounded-lg p-5 sticky top-20">
-          <div class="mb-5 border-b border-slate-200 pb-2">
-            <h3 class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Quick Rail</h3>
-            <p class="text-sm font-bold text-slate-900 mt-1">운영용 빠른 링크</p>
-          </div>
-          <div class="flex flex-col">
-            <a class="quick-item" href="__SITE_URL__wiki/"><strong class="text-indigo-600">Central Wiki Index</strong><span>시스템 전체 가이드 및 로드맵 문서</span></a>
-            __QUICK_LINKS__
-          </div>
-        </aside>
+      <div class="mt-8 grid gap-4 xl:grid-cols-12">
+__FEATURED_CARDS__
       </div>
-    </div>
+    </section>
+
+    <section id="documentation" class="mt-8 grid gap-5 xl:grid-cols-[minmax(0,1.35fr)_360px]">
+      <div class="shell p-6 md:p-8 xl:p-10">
+        <span class="eyebrow">Documentation Hub</span>
+        <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">중앙 위키와 서비스 문서를 홈에서 바로 이어 읽을 수 있게</h2>
+        <div class="mt-8 grid gap-4 md:grid-cols-2">
+__DOCUMENTATION_CARDS__
+        </div>
+      </div>
+
+      <aside class="shell p-6 md:p-8">
+        <span class="eyebrow">Repo Wiki Links</span>
+        <h2 class="mt-4 font-display text-3xl tracking-[-0.05em]">모든 공개 저장소의 `wiki/` 바로가기</h2>
+        <p class="mt-4 text-sm leading-7 text-[var(--ink-soft)]">서비스 설명이 README에서 끝나지 않도록, 각 저장소의 위키 진입점을 따로 모았습니다.</p>
+        <div class="mt-6 flex flex-col gap-3">
+__WIKI_LINKS__
+        </div>
+      </aside>
+    </section>
+
+    <section id="explorer" class="mt-8 shell p-6 md:p-8 xl:p-10">
+      <div class="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <span class="eyebrow">Project Explorer</span>
+          <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">위키, 라이브 페이지, 저장소를 한 번에 탐색하는 메인 라이브러리</h2>
+        </div>
+        <p class="max-w-2xl text-sm leading-7 text-[var(--ink-soft)]">Fuse.js 기반 검색으로 프로젝트명뿐 아니라 설명, 기술 스택, 다음 포커스까지 같이 검색합니다.</p>
+      </div>
+      <div class="mt-8 grid gap-4 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-end">
+        <div>
+          <label class="mb-3 block text-sm font-semibold text-[var(--ink)]" for="repo-search">프로젝트명, 설명, 기술 스택, 다음 포커스로 찾기</label>
+          <input class="w-full rounded-[22px] border border-[var(--line-strong)] bg-white/80 px-5 py-4 text-base shadow-sm outline-none transition placeholder:text-slate-400 focus:border-emerald-600 focus:ring-4 focus:ring-emerald-100" id="repo-search" type="search" placeholder="예: automation, dashboard, wiki, OCR, risk-control">
+        </div>
+        <div class="rounded-[22px] border border-[var(--line)] bg-white/70 px-5 py-4 text-sm">
+          <strong id="result-count" class="block font-display text-3xl tracking-[-0.05em]">0</strong>
+          <span class="text-[var(--ink-soft)]">matching repositories</span>
+        </div>
+      </div>
+      <div class="filter-row mt-5">
+__FILTER_CHIPS__
+      </div>
+      <div class="availability-row">
+        <button class="availability-chip is-active" type="button" data-availability-filter="all">전체</button>
+        <button class="availability-chip" type="button" data-availability-filter="live">Live Pages</button>
+        <button class="availability-chip" type="button" data-availability-filter="repo">Repo Only</button>
+      </div>
+      <div class="mt-8 grid gap-4 md:grid-cols-2 2xl:grid-cols-3" id="project-grid">
+__PROJECT_CARDS__
+      </div>
+      <p class="mt-6 hidden rounded-[22px] border border-dashed border-[var(--line-strong)] bg-white/60 px-5 py-6 text-center text-sm text-[var(--ink-soft)]" id="empty-state">조건에 맞는 저장소가 없습니다. 검색어를 줄이거나 트랙/가용성 필터를 바꿔 보세요.</p>
+    </section>
+
+    <section class="mt-8 grid gap-5 xl:grid-cols-[minmax(0,1.25fr)_360px]">
+      <div class="shell p-6 md:p-8 xl:p-10">
+        <span class="eyebrow">Execution Timeline</span>
+        <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">최근 작업 흐름과 다음 개선 포인트를 한 화면에 남겼습니다</h2>
+        <div class="mt-8 space-y-4">
+__TIMELINE_ITEMS__
+        </div>
+      </div>
+
+      <aside class="shell p-6 md:p-8">
+        <span class="eyebrow">Open Source Stack</span>
+        <h2 class="mt-4 font-display text-3xl tracking-[-0.05em]">이번 허브 재구성에 사용한 UI 레이어</h2>
+        <p class="mt-4 text-sm leading-7 text-[var(--ink-soft)]">정적 사이트 구조를 유지하면서도 탐색성, 시각 밀도, 데이터 전달력을 높이기 위해 가벼운 오픈소스 스택을 적극적으로 조합했습니다.</p>
+        <div class="mt-6 grid gap-3">
+__OSS_STACK_CARDS__
+        </div>
+      </aside>
+    </section>
+
+    <section id="recent" class="mt-8 shell p-6 md:p-8 xl:p-10">
+      <div class="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <span class="eyebrow">Recent Activity</span>
+          <h2 class="mt-4 font-display text-[clamp(2rem,4vw,3.4rem)] tracking-[-0.05em]">최근 갱신된 저장소를 작업 맥락과 함께 다시 정렬했습니다</h2>
+        </div>
+        <p class="max-w-2xl text-sm leading-7 text-[var(--ink-soft)]">최근 변경 기준일과 다음 포커스를 함께 보여줘서, 단순 최신순 목록보다 실제 운영 중인 축을 더 빨리 읽을 수 있습니다.</p>
+      </div>
+      <div class="mt-8 grid gap-4">
+__RECENT_ROWS__
+      </div>
+    </section>
   </main>
-  <footer class="border-t border-slate-200 bg-white mt-20 py-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
-      <div class="text-center sm:text-left">
-        <strong class="text-slate-900 text-sm font-bold tracking-widest uppercase">__SITE_NAME__ System</strong>
-        <p class="text-slate-400 text-[10px] mt-1 uppercase tracking-widest">Project Hub &middot; Documentation &middot; Automation</p>
-      </div>
-      <div class="flex flex-wrap justify-center gap-6 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
-        <a href="__SITE_URL__wiki/" class="hover:text-indigo-600 transition-colors">Wiki</a>
-        <a href="__SITE_URL__rss.xml" class="hover:text-indigo-600 transition-colors">RSS</a>
-        <a href="__SITE_URL__feed.xml" class="hover:text-indigo-600 transition-colors">Atom</a>
-        <a href="__SITE_URL__sitemap.xml" class="hover:text-indigo-600 transition-colors">Sitemap</a>
+
+  <footer class="mx-auto mb-8 w-[min(calc(100%-24px),1280px)]">
+    <div class="shell px-6 py-6 md:px-8">
+      <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+        <div>
+          <strong class="block text-sm font-semibold uppercase tracking-[0.24em] text-[var(--ink)]">__SITE_NAME__</strong>
+          <p class="mt-2 text-sm leading-7 text-[var(--ink-soft)]">프로젝트 허브, 중앙 위키, 피드, 사이트맵, 메타데이터를 함께 관리하는 포트폴리오 아틀라스.</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a class="button" href="__SITE_URL__wiki/">Central Wiki</a>
+          <a class="button" href="__SITE_URL__rss.xml">RSS</a>
+          <a class="button" href="__SITE_URL__feed.xml">Atom</a>
+          <a class="button" href="__SITE_URL__sitemap.xml">Sitemap</a>
+          <a class="button" href="__WIKI_REPO_URL__">Wiki Source</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <script id="project-search-index" type="application/json">__PROJECT_SEARCH_INDEX__</script>
+  <script id="track-chart-data" type="application/json">__TRACK_CHART_DATA__</script>
+  <script>
+    (() => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const revealItems = Array.from(document.querySelectorAll('.reveal'));
+      if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.14 });
+        revealItems.forEach((item) => observer.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add('is-visible'));
+      }
+
+      const chartData = JSON.parse(document.querySelector('#track-chart-data')?.textContent || '{}');
+      const chartCanvas = document.querySelector('#portfolio-chart');
+      if (chartCanvas && window.Chart && chartData.labels?.length) {
+        new Chart(chartCanvas, {
+          type: 'doughnut',
+          data: chartData,
+          options: {
+            plugins: { legend: { display: false }, tooltip: { padding: 12, cornerRadius: 12 } },
+            cutout: '68%',
+            animation: prefersReducedMotion ? false : { duration: 900 }
+          }
+        });
+      }
+
+      const searchInput = document.querySelector('#repo-search');
+      const cards = Array.from(document.querySelectorAll('[data-project-card]'));
+      const emptyState = document.querySelector('#empty-state');
+      const resultCount = document.querySelector('#result-count');
+      const trackButtons = Array.from(document.querySelectorAll('[data-track-filter]'));
+      const availabilityButtons = Array.from(document.querySelectorAll('[data-availability-filter]'));
+      const trackJumps = Array.from(document.querySelectorAll('[data-track-jump]'));
+      const projectIndex = JSON.parse(document.querySelector('#project-search-index')?.textContent || '[]');
+      const fuse = new Fuse(projectIndex, {
+        threshold: 0.34,
+        ignoreLocation: true,
+        keys: ['name', 'subtitle', 'description', 'category', 'track_title', 'language', 'topics', 'stage', 'status', 'audience', 'next_focus']
+      });
+
+      let activeTrack = 'all';
+      let activeAvailability = 'all';
+
+      const syncButtons = (buttons, activeValue, key) => {
+        buttons.forEach((button) => {
+          button.classList.toggle('is-active', button.dataset[key] === activeValue);
+        });
+      };
+
+      const applyFilters = () => {
+        const query = (searchInput?.value || '').trim();
+        const matchedIds = query
+          ? new Set(fuse.search(query).map((result) => result.item.id))
+          : new Set(projectIndex.map((item) => item.id));
+
+        let visibleCount = 0;
+        cards.forEach((card) => {
+          const matchesTrack = activeTrack === 'all' || card.dataset.track === activeTrack;
+          const matchesAvailability = activeAvailability === 'all' || card.dataset.availability === activeAvailability;
+          const matchesQuery = matchedIds.has(card.dataset.id || '');
+          const shouldShow = matchesTrack && matchesAvailability && matchesQuery;
+          card.hidden = !shouldShow;
+          if (shouldShow) visibleCount += 1;
+        });
+
+        if (emptyState) emptyState.hidden = visibleCount !== 0;
+        if (resultCount) resultCount.textContent = String(visibleCount);
+      };
+
+      trackButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          activeTrack = button.dataset.trackFilter || 'all';
+          syncButtons(trackButtons, activeTrack, 'trackFilter');
+          applyFilters();
+        });
+      });
+
+      availabilityButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          activeAvailability = button.dataset.availabilityFilter || 'all';
+          syncButtons(availabilityButtons, activeAvailability, 'availabilityFilter');
+          applyFilters();
+        });
+      });
+
+      trackJumps.forEach((button) => {
+        button.addEventListener('click', () => {
+          activeTrack = button.dataset.trackJump || 'all';
+          syncButtons(trackButtons, activeTrack, 'trackFilter');
+          document.querySelector('#explorer')?.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+          applyFilters();
+        });
+      });
+
+      searchInput?.addEventListener('input', applyFilters);
+      applyFilters();
+    })();
+  </script>
 </body>
 </html>
