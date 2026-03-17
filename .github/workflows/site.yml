@@ -10,6 +10,7 @@ on:
       - "site-config.json"
       - "site.webmanifest"
       - "templates/**"
+      - "wiki/**"
       - ".github/workflows/site.yml"
   schedule:
     - cron: "0 */6 * * *"
@@ -33,6 +34,56 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python generate_site.py
+      - name: Smoke check generated assets
+        run: |
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          placeholder_re = re.compile(r"__[A-Z0-9_]+__")
+          required_files = [
+              Path("index.html"),
+              Path("wiki/index.html"),
+              Path("projects.json"),
+              Path("sitemap.xml"),
+              Path("rss.xml"),
+              Path("feed.xml"),
+              Path("robots.txt"),
+              Path("site.webmanifest"),
+              Path(".nojekyll"),
+          ]
+
+          missing = [str(path) for path in required_files if not path.exists()]
+
+          config = json.loads(Path("site-config.json").read_text(encoding="utf-8"))
+          generated_docs = []
+          for document in config.get("wiki_documents", []):
+              if document.get("source_path") and document.get("output_path"):
+                  generated_docs.append(Path(document["output_path"]))
+
+          missing.extend(str(path) for path in generated_docs if not path.exists())
+
+          html_targets = [Path("index.html"), Path("wiki/index.html"), *generated_docs]
+          unresolved = []
+          for path in html_targets:
+              text = path.read_text(encoding="utf-8")
+              if placeholder_re.search(text):
+                  unresolved.append(str(path))
+
+          if missing or unresolved:
+              if missing:
+                  print("Missing generated files:")
+                  for path in missing:
+                      print(f" - {path}")
+              if unresolved:
+                  print("Files with unresolved placeholders:")
+                  for path in unresolved:
+                      print(f" - {path}")
+              raise SystemExit(1)
+
+          print("Smoke check passed.")
+          PY
       - name: Commit generated assets
         run: |
           git config --global user.name 'github-actions[bot]'
