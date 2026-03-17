@@ -67,6 +67,28 @@
     </image:image>
   </url>
   <url>
+    <loc>https://sheryloe.github.io/BloggerGent/</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/bloggergent.png</image:loc>
+      <image:title>BloggerGent</image:title>
+      <image:caption>BloggerGent 소개 페이지 첫 화면. 멀티 채널 블로그 발행 스튜디오 설명이 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/grid-crop-image/</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/grid-crop-image.png</image:loc>
+      <image:title>grid-crop-image</image:title>
+      <image:caption>grid-crop-image 소개 페이지 첫 화면. 이미지 자르기와 분할 저장 기능이 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://sheryloe.github.io/Automethemoney/</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -75,17 +97,6 @@
       <image:loc>https://sheryloe.github.io/assets/previews/automethemoney.png</image:loc>
       <image:title>Automethemoney</image:title>
       <image:caption>Automethemoney 소개 페이지 첫 화면. 자동매매 전략과 운영 리포트 구조가 보입니다.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sheryloe.github.io/BloggerGent/</loc>
-    <lastmod>2026-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://sheryloe.github.io/assets/previews/bloggergent.png</image:loc>
-      <image:title>BloggerGent</image:title>
-      <image:caption>BloggerGent 소개 페이지 첫 화면. 멀티 채널 블로그 발행 스튜디오 설명이 보입니다.</image:caption>
     </image:image>
   </url>
   <url>
@@ -119,17 +130,6 @@
       <image:loc>https://sheryloe.github.io/assets/previews/vibe-cowork-thinking.png</image:loc>
       <image:title>Vibe_Cowork_Thinking</image:title>
       <image:caption>Vibe_Cowork_Thinking 소개 페이지 첫 화면. AI 협업 오케스트레이션 실험 설명이 보입니다.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sheryloe.github.io/grid-crop-image/</loc>
-    <lastmod>2026-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://sheryloe.github.io/assets/previews/grid-crop-image.png</image:loc>
-      <image:title>grid-crop-image</image:title>
-      <image:caption>grid-crop-image 소개 페이지 첫 화면. 이미지 자르기와 분할 저장 기능이 보입니다.</image:caption>
     </image:image>
   </url>
   <url>
