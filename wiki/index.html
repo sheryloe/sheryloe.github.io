@@ -362,17 +362,16 @@
           <button class="tab-trigger" type="button" role="tab" aria-selected="false" data-tab-target="repositories">Repo Wikis</button>
           <button class="tab-trigger" type="button" role="tab" aria-selected="false" data-tab-target="timeline">Timeline</button>
         </div>
-        <p class="text-xs text-slate-500">generated 2026-03-17 02:43 UTC</p>
+        <p class="text-xs text-slate-500">generated 2026-03-17 03:55 UTC</p>
       </div>
 
       <div class="mt-5" data-tab-panel="documents">
-        <div class="grid gap-4 xl:grid-cols-[minmax(0,1fr)_320px]">
-          <section>
-            <div class="flex items-center justify-between">
-              <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Published HTML Docs</h2>
-              <a class="button" href="https://sheryloe.github.io/">루트 허브로 이동</a>
-            </div>
-            <div class="mt-4 grid gap-3 md:grid-cols-2">
+        <section>
+          <div class="flex items-center justify-between">
+            <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Published HTML Docs</h2>
+            <a class="button" href="https://sheryloe.github.io/">루트 허브로 이동</a>
+          </div>
+          <div class="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             <article class="doc-card reveal">
               <p class="eyebrow eyebrow-small">Hub</p>
               <h3>Central Wiki</h3>
@@ -413,49 +412,8 @@
                 <a class="button button-primary" href="https://sheryloe.github.io/wiki/service-todo.html">Open Doc</a>
               </div>
             </article>
-            </div>
-          </section>
-          <aside class="space-y-3">
-            <section class="note-card">
-              <span class="section-label">Reading Path</span>
-              <p>Portfolio Home으로 전체 방향을 먼저 보고, Repository Service Map에서 역할을 확인한 뒤, Timeline DO와 Service TODO로 실행 흐름을 읽는 구조를 권장합니다.</p>
-            </section>
-            <section class="grid gap-3">
-            <article class="wiki-track-card accent-teal reveal">
-              <div>
-                <p class="eyebrow eyebrow-small">AI Automation</p>
-                <h3>AI Automation</h3>
-                <p>AI 비서, 글쓰기 자동화, 멀티 채널 발행, 협업 오케스트레이션까지 지식 작업을 자동화하는 축입니다.</p>
-              </div>
-              <strong class="track-count">4 tracked repos</strong>
-            </article>
-            <article class="wiki-track-card accent-amber reveal">
-              <div>
-                <p class="eyebrow eyebrow-small">Service Products</p>
-                <h3>Service Products</h3>
-                <p>거래, 개인 재무, 분석 대시보드처럼 실제 사용 시나리오가 분명한 서비스형 프로젝트를 묶었습니다.</p>
-              </div>
-              <strong class="track-count">3 tracked repos</strong>
-            </article>
-            <article class="wiki-track-card accent-ocean reveal">
-              <div>
-                <p class="eyebrow eyebrow-small">Desktop Utilities</p>
-                <h3>Desktop Utilities</h3>
-                <p>자주 쓰는 작업을 빠르게 끝내는 Windows 중심 도구를 제품 감각으로 정리하는 축입니다.</p>
-              </div>
-              <strong class="track-count">2 tracked repos</strong>
-            </article>
-            <article class="wiki-track-card accent-slate reveal">
-              <div>
-                <p class="eyebrow eyebrow-small">Platform Docs</p>
-                <h3>Platform Docs</h3>
-                <p>플랫폼 워크스페이스와 중앙 위키를 통해 전체 저장소의 구조와 운영 원칙을 설명하는 축입니다.</p>
-              </div>
-              <strong class="track-count">1 tracked repos</strong>
-            </article>
-            </section>
-          </aside>
-        </div>
+          </div>
+        </section>
       </div>
 
       <div class="mt-5 hidden" data-tab-panel="repositories">
@@ -638,13 +596,12 @@
       </div>
 
       <div class="mt-5 hidden" data-tab-panel="timeline">
-        <div class="grid gap-4 xl:grid-cols-[minmax(0,1fr)_320px]">
-          <section>
-            <div class="flex items-center justify-between">
-              <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Documentation Timeline</h2>
-              <span class="text-xs text-slate-500">accordion</span>
-            </div>
-            <div class="mt-4 grid gap-3">
+        <section>
+          <div class="flex items-center justify-between">
+            <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Documentation Timeline</h2>
+            <span class="text-xs text-slate-500">accordion</span>
+          </div>
+          <div class="mt-4 grid gap-3">
             <article class="timeline-card reveal">
               <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-2026-02-26-ai">
                 <div class="accordion-copy">
@@ -697,19 +654,8 @@
                 <ul class="timeline-points"><li>BloggerGent, BloManagent, donggri_gagyeobu의 서비스 설명 자산이 확장됐습니다.</li><li>README와 wiki를 별개가 아니라 서비스 소개의 연장선으로 읽게 만드는 방향이 분명해졌습니다.</li></ul>
               </div>
             </article>
-            </div>
-          </section>
-          <aside class="space-y-3">
-            <section class="note-card">
-              <span class="section-label">Why HTML</span>
-              <p>원본 문서는 계속 `wiki/*.md`로 관리하지만, 방문자는 완성형 문서처럼 보이는 HTML 경로를 통해 읽도록 분리했습니다.</p>
-            </section>
-            <section class="note-card">
-              <span class="section-label">Next Step</span>
-              <p>루트 허브의 프로젝트 상세 시트와 위키 문서의 문맥을 더 촘촘하게 연결해 저장소 탐색에서 문서 읽기로 이어지는 흐름을 강화합니다.</p>
-            </section>
-          </aside>
-        </div>
+          </div>
+        </section>
       </div>
     </section>
   </main>

@@ -333,7 +333,11 @@
     }
 
     .recent-row {
-      @apply grid gap-3 p-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_100px_auto];
+      @apply p-4;
+    }
+
+    .recent-head {
+      @apply flex flex-col gap-2 md:flex-row md:items-start md:justify-between;
     }
 
     .recent-main strong {
@@ -345,7 +349,11 @@
     }
 
     .recent-note {
-      @apply text-sm leading-6 text-slate-600;
+      @apply mt-3 text-sm leading-6 text-slate-600;
+    }
+
+    .recent-date {
+      @apply text-xs font-medium text-slate-500;
     }
 
     .wiki-link {
@@ -370,6 +378,10 @@
 
     .reveal {
       @apply opacity-100;
+    }
+
+    .is-filtered-out {
+      display: none !important;
     }
 
     dialog::backdrop {
@@ -527,7 +539,7 @@
       <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p class="section-label">Project Directory</p>
-          <h1 class="mt-2 text-2xl font-semibold tracking-[-0.04em] text-slate-950 md:text-3xl">동그리의 만들어나가는 흐름</h1>
+          <h1 class="mt-2 text-2xl font-semibold tracking-[-0.04em] text-slate-950 md:text-3xl">공개 프로젝트와 문서를 한 화면에서 차분하게 탐색하는 허브</h1>
           <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-600">과한 소개 문구보다 실제 프로젝트 구조, 문서 흐름, 다음 작업 포인트가 빠르게 읽히도록 메인 허브를 다시 정리합니다.</p>
         </div>
         <div class="flex flex-wrap gap-2">
@@ -570,17 +582,16 @@
           <button class="tab-trigger" type="button" role="tab" aria-selected="false" data-tab-target="docs">Docs</button>
           <button class="tab-trigger" type="button" role="tab" aria-selected="false" data-tab-target="activity">Activity</button>
         </div>
-        <p class="text-xs text-slate-500">generated 2026-03-17 02:43 UTC</p>
+        <p class="text-xs text-slate-500">generated 2026-03-17 03:55 UTC</p>
       </div>
 
       <div class="mt-5" data-tab-panel="overview">
-        <div class="grid gap-4 xl:grid-cols-[minmax(0,1.2fr)_360px]">
-          <section class="space-y-4">
-            <div class="flex items-center justify-between">
-              <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Featured Builds</h2>
-              <button class="button button-ghost" type="button" data-tab-link="projects">프로젝트 전체 보기</button>
-            </div>
-            <div class="grid gap-4">
+        <section class="space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Featured Builds</h2>
+            <button class="button button-ghost" type="button" data-tab-link="projects">프로젝트 전체 보기</button>
+          </div>
+          <div class="grid gap-4">
             <article class="feature-card feature-card--xl accent-amber reveal">
               <div class="feature-shell">
                 <a class="feature-link" href="https://sheryloe.github.io/Automethemoney/" aria-label="Automethemoney 열기">
@@ -751,93 +762,8 @@
                 </div>
               </div>
             </article>
-            </div>
-          </section>
-
-          <aside class="space-y-4">
-            <section class="track-card">
-              <div class="flex items-center justify-between">
-                <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Current Focus</h2>
-                <span class="badge">compact</span>
-              </div>
-              <ul class="mt-4 space-y-3 text-sm leading-6 text-slate-600">
-                <li>권한 분리, 운영 알림, 복구 로그처럼 서비스 운영에 필요한 장치를 우선 보강합니다.</li>                <li>README, Pages, wiki 설명을 같은 서비스 언어로 맞추고 Markdown 원본과 HTML 문서 퍼블리시 경로를 함께 관리합니다.</li>                <li>미리보기 이미지, 구조화 데이터, 피드, 위키 인덱스를 함께 관리해 검색성과 가독성을 동시에 챙깁니다.</li>
-              </ul>
-            </section>
-            <section class="space-y-3">
-              <div class="flex items-center justify-between">
-                <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Tracks</h2>
-                <span class="text-xs text-slate-500">서비스 축 기준</span>
-              </div>
-              <div class="grid gap-3">
-            <article class="track-card accent-teal reveal">
-              <div class="track-copy">
-                <p class="eyebrow eyebrow-small">AI Automation</p>
-                <h3>AI Automation</h3>
-                <p>AI 비서, 글쓰기 자동화, 멀티 채널 발행, 협업 오케스트레이션까지 지식 작업을 자동화하는 축입니다.</p>
-              </div>
-              <div class="track-metrics">
-                <strong>4</strong>
-                <span>tracked repos · 4 live pages</span>
-              </div>
-              <p class="track-outcome">자동화 루프, 승인 단계, 운영 로그, 에이전트 실험</p>
-              <p class="track-repos">AI_BISEO · AI_Writer_TISTORY · BloggerGent · Vibe_Cowork_Thinking</p>
-              <button class="button button-ghost" type="button" data-track-jump="ai-automation">
-                Explorer에서 보기
-              </button>
-            </article>
-            <article class="track-card accent-amber reveal">
-              <div class="track-copy">
-                <p class="eyebrow eyebrow-small">Service Products</p>
-                <h3>Service Products</h3>
-                <p>거래, 개인 재무, 분석 대시보드처럼 실제 사용 시나리오가 분명한 서비스형 프로젝트를 묶었습니다.</p>
-              </div>
-              <div class="track-metrics">
-                <strong>3</strong>
-                <span>tracked repos · 3 live pages</span>
-              </div>
-              <p class="track-outcome">운영 콘솔, 데이터 검증, 리포트, 사용자 피드백 루프</p>
-              <p class="track-repos">Automethemoney · donggri_gagyeobu · BloManagent</p>
-              <button class="button button-ghost" type="button" data-track-jump="service-products">
-                Explorer에서 보기
-              </button>
-            </article>
-            <article class="track-card accent-ocean reveal">
-              <div class="track-copy">
-                <p class="eyebrow eyebrow-small">Desktop Utilities</p>
-                <h3>Desktop Utilities</h3>
-                <p>자주 쓰는 작업을 빠르게 끝내는 Windows 중심 도구를 제품 감각으로 정리하는 축입니다.</p>
-              </div>
-              <div class="track-metrics">
-                <strong>2</strong>
-                <span>tracked repos · 2 live pages</span>
-              </div>
-              <p class="track-outcome">실행 런처, 이미지 워크플로, 설치/배포 경험</p>
-              <p class="track-repos">Favorit · grid-crop-image</p>
-              <button class="button button-ghost" type="button" data-track-jump="desktop-utilities">
-                Explorer에서 보기
-              </button>
-            </article>
-            <article class="track-card accent-slate reveal">
-              <div class="track-copy">
-                <p class="eyebrow eyebrow-small">Platform Docs</p>
-                <h3>Platform Docs</h3>
-                <p>플랫폼 워크스페이스와 중앙 위키를 통해 전체 저장소의 구조와 운영 원칙을 설명하는 축입니다.</p>
-              </div>
-              <div class="track-metrics">
-                <strong>1</strong>
-                <span>tracked repos · 0 live pages</span>
-              </div>
-              <p class="track-outcome">플랫폼 분리, 문서 허브, 메타데이터, 포트폴리오 아틀라스</p>
-              <p class="track-repos">donggeuri-cloudflare-blog</p>
-              <button class="button button-ghost" type="button" data-track-jump="platform-docs">
-                Explorer에서 보기
-              </button>
-            </article>
-              </div>
-            </section>
-          </aside>
-        </div>
+          </div>
+        </section>
       </div>
 
       <div class="mt-5 hidden" data-tab-panel="projects">
@@ -1366,120 +1292,140 @@
               </div>
               <div class="mt-4 grid gap-3">
             <article class="recent-row reveal">
-              <div class="recent-main">
-                <strong>Automethemoney</strong>
-                <span>Trading Ops · Service Products</span>
+              <div class="recent-head">
+                <div class="recent-main">
+                  <strong>Automethemoney</strong>
+                  <span>Trading Ops · Service Products</span>
+                </div>
+                <time class="recent-date" datetime="2026-03-17">2026-03-17</time>
               </div>
               <p class="recent-note">paper/live 권한 분리, 손실 경보, 전략별 비교</p>
-              <time datetime="2026-03-17">2026-03-17</time>
               <div class="recent-actions">
                 <a class="button button-primary" href="https://sheryloe.github.io/Automethemoney/">Live Page</a>
                 <a class="button" href="https://github.com/sheryloe/Automethemoney/tree/main/wiki">Wiki</a>
               </div>
             </article>
             <article class="recent-row reveal">
-              <div class="recent-main">
-                <strong>BloggerGent</strong>
-                <span>Publishing Studio · AI Automation</span>
+              <div class="recent-head">
+                <div class="recent-main">
+                  <strong>BloggerGent</strong>
+                  <span>Publishing Studio · AI Automation</span>
+                </div>
+                <time class="recent-date" datetime="2026-03-16">2026-03-16</time>
               </div>
               <p class="recent-note">승인 단계, 콘텐츠 캘린더, 발행 QA 체크리스트</p>
-              <time datetime="2026-03-16">2026-03-16</time>
               <div class="recent-actions">
                 <a class="button button-primary" href="https://sheryloe.github.io/BloggerGent/">Live Page</a>
                 <a class="button" href="https://github.com/sheryloe/BloggerGent/tree/main/wiki">Wiki</a>
               </div>
             </article>
             <article class="recent-row reveal">
-              <div class="recent-main">
-                <strong>BloManagent</strong>
-                <span>Analytics Dashboard · Service Products</span>
+              <div class="recent-head">
+                <div class="recent-main">
+                  <strong>BloManagent</strong>
+                  <span>Analytics Dashboard · Service Products</span>
+                </div>
+                <time class="recent-date" datetime="2026-03-16">2026-03-16</time>
               </div>
               <p class="recent-note">비동기 수집, 공유 리포트, 등급 근거 시각화</p>
-              <time datetime="2026-03-16">2026-03-16</time>
               <div class="recent-actions">
                 <a class="button button-primary" href="https://sheryloe.github.io/BloManagent/">Live Page</a>
                 <a class="button" href="https://github.com/sheryloe/BloManagent/tree/main/wiki">Wiki</a>
               </div>
             </article>
             <article class="recent-row reveal">
-              <div class="recent-main">
-                <strong>donggeuri-cloudflare-blog</strong>
-                <span>Cloud Platform · Platform Docs</span>
+              <div class="recent-head">
+                <div class="recent-main">
+                  <strong>donggeuri-cloudflare-blog</strong>
+                  <span>Cloud Platform · Platform Docs</span>
+                </div>
+                <time class="recent-date" datetime="2026-03-16">2026-03-16</time>
               </div>
               <p class="recent-note">권한 분리, 미리보기, 맞춤 도메인 가이드</p>
-              <time datetime="2026-03-16">2026-03-16</time>
               <div class="recent-actions">
                 <a class="button button-primary" href="https://github.com/sheryloe/donggeuri-cloudflare-blog">Repository</a>
                 <a class="button" href="https://github.com/sheryloe/donggeuri-cloudflare-blog/tree/main/wiki">Wiki</a>
               </div>
             </article>
             <article class="recent-row reveal">
-              <div class="recent-main">
-                <strong>donggri_gagyeobu</strong>
-                <span>Local Finance · Service Products</span>
+              <div class="recent-head">
+                <div class="recent-main">
+                  <strong>donggri_gagyeobu</strong>
+                  <span>Local Finance · Service Products</span>
+                </div>
+                <time class="recent-date" datetime="2026-03-16">2026-03-16</time>
               </div>
               <p class="recent-note">예산 알림, 가족 공유 모드, 백업 검증 자동화</p>
-              <time datetime="2026-03-16">2026-03-16</time>
               <div class="recent-actions">
                 <a class="button button-primary" href="https://sheryloe.github.io/donggri_gagyeobu/">Live Page</a>
                 <a class="button" href="https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki">Wiki</a>
               </div>
             </article>
             <article class="recent-row reveal">
-              <div class="recent-main">
-                <strong>Vibe_Cowork_Thinking</strong>
-                <span>AI Workflow Lab · AI Automation</span>
+              <div class="recent-head">
+                <div class="recent-main">
+                  <strong>Vibe_Cowork_Thinking</strong>
+                  <span>AI Workflow Lab · AI Automation</span>
+                </div>
+                <time class="recent-date" datetime="2026-03-16">2026-03-16</time>
               </div>
               <p class="recent-note">diff 뷰, 권한 모델, 결과 비교 리포트</p>
-              <time datetime="2026-03-16">2026-03-16</time>
               <div class="recent-actions">
                 <a class="button button-primary" href="https://sheryloe.github.io/Vibe_Cowork_Thinking/">Live Page</a>
                 <a class="button" href="https://github.com/sheryloe/Vibe_Cowork_Thinking/tree/feat/initial-workflow-baseline/wiki">Wiki</a>
               </div>
             </article>
             <article class="recent-row reveal">
-              <div class="recent-main">
-                <strong>grid-crop-image</strong>
-                <span>Image Workflow · Desktop Utilities</span>
+              <div class="recent-head">
+                <div class="recent-main">
+                  <strong>grid-crop-image</strong>
+                  <span>Image Workflow · Desktop Utilities</span>
+                </div>
+                <time class="recent-date" datetime="2026-03-16">2026-03-16</time>
               </div>
               <p class="recent-note">배치 처리, OCR 보조, Undo/Redo</p>
-              <time datetime="2026-03-16">2026-03-16</time>
               <div class="recent-actions">
                 <a class="button button-primary" href="https://sheryloe.github.io/grid-crop-image/">Live Page</a>
                 <a class="button" href="https://github.com/sheryloe/grid-crop-image/tree/main/wiki">Wiki</a>
               </div>
             </article>
             <article class="recent-row reveal">
-              <div class="recent-main">
-                <strong>Favorit</strong>
-                <span>Desktop Utility · Desktop Utilities</span>
+              <div class="recent-head">
+                <div class="recent-main">
+                  <strong>Favorit</strong>
+                  <span>Desktop Utility · Desktop Utilities</span>
+                </div>
+                <time class="recent-date" datetime="2026-03-16">2026-03-16</time>
               </div>
               <p class="recent-note">검색, 그룹 정렬, 설정 백업, SmartScreen 대응 문서</p>
-              <time datetime="2026-03-16">2026-03-16</time>
               <div class="recent-actions">
                 <a class="button button-primary" href="https://sheryloe.github.io/Favorit/">Live Page</a>
                 <a class="button" href="https://github.com/sheryloe/Favorit/tree/main/wiki">Wiki</a>
               </div>
             </article>
             <article class="recent-row reveal">
-              <div class="recent-main">
-                <strong>AI_Writer_TISTORY</strong>
-                <span>Publishing Workflow · AI Automation</span>
+              <div class="recent-head">
+                <div class="recent-main">
+                  <strong>AI_Writer_TISTORY</strong>
+                  <span>Publishing Workflow · AI Automation</span>
+                </div>
+                <time class="recent-date" datetime="2026-03-16">2026-03-16</time>
               </div>
               <p class="recent-note">발행 승인 단계, SEO 검수, 실패 복구 로그</p>
-              <time datetime="2026-03-16">2026-03-16</time>
               <div class="recent-actions">
                 <a class="button button-primary" href="https://sheryloe.github.io/AI_Writer_TISTORY/">Live Page</a>
                 <a class="button" href="https://github.com/sheryloe/AI_Writer_TISTORY/tree/main/wiki">Wiki</a>
               </div>
             </article>
             <article class="recent-row reveal">
-              <div class="recent-main">
-                <strong>AI_BISEO</strong>
-                <span>Automation Ops · AI Automation</span>
+              <div class="recent-head">
+                <div class="recent-main">
+                  <strong>AI_BISEO</strong>
+                  <span>Automation Ops · AI Automation</span>
+                </div>
+                <time class="recent-date" datetime="2026-03-16">2026-03-16</time>
               </div>
               <p class="recent-note">운영용 키 분리, 실패 알림, 버전 비교 로그</p>
-              <time datetime="2026-03-16">2026-03-16</time>
               <div class="recent-actions">
                 <a class="button button-primary" href="https://sheryloe.github.io/AI_BISEO/">Live Page</a>
                 <a class="button" href="https://github.com/sheryloe/AI_BISEO/tree/main/wiki">Wiki</a>
@@ -1630,7 +1576,8 @@
           const matchesAvailability = activeAvailability === 'all' || card.dataset.availability === activeAvailability;
           const matchesQuery = matchedIds.has(card.dataset.id || '');
           const visible = matchesTrack && matchesAvailability && matchesQuery;
-          card.hidden = !visible;
+          card.classList.toggle('is-filtered-out', !visible);
+          card.setAttribute('aria-hidden', visible ? 'false' : 'true');
           if (visible) visibleCount += 1;
         });
 

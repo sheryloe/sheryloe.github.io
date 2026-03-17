@@ -486,12 +486,14 @@ def render_recent_row(repository: dict[str, Any]) -> str:
     primary_href = repository["live_url"] or repository["repo_url"]
     primary_label = primary_link_label(repository)
     return f"""            <article class="recent-row reveal">
-              <div class="recent-main">
-                <strong>{html.escape(repository["name"])}</strong>
-                <span>{html.escape(repository["category"])} · {html.escape(repository["track_title"])}</span>
+              <div class="recent-head">
+                <div class="recent-main">
+                  <strong>{html.escape(repository["name"])}</strong>
+                  <span>{html.escape(repository["category"])} · {html.escape(repository["track_title"])}</span>
+                </div>
+                <time class="recent-date" datetime="{repository["sort_at"].date().isoformat()}">{repository["sort_label"]}</time>
               </div>
               <p class="recent-note">{html.escape(repository["next_focus"])}</p>
-              <time datetime="{repository["sort_at"].date().isoformat()}">{repository["sort_label"]}</time>
               <div class="recent-actions">
                 <a class="button button-primary" href="{html.escape(primary_href)}">{primary_label}</a>
                 <a class="button" href="{html.escape(repository["wiki_url"])}">Wiki</a>

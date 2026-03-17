@@ -256,26 +256,15 @@ __SCHEMA_JSON__
       </div>
 
       <div class="mt-5" data-tab-panel="documents">
-        <div class="grid gap-4 xl:grid-cols-[minmax(0,1fr)_320px]">
-          <section>
-            <div class="flex items-center justify-between">
-              <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Published HTML Docs</h2>
-              <a class="button" href="__SITE_URL__">루트 허브로 이동</a>
-            </div>
-            <div class="mt-4 grid gap-3 md:grid-cols-2">
+        <section>
+          <div class="flex items-center justify-between">
+            <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Published HTML Docs</h2>
+            <a class="button" href="__SITE_URL__">루트 허브로 이동</a>
+          </div>
+          <div class="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
 __DOCUMENTATION_CARDS__
-            </div>
-          </section>
-          <aside class="space-y-3">
-            <section class="note-card">
-              <span class="section-label">Reading Path</span>
-              <p>Portfolio Home으로 전체 방향을 먼저 보고, Repository Service Map에서 역할을 확인한 뒤, Timeline DO와 Service TODO로 실행 흐름을 읽는 구조를 권장합니다.</p>
-            </section>
-            <section class="grid gap-3">
-__WIKI_TRACK_CARDS__
-            </section>
-          </aside>
-        </div>
+          </div>
+        </section>
       </div>
 
       <div class="mt-5 hidden" data-tab-panel="repositories">
@@ -289,27 +278,15 @@ __WIKI_REPO_CARDS__
       </div>
 
       <div class="mt-5 hidden" data-tab-panel="timeline">
-        <div class="grid gap-4 xl:grid-cols-[minmax(0,1fr)_320px]">
-          <section>
-            <div class="flex items-center justify-between">
-              <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Documentation Timeline</h2>
-              <span class="text-xs text-slate-500">accordion</span>
-            </div>
-            <div class="mt-4 grid gap-3">
+        <section>
+          <div class="flex items-center justify-between">
+            <h2 class="text-base font-semibold tracking-[-0.03em] text-slate-950">Documentation Timeline</h2>
+            <span class="text-xs text-slate-500">accordion</span>
+          </div>
+          <div class="mt-4 grid gap-3">
 __TIMELINE_ITEMS__
-            </div>
-          </section>
-          <aside class="space-y-3">
-            <section class="note-card">
-              <span class="section-label">Why HTML</span>
-              <p>원본 문서는 계속 `wiki/*.md`로 관리하지만, 방문자는 완성형 문서처럼 보이는 HTML 경로를 통해 읽도록 분리했습니다.</p>
-            </section>
-            <section class="note-card">
-              <span class="section-label">Next Step</span>
-              <p>루트 허브의 프로젝트 상세 시트와 위키 문서의 문맥을 더 촘촘하게 연결해 저장소 탐색에서 문서 읽기로 이어지는 흐름을 강화합니다.</p>
-            </section>
-          </aside>
-        </div>
+          </div>
+        </section>
       </div>
     </section>
   </main>
