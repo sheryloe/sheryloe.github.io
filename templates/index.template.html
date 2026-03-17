@@ -26,7 +26,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-  
   <script src="https://cdn.tailwindcss.com"></script>
   
   <style type="text/tailwindcss">
@@ -36,83 +35,36 @@
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       }
     }
-
-    body {
-      @apply bg-slate-50 text-slate-800 antialiased;
-    }
-
-    /* Python 스크립트(generate_site.py)에서 생성되는 클래스들에 대한 스타일 정의 */
-    .page-card { 
-      @apply bg-white border border-slate-200 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3 relative overflow-hidden; 
-    }
-    .page-card--hero, .page-card--wide {
-      @apply sm:col-span-2;
-    }
-    
-    /* 서비스별 포인트 컬러 */
+    body { @apply bg-slate-50 text-slate-800 antialiased; }
+    .page-card { @apply bg-white border border-slate-200 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3 relative overflow-hidden; }
+    .page-card--hero, .page-card--wide { @apply sm:col-span-2; }
     .tone-blue { border-top: 4px solid #3b82f6 !important; }
     .tone-amber { border-top: 4px solid #f59e0b !important; }
     .tone-slate { border-top: 4px solid #64748b !important; }
     .tone-white { border-top: 4px solid #cbd5e1 !important; }
-
-    .card-tag { 
-      @apply inline-flex items-center px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold rounded uppercase tracking-widest w-fit; 
-    }
-    .page-card h3 { 
-      @apply text-lg font-bold text-slate-900 m-0 tracking-tight; 
-    }
-    .page-card p { 
-      @apply text-slate-500 text-[13px] leading-relaxed grow m-0; 
-    }
-    .card-actions { 
-      @apply flex gap-2 mt-4 pt-4 border-t border-slate-100; 
-    }
-    .card-actions .button { 
-      @apply flex-1 inline-flex justify-center items-center px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider rounded border transition-colors focus:outline-none focus:ring-2 focus:ring-offset-1 text-center; 
-    }
-    .card-actions .button.primary { 
-      @apply bg-indigo-600 text-white border-transparent hover:bg-indigo-700 focus:ring-indigo-600; 
-    }
-    .card-actions .button:not(.primary) { 
-      @apply bg-white text-slate-700 border-slate-300 hover:bg-slate-50 focus:ring-slate-500; 
-    }
-
-    /* 사이드바 빠른 링크 스타일 */
-    .quick-item { 
-      @apply flex flex-col gap-1 p-3 border border-slate-200 rounded-lg hover:border-indigo-400 hover:bg-indigo-50/30 transition-all mb-2 bg-white; 
-    }
-    .quick-item strong { 
-      @apply text-slate-900 text-sm font-semibold tracking-tight; 
-    }
-    .quick-item span { 
-      @apply text-slate-500 text-[12px] leading-snug; 
-    }
-
-    /* 하단 업데이트 목록 스타일 */
+    .card-tag { @apply inline-flex items-center px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold rounded uppercase tracking-widest w-fit; }
+    .page-card h3 { @apply text-lg font-bold text-slate-900 m-0 tracking-tight; }
+    .page-card p { @apply text-slate-500 text-[13px] leading-relaxed grow m-0; }
+    .card-actions { @apply flex gap-2 mt-4 pt-4 border-t border-slate-100; }
+    .card-actions .button { @apply flex-1 inline-flex justify-center items-center px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider rounded border transition-colors focus:outline-none focus:ring-2 focus:ring-offset-1 text-center; }
+    .card-actions .button.primary { @apply bg-indigo-600 text-white border-transparent hover:bg-indigo-700 focus:ring-indigo-600; }
+    .card-actions .button:not(.primary) { @apply bg-white text-slate-700 border-slate-300 hover:bg-slate-50 focus:ring-slate-500; }
+    .quick-item { @apply flex flex-col gap-1 p-3 border border-slate-200 rounded-lg hover:border-indigo-400 hover:bg-indigo-50/30 transition-all mb-2 bg-white; }
+    .quick-item strong { @apply text-slate-900 text-sm font-semibold tracking-tight; }
+    .quick-item span { @apply text-slate-500 text-[12px] leading-snug; }
     .repo-list { @apply flex flex-col gap-3; }
-    .repo-row { 
-      @apply flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-white border border-slate-200 rounded-lg hover:shadow-sm transition-shadow gap-4; 
-    }
+    .repo-row { @apply flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-white border border-slate-200 rounded-lg hover:shadow-sm transition-shadow gap-4; }
     .repo-main { @apply flex flex-col gap-0.5; }
     .repo-main strong { @apply text-slate-900 font-semibold text-sm; }
     .repo-main span { @apply text-slate-500 text-[11px] uppercase tracking-wide font-bold; }
-    .repo-row time { 
-      @apply text-slate-600 text-[11px] font-mono bg-slate-100 px-2.5 py-1 rounded border border-slate-200 self-start sm:self-auto; 
-    }
+    .repo-row time { @apply text-slate-600 text-[11px] font-mono bg-slate-100 px-2.5 py-1 rounded border border-slate-200 self-start sm:self-auto; }
     .repo-links { @apply flex gap-2 w-full sm:w-auto; }
-    .repo-links a { 
-      @apply flex-1 sm:flex-none text-center px-3 py-1.5 text-[11px] uppercase tracking-wider font-bold rounded border border-slate-300 text-slate-700 bg-white hover:bg-slate-50 transition-colors; 
-    }
-    .repo-links a:first-child { 
-      @apply bg-slate-800 text-white border-transparent hover:bg-slate-900; 
-    }
+    .repo-links a { @apply flex-1 sm:flex-none text-center px-3 py-1.5 text-[11px] uppercase tracking-wider font-bold rounded border border-slate-300 text-slate-700 bg-white hover:bg-slate-50 transition-colors; }
+    .repo-links a:first-child { @apply bg-slate-800 text-white border-transparent hover:bg-slate-900; }
   </style>
-  <script type="application/ld+json">
-__SCHEMA_JSON__
-  </script>
+  <script type="application/ld+json">__SCHEMA_JSON__</script>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
-
   <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-14">
@@ -128,13 +80,10 @@ __SCHEMA_JSON__
       </div>
     </div>
   </header>
-
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    
     <section class="mb-10">
       <h1 class="text-2xl font-bold text-slate-900 mb-2 tracking-tight">공개 프로젝트 통합 관리 허브</h1>
       <p class="text-slate-500 text-sm max-w-3xl leading-relaxed mb-6">__DESCRIPTION__</p>
-      
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm flex flex-col justify-between border-l-4 border-l-indigo-500">
           <span class="text-slate-500 text-[11px] font-bold uppercase tracking-widest">Live Pages</span>
@@ -154,11 +103,8 @@ __SCHEMA_JSON__
         </div>
       </div>
     </section>
-
     <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 xl:gap-12">
-      
       <div class="xl:col-span-2 space-y-12">
-        
         <section id="wiki-center">
           <div class="flex items-end justify-between mb-5 border-b border-slate-200 pb-2">
             <div>
@@ -166,7 +112,6 @@ __SCHEMA_JSON__
               <h3 class="text-xl font-bold text-slate-900">시스템 문서 및 로드맵 (Wiki)</h3>
             </div>
           </div>
-          
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <article class="bg-white border border-slate-200 p-6 rounded-lg hover:border-indigo-400 hover:shadow-md transition-all sm:col-span-2 flex flex-col sm:flex-row gap-6 sm:items-center justify-between">
               <div>
@@ -179,14 +124,12 @@ __SCHEMA_JSON__
                 <a href="__WIKI_REPO_URL__" class="flex-1 text-center px-4 py-2 bg-white border border-slate-300 text-slate-700 text-[11px] font-bold uppercase tracking-widest rounded hover:bg-slate-50 transition-colors">GitHub Source</a>
               </div>
             </article>
-
             <article class="bg-white border border-slate-200 p-5 rounded-lg flex flex-col">
               <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded mb-3 w-fit tracking-widest">Service Map</span>
               <h3 class="text-[15px] font-bold text-slate-900 mb-2">Repository Service Map</h3>
               <p class="text-[13px] text-slate-500 mb-5 grow leading-relaxed">저장소별 역할과 서비스화 방향, 개선 포인트를 통합 정리한 문서입니다.</p>
               <a href="__SITE_URL__wiki/" class="text-[11px] font-bold text-indigo-600 hover:text-indigo-800 uppercase tracking-widest">Read Map →</a>
             </article>
-
             <article class="bg-white border border-slate-200 p-5 rounded-lg flex flex-col">
               <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded mb-3 w-fit tracking-widest">Backlog</span>
               <h3 class="text-[15px] font-bold text-slate-900 mb-2">Timeline DO + Service TODO</h3>
@@ -195,7 +138,6 @@ __SCHEMA_JSON__
             </article>
           </div>
         </section>
-
         <section id="direct-access">
           <div class="flex items-end justify-between mb-5 border-b border-slate-200 pb-2">
             <div>
@@ -203,11 +145,8 @@ __SCHEMA_JSON__
               <h3 class="text-xl font-bold text-slate-900">활성 서비스 콘솔 (Direct Access)</h3>
             </div>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-__DIRECT_CARDS__
-          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">__DIRECT_CARDS__</div>
         </section>
-
         <section id="recent-updates">
           <div class="flex items-end justify-between mb-5 border-b border-slate-200 pb-2">
             <div>
@@ -215,13 +154,9 @@ __DIRECT_CARDS__
               <h3 class="text-xl font-bold text-slate-900">최근 시스템 변경 로그</h3>
             </div>
           </div>
-          <div class="repo-list">
-__RECENT_ROWS__
-          </div>
+          <div class="repo-list">__RECENT_ROWS__</div>
         </section>
-        
       </div>
-
       <div class="xl:col-span-1">
         <aside class="bg-slate-100/50 border border-slate-200 rounded-lg p-5 sticky top-20">
           <div class="mb-5 border-b border-slate-200 pb-2">
@@ -229,18 +164,13 @@ __RECENT_ROWS__
             <p class="text-sm font-bold text-slate-900 mt-1">운영용 빠른 링크</p>
           </div>
           <div class="flex flex-col">
-            <a class="quick-item" href="__SITE_URL__wiki/">
-              <strong class="text-indigo-600">Central Wiki Index</strong>
-              <span>시스템 전체 가이드 및 로드맵 문서</span>
-            </a>
-__QUICK_LINKS__
+            <a class="quick-item" href="__SITE_URL__wiki/"><strong class="text-indigo-600">Central Wiki Index</strong><span>시스템 전체 가이드 및 로드맵 문서</span></a>
+            __QUICK_LINKS__
           </div>
         </aside>
       </div>
-
     </div>
   </main>
-
   <footer class="border-t border-slate-200 bg-white mt-20 py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
       <div class="text-center sm:text-left">
