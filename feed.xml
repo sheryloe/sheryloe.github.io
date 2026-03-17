@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Sheryloe Projects Atom</title>
-  <id>https://sheryloe.github.io/feed.xml</id>
+  <id>https://dongriarchive.com/feed.xml</id>
   <updated>2026-03-17T07:26:46Z</updated>
-  <link href="https://sheryloe.github.io/feed.xml" rel="self" />
-  <link href="https://sheryloe.github.io/" rel="alternate" />
+  <link href="https://dongriarchive.com/feed.xml" rel="self" />
+  <link href="https://dongriarchive.com/" rel="alternate" />
   <subtitle>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</subtitle>
   <author>
     <name>sheryloe</name>

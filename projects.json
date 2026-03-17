@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-17T07:46:53.838311Z",
-  "site_url": "https://sheryloe.github.io/",
+  "generated_at": "2026-03-17T09:04:34.292871Z",
+  "site_url": "https://dongriarchive.com/",
   "repository_count": 10,
   "live_pages_count": 9,
   "repositories": [
@@ -46,7 +46,7 @@
       "description": "자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.",
       "repo_url": "https://github.com/sheryloe/Automethemoney",
       "live_url": "https://sheryloe.github.io/Automethemoney/",
-      "pages_url": "https://sheryloe.github.io/Automethemoney/",
+      "pages_url": "https://dongriarchive.com/Automethemoney/",
       "wiki_url": "https://github.com/sheryloe/Automethemoney/tree/main/wiki",
       "language": "Python",
       "topics": [
@@ -65,7 +65,7 @@
       "availability": "live",
       "featured": true,
       "preview_path": "assets/previews/automethemoney.png",
-      "preview_image": "https://sheryloe.github.io/assets/previews/automethemoney.png",
+      "preview_image": "https://dongriarchive.com/assets/previews/automethemoney.png",
       "preview_alt": "Automethemoney 소개 페이지 첫 화면. 자동매매 전략과 운영 리포트 구조가 보입니다.",
       "updated_at": "2026-03-17T00:00:35Z",
       "pushed_at": "2026-03-17T00:00:31Z"
@@ -79,7 +79,7 @@
       "description": "여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.",
       "repo_url": "https://github.com/sheryloe/BloggerGent",
       "live_url": "https://sheryloe.github.io/BloggerGent/",
-      "pages_url": "https://sheryloe.github.io/BloggerGent/",
+      "pages_url": "https://dongriarchive.com/BloggerGent/",
       "wiki_url": "https://github.com/sheryloe/BloggerGent/tree/main/wiki",
       "language": "Python",
       "topics": [
@@ -98,7 +98,7 @@
       "availability": "live",
       "featured": true,
       "preview_path": "assets/previews/bloggergent.png",
-      "preview_image": "https://sheryloe.github.io/assets/previews/bloggergent.png",
+      "preview_image": "https://dongriarchive.com/assets/previews/bloggergent.png",
       "preview_alt": "BloggerGent 소개 페이지 첫 화면. 멀티 채널 블로그 발행 스튜디오 설명이 보입니다.",
       "updated_at": "2026-03-16T16:39:48Z",
       "pushed_at": "2026-03-16T16:39:44Z"
@@ -112,7 +112,7 @@
       "description": "블로그 URL 수집, 등급 산출, 주간 비교 리포트, 시각적 설명을 연결하는 분석 제품 실험입니다.",
       "repo_url": "https://github.com/sheryloe/BloManagent",
       "live_url": "https://sheryloe.github.io/BloManagent/",
-      "pages_url": "https://sheryloe.github.io/BloManagent/",
+      "pages_url": "https://dongriarchive.com/BloManagent/",
       "wiki_url": "https://github.com/sheryloe/BloManagent/tree/main/wiki",
       "language": "TypeScript",
       "topics": [
@@ -131,7 +131,7 @@
       "availability": "live",
       "featured": true,
       "preview_path": "assets/previews/blomanagent.png",
-      "preview_image": "https://sheryloe.github.io/assets/previews/blomanagent.png",
+      "preview_image": "https://dongriarchive.com/assets/previews/blomanagent.png",
       "preview_alt": "BloManagent 소개 페이지 첫 화면. 블로그 수집과 비교 분석 대시보드 흐름이 보입니다.",
       "updated_at": "2026-03-16T16:38:59Z",
       "pushed_at": "2026-03-16T16:38:56Z"
@@ -145,7 +145,7 @@
       "description": "자산, 카드 결제 예정, 예산, 소비 흐름을 브라우저에서 바로 관리할 수 있게 정리한 개인 재무 서비스입니다.",
       "repo_url": "https://github.com/sheryloe/donggri_gagyeobu",
       "live_url": "https://sheryloe.github.io/donggri_gagyeobu/",
-      "pages_url": "https://sheryloe.github.io/donggri_gagyeobu/",
+      "pages_url": "https://dongriarchive.com/donggri_gagyeobu/",
       "wiki_url": "https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki",
       "language": "JavaScript",
       "topics": [
@@ -164,7 +164,7 @@
       "availability": "live",
       "featured": true,
       "preview_path": "assets/previews/donggri-gagyeobu.png",
-      "preview_image": "https://sheryloe.github.io/assets/previews/donggri-gagyeobu.png",
+      "preview_image": "https://dongriarchive.com/assets/previews/donggri-gagyeobu.png",
       "preview_alt": "donggri_gagyeobu 소개 페이지 첫 화면. 개인 가계부 웹앱 구조와 사용 흐름이 보입니다.",
       "updated_at": "2026-03-16T12:55:14Z",
       "pushed_at": "2026-03-16T12:55:10Z"
@@ -178,7 +178,7 @@
       "description": "프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.",
       "repo_url": "https://github.com/sheryloe/Vibe_Cowork_Thinking",
       "live_url": "https://sheryloe.github.io/Vibe_Cowork_Thinking/",
-      "pages_url": "https://sheryloe.github.io/Vibe_Cowork_Thinking/",
+      "pages_url": "https://dongriarchive.com/Vibe_Cowork_Thinking/",
       "wiki_url": "https://github.com/sheryloe/Vibe_Cowork_Thinking/tree/feat/initial-workflow-baseline/wiki",
       "language": "Python",
       "topics": [
@@ -197,7 +197,7 @@
       "availability": "live",
       "featured": false,
       "preview_path": "assets/previews/vibe-cowork-thinking.png",
-      "preview_image": "https://sheryloe.github.io/assets/previews/vibe-cowork-thinking.png",
+      "preview_image": "https://dongriarchive.com/assets/previews/vibe-cowork-thinking.png",
       "preview_alt": "Vibe_Cowork_Thinking 소개 페이지 첫 화면. AI 협업 오케스트레이션 실험 설명이 보입니다.",
       "updated_at": "2026-03-16T12:55:13Z",
       "pushed_at": "2026-03-16T12:55:08Z"
@@ -211,7 +211,7 @@
       "description": "스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용까지 지원하는 Windows 이미지 워크플로 도구입니다.",
       "repo_url": "https://github.com/sheryloe/grid-crop-image",
       "live_url": "https://sheryloe.github.io/grid-crop-image/",
-      "pages_url": "https://sheryloe.github.io/grid-crop-image/",
+      "pages_url": "https://dongriarchive.com/grid-crop-image/",
       "wiki_url": "https://github.com/sheryloe/grid-crop-image/tree/main/wiki",
       "language": "Python",
       "topics": [
@@ -230,7 +230,7 @@
       "availability": "live",
       "featured": false,
       "preview_path": "assets/previews/grid-crop-image.png",
-      "preview_image": "https://sheryloe.github.io/assets/previews/grid-crop-image.png",
+      "preview_image": "https://dongriarchive.com/assets/previews/grid-crop-image.png",
       "preview_alt": "grid-crop-image 소개 페이지 첫 화면. 이미지 자르기와 분할 저장 기능이 보입니다.",
       "updated_at": "2026-03-16T12:55:10Z",
       "pushed_at": "2026-03-16T12:55:06Z"
@@ -244,7 +244,7 @@
       "description": "Windows 바탕화면에서 자주 쓰는 파일, 폴더, URL을 위젯처럼 빠르게 실행하도록 만든 데스크톱 런처입니다.",
       "repo_url": "https://github.com/sheryloe/Favorit",
       "live_url": "https://sheryloe.github.io/Favorit/",
-      "pages_url": "https://sheryloe.github.io/Favorit/",
+      "pages_url": "https://dongriarchive.com/Favorit/",
       "wiki_url": "https://github.com/sheryloe/Favorit/tree/main/wiki",
       "language": "C++",
       "topics": [
@@ -263,7 +263,7 @@
       "availability": "live",
       "featured": true,
       "preview_path": "assets/previews/favorit.png",
-      "preview_image": "https://sheryloe.github.io/assets/previews/favorit.png",
+      "preview_image": "https://dongriarchive.com/assets/previews/favorit.png",
       "preview_alt": "Favorit 소개 페이지 첫 화면. 실행 즐겨찾기 위젯과 설치 흐름 설명이 보입니다.",
       "updated_at": "2026-03-16T12:55:08Z",
       "pushed_at": "2026-03-16T12:55:04Z"
@@ -277,7 +277,7 @@
       "description": "티스토리 발행 자동화, AI 글쓰기, 검수 전 단계, 운영 로그를 정리하는 출판 워크플로 프로젝트입니다.",
       "repo_url": "https://github.com/sheryloe/AI_Writer_TISTORY",
       "live_url": "https://sheryloe.github.io/AI_Writer_TISTORY/",
-      "pages_url": "https://sheryloe.github.io/AI_Writer_TISTORY/",
+      "pages_url": "https://dongriarchive.com/AI_Writer_TISTORY/",
       "wiki_url": "https://github.com/sheryloe/AI_Writer_TISTORY/tree/main/wiki",
       "language": "TypeScript",
       "topics": [
@@ -296,7 +296,7 @@
       "availability": "live",
       "featured": false,
       "preview_path": "assets/previews/ai-writer-tistory.png",
-      "preview_image": "https://sheryloe.github.io/assets/previews/ai-writer-tistory.png",
+      "preview_image": "https://dongriarchive.com/assets/previews/ai-writer-tistory.png",
       "preview_alt": "AI_Writer_TISTORY 소개 페이지 첫 화면. AI 글쓰기와 티스토리 발행 흐름이 보입니다.",
       "updated_at": "2026-03-16T12:54:32Z",
       "pushed_at": "2026-03-16T12:54:26Z"
@@ -310,7 +310,7 @@
       "description": "AI 비서 응답, Notion 로그, n8n 자동화, Telegram 알림 흐름을 하나의 운영 서비스로 엮는 프로젝트입니다.",
       "repo_url": "https://github.com/sheryloe/AI_BISEO",
       "live_url": "https://sheryloe.github.io/AI_BISEO/",
-      "pages_url": "https://sheryloe.github.io/AI_BISEO/",
+      "pages_url": "https://dongriarchive.com/AI_BISEO/",
       "wiki_url": "https://github.com/sheryloe/AI_BISEO/tree/main/wiki",
       "language": "TypeScript",
       "topics": [
@@ -329,7 +329,7 @@
       "availability": "live",
       "featured": true,
       "preview_path": "assets/previews/ai-biseo.png",
-      "preview_image": "https://sheryloe.github.io/assets/previews/ai-biseo.png",
+      "preview_image": "https://dongriarchive.com/assets/previews/ai-biseo.png",
       "preview_alt": "AI_BISEO 소개 페이지 첫 화면. AI 비서 운영 대시보드와 자동화 흐름 설명이 보입니다.",
       "updated_at": "2026-03-16T12:54:29Z",
       "pushed_at": "2026-03-16T12:54:25Z"

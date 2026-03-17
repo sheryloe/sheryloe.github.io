@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sheryloe Projects RSS</title>
-    <link>https://sheryloe.github.io/</link>
+    <link>https://dongriarchive.com/</link>
     <description>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</description>
     <language>ko-kr</language>
     <lastBuildDate>Tue, 17 Mar 2026 07:26:46 +0000</lastBuildDate>
-    <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dongriarchive.com/rss.xml" rel="self" type="application/rss+xml" />
   <item>
     <title>donggeuri-cloudflare-blog</title>
     <link>https://github.com/sheryloe/donggeuri-cloudflare-blog</link>

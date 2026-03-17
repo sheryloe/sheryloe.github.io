@@ -2,14 +2,14 @@
   "name": "Sheryloe Projects",
   "short_name": "Sheryloe",
   "description": "AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.",
-  "start_url": "https://sheryloe.github.io/",
-  "scope": "https://sheryloe.github.io/",
+  "start_url": "https://dongriarchive.com/",
+  "scope": "https://dongriarchive.com/",
   "display": "standalone",
   "background_color": "#f4ede4",
   "theme_color": "#193630",
   "icons": [
     {
-      "src": "https://sheryloe.github.io/assets/meta/icon.svg",
+      "src": "https://dongriarchive.com/assets/meta/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"

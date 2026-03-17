@@ -111,6 +111,15 @@ def render_google_analytics_snippet(config: dict[str, Any]) -> str:
     )
 
 
+def render_google_site_verification_meta(config: dict[str, Any]) -> str:
+    verification = str(config.get("google_site_verification", "")).strip()
+    if not verification:
+        return ""
+
+    escaped_verification = html.escape(verification, quote=True)
+    return f'  <meta name="google-site-verification" content="{escaped_verification}">'
+
+
 def default_category(name: str, language: str) -> str:
     labels = {
         "AI_BISEO": "Automation Ops",
@@ -859,6 +868,7 @@ def render_wiki_doc_html(config: dict[str, Any], document: dict[str, Any], repos
         "__SITE_TITLE__": html.escape(str(config["site_title"])),
         "__DESCRIPTION__": html.escape(str(config["description"])),
         "__GOOGLE_ANALYTICS_SNIPPET__": render_google_analytics_snippet(config),
+        "__GOOGLE_SITE_VERIFICATION_META__": render_google_site_verification_meta(config),
         "__DOC_TITLE__": html.escape(str(document["title"])),
         "__DOC_BADGE__": html.escape(str(document.get("badge", "Document"))),
         "__DOC_SUMMARY__": html.escape(str(document.get("summary", ""))),
@@ -913,6 +923,7 @@ def render_index_html(config: dict[str, Any], repositories: list[dict[str, Any]]
         "__AUTHOR_NAME__": html.escape(str(config["author_name"])),
         "__SITE_URL__": html.escape(str(config["site_url"])),
         "__GOOGLE_ANALYTICS_SNIPPET__": render_google_analytics_snippet(config),
+        "__GOOGLE_SITE_VERIFICATION_META__": render_google_site_verification_meta(config),
         "__GITHUB_PROFILE__": html.escape(str(config["github_profile"])),
         "__WIKI_REPO_URL__": html.escape(str(config["wiki_repo_url"])),
         "__GENERATED_LABEL__": generated_at.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
@@ -1003,6 +1014,7 @@ def render_wiki_index_html(config: dict[str, Any], repositories: list[dict[str, 
         "__SITE_TITLE__": html.escape(str(config["site_title"])),
         "__DESCRIPTION__": html.escape(str(config["description"])),
         "__GOOGLE_ANALYTICS_SNIPPET__": render_google_analytics_snippet(config),
+        "__GOOGLE_SITE_VERIFICATION_META__": render_google_site_verification_meta(config),
         "__GITHUB_PROFILE__": html.escape(str(config["github_profile"])),
         "__WIKI_REPO_URL__": html.escape(str(config["wiki_repo_url"])),
         "__PUBLIC_REPO_COUNT__": str(len(repositories)),
