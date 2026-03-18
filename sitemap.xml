@@ -1,168 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-<url>
-<loc>https://sheryloe.github.io/</loc>
-<lastmod>2026-03-18</lastmod>
-<changefreq>daily</changefreq>
-<priority>1.0</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/meta/root-hub-social.png</image:loc>
-<image:title>Sheryloe Projects</image:title>
-<image:caption>Sheryloe Projects 첫 화면 미리보기</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/wiki/</loc>
-<lastmod>2026-03-18</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.7</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/meta/root-hub-social.png</image:loc>
-<image:title>Sheryloe Projects Wiki</image:title>
-<image:caption>Central wiki landing</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/wiki/home.html</loc>
-<lastmod>2026-03-18</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/meta/root-hub-social.png</image:loc>
-<image:title>Portfolio Home</image:title>
-<image:caption>전체 포트폴리오 축과 작업 원칙을 짧게 정리한 소개 문서입니다.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/wiki/repository-service-map.html</loc>
-<lastmod>2026-03-18</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/meta/root-hub-social.png</image:loc>
-<image:title>Repository Service Map</image:title>
-<image:caption>저장소별 역할, 서비스 설명, 다음 개선 포인트를 한 장으로 묶은 포지셔닝 문서입니다.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/wiki/timeline-do.html</loc>
-<lastmod>2026-03-18</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/meta/root-hub-social.png</image:loc>
-<image:title>Timeline DO</image:title>
-<image:caption>날짜 기준으로 묶은 완료 작업 기록으로, 전체 포트폴리오의 흐름을 빠르게 훑을 수 있습니다.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/wiki/service-todo.html</loc>
-<lastmod>2026-03-18</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/meta/root-hub-social.png</image:loc>
-<image:title>Service TODO</image:title>
-<image:caption>보안, 기능, 운영 관점에서 어떤 저장소를 다음에 어떻게 다듬어야 하는지 정리한 백로그입니다.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/Favorit/</loc>
-<lastmod>2026-03-18</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/previews/favorit.png</image:loc>
-<image:title>Favorit</image:title>
-<image:caption>Favorit 소개 페이지 첫 화면. 실행 즐겨찾기 위젯과 설치 흐름 설명이 보입니다.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/grid-crop-image/</loc>
-<lastmod>2026-03-18</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/previews/grid-crop-image.png</image:loc>
-<image:title>grid-crop-image</image:title>
-<image:caption>grid-crop-image 소개 페이지 첫 화면. 이미지 자르기와 분할 저장 기능이 보입니다.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/Automethemoney/</loc>
-<lastmod>2026-03-18</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/previews/automethemoney.png</image:loc>
-<image:title>Automethemoney</image:title>
-<image:caption>Automethemoney 소개 페이지 첫 화면. 자동매매 전략과 운영 리포트 구조가 보입니다.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/BloggerGent/</loc>
-<lastmod>2026-03-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/previews/bloggergent.png</image:loc>
-<image:title>BloggerGent</image:title>
-<image:caption>BloggerGent 소개 페이지 첫 화면. 멀티 채널 블로그 발행 스튜디오 설명이 보입니다.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/BloManagent/</loc>
-<lastmod>2026-03-16</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/previews/blomanagent.png</image:loc>
-<image:title>BloManagent</image:title>
-<image:caption>BloManagent 소개 페이지 첫 화면. 블로그 수집과 비교 분석 대시보드 흐름이 보입니다.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/donggri_gagyeobu/</loc>
-<lastmod>2026-03-16</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/previews/donggri-gagyeobu.png</image:loc>
-<image:title>donggri_gagyeobu</image:title>
-<image:caption>donggri_gagyeobu 소개 페이지 첫 화면. 개인 가계부 웹앱 구조와 사용 흐름이 보입니다.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/Vibe_Cowork_Thinking/</loc>
-<lastmod>2026-03-16</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/previews/vibe-cowork-thinking.png</image:loc>
-<image:title>Vibe_Cowork_Thinking</image:title>
-<image:caption>Vibe_Cowork_Thinking 소개 페이지 첫 화면. AI 협업 오케스트레이션 실험 설명이 보입니다.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/AI_Writer_TISTORY/</loc>
-<lastmod>2026-03-16</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/previews/ai-writer-tistory.png</image:loc>
-<image:title>AI_Writer_TISTORY</image:title>
-<image:caption>AI_Writer_TISTORY 소개 페이지 첫 화면. AI 글쓰기와 티스토리 발행 흐름이 보입니다.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://sheryloe.github.io/AI_BISEO/</loc>
-<lastmod>2026-03-16</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-<image:image>
-<image:loc>https://sheryloe.github.io/assets/previews/ai-biseo.png</image:loc>
-<image:title>AI_BISEO</image:title>
-<image:caption>AI_BISEO 소개 페이지 첫 화면. AI 비서 운영 대시보드와 자동화 흐름 설명이 보입니다.</image:caption>
-</image:image>
-</url>
+  <url>
+    <loc>https://sheryloe.github.io/</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/meta/root-hub-social.png</image:loc>
+      <image:title>Sheryloe Projects</image:title>
+      <image:caption>Sheryloe Projects 첫 화면 미리보기</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/wiki/</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/meta/root-hub-social.png</image:loc>
+      <image:title>Sheryloe Projects Wiki</image:title>
+      <image:caption>Central wiki landing</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/wiki/home.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/meta/root-hub-social.png</image:loc>
+      <image:title>Portfolio Home</image:title>
+      <image:caption>전체 포트폴리오 축과 작업 원칙을 짧게 정리한 소개 문서입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/wiki/repository-service-map.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/meta/root-hub-social.png</image:loc>
+      <image:title>Repository Service Map</image:title>
+      <image:caption>저장소별 역할, 서비스 설명, 다음 개선 포인트를 한 장으로 묶은 포지셔닝 문서입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/wiki/timeline-do.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/meta/root-hub-social.png</image:loc>
+      <image:title>Timeline DO</image:title>
+      <image:caption>날짜 기준으로 묶은 완료 작업 기록으로, 전체 포트폴리오의 흐름을 빠르게 훑을 수 있습니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/wiki/service-todo.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/meta/root-hub-social.png</image:loc>
+      <image:title>Service TODO</image:title>
+      <image:caption>보안, 기능, 운영 관점에서 어떤 저장소를 다음에 어떻게 다듬어야 하는지 정리한 백로그입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/BloggerGent/</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/bloggergent.png</image:loc>
+      <image:title>BloggerGent</image:title>
+      <image:caption>BloggerGent 소개 페이지 첫 화면. 멀티 채널 블로그 발행 스튜디오 설명이 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/Favorit/</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/favorit.png</image:loc>
+      <image:title>Favorit</image:title>
+      <image:caption>Favorit 소개 페이지 첫 화면. 실행 즐겨찾기 위젯과 설치 흐름 설명이 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/grid-crop-image/</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/grid-crop-image.png</image:loc>
+      <image:title>grid-crop-image</image:title>
+      <image:caption>grid-crop-image 소개 페이지 첫 화면. 이미지 자르기와 분할 저장 기능이 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/Automethemoney/</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/automethemoney.png</image:loc>
+      <image:title>Automethemoney</image:title>
+      <image:caption>Automethemoney 소개 페이지 첫 화면. 자동매매 전략과 운영 리포트 구조가 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/BloManagent/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/blomanagent.png</image:loc>
+      <image:title>BloManagent</image:title>
+      <image:caption>BloManagent 소개 페이지 첫 화면. 블로그 수집과 비교 분석 대시보드 흐름이 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/donggri_gagyeobu/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/donggri-gagyeobu.png</image:loc>
+      <image:title>donggri_gagyeobu</image:title>
+      <image:caption>donggri_gagyeobu 소개 페이지 첫 화면. 개인 가계부 웹앱 구조와 사용 흐름이 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/Vibe_Cowork_Thinking/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/vibe-cowork-thinking.png</image:loc>
+      <image:title>Vibe_Cowork_Thinking</image:title>
+      <image:caption>Vibe_Cowork_Thinking 소개 페이지 첫 화면. AI 협업 오케스트레이션 실험 설명이 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/AI_Writer_TISTORY/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/ai-writer-tistory.png</image:loc>
+      <image:title>AI_Writer_TISTORY</image:title>
+      <image:caption>AI_Writer_TISTORY 소개 페이지 첫 화면. AI 글쓰기와 티스토리 발행 흐름이 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/AI_BISEO/</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/ai-biseo.png</image:loc>
+      <image:title>AI_BISEO</image:title>
+      <image:caption>AI_BISEO 소개 페이지 첫 화면. AI 비서 운영 대시보드와 자동화 흐름 설명이 보입니다.</image:caption>
+    </image:image>
+  </url>
 </urlset>
