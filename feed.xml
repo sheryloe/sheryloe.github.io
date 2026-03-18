@@ -2,13 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Sheryloe Projects Atom</title>
   <id>https://sheryloe.github.io/feed.xml</id>
-  <updated>2026-03-18T06:05:48Z</updated>
+  <updated>2026-03-18T09:16:24Z</updated>
   <link href="https://sheryloe.github.io/feed.xml" rel="self" />
   <link href="https://sheryloe.github.io/" rel="alternate" />
   <subtitle>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</subtitle>
   <author>
     <name>sheryloe</name>
   </author>
+  <entry>
+    <title>Favorit</title>
+    <id>https://github.com/sheryloe/Favorit</id>
+    <link href="https://sheryloe.github.io/Favorit/" />
+    <updated>2026-03-18T09:16:24Z</updated>
+    <published>2026-03-11T07:21:57Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Favorit&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;파일과 URL을 위젯처럼 여는 실행 즐겨찾기 런처&lt;/p&gt;&lt;p&gt;Windows 바탕화면에서 자주 쓰는 파일, 폴더, URL을 위젯처럼 빠르게 실행하도록 만든 데스크톱 런처입니다.&lt;/p&gt;&lt;p&gt;Track: Desktop Utilities · Stage: Refine · Status: Live Widget&lt;/p&gt;&lt;p&gt;Next focus: 검색, 그룹 정렬, 설정 백업, SmartScreen 대응 문서&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Favorit/&quot;&gt;https://sheryloe.github.io/Favorit/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/Favorit/tree/main/wiki&quot;&gt;https://github.com/sheryloe/Favorit/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Favorit&quot;&gt;https://github.com/sheryloe/Favorit&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
   <entry>
     <title>grid-crop-image</title>
     <id>https://github.com/sheryloe/grid-crop-image</id>
@@ -64,14 +72,6 @@
     <updated>2026-03-16T12:55:08Z</updated>
     <published>2020-02-25T14:50:04Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;Vibe_Cowork_Thinking&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Runner와 Orchestrator를 분리한 협업 실험실&lt;/p&gt;&lt;p&gt;프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.&lt;/p&gt;&lt;p&gt;Track: AI Automation · Stage: Explore · Status: Live Lab&lt;/p&gt;&lt;p&gt;Next focus: diff 뷰, 권한 모델, 결과 비교 리포트&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Vibe_Cowork_Thinking/&quot;&gt;https://sheryloe.github.io/Vibe_Cowork_Thinking/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/Vibe_Cowork_Thinking/tree/feat/initial-workflow-baseline/wiki&quot;&gt;https://github.com/sheryloe/Vibe_Cowork_Thinking/tree/feat/initial-workflow-baseline/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Vibe_Cowork_Thinking&quot;&gt;https://github.com/sheryloe/Vibe_Cowork_Thinking&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Favorit</title>
-    <id>https://github.com/sheryloe/Favorit</id>
-    <link href="https://sheryloe.github.io/Favorit/" />
-    <updated>2026-03-16T12:55:04Z</updated>
-    <published>2026-03-11T07:21:57Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;Favorit&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;파일과 URL을 위젯처럼 여는 실행 즐겨찾기 런처&lt;/p&gt;&lt;p&gt;Windows 바탕화면에서 자주 쓰는 파일, 폴더, URL을 위젯처럼 빠르게 실행하도록 만든 데스크톱 런처입니다.&lt;/p&gt;&lt;p&gt;Track: Desktop Utilities · Stage: Refine · Status: Live Widget&lt;/p&gt;&lt;p&gt;Next focus: 검색, 그룹 정렬, 설정 백업, SmartScreen 대응 문서&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Favorit/&quot;&gt;https://sheryloe.github.io/Favorit/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/Favorit/tree/main/wiki&quot;&gt;https://github.com/sheryloe/Favorit/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Favorit&quot;&gt;https://github.com/sheryloe/Favorit&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
     <title>AI_Writer_TISTORY</title>

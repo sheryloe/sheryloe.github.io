@@ -67,6 +67,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://sheryloe.github.io/Favorit/</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/favorit.png</image:loc>
+      <image:title>Favorit</image:title>
+      <image:caption>Favorit 소개 페이지 첫 화면. 실행 즐겨찾기 위젯과 설치 흐름 설명이 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://sheryloe.github.io/grid-crop-image/</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -130,17 +141,6 @@
       <image:loc>https://sheryloe.github.io/assets/previews/vibe-cowork-thinking.png</image:loc>
       <image:title>Vibe_Cowork_Thinking</image:title>
       <image:caption>Vibe_Cowork_Thinking 소개 페이지 첫 화면. AI 협업 오케스트레이션 실험 설명이 보입니다.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sheryloe.github.io/Favorit/</loc>
-    <lastmod>2026-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://sheryloe.github.io/assets/previews/favorit.png</image:loc>
-      <image:title>Favorit</image:title>
-      <image:caption>Favorit 소개 페이지 첫 화면. 실행 즐겨찾기 위젯과 설치 흐름 설명이 보입니다.</image:caption>
     </image:image>
   </url>
   <url>

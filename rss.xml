@@ -5,8 +5,23 @@
     <link>https://sheryloe.github.io/</link>
     <description>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 18 Mar 2026 06:05:48 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 09:16:24 +0000</lastBuildDate>
     <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Favorit</title>
+    <link>https://sheryloe.github.io/Favorit/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/Favorit#2026-03-18</guid>
+    <pubDate>Wed, 18 Mar 2026 09:16:24 +0000</pubDate>
+    <description><![CDATA[<p><strong>Favorit</strong></p><p>파일과 URL을 위젯처럼 여는 실행 즐겨찾기 런처</p><p>Windows 바탕화면에서 자주 쓰는 파일, 폴더, URL을 위젯처럼 빠르게 실행하도록 만든 데스크톱 런처입니다.</p><p>Track: Desktop Utilities · Stage: Refine · Status: Live Widget</p><p>Next focus: 검색, 그룹 정렬, 설정 백업, SmartScreen 대응 문서</p><p>Live page: <a href="https://sheryloe.github.io/Favorit/">https://sheryloe.github.io/Favorit/</a></p><p>Wiki: <a href="https://github.com/sheryloe/Favorit/tree/main/wiki">https://github.com/sheryloe/Favorit/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/Favorit">https://github.com/sheryloe/Favorit</a></p>]]></description>
+    <category>Desktop Utilities</category>
+    <category>Desktop Utility</category>
+    <category>Refine</category>
+    <category>C++</category>
+    <category>cmake</category>
+    <category>cpp</category>
+    <category>launcher</category>
+    <category>productivity</category>
+  </item>
   <item>
     <title>grid-crop-image</title>
     <link>https://sheryloe.github.io/grid-crop-image/</link>
@@ -107,21 +122,6 @@
     <category>automation</category>
     <category>codex</category>
     <category>gemini</category>
-  </item>
-  <item>
-    <title>Favorit</title>
-    <link>https://sheryloe.github.io/Favorit/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/Favorit#2026-03-16</guid>
-    <pubDate>Mon, 16 Mar 2026 12:55:04 +0000</pubDate>
-    <description><![CDATA[<p><strong>Favorit</strong></p><p>파일과 URL을 위젯처럼 여는 실행 즐겨찾기 런처</p><p>Windows 바탕화면에서 자주 쓰는 파일, 폴더, URL을 위젯처럼 빠르게 실행하도록 만든 데스크톱 런처입니다.</p><p>Track: Desktop Utilities · Stage: Refine · Status: Live Widget</p><p>Next focus: 검색, 그룹 정렬, 설정 백업, SmartScreen 대응 문서</p><p>Live page: <a href="https://sheryloe.github.io/Favorit/">https://sheryloe.github.io/Favorit/</a></p><p>Wiki: <a href="https://github.com/sheryloe/Favorit/tree/main/wiki">https://github.com/sheryloe/Favorit/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/Favorit">https://github.com/sheryloe/Favorit</a></p>]]></description>
-    <category>Desktop Utilities</category>
-    <category>Desktop Utility</category>
-    <category>Refine</category>
-    <category>C++</category>
-    <category>cmake</category>
-    <category>cpp</category>
-    <category>launcher</category>
-    <category>productivity</category>
   </item>
   <item>
     <title>AI_Writer_TISTORY</title>
