@@ -1,9 +1,42 @@
 {
-  "generated_at": "2026-03-17T19:12:52.896925Z",
+  "generated_at": "2026-03-18T02:49:30.205754Z",
   "site_url": "https://sheryloe.github.io/",
   "repository_count": 10,
   "live_pages_count": 9,
   "repositories": [
+    {
+      "name": "Automethemoney",
+      "track": "service-products",
+      "track_title": "Service Products",
+      "category": "Trading Ops",
+      "subtitle": "전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔",
+      "description": "자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.",
+      "repo_url": "https://github.com/sheryloe/Automethemoney",
+      "live_url": "https://sheryloe.github.io/Automethemoney/",
+      "pages_url": "https://sheryloe.github.io/Automethemoney/",
+      "wiki_url": "https://github.com/sheryloe/Automethemoney/tree/main/wiki",
+      "language": "Python",
+      "topics": [
+        "algorithmic-trading",
+        "dashboard",
+        "python",
+        "risk-control",
+        "supabase",
+        "trading-console"
+      ],
+      "status": "Live Console",
+      "stage": "Operate",
+      "audience": "트레이딩 운영 / 실험 관리",
+      "next_focus": "paper/live 권한 분리, 손실 경보, 전략별 비교",
+      "has_pages": true,
+      "availability": "live",
+      "featured": true,
+      "preview_path": "assets/previews/automethemoney.png",
+      "preview_image": "https://sheryloe.github.io/assets/previews/automethemoney.png",
+      "preview_alt": "Automethemoney 소개 페이지 첫 화면. 자동매매 전략과 운영 리포트 구조가 보입니다.",
+      "updated_at": "2026-03-18T00:00:42Z",
+      "pushed_at": "2026-03-18T00:00:39Z"
+    },
     {
       "name": "BloggerGent",
       "track": "ai-automation",
@@ -97,39 +130,6 @@
       "pushed_at": "2026-03-17T09:58:12Z"
     },
     {
-      "name": "Automethemoney",
-      "track": "service-products",
-      "track_title": "Service Products",
-      "category": "Trading Ops",
-      "subtitle": "전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔",
-      "description": "자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.",
-      "repo_url": "https://github.com/sheryloe/Automethemoney",
-      "live_url": "https://sheryloe.github.io/Automethemoney/",
-      "pages_url": "https://sheryloe.github.io/Automethemoney/",
-      "wiki_url": "https://github.com/sheryloe/Automethemoney/tree/main/wiki",
-      "language": "Python",
-      "topics": [
-        "algorithmic-trading",
-        "dashboard",
-        "python",
-        "risk-control",
-        "supabase",
-        "trading-console"
-      ],
-      "status": "Live Console",
-      "stage": "Operate",
-      "audience": "트레이딩 운영 / 실험 관리",
-      "next_focus": "paper/live 권한 분리, 손실 경보, 전략별 비교",
-      "has_pages": true,
-      "availability": "live",
-      "featured": true,
-      "preview_path": "assets/previews/automethemoney.png",
-      "preview_image": "https://sheryloe.github.io/assets/previews/automethemoney.png",
-      "preview_alt": "Automethemoney 소개 페이지 첫 화면. 자동매매 전략과 운영 리포트 구조가 보입니다.",
-      "updated_at": "2026-03-17T00:00:35Z",
-      "pushed_at": "2026-03-17T00:00:31Z"
-    },
-    {
       "name": "BloManagent",
       "track": "service-products",
       "track_title": "Service Products",
@@ -192,7 +192,7 @@
       "preview_path": "assets/previews/donggri-gagyeobu.png",
       "preview_image": "https://sheryloe.github.io/assets/previews/donggri-gagyeobu.png",
       "preview_alt": "donggri_gagyeobu 소개 페이지 첫 화면. 개인 가계부 웹앱 구조와 사용 흐름이 보입니다.",
-      "updated_at": "2026-03-16T12:55:14Z",
+      "updated_at": "2026-03-18T02:34:39Z",
       "pushed_at": "2026-03-16T12:55:10Z"
     },
     {
