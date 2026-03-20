@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Sheryloe Projects Atom</title>
   <id>https://sheryloe.github.io/feed.xml</id>
-  <updated>2026-03-20T09:07:37Z</updated>
+  <updated>2026-03-20T18:30:16Z</updated>
   <link href="https://sheryloe.github.io/feed.xml" rel="self" />
   <link href="https://sheryloe.github.io/" rel="alternate" />
   <subtitle>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</subtitle>
@@ -10,20 +10,36 @@
     <name>sheryloe</name>
   </author>
   <entry>
+    <title>BloggerGent</title>
+    <id>https://github.com/sheryloe/BloggerGent</id>
+    <link href="https://sheryloe.github.io/BloggerGent/" />
+    <updated>2026-03-20T18:30:16Z</updated>
+    <published>2026-03-15T05:48:44Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;BloggerGent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;멀티 채널 블로그 운영을 위한 AI 발행 스튜디오&lt;/p&gt;&lt;p&gt;여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.&lt;/p&gt;&lt;p&gt;Track: AI Automation · Stage: Scale · Status: Live Studio&lt;/p&gt;&lt;p&gt;Next focus: 승인 단계, 콘텐츠 캘린더, 발행 QA 체크리스트&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/BloggerGent/&quot;&gt;https://sheryloe.github.io/BloggerGent/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/BloggerGent/tree/main/wiki&quot;&gt;https://github.com/sheryloe/BloggerGent/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/BloggerGent&quot;&gt;https://github.com/sheryloe/BloggerGent&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
     <title>Automethemoney</title>
     <id>https://github.com/sheryloe/Automethemoney</id>
     <link href="https://sheryloe.github.io/Automethemoney/" />
-    <updated>2026-03-20T09:07:37Z</updated>
+    <updated>2026-03-20T16:30:42Z</updated>
     <published>2026-03-04T12:59:41Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;Automethemoney&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔&lt;/p&gt;&lt;p&gt;자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.&lt;/p&gt;&lt;p&gt;Track: Service Products · Stage: Operate · Status: Live Console&lt;/p&gt;&lt;p&gt;Next focus: paper/live 권한 분리, 손실 경보, 전략별 비교&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Automethemoney/&quot;&gt;https://sheryloe.github.io/Automethemoney/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/Automethemoney/tree/main/wiki&quot;&gt;https://github.com/sheryloe/Automethemoney/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Automethemoney&quot;&gt;https://github.com/sheryloe/Automethemoney&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
-    <title>BloggerGent</title>
-    <id>https://github.com/sheryloe/BloggerGent</id>
-    <link href="https://sheryloe.github.io/BloggerGent/" />
-    <updated>2026-03-20T08:49:14Z</updated>
-    <published>2026-03-15T05:48:44Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;BloggerGent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;멀티 채널 블로그 운영을 위한 AI 발행 스튜디오&lt;/p&gt;&lt;p&gt;여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.&lt;/p&gt;&lt;p&gt;Track: AI Automation · Stage: Scale · Status: Live Studio&lt;/p&gt;&lt;p&gt;Next focus: 승인 단계, 콘텐츠 캘린더, 발행 QA 체크리스트&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/BloggerGent/&quot;&gt;https://sheryloe.github.io/BloggerGent/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/BloggerGent/tree/main/wiki&quot;&gt;https://github.com/sheryloe/BloggerGent/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/BloggerGent&quot;&gt;https://github.com/sheryloe/BloggerGent&lt;/a&gt;&lt;/p&gt;</summary>
+    <title>Favorit</title>
+    <id>https://github.com/sheryloe/Favorit</id>
+    <link href="https://sheryloe.github.io/Favorit/" />
+    <updated>2026-03-20T15:23:49Z</updated>
+    <published>2026-03-11T07:21:57Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Favorit&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;파일과 URL을 위젯처럼 여는 실행 즐겨찾기 런처&lt;/p&gt;&lt;p&gt;Windows 바탕화면에서 자주 쓰는 파일, 폴더, URL을 위젯처럼 빠르게 실행하도록 만든 데스크톱 런처입니다.&lt;/p&gt;&lt;p&gt;Track: Desktop Utilities · Stage: Refine · Status: Live Widget&lt;/p&gt;&lt;p&gt;Next focus: 검색, 그룹 정렬, 설정 백업, SmartScreen 대응 문서&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Favorit/&quot;&gt;https://sheryloe.github.io/Favorit/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/Favorit/tree/main/wiki&quot;&gt;https://github.com/sheryloe/Favorit/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Favorit&quot;&gt;https://github.com/sheryloe/Favorit&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>donggri_gagyeobu</title>
+    <id>https://github.com/sheryloe/donggri_gagyeobu</id>
+    <link href="https://sheryloe.github.io/donggri_gagyeobu/" />
+    <updated>2026-03-20T15:20:57Z</updated>
+    <published>2020-04-06T13:05:43Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;donggri_gagyeobu&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;자산 흐름과 예산을 브라우저에서 관리하는 개인 가계부&lt;/p&gt;&lt;p&gt;자산, 카드 결제 예정, 예산, 소비 흐름을 브라우저에서 바로 관리할 수 있게 정리한 개인 재무 서비스입니다.&lt;/p&gt;&lt;p&gt;Track: Service Products · Stage: Operate · Status: Live Service&lt;/p&gt;&lt;p&gt;Next focus: 예산 알림, 가족 공유 모드, 백업 검증 자동화&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/donggri_gagyeobu/&quot;&gt;https://sheryloe.github.io/donggri_gagyeobu/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki&quot;&gt;https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/donggri_gagyeobu&quot;&gt;https://github.com/sheryloe/donggri_gagyeobu&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
     <title>grid-crop-image</title>
@@ -32,14 +48,6 @@
     <updated>2026-03-19T07:02:07Z</updated>
     <published>2026-03-09T01:00:14Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;grid-crop-image&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;스크린샷 자르기와 분할 저장을 빠르게 끝내는 유틸리티&lt;/p&gt;&lt;p&gt;스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용까지 지원하는 Windows 이미지 워크플로 도구입니다.&lt;/p&gt;&lt;p&gt;Track: Desktop Utilities · Stage: Refine · Status: Live Utility&lt;/p&gt;&lt;p&gt;Next focus: 배치 처리, OCR 보조, Undo/Redo&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/grid-crop-image/&quot;&gt;https://sheryloe.github.io/grid-crop-image/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/grid-crop-image/tree/main/wiki&quot;&gt;https://github.com/sheryloe/grid-crop-image/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/grid-crop-image&quot;&gt;https://github.com/sheryloe/grid-crop-image&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Favorit</title>
-    <id>https://github.com/sheryloe/Favorit</id>
-    <link href="https://sheryloe.github.io/Favorit/" />
-    <updated>2026-03-18T09:16:24Z</updated>
-    <published>2026-03-11T07:21:57Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;Favorit&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;파일과 URL을 위젯처럼 여는 실행 즐겨찾기 런처&lt;/p&gt;&lt;p&gt;Windows 바탕화면에서 자주 쓰는 파일, 폴더, URL을 위젯처럼 빠르게 실행하도록 만든 데스크톱 런처입니다.&lt;/p&gt;&lt;p&gt;Track: Desktop Utilities · Stage: Refine · Status: Live Widget&lt;/p&gt;&lt;p&gt;Next focus: 검색, 그룹 정렬, 설정 백업, SmartScreen 대응 문서&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Favorit/&quot;&gt;https://sheryloe.github.io/Favorit/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/Favorit/tree/main/wiki&quot;&gt;https://github.com/sheryloe/Favorit/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Favorit&quot;&gt;https://github.com/sheryloe/Favorit&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
     <title>cloudflare-blog</title>
@@ -56,14 +64,6 @@
     <updated>2026-03-16T16:38:56Z</updated>
     <published>2026-03-12T04:59:48Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;BloManagent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;URL 수집과 비교 리포트를 잇는 분석 대시보드&lt;/p&gt;&lt;p&gt;블로그 URL 수집, 등급 산출, 주간 비교 리포트, 시각적 설명을 연결하는 분석 제품 실험입니다.&lt;/p&gt;&lt;p&gt;Track: Service Products · Stage: Operate · Status: Live Dashboard&lt;/p&gt;&lt;p&gt;Next focus: 비동기 수집, 공유 리포트, 등급 근거 시각화&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/BloManagent/&quot;&gt;https://sheryloe.github.io/BloManagent/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/BloManagent/tree/main/wiki&quot;&gt;https://github.com/sheryloe/BloManagent/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/BloManagent&quot;&gt;https://github.com/sheryloe/BloManagent&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>donggri_gagyeobu</title>
-    <id>https://github.com/sheryloe/donggri_gagyeobu</id>
-    <link href="https://sheryloe.github.io/donggri_gagyeobu/" />
-    <updated>2026-03-16T12:55:10Z</updated>
-    <published>2020-04-06T13:05:43Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;donggri_gagyeobu&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;자산 흐름과 예산을 브라우저에서 관리하는 개인 가계부&lt;/p&gt;&lt;p&gt;자산, 카드 결제 예정, 예산, 소비 흐름을 브라우저에서 바로 관리할 수 있게 정리한 개인 재무 서비스입니다.&lt;/p&gt;&lt;p&gt;Track: Service Products · Stage: Operate · Status: Live Service&lt;/p&gt;&lt;p&gt;Next focus: 예산 알림, 가족 공유 모드, 백업 검증 자동화&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/donggri_gagyeobu/&quot;&gt;https://sheryloe.github.io/donggri_gagyeobu/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki&quot;&gt;https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/donggri_gagyeobu&quot;&gt;https://github.com/sheryloe/donggri_gagyeobu&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
     <title>Vibe_Cowork_Thinking</title>

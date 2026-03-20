@@ -5,13 +5,28 @@
     <link>https://sheryloe.github.io/</link>
     <description>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 20 Mar 2026 09:07:37 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2026 18:30:16 +0000</lastBuildDate>
     <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>BloggerGent</title>
+    <link>https://sheryloe.github.io/BloggerGent/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/BloggerGent#2026-03-20</guid>
+    <pubDate>Fri, 20 Mar 2026 18:30:16 +0000</pubDate>
+    <description><![CDATA[<p><strong>BloggerGent</strong></p><p>멀티 채널 블로그 운영을 위한 AI 발행 스튜디오</p><p>여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.</p><p>Track: AI Automation · Stage: Scale · Status: Live Studio</p><p>Next focus: 승인 단계, 콘텐츠 캘린더, 발행 QA 체크리스트</p><p>Live page: <a href="https://sheryloe.github.io/BloggerGent/">https://sheryloe.github.io/BloggerGent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/BloggerGent/tree/main/wiki">https://github.com/sheryloe/BloggerGent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloggerGent">https://github.com/sheryloe/BloggerGent</a></p>]]></description>
+    <category>AI Automation</category>
+    <category>Publishing Studio</category>
+    <category>Scale</category>
+    <category>Python</category>
+    <category>ai-publishing</category>
+    <category>blogger</category>
+    <category>content-ops</category>
+    <category>editorial-workflow</category>
+  </item>
   <item>
     <title>Automethemoney</title>
     <link>https://sheryloe.github.io/Automethemoney/</link>
     <guid isPermaLink="false">https://github.com/sheryloe/Automethemoney#2026-03-20</guid>
-    <pubDate>Fri, 20 Mar 2026 09:07:37 +0000</pubDate>
+    <pubDate>Fri, 20 Mar 2026 16:30:42 +0000</pubDate>
     <description><![CDATA[<p><strong>Automethemoney</strong></p><p>전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔</p><p>자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.</p><p>Track: Service Products · Stage: Operate · Status: Live Console</p><p>Next focus: paper/live 권한 분리, 손실 경보, 전략별 비교</p><p>Live page: <a href="https://sheryloe.github.io/Automethemoney/">https://sheryloe.github.io/Automethemoney/</a></p><p>Wiki: <a href="https://github.com/sheryloe/Automethemoney/tree/main/wiki">https://github.com/sheryloe/Automethemoney/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/Automethemoney">https://github.com/sheryloe/Automethemoney</a></p>]]></description>
     <category>Service Products</category>
     <category>Trading Ops</category>
@@ -23,19 +38,34 @@
     <category>risk-control</category>
   </item>
   <item>
-    <title>BloggerGent</title>
-    <link>https://sheryloe.github.io/BloggerGent/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/BloggerGent#2026-03-20</guid>
-    <pubDate>Fri, 20 Mar 2026 08:49:14 +0000</pubDate>
-    <description><![CDATA[<p><strong>BloggerGent</strong></p><p>멀티 채널 블로그 운영을 위한 AI 발행 스튜디오</p><p>여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.</p><p>Track: AI Automation · Stage: Scale · Status: Live Studio</p><p>Next focus: 승인 단계, 콘텐츠 캘린더, 발행 QA 체크리스트</p><p>Live page: <a href="https://sheryloe.github.io/BloggerGent/">https://sheryloe.github.io/BloggerGent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/BloggerGent/tree/main/wiki">https://github.com/sheryloe/BloggerGent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloggerGent">https://github.com/sheryloe/BloggerGent</a></p>]]></description>
-    <category>AI Automation</category>
-    <category>Publishing Studio</category>
-    <category>Scale</category>
-    <category>Python</category>
-    <category>ai-publishing</category>
-    <category>blogger</category>
-    <category>content-ops</category>
-    <category>editorial-workflow</category>
+    <title>Favorit</title>
+    <link>https://sheryloe.github.io/Favorit/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/Favorit#2026-03-20</guid>
+    <pubDate>Fri, 20 Mar 2026 15:23:49 +0000</pubDate>
+    <description><![CDATA[<p><strong>Favorit</strong></p><p>파일과 URL을 위젯처럼 여는 실행 즐겨찾기 런처</p><p>Windows 바탕화면에서 자주 쓰는 파일, 폴더, URL을 위젯처럼 빠르게 실행하도록 만든 데스크톱 런처입니다.</p><p>Track: Desktop Utilities · Stage: Refine · Status: Live Widget</p><p>Next focus: 검색, 그룹 정렬, 설정 백업, SmartScreen 대응 문서</p><p>Live page: <a href="https://sheryloe.github.io/Favorit/">https://sheryloe.github.io/Favorit/</a></p><p>Wiki: <a href="https://github.com/sheryloe/Favorit/tree/main/wiki">https://github.com/sheryloe/Favorit/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/Favorit">https://github.com/sheryloe/Favorit</a></p>]]></description>
+    <category>Desktop Utilities</category>
+    <category>Desktop Utility</category>
+    <category>Refine</category>
+    <category>C++</category>
+    <category>cmake</category>
+    <category>cpp</category>
+    <category>launcher</category>
+    <category>productivity</category>
+  </item>
+  <item>
+    <title>donggri_gagyeobu</title>
+    <link>https://sheryloe.github.io/donggri_gagyeobu/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/donggri_gagyeobu#2026-03-20</guid>
+    <pubDate>Fri, 20 Mar 2026 15:20:57 +0000</pubDate>
+    <description><![CDATA[<p><strong>donggri_gagyeobu</strong></p><p>자산 흐름과 예산을 브라우저에서 관리하는 개인 가계부</p><p>자산, 카드 결제 예정, 예산, 소비 흐름을 브라우저에서 바로 관리할 수 있게 정리한 개인 재무 서비스입니다.</p><p>Track: Service Products · Stage: Operate · Status: Live Service</p><p>Next focus: 예산 알림, 가족 공유 모드, 백업 검증 자동화</p><p>Live page: <a href="https://sheryloe.github.io/donggri_gagyeobu/">https://sheryloe.github.io/donggri_gagyeobu/</a></p><p>Wiki: <a href="https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki">https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/donggri_gagyeobu">https://github.com/sheryloe/donggri_gagyeobu</a></p>]]></description>
+    <category>Service Products</category>
+    <category>Local Finance</category>
+    <category>Operate</category>
+    <category>JavaScript</category>
+    <category>budgeting</category>
+    <category>expense-tracker</category>
+    <category>finance-app</category>
+    <category>javascript</category>
   </item>
   <item>
     <title>grid-crop-image</title>
@@ -51,21 +81,6 @@
     <category>image-cropping</category>
     <category>image-processing</category>
     <category>pillow</category>
-  </item>
-  <item>
-    <title>Favorit</title>
-    <link>https://sheryloe.github.io/Favorit/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/Favorit#2026-03-18</guid>
-    <pubDate>Wed, 18 Mar 2026 09:16:24 +0000</pubDate>
-    <description><![CDATA[<p><strong>Favorit</strong></p><p>파일과 URL을 위젯처럼 여는 실행 즐겨찾기 런처</p><p>Windows 바탕화면에서 자주 쓰는 파일, 폴더, URL을 위젯처럼 빠르게 실행하도록 만든 데스크톱 런처입니다.</p><p>Track: Desktop Utilities · Stage: Refine · Status: Live Widget</p><p>Next focus: 검색, 그룹 정렬, 설정 백업, SmartScreen 대응 문서</p><p>Live page: <a href="https://sheryloe.github.io/Favorit/">https://sheryloe.github.io/Favorit/</a></p><p>Wiki: <a href="https://github.com/sheryloe/Favorit/tree/main/wiki">https://github.com/sheryloe/Favorit/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/Favorit">https://github.com/sheryloe/Favorit</a></p>]]></description>
-    <category>Desktop Utilities</category>
-    <category>Desktop Utility</category>
-    <category>Refine</category>
-    <category>C++</category>
-    <category>cmake</category>
-    <category>cpp</category>
-    <category>launcher</category>
-    <category>productivity</category>
   </item>
   <item>
     <title>cloudflare-blog</title>
@@ -92,21 +107,6 @@
     <category>blog-analytics</category>
     <category>ollama</category>
     <category>openai</category>
-  </item>
-  <item>
-    <title>donggri_gagyeobu</title>
-    <link>https://sheryloe.github.io/donggri_gagyeobu/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/donggri_gagyeobu#2026-03-16</guid>
-    <pubDate>Mon, 16 Mar 2026 12:55:10 +0000</pubDate>
-    <description><![CDATA[<p><strong>donggri_gagyeobu</strong></p><p>자산 흐름과 예산을 브라우저에서 관리하는 개인 가계부</p><p>자산, 카드 결제 예정, 예산, 소비 흐름을 브라우저에서 바로 관리할 수 있게 정리한 개인 재무 서비스입니다.</p><p>Track: Service Products · Stage: Operate · Status: Live Service</p><p>Next focus: 예산 알림, 가족 공유 모드, 백업 검증 자동화</p><p>Live page: <a href="https://sheryloe.github.io/donggri_gagyeobu/">https://sheryloe.github.io/donggri_gagyeobu/</a></p><p>Wiki: <a href="https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki">https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/donggri_gagyeobu">https://github.com/sheryloe/donggri_gagyeobu</a></p>]]></description>
-    <category>Service Products</category>
-    <category>Local Finance</category>
-    <category>Operate</category>
-    <category>JavaScript</category>
-    <category>budgeting</category>
-    <category>expense-tracker</category>
-    <category>finance-app</category>
-    <category>javascript</category>
   </item>
   <item>
     <title>Vibe_Cowork_Thinking</title>

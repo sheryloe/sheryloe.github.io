@@ -67,6 +67,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://sheryloe.github.io/BloggerGent/</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/bloggergent.png</image:loc>
+      <image:title>BloggerGent</image:title>
+      <image:caption>BloggerGent 소개 페이지 첫 화면. 멀티 채널 블로그 발행 스튜디오 설명이 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://sheryloe.github.io/Automethemoney/</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -78,14 +89,25 @@
     </image:image>
   </url>
   <url>
-    <loc>https://sheryloe.github.io/BloggerGent/</loc>
+    <loc>https://sheryloe.github.io/Favorit/</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://sheryloe.github.io/assets/previews/bloggergent.png</image:loc>
-      <image:title>BloggerGent</image:title>
-      <image:caption>BloggerGent 소개 페이지 첫 화면. 멀티 채널 블로그 발행 스튜디오 설명이 보입니다.</image:caption>
+      <image:loc>https://sheryloe.github.io/assets/previews/favorit.png</image:loc>
+      <image:title>Favorit</image:title>
+      <image:caption>Favorit 소개 페이지 첫 화면. 실행 즐겨찾기 위젯과 설치 흐름 설명이 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/donggri_gagyeobu/</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/donggri-gagyeobu.png</image:loc>
+      <image:title>donggri_gagyeobu</image:title>
+      <image:caption>donggri_gagyeobu 소개 페이지 첫 화면. 개인 가계부 웹앱 구조와 사용 흐름이 보입니다.</image:caption>
     </image:image>
   </url>
   <url>
@@ -100,17 +122,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://sheryloe.github.io/Favorit/</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://sheryloe.github.io/assets/previews/favorit.png</image:loc>
-      <image:title>Favorit</image:title>
-      <image:caption>Favorit 소개 페이지 첫 화면. 실행 즐겨찾기 위젯과 설치 흐름 설명이 보입니다.</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://sheryloe.github.io/BloManagent/</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -119,17 +130,6 @@
       <image:loc>https://sheryloe.github.io/assets/previews/blomanagent.png</image:loc>
       <image:title>BloManagent</image:title>
       <image:caption>BloManagent 소개 페이지 첫 화면. 블로그 수집과 비교 분석 대시보드 흐름이 보입니다.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sheryloe.github.io/donggri_gagyeobu/</loc>
-    <lastmod>2026-03-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://sheryloe.github.io/assets/previews/donggri-gagyeobu.png</image:loc>
-      <image:title>donggri_gagyeobu</image:title>
-      <image:caption>donggri_gagyeobu 소개 페이지 첫 화면. 개인 가계부 웹앱 구조와 사용 흐름이 보입니다.</image:caption>
     </image:image>
   </url>
   <url>
