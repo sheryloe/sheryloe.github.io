@@ -1073,7 +1073,7 @@ def render_sitemap_xml(config: dict[str, Any], repositories: list[dict[str, Any]
     lines.extend(
         [
             "  <url>",
-            f"    <loc>{site_url}wiki/</loc>",
+            f"    <loc>{site_url}/wiki/</loc>",
             f"    <lastmod>{today}</lastmod>",
             "    <changefreq>weekly</changefreq>",
             "    <priority>0.7</priority>",
