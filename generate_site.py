@@ -1049,7 +1049,7 @@ def append_image_metadata(
 
 
 def render_sitemap_xml(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
-    site_url = str(config["site_url"])
+    site_url = str(config["site_url"]).rstrip("/")
     social_image = dict(config.get("social_image", {}))
     social_image_url = absolute_asset_url(config, str(social_image.get("path", "assets/meta/root-hub-social.png")))
     today = datetime.now(timezone.utc).date().isoformat()
@@ -1057,7 +1057,7 @@ def render_sitemap_xml(config: dict[str, Any], repositories: list[dict[str, Any]
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
         "  <url>",
-        f"    <loc>{site_url}</loc>",
+        f"    <loc>{site_url}/</loc>",
         f"    <lastmod>{today}</lastmod>",
         "    <changefreq>daily</changefreq>",
         "    <priority>1.0</priority>",
@@ -1253,7 +1253,8 @@ def render_atom_xml(config: dict[str, Any], repositories: list[dict[str, Any]]) 
 
 
 def render_robots_txt(config: dict[str, Any]) -> str:
-    return f"User-agent: *\nAllow: /\n\nSitemap: {config['site_url']}sitemap.xml\n"
+    site_url = str(config['site_url']).rstrip("/")
+    return f"User-agent: *\nAllow: /\n\nSitemap: {site_url}/sitemap.xml\n"
 
 
 def render_site_webmanifest(config: dict[str, Any]) -> str:
