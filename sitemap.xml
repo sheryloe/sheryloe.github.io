@@ -67,17 +67,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://sheryloe.github.io/BloggerGent/</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://sheryloe.github.io/assets/previews/bloggergent.png</image:loc>
-      <image:title>BloggerGent</image:title>
-      <image:caption>BloggerGent 소개 페이지 첫 화면. 멀티 채널 블로그 발행 스튜디오 설명이 보입니다.</image:caption>
-    </image:image>
-  </url>
-  <url>
     <loc>https://sheryloe.github.io/Automethemoney/</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -86,6 +75,17 @@
       <image:loc>https://sheryloe.github.io/assets/previews/automethemoney.png</image:loc>
       <image:title>Automethemoney</image:title>
       <image:caption>Automethemoney 소개 페이지 첫 화면. 자동매매 전략과 운영 리포트 구조가 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/BloggerGent/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/bloggergent.png</image:loc>
+      <image:title>BloggerGent</image:title>
+      <image:caption>BloggerGent 소개 페이지 첫 화면. 멀티 채널 블로그 발행 스튜디오 설명이 보입니다.</image:caption>
     </image:image>
   </url>
   <url>
