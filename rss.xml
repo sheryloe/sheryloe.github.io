@@ -5,13 +5,13 @@
     <link>https://sheryloe.github.io/</link>
     <description>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 30 Mar 2026 00:00:33 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2026 00:00:35 +0000</lastBuildDate>
     <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <item>
     <title>Automethemoney</title>
     <link>https://sheryloe.github.io/Automethemoney/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/Automethemoney#2026-03-30</guid>
-    <pubDate>Mon, 30 Mar 2026 00:00:33 +0000</pubDate>
+    <guid isPermaLink="false">https://github.com/sheryloe/Automethemoney#2026-03-31</guid>
+    <pubDate>Tue, 31 Mar 2026 00:00:35 +0000</pubDate>
     <description><![CDATA[<p><strong>Automethemoney</strong></p><p>전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔</p><p>자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.</p><p>Track: Service Products · Stage: Operate · Status: Live Console</p><p>Next focus: paper/live 권한 분리, 손실 경보, 전략별 비교</p><p>Live page: <a href="https://sheryloe.github.io/Automethemoney/">https://sheryloe.github.io/Automethemoney/</a></p><p>Wiki: <a href="https://github.com/sheryloe/Automethemoney/tree/main/wiki">https://github.com/sheryloe/Automethemoney/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/Automethemoney">https://github.com/sheryloe/Automethemoney</a></p>]]></description>
     <category>Service Products</category>
     <category>Trading Ops</category>
