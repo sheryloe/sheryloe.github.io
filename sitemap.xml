@@ -78,6 +78,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://sheryloe.github.io/grid-crop-image/</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/grid-crop-image.png</image:loc>
+      <image:title>grid-crop-image</image:title>
+      <image:caption>grid-crop-image 소개 페이지 첫 화면. 이미지 자르기와 분할 저장 기능이 보입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://sheryloe.github.io/Favorit/</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -108,17 +119,6 @@
       <image:loc>https://sheryloe.github.io/assets/previews/donggri-gagyeobu.png</image:loc>
       <image:title>donggri_gagyeobu</image:title>
       <image:caption>donggri_gagyeobu 소개 페이지 첫 화면. 개인 가계부 웹앱 구조와 사용 흐름이 보입니다.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sheryloe.github.io/grid-crop-image/</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://sheryloe.github.io/assets/previews/grid-crop-image.png</image:loc>
-      <image:title>grid-crop-image</image:title>
-      <image:caption>grid-crop-image 소개 페이지 첫 화면. 이미지 자르기와 분할 저장 기능이 보입니다.</image:caption>
     </image:image>
   </url>
   <url>
