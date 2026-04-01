@@ -5,8 +5,8 @@
   "start_url": "https://sheryloe.github.io/",
   "scope": "https://sheryloe.github.io/",
   "display": "standalone",
-  "background_color": "#f4ede4",
-  "theme_color": "#193630",
+  "background_color": "#f4fbff",
+  "theme_color": "#4f89ad",
   "icons": [
     {
       "src": "https://sheryloe.github.io/assets/meta/icon.svg",

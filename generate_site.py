@@ -18,6 +18,9 @@ CONFIG_PATH = ROOT / "site-config.json"
 HOME_TEMPLATE_PATH = ROOT / "templates" / "index.template.html"
 WIKI_TEMPLATE_PATH = ROOT / "templates" / "wiki.template.html"
 WIKI_DOC_TEMPLATE_PATH = ROOT / "templates" / "wiki-doc.template.html"
+PORTFOLIO_TEMPLATE_PATH = ROOT / "templates" / "portfolio.template.html"
+AGENTS_TEMPLATE_PATH = ROOT / "templates" / "agents.template.html"
+CODEX_SUBAGENTS_CACHE_PATH = ROOT / "codex-subagents.json"
 
 
 def load_config() -> dict[str, Any]:
@@ -61,6 +64,104 @@ def fetch_public_repositories(username: str) -> list[dict[str, Any]]:
         page += 1
 
     return repositories
+
+
+def fetch_text(url: str, *, headers: dict[str, str] | None = None, timeout: int = 20) -> str:
+    merged_headers = {"User-Agent": "sheryloe-root-site-generator"}
+    if headers:
+        merged_headers.update(headers)
+    request = urllib.request.Request(url, headers=merged_headers)
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        payload = response.read()
+    return payload.decode("utf-8", errors="replace")
+
+
+CODEX_CATEGORY_LINE_RE = re.compile(r"^### \[[^\]]+\]\((categories/[^)]+)/\)\s*$")
+CODEX_AGENT_BULLET_RE = re.compile(r"^- `([^`]+)` - (.+)$")
+
+
+def parse_codex_categories(readme_text: str) -> list[dict[str, str]]:
+    categories: list[dict[str, str]] = []
+    for raw_line in readme_text.splitlines():
+        line = raw_line.strip()
+        match = CODEX_CATEGORY_LINE_RE.match(line)
+        if not match:
+            continue
+        category_path = match.group(1).strip("/")
+        folder = Path(category_path).name
+        label = raw_line.strip().lstrip("#").strip()
+        title_match = re.search(r"\\[(?P<title>[^\\]]+)\\]", label)
+        raw_title = title_match.group("title") if title_match else folder
+        categories.append(
+            {
+                "title": raw_title.strip(),
+                "path": category_path,
+                "slug": folder,
+            }
+        )
+    return categories
+
+
+def parse_codex_category_agents(category_text: str) -> list[dict[str, str]]:
+    agents: list[dict[str, str]] = []
+    current: dict[str, str] | None = None
+    for raw_line in category_text.splitlines():
+        line = raw_line.rstrip()
+        bullet_match = CODEX_AGENT_BULLET_RE.match(line.strip())
+        if bullet_match:
+            if current:
+                agents.append(current)
+            current = {"name": bullet_match.group(1).strip(), "description": bullet_match.group(2).strip()}
+            continue
+        if current and line.startswith("  ") and line.strip():
+            current["description"] = (current["description"] + " " + line.strip()).strip()
+    if current:
+        agents.append(current)
+    return agents
+
+
+def fetch_codex_subagents_payload() -> dict[str, Any]:
+    source_repo = "VoltAgent/awesome-codex-subagents"
+    source_url = f"https://github.com/{source_repo}"
+    base_raw = f"https://raw.githubusercontent.com/{source_repo}/main/"
+    base_browse = f"https://github.com/{source_repo}/tree/main/"
+
+    try:
+        readme_text = fetch_text(base_raw + "README.md")
+        categories = parse_codex_categories(readme_text)
+        payload_categories: list[dict[str, Any]] = []
+        total_agents = 0
+
+        for category in categories:
+            category_readme = fetch_text(base_raw + category["path"].rstrip("/") + "/README.md")
+            agents = parse_codex_category_agents(category_readme)
+            total_agents += len(agents)
+            payload_categories.append(
+                {
+                    "title": category["title"],
+                    "slug": category["slug"],
+                    "path": category["path"],
+                    "browse_url": base_browse + category["path"].rstrip("/") + "/",
+                    "agent_count": len(agents),
+                    "agents": agents,
+                }
+            )
+
+        return {
+            "source": source_url,
+            "generated_at": isoformat_z(datetime.now(timezone.utc)),
+            "total_agents": total_agents,
+            "categories": payload_categories,
+        }
+    except Exception:
+        if CODEX_SUBAGENTS_CACHE_PATH.exists():
+            return json.loads(CODEX_SUBAGENTS_CACHE_PATH.read_text(encoding="utf-8"))
+        return {
+            "source": source_url,
+            "generated_at": isoformat_z(datetime.now(timezone.utc)),
+            "total_agents": 0,
+            "categories": [],
+        }
 
 
 def parse_dt(value: str | None) -> datetime:
@@ -130,19 +231,20 @@ def default_category(name: str, language: str) -> str:
 
 def default_track(name: str) -> str:
     labels = {
-        "AI_BISEO": "ai-automation",
-        "AI_Writer_TISTORY": "ai-automation",
-        "Automethemoney": "service-products",
-        "BloggerGent": "ai-automation",
-        "BloManagent": "service-products",
-        "DonggriWorld": "service-products",
-        "cloudflare-blog": "platform-docs",
-        "donggri_gagyeobu": "service-products",
-        "Favorit": "desktop-utilities",
-        "grid-crop-image": "desktop-utilities",
-        "Vibe_Cowork_Thinking": "ai-automation",
+        "AI_BISEO": "ai-ops",
+        "Vibe_Cowork_Thinking": "ai-ops",
+        "AI_Writer_TISTORY": "publishing",
+        "BloggerGent": "publishing",
+        "BloManagent": "publishing",
+        "Automethemoney": "finance",
+        "donggri_gagyeobu": "finance",
+        "Favorit": "desktop",
+        "grid-crop-image": "desktop",
+        "cloudflare-blog": "platform",
+        "DonggriWorld": "platform",
+        "DonggriGent": "platform",
     }
-    return labels.get(name, "platform-docs")
+    return labels.get(name, "platform")
 
 
 def default_subtitle(name: str, description: str, language: str) -> str:
@@ -168,10 +270,11 @@ def default_stage(has_pages: bool) -> str:
 
 def default_accent(track: str) -> str:
     labels = {
-        "ai-automation": "teal",
-        "service-products": "amber",
-        "desktop-utilities": "ocean",
-        "platform-docs": "slate",
+        "ai-ops": "ocean",
+        "publishing": "teal",
+        "finance": "amber",
+        "desktop": "rose",
+        "platform": "slate",
     }
     return labels.get(track, "slate")
 
@@ -580,11 +683,11 @@ def render_track_legend(config: dict[str, Any], repositories: list[dict[str, Any
 
 def build_track_chart_data(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
     color_map = {
-        "teal": "#1f8a72",
-        "amber": "#d88c3a",
-        "ocean": "#3a6fd8",
-        "slate": "#556271",
-        "rose": "#d46363",
+        "ocean": "#74b6d8",
+        "teal": "#67b8b1",
+        "amber": "#93cea0",
+        "rose": "#acd7bf",
+        "slate": "#93a9b6",
     }
     counts = Counter(repository["track"] for repository in repositories)
     labels: list[str] = []
@@ -602,7 +705,7 @@ def build_track_chart_data(config: dict[str, Any], repositories: list[dict[str, 
                 "label": "Tracked repositories",
                 "data": values,
                 "backgroundColor": colors,
-                "borderColor": "#f4ede4",
+                "borderColor": "#f4fbff",
                 "borderWidth": 3,
                 "hoverOffset": 6,
             }
@@ -1033,6 +1136,175 @@ def render_wiki_index_html(config: dict[str, Any], repositories: list[dict[str, 
     return rendered
 
 
+def render_portfolio_repo_row(repository: dict[str, Any]) -> str:
+    primary_href = repository["live_url"] or repository["repo_url"]
+    primary_label = primary_link_label(repository)
+    return f"""            <article class="repo-row reveal">
+              <div class="repo-row-main">
+                <div>
+                  <strong>{html.escape(repository["name"])}</strong>
+                  <p>{html.escape(repository["subtitle"])}</p>
+                </div>
+                <span class="status-pill">{html.escape(repository["availability_label"])}</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-pill">{html.escape(repository["track_title"])}</span>
+                {render_tags(repository, max_topics=2)}
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="{html.escape(primary_href)}">{primary_label}</a>
+                <a class="button" href="{html.escape(repository["wiki_url"])}">Wiki</a>
+                <a class="button" href="{html.escape(repository["repo_url"])}">GitHub</a>
+              </div>
+            </article>"""
+
+
+def render_portfolio_track_section(track: dict[str, Any], repositories_by_name: dict[str, dict[str, Any]]) -> str:
+    matched = [repositories_by_name[name] for name in track.get("repositories", []) if name in repositories_by_name]
+    accent = slugify(str(track.get("accent", "slate")))
+    icon = str(track.get("icon", "solar:layers-minimalistic-linear"))
+    repo_rows = "\n".join(render_portfolio_repo_row(repository) for repository in matched)
+    return f"""          <section class="shell track-section accent-{accent} p-4 md:p-5">
+            <div class="track-head">
+              <div>
+                <p class="section-label">{html.escape(str(track.get("title", "")))}</p>
+                <h2 class="mt-2 text-2xl font-semibold tracking-[-0.04em] text-slate-950">{html.escape(str(track.get("title", "")))}</h2>
+                <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-600">{html.escape(str(track.get("summary", "")))}</p>
+              </div>
+              <div class="track-icon" aria-hidden="true">
+                <iconify-icon icon="{html.escape(icon)}"></iconify-icon>
+              </div>
+            </div>
+            <div class="mt-4 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-6 text-slate-700">
+              <strong class="text-slate-900">Outcome</strong><span class="text-slate-500"> · </span>{html.escape(str(track.get("outcome", "")))}
+            </div>
+            <div class="mt-5 grid gap-3">
+{repo_rows}
+            </div>
+          </section>"""
+
+
+def render_portfolio_html(config: dict[str, Any], repositories: list[dict[str, Any]]) -> str:
+    template = PORTFOLIO_TEMPLATE_PATH.read_text(encoding="utf-8")
+    generated_at = datetime.now(timezone.utc)
+    tracks = list(config.get("portfolio_tracks", []))
+    live_repositories = [repo for repo in repositories if repo["has_pages"]]
+    repositories_by_name = {repository["name"]: repository for repository in repositories}
+    featured_order = {name: index for index, name in enumerate(config.get("featured_repositories", []))}
+    featured_live = sorted(
+        [repo for repo in live_repositories if repo["name"] in featured_order],
+        key=lambda repo: featured_order[repo["name"]],
+    )[: min(6, len(live_repositories))]
+
+    if len(featured_live) < min(6, len(live_repositories)):
+        used = {repo["name"] for repo in featured_live}
+        for repository in live_repositories:
+            if repository["name"] in used:
+                continue
+            featured_live.append(repository)
+            used.add(repository["name"])
+            if len(featured_live) == min(6, len(live_repositories)):
+                break
+
+    featured_rows = "\n".join(render_portfolio_repo_row(repository) for repository in featured_live)
+    social_image = dict(config.get("social_image", {}))
+    social_image_path = relative_asset_path(str(social_image.get("path", "assets/meta/root-hub-social.png")))
+
+    replacements = {
+        "__SITE_NAME__": html.escape(str(config["site_name"])),
+        "__SITE_TITLE__": html.escape(f"Portfolio | {config['site_name']}"),
+        "__DESCRIPTION__": html.escape(str(config["description"])),
+        "__AUTHOR_NAME__": html.escape(str(config["author_name"])),
+        "__SITE_URL__": html.escape(str(config["site_url"])),
+        "__GOOGLE_ANALYTICS_SNIPPET__": render_google_analytics_snippet(config),
+        "__GITHUB_PROFILE__": html.escape(str(config["github_profile"])),
+        "__WIKI_REPO_URL__": html.escape(str(config["wiki_repo_url"])),
+        "__PUBLIC_REPO_COUNT__": str(len(repositories)),
+        "__LIVE_PAGE_COUNT__": str(len(live_repositories)),
+        "__TRACK_COUNT__": str(len(tracks)),
+        "__GENERATED_LABEL__": generated_at.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "__PORTFOLIO_TRACK_SECTIONS__": "\n".join(
+            render_portfolio_track_section(track, repositories_by_name) for track in tracks
+        ),
+        "__FEATURED_ROWS__": featured_rows,
+        "__SCHEMA_JSON__": build_schema(config, repositories),
+        "__SOCIAL_IMAGE_URL__": html.escape(absolute_asset_url(config, social_image_path)),
+        "__SOCIAL_IMAGE_ALT__": html.escape(str(social_image.get("alt", config["site_name"]))),
+    }
+
+    rendered = template
+    for key, value in replacements.items():
+        rendered = rendered.replace(key, value)
+    return rendered
+
+
+def render_agent_card(agent: dict[str, str], *, category: dict[str, Any]) -> str:
+    name = agent["name"]
+    description = agent["description"]
+    search_text = f"{name} {description} {category.get('title','')}".lower()
+    return f"""              <article class="agent-card reveal" data-agent-card data-search="{html.escape(search_text, quote=True)}">
+                <div class="agent-head">
+                  <code class="agent-code">{html.escape(name)}</code>
+                  <span class="status-pill">{html.escape(str(category.get("title", "")))}</span>
+                </div>
+                <p class="agent-desc">{html.escape(description)}</p>
+                <div class="button-row">
+                  <a class="button button-primary" href="{html.escape(str(category.get("browse_url", "")))}">Browse Category</a>
+                </div>
+              </article>"""
+
+
+def render_agent_category_section(category: dict[str, Any]) -> str:
+    cards = "\n".join(render_agent_card(agent, category=category) for agent in category.get("agents", []))
+    return f"""      <section class="shell p-4 md:p-5" data-category-section>
+        <div class="category-head">
+          <div>
+            <p class="section-label">Category</p>
+            <h2 class="mt-2 text-xl font-semibold tracking-[-0.03em] text-slate-950">{html.escape(str(category.get("title","")))}</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-600">Included agents: <strong class="text-slate-900">{int(category.get("agent_count", 0))}</strong></p>
+          </div>
+          <a class="button" href="{html.escape(str(category.get("browse_url","")))}">Source</a>
+        </div>
+        <div class="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3" data-agent-grid>
+{cards}
+        </div>
+      </section>"""
+
+
+def render_agents_html(config: dict[str, Any], repositories: list[dict[str, Any]], subagents: dict[str, Any]) -> str:
+    template = AGENTS_TEMPLATE_PATH.read_text(encoding="utf-8")
+    generated_at = datetime.now(timezone.utc)
+    live_repositories = [repo for repo in repositories if repo["has_pages"]]
+    social_image = dict(config.get("social_image", {}))
+    social_image_path = relative_asset_path(str(social_image.get("path", "assets/meta/root-hub-social.png")))
+
+    replacements = {
+        "__SITE_NAME__": html.escape(str(config["site_name"])),
+        "__SITE_TITLE__": html.escape(f"Codex Subagents | {config['site_name']}"),
+        "__DESCRIPTION__": html.escape(str(config["description"])),
+        "__AUTHOR_NAME__": html.escape(str(config["author_name"])),
+        "__SITE_URL__": html.escape(str(config["site_url"])),
+        "__GOOGLE_ANALYTICS_SNIPPET__": render_google_analytics_snippet(config),
+        "__GITHUB_PROFILE__": html.escape(str(config["github_profile"])),
+        "__GENERATED_LABEL__": generated_at.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "__PUBLIC_REPO_COUNT__": str(len(repositories)),
+        "__LIVE_PAGE_COUNT__": str(len(live_repositories)),
+        "__AGENT_TOTAL__": str(int(subagents.get("total_agents", 0))),
+        "__AGENT_SOURCE_URL__": html.escape(str(subagents.get("source", ""))),
+        "__AGENT_CATEGORY_SECTIONS__": "\n".join(
+            render_agent_category_section(category) for category in subagents.get("categories", [])
+        ),
+        "__SCHEMA_JSON__": build_schema(config, repositories),
+        "__SOCIAL_IMAGE_URL__": html.escape(absolute_asset_url(config, social_image_path)),
+        "__SOCIAL_IMAGE_ALT__": html.escape(str(social_image.get("alt", config["site_name"]))),
+    }
+
+    rendered = template
+    for key, value in replacements.items():
+        rendered = rendered.replace(key, value)
+    return rendered
+
+
 def append_image_metadata(
     lines: list[str],
     image_url: str | None,
@@ -1076,6 +1348,23 @@ def render_sitemap_xml(config: dict[str, Any], repositories: list[dict[str, Any]
     lines.extend(
         [
             "  <url>",
+            f"    <loc>{site_url}/portfolio/</loc>",
+            f"    <lastmod>{today}</lastmod>",
+            "    <changefreq>weekly</changefreq>",
+            "    <priority>0.8</priority>",
+        ]
+    )
+    append_image_metadata(
+        lines,
+        social_image_url,
+        title=f"{config['site_name']} Portfolio",
+        caption="Portfolio landing",
+    )
+    lines.append("  </url>")
+
+    lines.extend(
+        [
+            "  <url>",
             f"    <loc>{site_url}/wiki/</loc>",
             f"    <lastmod>{today}</lastmod>",
             "    <changefreq>weekly</changefreq>",
@@ -1087,6 +1376,23 @@ def render_sitemap_xml(config: dict[str, Any], repositories: list[dict[str, Any]
         social_image_url,
         title=f"{config['site_name']} Wiki",
         caption="Central wiki landing",
+    )
+    lines.append("  </url>")
+
+    lines.extend(
+        [
+            "  <url>",
+            f"    <loc>{site_url}/wiki/agents.html</loc>",
+            f"    <lastmod>{today}</lastmod>",
+            "    <changefreq>weekly</changefreq>",
+            "    <priority>0.6</priority>",
+        ]
+    )
+    append_image_metadata(
+        lines,
+        social_image_url,
+        title=f"{config['site_name']} Codex Subagents",
+        caption="Codex subagents reference",
     )
     lines.append("  </url>")
 
@@ -1269,8 +1575,8 @@ def render_site_webmanifest(config: dict[str, Any]) -> str:
         "start_url": config["site_url"],
         "scope": config["site_url"],
         "display": "standalone",
-        "background_color": "#f4ede4",
-        "theme_color": "#193630",
+        "background_color": "#f4fbff",
+        "theme_color": "#4f89ad",
         "icons": [
             {
                 "src": absolute_asset_url(config, icon_path),
@@ -1330,9 +1636,12 @@ def write_file(path: Path, content: str) -> None:
 def main() -> int:
     config = load_config()
     repositories = normalize_repositories(config, fetch_public_repositories(str(config["username"])))
+    subagents = fetch_codex_subagents_payload()
 
     write_file(ROOT / "index.html", render_index_html(config, repositories))
+    write_file(ROOT / "portfolio" / "index.html", render_portfolio_html(config, repositories))
     write_file(ROOT / "wiki" / "index.html", render_wiki_index_html(config, repositories))
+    write_file(ROOT / "wiki" / "agents.html", render_agents_html(config, repositories, subagents))
     for document in generated_wiki_documents(config):
         write_file(ROOT / str(document["output_path"]), render_wiki_doc_html(config, document, repositories))
     write_file(ROOT / "sitemap.xml", render_sitemap_xml(config, repositories))
@@ -1340,12 +1649,14 @@ def main() -> int:
     write_file(ROOT / "feed.xml", render_atom_xml(config, repositories))
     write_file(ROOT / "robots.txt", render_robots_txt(config))
     write_file(ROOT / "projects.json", render_projects_json(config, repositories))
+    write_file(CODEX_SUBAGENTS_CACHE_PATH, json.dumps(subagents, ensure_ascii=False, indent=2) + "\n")
     write_file(ROOT / "site.webmanifest", render_site_webmanifest(config))
     write_file(ROOT / ".nojekyll", "\n")
 
     print(
-        "Generated: index.html, wiki/index.html, wiki/*.html, sitemap.xml, rss.xml, feed.xml, "
-        "robots.txt, projects.json, site.webmanifest, .nojekyll"
+        "Generated: index.html, portfolio/index.html, wiki/index.html, wiki/agents.html, wiki/*.html, "
+        "sitemap.xml, rss.xml, feed.xml, robots.txt, projects.json, codex-subagents.json, "
+        "site.webmanifest, .nojekyll"
     )
     print(
         f"Repositories: {len(repositories)} total, "

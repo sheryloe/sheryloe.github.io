@@ -47,7 +47,10 @@ jobs:
           placeholder_re = re.compile(r"__[A-Z0-9_]+__")
           required_files = [
               Path("index.html"),
+              Path("portfolio/index.html"),
               Path("wiki/index.html"),
+              Path("wiki/agents.html"),
+              Path("codex-subagents.json"),
               Path("projects.json"),
               Path("sitemap.xml"),
               Path("rss.xml"),
@@ -68,6 +71,7 @@ jobs:
           missing.extend(str(path) for path in generated_docs if not path.exists())
 
           html_targets = [Path("index.html"), Path("wiki/index.html"), *generated_docs]
+          html_targets.extend([Path("portfolio/index.html"), Path("wiki/agents.html")])
           unresolved = []
           for path in html_targets:
               text = path.read_text(encoding="utf-8")
@@ -91,7 +95,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .nojekyll index.html wiki/*.html sitemap.xml rss.xml feed.xml robots.txt projects.json site.webmanifest
+          git add .nojekyll index.html portfolio/index.html wiki/*.html sitemap.xml rss.xml feed.xml robots.txt projects.json codex-subagents.json site.webmanifest
           git diff --cached --quiet && exit 0
           git commit -m "chore: refresh root site assets [skip ci]"
           git push
@@ -102,8 +106,9 @@ jobs:
           rm -rf _site
           mkdir -p _site
           cp -r assets _site/assets
+          cp -r portfolio _site/portfolio
           cp -r wiki _site/wiki
-          cp index.html projects.json sitemap.xml rss.xml feed.xml robots.txt site.webmanifest .nojekyll _site/
+          cp index.html projects.json sitemap.xml rss.xml feed.xml robots.txt codex-subagents.json site.webmanifest .nojekyll _site/
           cp googleb146312c1195390f.html naver637a8890bce9d21fe787686e75fea7aa.html _site/
           if [ -f CNAME ]; then cp CNAME _site/CNAME; fi
       - name: Upload Pages artifact

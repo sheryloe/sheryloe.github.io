@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Central Wiki | Sheryloe Projects</title>
   <meta name="description" content="AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.">
-  <meta name="theme-color" content="#eaf2fb">
+  <meta name="theme-color" content="#4f89ad">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="https://sheryloe.github.io/wiki/">
   <meta property="og:type" content="website">
@@ -29,27 +29,29 @@
   <script src="https://code.iconify.design/iconify-icon/3.1.1/iconify-icon.min.js"></script>
   <style type="text/tailwindcss">
     :root {
-      --background: #eff6ff;
-      --foreground: #0f172a;
-      --muted: #64748b;
-      --border: #d6e3f0;
-      --card: rgba(255, 255, 255, 0.94);
-      --primary: #2563eb;
-      --primary-foreground: #ffffff;
-      --secondary: rgba(241, 247, 255, 0.92);
-      --teal: #2563eb;
-      --amber: #3b82f6;
-      --ocean: #1d4ed8;
-      --slate: #475569;
-      --rose: #60a5fa;
+      --background: #f4fbff;
+      --foreground: #1f3442;
+      --muted: #627786;
+      --border: #d5e4ea;
+      --card: rgba(251, 254, 255, 0.92);
+      --primary: #4f89ad;
+      --primary-foreground: #f8fdff;
+      --secondary: rgba(236, 246, 250, 0.92);
+      --secondary-strong: rgba(230, 244, 234, 0.86);
+      --ring: #8bbdd8;
+      --teal: #67b8b1;
+      --amber: #93cea0;
+      --ocean: #74b6d8;
+      --slate: #93a9b6;
+      --rose: #acd7bf;
     }
 
     body {
       min-height: 100vh;
       background:
-        radial-gradient(circle at 10% -5%, rgba(147, 197, 253, 0.35), transparent 30rem),
-        radial-gradient(circle at 90% 0%, rgba(191, 219, 254, 0.4), transparent 28rem),
-        linear-gradient(180deg, #f4f8fc 0%, #edf4fb 100%);
+        radial-gradient(circle at 10% -5%, rgba(116, 182, 216, 0.22), transparent 32rem),
+        radial-gradient(circle at 92% 0%, rgba(147, 206, 160, 0.16), transparent 28rem),
+        linear-gradient(180deg, #f4fbff 0%, #f7fcfa 52%, #f1f5f6 100%);
       color: var(--foreground);
       font-family: "Work Sans", "Noto Sans KR", sans-serif;
     }
@@ -60,25 +62,25 @@
       pointer-events: none;
       opacity: 0.12;
       background-image:
-        radial-gradient(circle at 20% 16%, rgba(96, 165, 250, 0.12), transparent 22rem),
-        repeating-linear-gradient(0deg, rgba(148, 163, 184, 0.08), rgba(148, 163, 184, 0.08) 1px, transparent 1px, transparent 3px);
+        radial-gradient(circle at 20% 16%, rgba(116, 182, 216, 0.12), transparent 22rem),
+        repeating-linear-gradient(0deg, rgba(147, 169, 182, 0.1), rgba(147, 169, 182, 0.1) 1px, transparent 1px, transparent 3px);
       z-index: -1;
     }
 
     .command-top {
       border: 1px solid var(--border);
       border-radius: 14px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 250, 255, 0.96));
+      background: linear-gradient(180deg, rgba(251, 254, 255, 0.98), rgba(236, 246, 250, 0.96));
       display: grid;
       gap: 0.85rem;
       grid-template-columns: minmax(0, 1fr);
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 18px 48px rgba(79, 137, 173, 0.12);
       backdrop-filter: blur(6px);
     }
 
     .command-brand h1 {
       margin-top: 0.2rem;
-      color: #1e3a8a;
+      color: #245064;
       font-family: "Space Grotesk", "Inter", sans-serif;
       font-size: clamp(1.3rem, 2.4vw, 1.85rem);
       font-weight: 800;
@@ -87,7 +89,7 @@
     }
 
     .command-kicker {
-      color: #3b82f6;
+      color: var(--primary);
       font-size: 0.68rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
@@ -128,7 +130,7 @@
     .shell {
       border-color: var(--border);
       background: var(--card);
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 18px 48px rgba(79, 137, 173, 0.1);
       backdrop-filter: blur(6px);
     }
 
@@ -142,7 +144,7 @@
     }
 
     .hero-eyebrow {
-      color: #2563eb;
+      color: var(--primary);
       font-size: 0.68rem;
       font-weight: 700;
       letter-spacing: 0.2em;
@@ -151,7 +153,7 @@
 
     .hero-title {
       margin-top: 0.5rem;
-      color: #0f172a;
+      color: var(--foreground);
       font-family: "Space Grotesk", "Inter", sans-serif;
       font-size: 1.4rem;
       font-weight: 800;
@@ -162,7 +164,7 @@
 
     .hero-summary {
       margin-top: 0.65rem;
-      color: #475569;
+      color: var(--muted);
       font-size: 0.9rem;
       line-height: 1.65;
     }
@@ -176,36 +178,36 @@
       width: 100%;
       text-align: left;
       justify-content: flex-start;
-      border: 1px solid #d0deee;
+      border: 1px solid var(--border);
       border-radius: 9px;
-      background: rgba(247, 250, 255, 0.96);
-      color: #334155;
+      background: rgba(251, 254, 255, 0.96);
+      color: var(--foreground);
       font-family: "Space Grotesk", "Inter", sans-serif;
       letter-spacing: 0.02em;
     }
 
     .rail-tab.is-active {
-      border-color: #3b82f6;
-      background: #dbeafe;
-      color: #1e3a8a;
+      border-color: #9ac3d9;
+      background: var(--secondary-strong);
+      color: #245064;
     }
 
     .rail-links {
       display: grid;
       gap: 0.5rem;
       padding-top: 0.35rem;
-      border-top: 1px solid #d6e3f0;
+      border-top: 1px solid var(--border);
     }
 
     .rail-foot {
-      border-top: 1px solid #d6e3f0;
+      border-top: 1px solid var(--border);
       padding-top: 0.75rem;
     }
 
     .rail-foot strong {
       display: block;
       margin-top: 0.4rem;
-      color: #0f172a;
+      color: var(--foreground);
       font-family: "Space Grotesk", "Inter", sans-serif;
       font-size: 1.1rem;
       letter-spacing: -0.01em;
@@ -239,20 +241,20 @@
     }
 
     .hud-card {
-      border: 1px solid #d6e3f0;
+      border: 1px solid var(--border);
       border-radius: 10px;
-      background: #f8fbff;
+      background: var(--secondary);
       padding: 0.75rem 0.9rem;
     }
 
     .hud-card .section-label {
-      color: #64748b;
+      color: var(--muted);
     }
 
     .hud-card strong {
       display: block;
       margin-top: 0.35rem;
-      color: #0f172a;
+      color: var(--foreground);
       font-family: "Space Grotesk", "Inter", sans-serif;
       font-size: 1.15rem;
       letter-spacing: -0.02em;
@@ -260,49 +262,62 @@
 
     .button {
       @apply inline-flex items-center justify-center rounded-lg border px-3.5 py-2 text-sm font-medium transition-colors;
-      border-color: #c8d9ec;
-      background: #ffffff;
-      color: #1e293b;
+      border-color: var(--border);
+      background: rgba(251, 254, 255, 0.98);
+      color: var(--foreground);
+      box-shadow: 0 1px 2px rgba(79, 137, 173, 0.08);
     }
 
     .button:hover {
-      background: #eff6ff;
+      background: var(--secondary);
+      border-color: #bfd4de;
     }
 
     .button-primary {
-      background: linear-gradient(90deg, #2563eb, #1d4ed8);
-      border-color: #2563eb;
-      color: #ffffff;
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--primary-foreground);
     }
 
     .button-primary:hover {
-      background: linear-gradient(90deg, #1d4ed8, #1e40af);
+      background: #3f7597;
+      border-color: #3f7597;
     }
 
     .tabs-list {
       @apply inline-flex rounded-xl border p-1;
-      border-color: #d6e3f0;
-      background: #eef4fb;
+      border-color: var(--border);
+      background: rgba(236, 246, 250, 0.92);
     }
 
     .tab-trigger {
       @apply rounded-lg px-3.5 py-2 text-sm font-medium transition-colors;
-      color: #475569;
+      color: var(--muted);
       font-family: "Space Grotesk", "Inter", sans-serif;
       letter-spacing: 0.02em;
       text-transform: uppercase;
     }
 
     .tab-trigger.is-active {
-      background: #dbeafe;
-      color: #1e3a8a;
+      background: var(--secondary-strong);
+      color: #245064;
       box-shadow: none;
+    }
+
+    .button:focus-visible,
+    .tab-trigger:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--ring);
+      outline-offset: 2px;
+      box-shadow: 0 0 0 4px rgba(139, 189, 216, 0.22);
     }
 
     .section-label,
     .timeline-date {
       @apply text-xs font-semibold uppercase tracking-[0.18em];
-      color: #64748b;
+      color: var(--muted);
     }
 
     .doc-card,
@@ -312,8 +327,8 @@
     .info-card,
     .note-card {
       @apply rounded-xl border p-4;
-      border-color: #d6e3f0;
-      background: #ffffff;
+      border-color: var(--border);
+      background: rgba(251, 254, 255, 0.98);
     }
 
     .doc-card h3,
@@ -321,7 +336,7 @@
     .wiki-repo-card h3,
     .section-heading,
     .track-count {
-      color: #0f172a;
+      color: var(--foreground);
       font-family: "Space Grotesk", "Inter", sans-serif;
       @apply mt-3 text-lg font-semibold tracking-[-0.03em];
     }
@@ -332,7 +347,7 @@
     .note-card p,
     .accordion-panel p,
     .timeline-points {
-      color: #475569;
+      color: var(--muted);
       @apply mt-2 text-sm leading-6;
     }
 
@@ -349,9 +364,9 @@
     .meta-pill,
     .eyebrow {
       @apply inline-flex items-center rounded-md border px-2.5 py-1 text-[11px] font-medium;
-      border-color: #d6e3f0;
-      background: #f1f6fc;
-      color: #4b5563;
+      border-color: var(--border);
+      background: rgba(236, 246, 250, 0.92);
+      color: var(--muted);
     }
 
     .eyebrow-small {
@@ -367,18 +382,18 @@
     }
 
     .accordion-copy strong {
-      color: #0f172a;
+      color: var(--foreground);
       font-family: "Space Grotesk", "Inter", sans-serif;
       @apply mt-1 block text-sm font-semibold;
     }
 
     .accordion-panel {
       @apply border-t px-4 pb-4 pt-3;
-      border-color: #d6e3f0;
+      border-color: var(--border);
     }
 
     .accordion-icon {
-      color: #64748b;
+      color: var(--muted);
       @apply text-xl;
     }
 
@@ -387,7 +402,7 @@
     .wiki-repo-card,
     .timeline-card,
     .note-card {
-      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 14px 34px rgba(79, 137, 173, 0.12);
     }
 
     @media (min-width: 1024px) {
@@ -457,6 +472,21 @@
         {
           "@type": "ListItem",
           "position": 2,
+          "name": "DonggriGent",
+          "url": "https://sheryloe.github.io/DonggriGent/",
+          "description": "개인 운영 흐름에서 반복되는 작업을 줄이기 위한 웹 기반 툴링/실험 저장소입니다."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "donggri_gagyeobu",
+          "url": "https://sheryloe.github.io/donggri_gagyeobu/",
+          "description": "자산, 카드 결제 예정, 예산, 소비 흐름을 브라우저에서 바로 관리할 수 있게 정리한 개인 재무 서비스입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/donggri-gagyeobu.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
           "name": "BloggerGent",
           "url": "https://sheryloe.github.io/BloggerGent/",
           "description": "여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.",
@@ -464,21 +494,14 @@
         },
         {
           "@type": "ListItem",
-          "position": 3,
-          "name": "DonggriGent",
-          "url": "https://sheryloe.github.io/DonggriGent/",
-          "description": ""
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "DonggriWorld",
-          "url": "https://github.com/sheryloe/DonggriWorld",
-          "description": "DonggriWorld의 초기 서비스 구상과 구조를 정리하는 공개 시드 저장소입니다."
-        },
-        {
-          "@type": "ListItem",
           "position": 5,
+          "name": "DonggriGameBook",
+          "url": "https://github.com/sheryloe/DonggriGameBook",
+          "description": "DonggriWorld"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
           "name": "grid-crop-image",
           "url": "https://sheryloe.github.io/grid-crop-image/",
           "description": "스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용까지 지원하는 Windows 이미지 워크플로 도구입니다.",
@@ -486,19 +509,11 @@
         },
         {
           "@type": "ListItem",
-          "position": 6,
+          "position": 7,
           "name": "Favorit",
           "url": "https://sheryloe.github.io/Favorit/",
           "description": "Windows 바탕화면에서 자주 쓰는 파일, 폴더, URL을 위젯처럼 빠르게 실행하도록 만든 데스크톱 런처입니다.",
           "image": "https://sheryloe.github.io/assets/previews/favorit.png"
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "name": "donggri_gagyeobu",
-          "url": "https://sheryloe.github.io/donggri_gagyeobu/",
-          "description": "자산, 카드 결제 예정, 예산, 소비 흐름을 브라우저에서 바로 관리할 수 있게 정리한 개인 재무 서비스입니다.",
-          "image": "https://sheryloe.github.io/assets/previews/donggri-gagyeobu.png"
         },
         {
           "@type": "ListItem",
@@ -556,13 +571,15 @@
       </div>
       <nav class="command-links">
         <a class="button" href="https://sheryloe.github.io/">Project Hub</a>
+        <a class="button" href="https://sheryloe.github.io/portfolio/">Portfolio</a>
+        <a class="button" href="https://sheryloe.github.io/wiki/agents.html">Agents</a>
         <a class="button" href="https://github.com/sheryloe">GitHub</a>
         <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki">Wiki Source</a>
       </nav>
       <div class="command-status">
         <span><strong>12</strong>Repos</span>
         <span><strong>10</strong>Live</span>
-        <span><strong>5</strong>Docs</span>
+        <span><strong>8</strong>Docs</span>
       </div>
     </div>
   </header>
@@ -583,13 +600,13 @@
 
       <div class="rail-links">
         <a class="button" href="https://sheryloe.github.io/">Open Project Hub</a>
-        <a class="button" href="https://sheryloe.github.io/rss.xml">RSS Feed</a>
-        <a class="button" href="https://sheryloe.github.io/feed.xml">Atom Feed</a>
+        <a class="button" href="https://sheryloe.github.io/portfolio/">Open Portfolio</a>
+        <a class="button" href="https://sheryloe.github.io/wiki/agents.html">Browse Agents</a>
       </div>
 
       <div class="rail-foot">
         <p class="section-label">Generated</p>
-        <strong>2026-04-01 13:52 UTC</strong>
+        <strong>2026-04-01 16:29 UTC</strong>
       </div>
     </aside>
 
@@ -617,11 +634,11 @@
         </article>
         <article class="hud-card">
           <span class="section-label">HTML Docs</span>
-          <strong>5</strong>
+          <strong>8</strong>
         </article>
       </div>
 
-      <p class="journal-generated">generated 2026-04-01 13:52 UTC</p>
+      <p class="journal-generated">generated 2026-04-01 16:29 UTC</p>
 
       <div class="mt-5" data-tab-panel="documents">
         <section>
@@ -636,6 +653,22 @@
               <p>문서 인덱스, 저장소별 wiki 진입점, 최근 문서 흐름을 한곳에 모은 중앙 허브입니다.</p>
               <div class="button-row">
                 <a class="button button-primary" href="https://sheryloe.github.io/wiki/">Open Hub</a> <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki">GitHub Source</a>
+              </div>
+            </article>
+            <article class="doc-card reveal">
+              <p class="eyebrow eyebrow-small">Portfolio</p>
+              <h3>Portfolio (Landing)</h3>
+              <p>대표 프로젝트와 트랙을 한 페이지로 요약한 포트폴리오 랜딩입니다.</p>
+              <div class="button-row">
+                <a class="button button-primary" href="https://sheryloe.github.io/portfolio/">Open Portfolio</a>
+              </div>
+            </article>
+            <article class="doc-card reveal">
+              <p class="eyebrow eyebrow-small">Reference</p>
+              <h3>Codex Subagents</h3>
+              <p>awesome-codex-subagents를 기반으로 카테고리별 서브에이전트를 검색할 수 있는 참고 페이지입니다.</p>
+              <div class="button-row">
+                <a class="button button-primary" href="https://sheryloe.github.io/wiki/agents.html">Browse Agents</a> <a class="button" href="https://github.com/VoltAgent/awesome-codex-subagents">GitHub Source</a>
               </div>
             </article>
             <article class="doc-card reveal">
@@ -670,6 +703,14 @@
                 <a class="button button-primary" href="https://sheryloe.github.io/wiki/service-todo.html">Open Doc</a>
               </div>
             </article>
+            <article class="doc-card reveal">
+              <p class="eyebrow eyebrow-small">Audit</p>
+              <h3>Public Repo Audit</h3>
+              <p>공개 저장소 전반의 보안/온보딩 점검과 우선순위 수정 내역을 정리한 문서입니다.</p>
+              <div class="button-row">
+                <a class="button button-primary" href="https://sheryloe.github.io/wiki/public-repo-audit.html">Open Doc</a>
+              </div>
+            </article>
           </div>
         </section>
         <section class="mt-5">
@@ -678,37 +719,45 @@
             <span class="section-label">grouped</span>
           </div>
           <div class="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+            <article class="wiki-track-card accent-ocean reveal">
+              <div>
+                <p class="eyebrow eyebrow-small">AI Ops &amp; Agents</p>
+                <h3>AI Ops &amp; Agents</h3>
+                <p>AI 비서/에이전트와 운영 자동화 흐름을 묶어, 로그·알림·권한까지 서비스처럼 관리하는 축입니다.</p>
+              </div>
+              <strong class="track-count">2 tracked repos</strong>
+            </article>
             <article class="wiki-track-card accent-teal reveal">
               <div>
-                <p class="eyebrow eyebrow-small">AI Automation</p>
-                <h3>AI Automation</h3>
-                <p>AI 비서, 글쓰기 자동화, 멀티 채널 발행, 협업 오케스트레이션까지 지식 작업을 자동화하는 축입니다.</p>
+                <p class="eyebrow eyebrow-small">Content &amp; Publishing</p>
+                <h3>Content &amp; Publishing</h3>
+                <p>글쓰기/발행 자동화와 채널 운영을 중심으로, 제작-검수-발행-분석 흐름을 제품처럼 묶는 축입니다.</p>
               </div>
-              <strong class="track-count">4 tracked repos</strong>
+              <strong class="track-count">3 tracked repos</strong>
             </article>
             <article class="wiki-track-card accent-amber reveal">
               <div>
-                <p class="eyebrow eyebrow-small">Service Products</p>
-                <h3>Service Products</h3>
-                <p>거래, 개인 재무, 분석 대시보드처럼 실제 사용 시나리오가 분명한 서비스형 프로젝트를 묶었습니다.</p>
+                <p class="eyebrow eyebrow-small">Finance &amp; Trading</p>
+                <h3>Finance &amp; Trading</h3>
+                <p>트레이딩 운영과 개인 재무처럼 숫자 기반 워크플로를 안정적으로 굴리는 서비스 축입니다.</p>
               </div>
-              <strong class="track-count">4 tracked repos</strong>
+              <strong class="track-count">2 tracked repos</strong>
             </article>
-            <article class="wiki-track-card accent-ocean reveal">
+            <article class="wiki-track-card accent-rose reveal">
               <div>
                 <p class="eyebrow eyebrow-small">Desktop Utilities</p>
                 <h3>Desktop Utilities</h3>
-                <p>자주 쓰는 작업을 빠르게 끝내는 Windows 중심 도구를 제품 감각으로 정리하는 축입니다.</p>
+                <p>Windows 중심의 생산성/이미지 작업 도구를 제품 감각으로 다듬는 축입니다.</p>
               </div>
               <strong class="track-count">2 tracked repos</strong>
             </article>
             <article class="wiki-track-card accent-slate reveal">
               <div>
-                <p class="eyebrow eyebrow-small">Platform Docs</p>
-                <h3>Platform Docs</h3>
-                <p>플랫폼 워크스페이스와 중앙 위키를 통해 전체 저장소의 구조와 운영 원칙을 설명하는 축입니다.</p>
+                <p class="eyebrow eyebrow-small">Platform &amp; Seeds</p>
+                <h3>Platform &amp; Seeds</h3>
+                <p>플랫폼 기반, 허브, 서비스 시드 저장소까지 &#x27;정리/설계/운영 표준&#x27;을 만드는 축입니다.</p>
               </div>
-              <strong class="track-count">1 tracked repos</strong>
+              <strong class="track-count">2 tracked repos</strong>
             </article>
           </div>
         </section>
@@ -723,7 +772,7 @@
             <article class="wiki-repo-card accent-amber reveal">
               <div class="wiki-repo-head">
                 <div>
-                  <p class="eyebrow eyebrow-small">Service Products</p>
+                  <p class="eyebrow eyebrow-small">Finance &amp; Trading</p>
                   <h3>Automethemoney</h3>
                 </div>
                 <span class="status-pill">Operate</span>
@@ -737,10 +786,44 @@
                 <a class="button" href="https://sheryloe.github.io/Automethemoney/">Live Page</a>
               </div>
             </article>
-            <article class="wiki-repo-card accent-rose reveal">
+            <article class="wiki-repo-card accent-slate reveal">
               <div class="wiki-repo-head">
                 <div>
-                  <p class="eyebrow eyebrow-small">AI Automation</p>
+                  <p class="eyebrow eyebrow-small">Platform &amp; Seeds</p>
+                  <h3>DonggriGent</h3>
+                </div>
+                <span class="status-pill">Operate</span>
+              </div>
+              <p>운영 자동화/툴링을 위한 가벼운 웹 실험</p>
+              <div class="meta-row">
+                <span class="meta-pill">JavaScript</span><span class="meta-pill">Operate</span><span class="meta-pill">Live</span><span class="meta-pill">automation</span><span class="meta-pill">tools</span>
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/DonggriGent/tree/main/wiki">Repo Wiki</a>
+                <a class="button" href="https://sheryloe.github.io/DonggriGent/">Live Page</a>
+              </div>
+            </article>
+            <article class="wiki-repo-card accent-amber reveal">
+              <div class="wiki-repo-head">
+                <div>
+                  <p class="eyebrow eyebrow-small">Finance &amp; Trading</p>
+                  <h3>donggri_gagyeobu</h3>
+                </div>
+                <span class="status-pill">Operate</span>
+              </div>
+              <p>자산 흐름과 예산을 브라우저에서 관리하는 개인 가계부</p>
+              <div class="meta-row">
+                <span class="meta-pill">JavaScript</span><span class="meta-pill">Operate</span><span class="meta-pill">Live</span><span class="meta-pill">budgeting</span><span class="meta-pill">expense-tracker</span>
+              </div>
+              <div class="button-row">
+                <a class="button button-primary" href="https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki">Repo Wiki</a>
+                <a class="button" href="https://sheryloe.github.io/donggri_gagyeobu/">Live Page</a>
+              </div>
+            </article>
+            <article class="wiki-repo-card accent-teal reveal">
+              <div class="wiki-repo-head">
+                <div>
+                  <p class="eyebrow eyebrow-small">Content &amp; Publishing</p>
                   <h3>BloggerGent</h3>
                 </div>
                 <span class="status-pill">Scale</span>
@@ -757,38 +840,21 @@
             <article class="wiki-repo-card accent-slate reveal">
               <div class="wiki-repo-head">
                 <div>
-                  <p class="eyebrow eyebrow-small">Platform Docs</p>
-                  <h3>DonggriGent</h3>
-                </div>
-                <span class="status-pill">Operate</span>
-              </div>
-              <p>JavaScript</p>
-              <div class="meta-row">
-                <span class="meta-pill">JavaScript</span><span class="meta-pill">Operate</span><span class="meta-pill">Live</span>
-              </div>
-              <div class="button-row">
-                <a class="button button-primary" href="https://github.com/sheryloe/DonggriGent/tree/main/wiki">Repo Wiki</a>
-                <a class="button" href="https://sheryloe.github.io/DonggriGent/">Live Page</a>
-              </div>
-            </article>
-            <article class="wiki-repo-card accent-amber reveal">
-              <div class="wiki-repo-head">
-                <div>
-                  <p class="eyebrow eyebrow-small">Service Products</p>
-                  <h3>DonggriWorld</h3>
+                  <p class="eyebrow eyebrow-small">Platform &amp; Seeds</p>
+                  <h3>DonggriGameBook</h3>
                 </div>
                 <span class="status-pill">Build</span>
               </div>
-              <p>서비스 아이디어를 제품 요구사항으로 구체화하는 신규 저장소</p>
+              <p>DonggriWorld</p>
               <div class="meta-row">
-                <span class="meta-pill">TypeScript</span><span class="meta-pill">Build</span><span class="meta-pill">planning</span><span class="meta-pill">product-discovery</span>
+                <span class="meta-pill">TypeScript</span><span class="meta-pill">Build</span>
               </div>
               <div class="button-row">
-                <a class="button button-primary" href="https://github.com/sheryloe/DonggriWorld/tree/main/wiki">Repo Wiki</a>
-                <a class="button" href="https://github.com/sheryloe/DonggriWorld">Repository</a>
+                <a class="button button-primary" href="https://github.com/sheryloe/DonggriGameBook/tree/main/wiki">Repo Wiki</a>
+                <a class="button" href="https://github.com/sheryloe/DonggriGameBook">Repository</a>
               </div>
             </article>
-            <article class="wiki-repo-card accent-ocean reveal">
+            <article class="wiki-repo-card accent-rose reveal">
               <div class="wiki-repo-head">
                 <div>
                   <p class="eyebrow eyebrow-small">Desktop Utilities</p>
@@ -805,7 +871,7 @@
                 <a class="button" href="https://sheryloe.github.io/grid-crop-image/">Live Page</a>
               </div>
             </article>
-            <article class="wiki-repo-card accent-ocean reveal">
+            <article class="wiki-repo-card accent-rose reveal">
               <div class="wiki-repo-head">
                 <div>
                   <p class="eyebrow eyebrow-small">Desktop Utilities</p>
@@ -822,27 +888,10 @@
                 <a class="button" href="https://sheryloe.github.io/Favorit/">Live Page</a>
               </div>
             </article>
-            <article class="wiki-repo-card accent-amber reveal">
-              <div class="wiki-repo-head">
-                <div>
-                  <p class="eyebrow eyebrow-small">Service Products</p>
-                  <h3>donggri_gagyeobu</h3>
-                </div>
-                <span class="status-pill">Operate</span>
-              </div>
-              <p>자산 흐름과 예산을 브라우저에서 관리하는 개인 가계부</p>
-              <div class="meta-row">
-                <span class="meta-pill">JavaScript</span><span class="meta-pill">Operate</span><span class="meta-pill">Live</span><span class="meta-pill">budgeting</span><span class="meta-pill">expense-tracker</span>
-              </div>
-              <div class="button-row">
-                <a class="button button-primary" href="https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki">Repo Wiki</a>
-                <a class="button" href="https://sheryloe.github.io/donggri_gagyeobu/">Live Page</a>
-              </div>
-            </article>
             <article class="wiki-repo-card accent-slate reveal">
               <div class="wiki-repo-head">
                 <div>
-                  <p class="eyebrow eyebrow-small">Platform Docs</p>
+                  <p class="eyebrow eyebrow-small">Platform &amp; Seeds</p>
                   <h3>cloudflare-blog</h3>
                 </div>
                 <span class="status-pill">Build</span>
@@ -856,10 +905,10 @@
                 <a class="button" href="https://github.com/sheryloe/cloudflare-blog">Repository</a>
               </div>
             </article>
-            <article class="wiki-repo-card accent-amber reveal">
+            <article class="wiki-repo-card accent-teal reveal">
               <div class="wiki-repo-head">
                 <div>
-                  <p class="eyebrow eyebrow-small">Service Products</p>
+                  <p class="eyebrow eyebrow-small">Content &amp; Publishing</p>
                   <h3>BloManagent</h3>
                 </div>
                 <span class="status-pill">Operate</span>
@@ -873,10 +922,10 @@
                 <a class="button" href="https://sheryloe.github.io/BloManagent/">Live Page</a>
               </div>
             </article>
-            <article class="wiki-repo-card accent-teal reveal">
+            <article class="wiki-repo-card accent-ocean reveal">
               <div class="wiki-repo-head">
                 <div>
-                  <p class="eyebrow eyebrow-small">AI Automation</p>
+                  <p class="eyebrow eyebrow-small">AI Ops &amp; Agents</p>
                   <h3>Vibe_Cowork_Thinking</h3>
                 </div>
                 <span class="status-pill">Explore</span>
@@ -893,7 +942,7 @@
             <article class="wiki-repo-card accent-teal reveal">
               <div class="wiki-repo-head">
                 <div>
-                  <p class="eyebrow eyebrow-small">AI Automation</p>
+                  <p class="eyebrow eyebrow-small">Content &amp; Publishing</p>
                   <h3>AI_Writer_TISTORY</h3>
                 </div>
                 <span class="status-pill">Scale</span>
@@ -907,10 +956,10 @@
                 <a class="button" href="https://sheryloe.github.io/AI_Writer_TISTORY/">Live Page</a>
               </div>
             </article>
-            <article class="wiki-repo-card accent-teal reveal">
+            <article class="wiki-repo-card accent-ocean reveal">
               <div class="wiki-repo-head">
                 <div>
-                  <p class="eyebrow eyebrow-small">AI Automation</p>
+                  <p class="eyebrow eyebrow-small">AI Ops &amp; Agents</p>
                   <h3>AI_BISEO</h3>
                 </div>
                 <span class="status-pill">Operate</span>

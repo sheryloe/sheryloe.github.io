@@ -6,7 +6,7 @@ __GOOGLE_ANALYTICS_SNIPPET__
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Central Wiki | __SITE_NAME__</title>
   <meta name="description" content="__DESCRIPTION__">
-  <meta name="theme-color" content="#eaf2fb">
+  <meta name="theme-color" content="#4f89ad">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="__SITE_URL__wiki/">
   <meta property="og:type" content="website">
@@ -23,27 +23,29 @@ __GOOGLE_ANALYTICS_SNIPPET__
   <script src="https://code.iconify.design/iconify-icon/3.1.1/iconify-icon.min.js"></script>
   <style type="text/tailwindcss">
     :root {
-      --background: #eff6ff;
-      --foreground: #0f172a;
-      --muted: #64748b;
-      --border: #d6e3f0;
-      --card: rgba(255, 255, 255, 0.94);
-      --primary: #2563eb;
-      --primary-foreground: #ffffff;
-      --secondary: rgba(241, 247, 255, 0.92);
-      --teal: #2563eb;
-      --amber: #3b82f6;
-      --ocean: #1d4ed8;
-      --slate: #475569;
-      --rose: #60a5fa;
+      --background: #f4fbff;
+      --foreground: #1f3442;
+      --muted: #627786;
+      --border: #d5e4ea;
+      --card: rgba(251, 254, 255, 0.92);
+      --primary: #4f89ad;
+      --primary-foreground: #f8fdff;
+      --secondary: rgba(236, 246, 250, 0.92);
+      --secondary-strong: rgba(230, 244, 234, 0.86);
+      --ring: #8bbdd8;
+      --teal: #67b8b1;
+      --amber: #93cea0;
+      --ocean: #74b6d8;
+      --slate: #93a9b6;
+      --rose: #acd7bf;
     }
 
     body {
       min-height: 100vh;
       background:
-        radial-gradient(circle at 10% -5%, rgba(147, 197, 253, 0.35), transparent 30rem),
-        radial-gradient(circle at 90% 0%, rgba(191, 219, 254, 0.4), transparent 28rem),
-        linear-gradient(180deg, #f4f8fc 0%, #edf4fb 100%);
+        radial-gradient(circle at 10% -5%, rgba(116, 182, 216, 0.22), transparent 32rem),
+        radial-gradient(circle at 92% 0%, rgba(147, 206, 160, 0.16), transparent 28rem),
+        linear-gradient(180deg, #f4fbff 0%, #f7fcfa 52%, #f1f5f6 100%);
       color: var(--foreground);
       font-family: "Work Sans", "Noto Sans KR", sans-serif;
     }
@@ -54,25 +56,25 @@ __GOOGLE_ANALYTICS_SNIPPET__
       pointer-events: none;
       opacity: 0.12;
       background-image:
-        radial-gradient(circle at 20% 16%, rgba(96, 165, 250, 0.12), transparent 22rem),
-        repeating-linear-gradient(0deg, rgba(148, 163, 184, 0.08), rgba(148, 163, 184, 0.08) 1px, transparent 1px, transparent 3px);
+        radial-gradient(circle at 20% 16%, rgba(116, 182, 216, 0.12), transparent 22rem),
+        repeating-linear-gradient(0deg, rgba(147, 169, 182, 0.1), rgba(147, 169, 182, 0.1) 1px, transparent 1px, transparent 3px);
       z-index: -1;
     }
 
     .command-top {
       border: 1px solid var(--border);
       border-radius: 14px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 250, 255, 0.96));
+      background: linear-gradient(180deg, rgba(251, 254, 255, 0.98), rgba(236, 246, 250, 0.96));
       display: grid;
       gap: 0.85rem;
       grid-template-columns: minmax(0, 1fr);
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 18px 48px rgba(79, 137, 173, 0.12);
       backdrop-filter: blur(6px);
     }
 
     .command-brand h1 {
       margin-top: 0.2rem;
-      color: #1e3a8a;
+      color: #245064;
       font-family: "Space Grotesk", "Inter", sans-serif;
       font-size: clamp(1.3rem, 2.4vw, 1.85rem);
       font-weight: 800;
@@ -81,7 +83,7 @@ __GOOGLE_ANALYTICS_SNIPPET__
     }
 
     .command-kicker {
-      color: #3b82f6;
+      color: var(--primary);
       font-size: 0.68rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
@@ -122,7 +124,7 @@ __GOOGLE_ANALYTICS_SNIPPET__
     .shell {
       border-color: var(--border);
       background: var(--card);
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 18px 48px rgba(79, 137, 173, 0.1);
       backdrop-filter: blur(6px);
     }
 
@@ -136,7 +138,7 @@ __GOOGLE_ANALYTICS_SNIPPET__
     }
 
     .hero-eyebrow {
-      color: #2563eb;
+      color: var(--primary);
       font-size: 0.68rem;
       font-weight: 700;
       letter-spacing: 0.2em;
@@ -145,7 +147,7 @@ __GOOGLE_ANALYTICS_SNIPPET__
 
     .hero-title {
       margin-top: 0.5rem;
-      color: #0f172a;
+      color: var(--foreground);
       font-family: "Space Grotesk", "Inter", sans-serif;
       font-size: 1.4rem;
       font-weight: 800;
@@ -156,7 +158,7 @@ __GOOGLE_ANALYTICS_SNIPPET__
 
     .hero-summary {
       margin-top: 0.65rem;
-      color: #475569;
+      color: var(--muted);
       font-size: 0.9rem;
       line-height: 1.65;
     }
@@ -170,36 +172,36 @@ __GOOGLE_ANALYTICS_SNIPPET__
       width: 100%;
       text-align: left;
       justify-content: flex-start;
-      border: 1px solid #d0deee;
+      border: 1px solid var(--border);
       border-radius: 9px;
-      background: rgba(247, 250, 255, 0.96);
-      color: #334155;
+      background: rgba(251, 254, 255, 0.96);
+      color: var(--foreground);
       font-family: "Space Grotesk", "Inter", sans-serif;
       letter-spacing: 0.02em;
     }
 
     .rail-tab.is-active {
-      border-color: #3b82f6;
-      background: #dbeafe;
-      color: #1e3a8a;
+      border-color: #9ac3d9;
+      background: var(--secondary-strong);
+      color: #245064;
     }
 
     .rail-links {
       display: grid;
       gap: 0.5rem;
       padding-top: 0.35rem;
-      border-top: 1px solid #d6e3f0;
+      border-top: 1px solid var(--border);
     }
 
     .rail-foot {
-      border-top: 1px solid #d6e3f0;
+      border-top: 1px solid var(--border);
       padding-top: 0.75rem;
     }
 
     .rail-foot strong {
       display: block;
       margin-top: 0.4rem;
-      color: #0f172a;
+      color: var(--foreground);
       font-family: "Space Grotesk", "Inter", sans-serif;
       font-size: 1.1rem;
       letter-spacing: -0.01em;
@@ -233,20 +235,20 @@ __GOOGLE_ANALYTICS_SNIPPET__
     }
 
     .hud-card {
-      border: 1px solid #d6e3f0;
+      border: 1px solid var(--border);
       border-radius: 10px;
-      background: #f8fbff;
+      background: var(--secondary);
       padding: 0.75rem 0.9rem;
     }
 
     .hud-card .section-label {
-      color: #64748b;
+      color: var(--muted);
     }
 
     .hud-card strong {
       display: block;
       margin-top: 0.35rem;
-      color: #0f172a;
+      color: var(--foreground);
       font-family: "Space Grotesk", "Inter", sans-serif;
       font-size: 1.15rem;
       letter-spacing: -0.02em;
@@ -254,49 +256,62 @@ __GOOGLE_ANALYTICS_SNIPPET__
 
     .button {
       @apply inline-flex items-center justify-center rounded-lg border px-3.5 py-2 text-sm font-medium transition-colors;
-      border-color: #c8d9ec;
-      background: #ffffff;
-      color: #1e293b;
+      border-color: var(--border);
+      background: rgba(251, 254, 255, 0.98);
+      color: var(--foreground);
+      box-shadow: 0 1px 2px rgba(79, 137, 173, 0.08);
     }
 
     .button:hover {
-      background: #eff6ff;
+      background: var(--secondary);
+      border-color: #bfd4de;
     }
 
     .button-primary {
-      background: linear-gradient(90deg, #2563eb, #1d4ed8);
-      border-color: #2563eb;
-      color: #ffffff;
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--primary-foreground);
     }
 
     .button-primary:hover {
-      background: linear-gradient(90deg, #1d4ed8, #1e40af);
+      background: #3f7597;
+      border-color: #3f7597;
     }
 
     .tabs-list {
       @apply inline-flex rounded-xl border p-1;
-      border-color: #d6e3f0;
-      background: #eef4fb;
+      border-color: var(--border);
+      background: rgba(236, 246, 250, 0.92);
     }
 
     .tab-trigger {
       @apply rounded-lg px-3.5 py-2 text-sm font-medium transition-colors;
-      color: #475569;
+      color: var(--muted);
       font-family: "Space Grotesk", "Inter", sans-serif;
       letter-spacing: 0.02em;
       text-transform: uppercase;
     }
 
     .tab-trigger.is-active {
-      background: #dbeafe;
-      color: #1e3a8a;
+      background: var(--secondary-strong);
+      color: #245064;
       box-shadow: none;
+    }
+
+    .button:focus-visible,
+    .tab-trigger:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--ring);
+      outline-offset: 2px;
+      box-shadow: 0 0 0 4px rgba(139, 189, 216, 0.22);
     }
 
     .section-label,
     .timeline-date {
       @apply text-xs font-semibold uppercase tracking-[0.18em];
-      color: #64748b;
+      color: var(--muted);
     }
 
     .doc-card,
@@ -306,8 +321,8 @@ __GOOGLE_ANALYTICS_SNIPPET__
     .info-card,
     .note-card {
       @apply rounded-xl border p-4;
-      border-color: #d6e3f0;
-      background: #ffffff;
+      border-color: var(--border);
+      background: rgba(251, 254, 255, 0.98);
     }
 
     .doc-card h3,
@@ -315,7 +330,7 @@ __GOOGLE_ANALYTICS_SNIPPET__
     .wiki-repo-card h3,
     .section-heading,
     .track-count {
-      color: #0f172a;
+      color: var(--foreground);
       font-family: "Space Grotesk", "Inter", sans-serif;
       @apply mt-3 text-lg font-semibold tracking-[-0.03em];
     }
@@ -326,7 +341,7 @@ __GOOGLE_ANALYTICS_SNIPPET__
     .note-card p,
     .accordion-panel p,
     .timeline-points {
-      color: #475569;
+      color: var(--muted);
       @apply mt-2 text-sm leading-6;
     }
 
@@ -343,9 +358,9 @@ __GOOGLE_ANALYTICS_SNIPPET__
     .meta-pill,
     .eyebrow {
       @apply inline-flex items-center rounded-md border px-2.5 py-1 text-[11px] font-medium;
-      border-color: #d6e3f0;
-      background: #f1f6fc;
-      color: #4b5563;
+      border-color: var(--border);
+      background: rgba(236, 246, 250, 0.92);
+      color: var(--muted);
     }
 
     .eyebrow-small {
@@ -361,18 +376,18 @@ __GOOGLE_ANALYTICS_SNIPPET__
     }
 
     .accordion-copy strong {
-      color: #0f172a;
+      color: var(--foreground);
       font-family: "Space Grotesk", "Inter", sans-serif;
       @apply mt-1 block text-sm font-semibold;
     }
 
     .accordion-panel {
       @apply border-t px-4 pb-4 pt-3;
-      border-color: #d6e3f0;
+      border-color: var(--border);
     }
 
     .accordion-icon {
-      color: #64748b;
+      color: var(--muted);
       @apply text-xl;
     }
 
@@ -381,7 +396,7 @@ __GOOGLE_ANALYTICS_SNIPPET__
     .wiki-repo-card,
     .timeline-card,
     .note-card {
-      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 14px 34px rgba(79, 137, 173, 0.12);
     }
 
     @media (min-width: 1024px) {
@@ -426,6 +441,8 @@ __SCHEMA_JSON__
       </div>
       <nav class="command-links">
         <a class="button" href="__SITE_URL__">Project Hub</a>
+        <a class="button" href="__SITE_URL__portfolio/">Portfolio</a>
+        <a class="button" href="__SITE_URL__wiki/agents.html">Agents</a>
         <a class="button" href="__GITHUB_PROFILE__">GitHub</a>
         <a class="button" href="__WIKI_REPO_URL__">Wiki Source</a>
       </nav>
@@ -453,8 +470,8 @@ __SCHEMA_JSON__
 
       <div class="rail-links">
         <a class="button" href="__SITE_URL__">Open Project Hub</a>
-        <a class="button" href="__SITE_URL__rss.xml">RSS Feed</a>
-        <a class="button" href="__SITE_URL__feed.xml">Atom Feed</a>
+        <a class="button" href="__SITE_URL__portfolio/">Open Portfolio</a>
+        <a class="button" href="__SITE_URL__wiki/agents.html">Browse Agents</a>
       </div>
 
       <div class="rail-foot">

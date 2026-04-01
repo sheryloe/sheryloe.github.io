@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WXFKE2E0L0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WXFKE2E0L0');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codex Subagents | Sheryloe Projects</title>
+  <meta name="description" content="AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#4f89ad">
+  <meta name="author" content="sheryloe">
+  <link rel="canonical" href="https://sheryloe.github.io/wiki/agents.html">
+  <link rel="icon" type="image/svg+xml" href="https://sheryloe.github.io/assets/meta/icon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="Sheryloe Projects">
+  <meta property="og:title" content="Codex Subagents | Sheryloe Projects">
+  <meta property="og:description" content="AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.">
+  <meta property="og:url" content="https://sheryloe.github.io/wiki/agents.html">
+  <meta property="og:image" content="https://sheryloe.github.io/assets/meta/root-hub-social.png">
+  <meta property="og:image:alt" content="Sheryloe Projects 첫 화면 미리보기">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Codex Subagents | Sheryloe Projects">
+  <meta name="twitter:description" content="AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.">
+  <meta name="twitter:image" content="https://sheryloe.github.io/assets/meta/root-hub-social.png">
+  <meta name="twitter:image:alt" content="Sheryloe Projects 첫 화면 미리보기">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="https://code.iconify.design/iconify-icon/3.1.1/iconify-icon.min.js"></script>
+  <style type="text/tailwindcss">
+    :root {
+      --foreground: #1f3442;
+      --muted: #627786;
+      --border: #d5e4ea;
+      --card: #fbfeff;
+      --primary: #4f89ad;
+      --primary-hover: #3f7597;
+      --primary-foreground: #f8fdff;
+      --secondary: #ecf6fa;
+      --secondary-strong: #e6f4ea;
+      --ring: #8bbdd8;
+    }
+
+    body {
+      @apply min-h-screen bg-slate-50 text-slate-950 antialiased;
+      font-family: "Inter", "Noto Sans KR", sans-serif;
+      background-image:
+        radial-gradient(circle at top, rgba(116, 182, 216, 0.18), transparent 32rem),
+        radial-gradient(circle at right top, rgba(147, 206, 160, 0.14), transparent 28rem),
+        linear-gradient(180deg, #f4fbff 0%, #f7fcfa 52%, #f1f5f6 100%);
+      color: var(--foreground);
+    }
+
+    .shell {
+      @apply rounded-2xl border bg-white shadow-sm;
+      border-color: var(--border);
+      box-shadow: 0 18px 48px rgba(79, 137, 173, 0.08);
+    }
+
+    .button {
+      @apply inline-flex items-center justify-center rounded-lg border px-3.5 py-2 text-sm font-medium transition-colors;
+      border-color: var(--border);
+      background: var(--card);
+      color: var(--foreground);
+      box-shadow: 0 1px 2px rgba(79, 137, 173, 0.08);
+    }
+
+    .button:hover {
+      background: var(--secondary);
+      border-color: #bfd4de;
+    }
+
+    .button-primary {
+      background: var(--primary);
+      color: var(--primary-foreground);
+      border-color: var(--primary);
+    }
+
+    .button-primary:hover {
+      background: var(--primary-hover);
+      border-color: var(--primary-hover);
+    }
+
+    .section-label,
+    .status-pill {
+      @apply inline-flex items-center rounded-md border px-2.5 py-1 text-[11px] font-medium;
+      border-color: var(--border);
+      background: var(--secondary);
+      color: #426070;
+    }
+
+    .section-label {
+      @apply text-xs font-semibold uppercase tracking-[0.18em] text-slate-500;
+      border: none;
+      background: transparent;
+      padding: 0;
+      color: var(--muted);
+    }
+
+    .status-pill {
+      background: var(--secondary-strong);
+      color: #47685b;
+      border-color: #c9dfd1;
+    }
+
+    .agent-card {
+      @apply rounded-xl border bg-white p-4;
+      border-color: var(--border);
+      box-shadow: 0 12px 28px rgba(79, 137, 173, 0.08);
+    }
+
+    .agent-head {
+      @apply flex flex-col gap-2 md:flex-row md:items-start md:justify-between;
+    }
+
+    .agent-code {
+      @apply rounded px-2 py-1 text-sm font-semibold;
+      background: var(--secondary);
+      color: var(--foreground);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    .agent-desc {
+      @apply mt-3 text-sm leading-6;
+      color: var(--muted);
+    }
+
+    .button-row {
+      @apply mt-4 flex flex-wrap gap-2;
+    }
+
+    .category-head {
+      @apply flex flex-col gap-3 md:flex-row md:items-start md:justify-between;
+    }
+
+    .reveal {
+      @apply opacity-100;
+    }
+
+    .button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--ring);
+      outline-offset: 2px;
+      box-shadow: 0 0 0 4px rgba(139, 189, 216, 0.22);
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Sheryloe Projects",
+      "url": "https://sheryloe.github.io/",
+      "description": "AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다."
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Sheryloe Projects | 공개 프로젝트 허브와 문서 아카이브",
+      "url": "https://sheryloe.github.io/",
+      "description": "AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.",
+      "image": "https://sheryloe.github.io/assets/meta/root-hub-social.png"
+    },
+    {
+      "@type": "Person",
+      "name": "sheryloe",
+      "url": "https://github.com/sheryloe",
+      "sameAs": [
+        "https://github.com/sheryloe"
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Public repositories by sheryloe",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Automethemoney",
+          "url": "https://sheryloe.github.io/Automethemoney/",
+          "description": "자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/automethemoney.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "DonggriGent",
+          "url": "https://sheryloe.github.io/DonggriGent/",
+          "description": "개인 운영 흐름에서 반복되는 작업을 줄이기 위한 웹 기반 툴링/실험 저장소입니다."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "donggri_gagyeobu",
+          "url": "https://sheryloe.github.io/donggri_gagyeobu/",
+          "description": "자산, 카드 결제 예정, 예산, 소비 흐름을 브라우저에서 바로 관리할 수 있게 정리한 개인 재무 서비스입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/donggri-gagyeobu.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "BloggerGent",
+          "url": "https://sheryloe.github.io/BloggerGent/",
+          "description": "여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/bloggergent.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "DonggriGameBook",
+          "url": "https://github.com/sheryloe/DonggriGameBook",
+          "description": "DonggriWorld"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "grid-crop-image",
+          "url": "https://sheryloe.github.io/grid-crop-image/",
+          "description": "스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용까지 지원하는 Windows 이미지 워크플로 도구입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/grid-crop-image.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Favorit",
+          "url": "https://sheryloe.github.io/Favorit/",
+          "description": "Windows 바탕화면에서 자주 쓰는 파일, 폴더, URL을 위젯처럼 빠르게 실행하도록 만든 데스크톱 런처입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/favorit.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "cloudflare-blog",
+          "url": "https://github.com/sheryloe/cloudflare-blog",
+          "description": "Cloudflare 기반 블로그 플랫폼을 Public, Admin, API 레이어로 분리해 운영 UX를 다듬는 워크스페이스입니다."
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "BloManagent",
+          "url": "https://sheryloe.github.io/BloManagent/",
+          "description": "블로그 URL 수집, 등급 산출, 주간 비교 리포트, 시각적 설명을 연결하는 분석 제품 실험입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/blomanagent.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Vibe_Cowork_Thinking",
+          "url": "https://sheryloe.github.io/Vibe_Cowork_Thinking/",
+          "description": "프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/vibe-cowork-thinking.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "AI_Writer_TISTORY",
+          "url": "https://sheryloe.github.io/AI_Writer_TISTORY/",
+          "description": "티스토리 발행 자동화, AI 글쓰기, 검수 전 단계, 운영 로그를 정리하는 출판 워크플로 프로젝트입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/ai-writer-tistory.png"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "AI_BISEO",
+          "url": "https://sheryloe.github.io/AI_BISEO/",
+          "description": "AI 비서 응답, Notion 로그, n8n 자동화, Telegram 알림 흐름을 하나의 운영 서비스로 엮는 프로젝트입니다.",
+          "image": "https://sheryloe.github.io/assets/previews/ai-biseo.png"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="mx-auto w-[min(calc(100%-24px),1220px)] py-6">
+    <div class="shell px-5 py-4">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <p class="section-label">Codex Subagents</p>
+          <h1 class="mt-2 text-2xl font-semibold tracking-[-0.04em] md:text-3xl" style="color: var(--foreground);">Awesome Codex Subagents</h1>
+          <p class="mt-3 max-w-3xl text-sm leading-7" style="color: var(--muted);">awesome-codex-subagents를 기반으로 카테고리별 서브에이전트 목록을 빠르게 검색할 수 있게 정리했습니다.</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a class="button" href="https://sheryloe.github.io/">Project Hub</a>
+          <a class="button" href="https://sheryloe.github.io/portfolio/">Portfolio</a>
+          <a class="button" href="https://sheryloe.github.io/wiki/">Wiki</a>
+          <a class="button" href="https://github.com/VoltAgent/awesome-codex-subagents">Source</a>
+        </div>
+      </div>
+      <div class="mt-5 grid gap-3 sm:grid-cols-3">
+        <article class="agent-card">
+          <span class="section-label">Subagents</span>
+          <strong class="mt-2 block text-2xl font-semibold tracking-[-0.04em]" id="agent-total" style="color: var(--foreground);">0</strong>
+        </article>
+        <article class="agent-card">
+          <span class="section-label">Public Repos</span>
+          <strong class="mt-2 block text-2xl font-semibold tracking-[-0.04em]" style="color: var(--foreground);">12</strong>
+        </article>
+        <article class="agent-card">
+          <span class="section-label">Live Pages</span>
+          <strong class="mt-2 block text-2xl font-semibold tracking-[-0.04em]" style="color: var(--foreground);">10</strong>
+        </article>
+      </div>
+      <div class="mt-5 grid gap-3 lg:grid-cols-[minmax(0,1fr)_220px] lg:items-end">
+        <div>
+          <label class="mb-2 block text-sm font-medium text-slate-700" for="agent-search">이름/설명으로 검색</label>
+          <input class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-slate-400 focus:ring-slate-200" id="agent-search" type="search" placeholder="api-designer, security-auditor, code-mapper ...">
+        </div>
+        <div class="agent-card">
+          <span class="section-label">Results</span>
+          <strong class="mt-2 block text-2xl font-semibold tracking-[-0.04em]" id="agent-results" style="color: var(--foreground);">0</strong>
+        </div>
+      </div>
+      <p class="mt-4 text-xs" style="color: var(--muted);">generated 2026-04-01 16:29 UTC</p>
+    </div>
+  </header>
+
+  <main class="mx-auto w-[min(calc(100%-24px),1220px)] space-y-4 pb-10">
+
+  </main>
+
+  <footer class="mx-auto w-[min(calc(100%-24px),1220px)] pb-8">
+    <div class="shell px-5 py-4">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div>
+          <strong class="text-sm font-semibold tracking-[-0.02em]" style="color: var(--foreground);">Sheryloe Projects</strong>
+          <p class="mt-1 text-sm" style="color: var(--muted);">카테고리/키워드 기반으로 필요한 서브에이전트를 빠르게 찾아 쓰는 목적의 참고 페이지입니다.</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <a class="button" href="https://sheryloe.github.io/">Hub</a>
+          <a class="button" href="https://sheryloe.github.io/wiki/">Wiki</a>
+          <a class="button" href="https://sheryloe.github.io/portfolio/">Portfolio</a>
+          <a class="button" href="https://github.com/VoltAgent/awesome-codex-subagents">Source</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById("agent-search");
+    const resultCounter = document.getElementById("agent-results");
+    const cards = Array.from(document.querySelectorAll("[data-agent-card]"));
+    const sections = Array.from(document.querySelectorAll("[data-category-section]"));
+
+    const update = () => {
+      const query = (searchInput.value || "").trim().toLowerCase();
+      let visible = 0;
+
+      for (const card of cards) {
+        const hay = card.getAttribute("data-search") || "";
+        const isMatch = !query || hay.includes(query);
+        card.classList.toggle("hidden", !isMatch);
+        if (isMatch) visible += 1;
+      }
+
+      for (const section of sections) {
+        const sectionCards = Array.from(section.querySelectorAll("[data-agent-card]"));
+        const sectionVisible = sectionCards.some((c) => !c.classList.contains("hidden"));
+        section.classList.toggle("hidden", !sectionVisible);
+      }
+
+      resultCounter.textContent = String(visible);
+    };
+
+    searchInput.addEventListener("input", update);
+    update();
+  </script>
+</body>
+</html>
+

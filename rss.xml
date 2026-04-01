@@ -5,15 +5,15 @@
     <link>https://sheryloe.github.io/</link>
     <description>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 01 Apr 2026 13:34:55 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2026 16:08:02 +0000</lastBuildDate>
     <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <item>
     <title>Automethemoney</title>
     <link>https://sheryloe.github.io/Automethemoney/</link>
     <guid isPermaLink="false">https://github.com/sheryloe/Automethemoney#2026-04-01</guid>
-    <pubDate>Wed, 01 Apr 2026 13:34:55 +0000</pubDate>
-    <description><![CDATA[<p><strong>Automethemoney</strong></p><p>전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔</p><p>자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.</p><p>Track: Service Products · Stage: Operate · Status: Live Console</p><p>Next focus: paper/live 권한 분리, 손실 경보, 전략별 비교</p><p>Live page: <a href="https://sheryloe.github.io/Automethemoney/">https://sheryloe.github.io/Automethemoney/</a></p><p>Wiki: <a href="https://github.com/sheryloe/Automethemoney/tree/main/wiki">https://github.com/sheryloe/Automethemoney/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/Automethemoney">https://github.com/sheryloe/Automethemoney</a></p>]]></description>
-    <category>Service Products</category>
+    <pubDate>Wed, 01 Apr 2026 16:08:02 +0000</pubDate>
+    <description><![CDATA[<p><strong>Automethemoney</strong></p><p>전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔</p><p>자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.</p><p>Track: Finance &amp; Trading · Stage: Operate · Status: Live Console</p><p>Next focus: paper/live 권한 분리, 손실 경보, 전략별 비교</p><p>Live page: <a href="https://sheryloe.github.io/Automethemoney/">https://sheryloe.github.io/Automethemoney/</a></p><p>Wiki: <a href="https://github.com/sheryloe/Automethemoney/tree/main/wiki">https://github.com/sheryloe/Automethemoney/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/Automethemoney">https://github.com/sheryloe/Automethemoney</a></p>]]></description>
+    <category>Finance &amp; Trading</category>
     <category>Trading Ops</category>
     <category>Operate</category>
     <category>Python</category>
@@ -23,12 +23,41 @@
     <category>risk-control</category>
   </item>
   <item>
+    <title>DonggriGent</title>
+    <link>https://sheryloe.github.io/DonggriGent/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/DonggriGent#2026-04-01</guid>
+    <pubDate>Wed, 01 Apr 2026 16:00:35 +0000</pubDate>
+    <description><![CDATA[<p><strong>DonggriGent</strong></p><p>운영 자동화/툴링을 위한 가벼운 웹 실험</p><p>개인 운영 흐름에서 반복되는 작업을 줄이기 위한 웹 기반 툴링/실험 저장소입니다.</p><p>Track: Platform &amp; Seeds · Stage: Operate · Status: Live Pages</p><p>Next focus: README/사용 시나리오 정리, 설정 가이드, 데모 흐름 보강</p><p>Live page: <a href="https://sheryloe.github.io/DonggriGent/">https://sheryloe.github.io/DonggriGent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/DonggriGent/tree/main/wiki">https://github.com/sheryloe/DonggriGent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/DonggriGent">https://github.com/sheryloe/DonggriGent</a></p>]]></description>
+    <category>Platform &amp; Seeds</category>
+    <category>Platform Utility</category>
+    <category>Operate</category>
+    <category>JavaScript</category>
+    <category>automation</category>
+    <category>tools</category>
+    <category>web</category>
+  </item>
+  <item>
+    <title>donggri_gagyeobu</title>
+    <link>https://sheryloe.github.io/donggri_gagyeobu/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/donggri_gagyeobu#2026-04-01</guid>
+    <pubDate>Wed, 01 Apr 2026 15:48:22 +0000</pubDate>
+    <description><![CDATA[<p><strong>donggri_gagyeobu</strong></p><p>자산 흐름과 예산을 브라우저에서 관리하는 개인 가계부</p><p>자산, 카드 결제 예정, 예산, 소비 흐름을 브라우저에서 바로 관리할 수 있게 정리한 개인 재무 서비스입니다.</p><p>Track: Finance &amp; Trading · Stage: Operate · Status: Live Service</p><p>Next focus: 예산 알림, 가족 공유 모드, 백업 검증 자동화</p><p>Live page: <a href="https://sheryloe.github.io/donggri_gagyeobu/">https://sheryloe.github.io/donggri_gagyeobu/</a></p><p>Wiki: <a href="https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki">https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/donggri_gagyeobu">https://github.com/sheryloe/donggri_gagyeobu</a></p>]]></description>
+    <category>Finance &amp; Trading</category>
+    <category>Local Finance</category>
+    <category>Operate</category>
+    <category>JavaScript</category>
+    <category>budgeting</category>
+    <category>expense-tracker</category>
+    <category>finance-app</category>
+    <category>javascript</category>
+  </item>
+  <item>
     <title>BloggerGent</title>
     <link>https://sheryloe.github.io/BloggerGent/</link>
     <guid isPermaLink="false">https://github.com/sheryloe/BloggerGent#2026-04-01</guid>
     <pubDate>Wed, 01 Apr 2026 13:18:39 +0000</pubDate>
-    <description><![CDATA[<p><strong>BloggerGent</strong></p><p>멀티 채널 블로그 운영을 위한 AI 발행 스튜디오</p><p>여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.</p><p>Track: AI Automation · Stage: Scale · Status: Live Studio</p><p>Next focus: 승인 단계, 콘텐츠 캘린더, 발행 QA 체크리스트</p><p>Live page: <a href="https://sheryloe.github.io/BloggerGent/">https://sheryloe.github.io/BloggerGent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/BloggerGent/tree/main/wiki">https://github.com/sheryloe/BloggerGent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloggerGent">https://github.com/sheryloe/BloggerGent</a></p>]]></description>
-    <category>AI Automation</category>
+    <description><![CDATA[<p><strong>BloggerGent</strong></p><p>멀티 채널 블로그 운영을 위한 AI 발행 스튜디오</p><p>여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.</p><p>Track: Content &amp; Publishing · Stage: Scale · Status: Live Studio</p><p>Next focus: 승인 단계, 콘텐츠 캘린더, 발행 QA 체크리스트</p><p>Live page: <a href="https://sheryloe.github.io/BloggerGent/">https://sheryloe.github.io/BloggerGent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/BloggerGent/tree/main/wiki">https://github.com/sheryloe/BloggerGent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloggerGent">https://github.com/sheryloe/BloggerGent</a></p>]]></description>
+    <category>Content &amp; Publishing</category>
     <category>Publishing Studio</category>
     <category>Scale</category>
     <category>Python</category>
@@ -38,30 +67,15 @@
     <category>editorial-workflow</category>
   </item>
   <item>
-    <title>DonggriGent</title>
-    <link>https://sheryloe.github.io/DonggriGent/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/DonggriGent#2026-04-01</guid>
-    <pubDate>Wed, 01 Apr 2026 09:05:14 +0000</pubDate>
-    <description><![CDATA[<p><strong>DonggriGent</strong></p><p>JavaScript</p><p>설명이 아직 정리되지 않은 저장소입니다.</p><p>Track: Platform Docs · Stage: Operate · Status: Live Pages</p><p>Next focus: 다음 개선 포인트를 문서화 중입니다.</p><p>Live page: <a href="https://sheryloe.github.io/DonggriGent/">https://sheryloe.github.io/DonggriGent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/DonggriGent/tree/main/wiki">https://github.com/sheryloe/DonggriGent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/DonggriGent">https://github.com/sheryloe/DonggriGent</a></p>]]></description>
-    <category>Platform Docs</category>
-    <category>JavaScript</category>
-    <category>Operate</category>
-    <category>JavaScript</category>
-  </item>
-  <item>
-    <title>DonggriWorld</title>
-    <link>https://github.com/sheryloe/DonggriWorld</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/DonggriWorld#2026-04-01</guid>
+    <title>DonggriGameBook</title>
+    <link>https://github.com/sheryloe/DonggriGameBook</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/DonggriGameBook#2026-04-01</guid>
     <pubDate>Wed, 01 Apr 2026 09:03:39 +0000</pubDate>
-    <description><![CDATA[<p><strong>DonggriWorld</strong></p><p>서비스 아이디어를 제품 요구사항으로 구체화하는 신규 저장소</p><p>DonggriWorld의 초기 서비스 구상과 구조를 정리하는 공개 시드 저장소입니다.</p><p>Track: Service Products · Stage: Build · Status: Repository Seed</p><p>Next focus: README 서비스 명세, 기본 구조, 초기 데모 페이지</p><p>Wiki: <a href="https://github.com/sheryloe/DonggriWorld/tree/main/wiki">https://github.com/sheryloe/DonggriWorld/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/DonggriWorld">https://github.com/sheryloe/DonggriWorld</a></p>]]></description>
-    <category>Service Products</category>
-    <category>Service Seed</category>
+    <description><![CDATA[<p><strong>DonggriGameBook</strong></p><p>DonggriWorld</p><p>DonggriWorld</p><p>Track: Platform &amp; Seeds · Stage: Build · Status: Repository</p><p>Next focus: 다음 개선 포인트를 문서화 중입니다.</p><p>Wiki: <a href="https://github.com/sheryloe/DonggriGameBook/tree/main/wiki">https://github.com/sheryloe/DonggriGameBook/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/DonggriGameBook">https://github.com/sheryloe/DonggriGameBook</a></p>]]></description>
+    <category>Platform &amp; Seeds</category>
+    <category>TypeScript</category>
     <category>Build</category>
     <category>TypeScript</category>
-    <category>planning</category>
-    <category>product-discovery</category>
-    <category>roadmap</category>
-    <category>service-seed</category>
   </item>
   <item>
     <title>grid-crop-image</title>
@@ -94,27 +108,12 @@
     <category>productivity</category>
   </item>
   <item>
-    <title>donggri_gagyeobu</title>
-    <link>https://sheryloe.github.io/donggri_gagyeobu/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/donggri_gagyeobu#2026-03-20</guid>
-    <pubDate>Fri, 20 Mar 2026 15:20:57 +0000</pubDate>
-    <description><![CDATA[<p><strong>donggri_gagyeobu</strong></p><p>자산 흐름과 예산을 브라우저에서 관리하는 개인 가계부</p><p>자산, 카드 결제 예정, 예산, 소비 흐름을 브라우저에서 바로 관리할 수 있게 정리한 개인 재무 서비스입니다.</p><p>Track: Service Products · Stage: Operate · Status: Live Service</p><p>Next focus: 예산 알림, 가족 공유 모드, 백업 검증 자동화</p><p>Live page: <a href="https://sheryloe.github.io/donggri_gagyeobu/">https://sheryloe.github.io/donggri_gagyeobu/</a></p><p>Wiki: <a href="https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki">https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/donggri_gagyeobu">https://github.com/sheryloe/donggri_gagyeobu</a></p>]]></description>
-    <category>Service Products</category>
-    <category>Local Finance</category>
-    <category>Operate</category>
-    <category>JavaScript</category>
-    <category>budgeting</category>
-    <category>expense-tracker</category>
-    <category>finance-app</category>
-    <category>javascript</category>
-  </item>
-  <item>
     <title>cloudflare-blog</title>
     <link>https://github.com/sheryloe/cloudflare-blog</link>
     <guid isPermaLink="false">https://github.com/sheryloe/cloudflare-blog#2026-03-17</guid>
     <pubDate>Tue, 17 Mar 2026 09:58:12 +0000</pubDate>
-    <description><![CDATA[<p><strong>cloudflare-blog</strong></p><p>Public, Admin, API를 분리한 블로그 플랫폼 워크스페이스</p><p>Cloudflare 기반 블로그 플랫폼을 Public, Admin, API 레이어로 분리해 운영 UX를 다듬는 워크스페이스입니다.</p><p>Track: Platform Docs · Stage: Build · Status: Platform Repo</p><p>Next focus: 권한 분리, 미리보기, 맞춤 도메인 가이드</p><p>Wiki: <a href="https://github.com/sheryloe/cloudflare-blog/tree/main/wiki">https://github.com/sheryloe/cloudflare-blog/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/cloudflare-blog">https://github.com/sheryloe/cloudflare-blog</a></p>]]></description>
-    <category>Platform Docs</category>
+    <description><![CDATA[<p><strong>cloudflare-blog</strong></p><p>Public, Admin, API를 분리한 블로그 플랫폼 워크스페이스</p><p>Cloudflare 기반 블로그 플랫폼을 Public, Admin, API 레이어로 분리해 운영 UX를 다듬는 워크스페이스입니다.</p><p>Track: Platform &amp; Seeds · Stage: Build · Status: Platform Repo</p><p>Next focus: 권한 분리, 미리보기, 맞춤 도메인 가이드</p><p>Wiki: <a href="https://github.com/sheryloe/cloudflare-blog/tree/main/wiki">https://github.com/sheryloe/cloudflare-blog/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/cloudflare-blog">https://github.com/sheryloe/cloudflare-blog</a></p>]]></description>
+    <category>Platform &amp; Seeds</category>
     <category>Cloud Platform</category>
     <category>Build</category>
     <category>TypeScript</category>
@@ -128,8 +127,8 @@
     <link>https://sheryloe.github.io/BloManagent/</link>
     <guid isPermaLink="false">https://github.com/sheryloe/BloManagent#2026-03-16</guid>
     <pubDate>Mon, 16 Mar 2026 16:38:56 +0000</pubDate>
-    <description><![CDATA[<p><strong>BloManagent</strong></p><p>URL 수집과 비교 리포트를 잇는 분석 대시보드</p><p>블로그 URL 수집, 등급 산출, 주간 비교 리포트, 시각적 설명을 연결하는 분석 제품 실험입니다.</p><p>Track: Service Products · Stage: Operate · Status: Live Dashboard</p><p>Next focus: 비동기 수집, 공유 리포트, 등급 근거 시각화</p><p>Live page: <a href="https://sheryloe.github.io/BloManagent/">https://sheryloe.github.io/BloManagent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/BloManagent/tree/main/wiki">https://github.com/sheryloe/BloManagent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloManagent">https://github.com/sheryloe/BloManagent</a></p>]]></description>
-    <category>Service Products</category>
+    <description><![CDATA[<p><strong>BloManagent</strong></p><p>URL 수집과 비교 리포트를 잇는 분석 대시보드</p><p>블로그 URL 수집, 등급 산출, 주간 비교 리포트, 시각적 설명을 연결하는 분석 제품 실험입니다.</p><p>Track: Content &amp; Publishing · Stage: Operate · Status: Live Dashboard</p><p>Next focus: 비동기 수집, 공유 리포트, 등급 근거 시각화</p><p>Live page: <a href="https://sheryloe.github.io/BloManagent/">https://sheryloe.github.io/BloManagent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/BloManagent/tree/main/wiki">https://github.com/sheryloe/BloManagent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloManagent">https://github.com/sheryloe/BloManagent</a></p>]]></description>
+    <category>Content &amp; Publishing</category>
     <category>Analytics Dashboard</category>
     <category>Operate</category>
     <category>TypeScript</category>
@@ -143,8 +142,8 @@
     <link>https://sheryloe.github.io/Vibe_Cowork_Thinking/</link>
     <guid isPermaLink="false">https://github.com/sheryloe/Vibe_Cowork_Thinking#2026-03-16</guid>
     <pubDate>Mon, 16 Mar 2026 12:55:08 +0000</pubDate>
-    <description><![CDATA[<p><strong>Vibe_Cowork_Thinking</strong></p><p>Runner와 Orchestrator를 분리한 협업 실험실</p><p>프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.</p><p>Track: AI Automation · Stage: Explore · Status: Live Lab</p><p>Next focus: diff 뷰, 권한 모델, 결과 비교 리포트</p><p>Live page: <a href="https://sheryloe.github.io/Vibe_Cowork_Thinking/">https://sheryloe.github.io/Vibe_Cowork_Thinking/</a></p><p>Wiki: <a href="https://github.com/sheryloe/Vibe_Cowork_Thinking/tree/feat/initial-workflow-baseline/wiki">https://github.com/sheryloe/Vibe_Cowork_Thinking/tree/feat/initial-workflow-baseline/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/Vibe_Cowork_Thinking">https://github.com/sheryloe/Vibe_Cowork_Thinking</a></p>]]></description>
-    <category>AI Automation</category>
+    <description><![CDATA[<p><strong>Vibe_Cowork_Thinking</strong></p><p>Runner와 Orchestrator를 분리한 협업 실험실</p><p>프로젝트별 설정과 실행 로그를 유지하면서 Codex와 Gemini 작업 흐름을 오케스트레이션하는 실험적 워크스페이스입니다.</p><p>Track: AI Ops &amp; Agents · Stage: Explore · Status: Live Lab</p><p>Next focus: diff 뷰, 권한 모델, 결과 비교 리포트</p><p>Live page: <a href="https://sheryloe.github.io/Vibe_Cowork_Thinking/">https://sheryloe.github.io/Vibe_Cowork_Thinking/</a></p><p>Wiki: <a href="https://github.com/sheryloe/Vibe_Cowork_Thinking/tree/feat/initial-workflow-baseline/wiki">https://github.com/sheryloe/Vibe_Cowork_Thinking/tree/feat/initial-workflow-baseline/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/Vibe_Cowork_Thinking">https://github.com/sheryloe/Vibe_Cowork_Thinking</a></p>]]></description>
+    <category>AI Ops &amp; Agents</category>
     <category>AI Workflow Lab</category>
     <category>Explore</category>
     <category>Python</category>
@@ -158,8 +157,8 @@
     <link>https://sheryloe.github.io/AI_Writer_TISTORY/</link>
     <guid isPermaLink="false">https://github.com/sheryloe/AI_Writer_TISTORY#2026-03-16</guid>
     <pubDate>Mon, 16 Mar 2026 12:54:26 +0000</pubDate>
-    <description><![CDATA[<p><strong>AI_Writer_TISTORY</strong></p><p>AI 초안 생성부터 발행 전 검수까지 잇는 백엔드</p><p>티스토리 발행 자동화, AI 글쓰기, 검수 전 단계, 운영 로그를 정리하는 출판 워크플로 프로젝트입니다.</p><p>Track: AI Automation · Stage: Scale · Status: Live Workflow</p><p>Next focus: 발행 승인 단계, SEO 검수, 실패 복구 로그</p><p>Live page: <a href="https://sheryloe.github.io/AI_Writer_TISTORY/">https://sheryloe.github.io/AI_Writer_TISTORY/</a></p><p>Wiki: <a href="https://github.com/sheryloe/AI_Writer_TISTORY/tree/main/wiki">https://github.com/sheryloe/AI_Writer_TISTORY/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/AI_Writer_TISTORY">https://github.com/sheryloe/AI_Writer_TISTORY</a></p>]]></description>
-    <category>AI Automation</category>
+    <description><![CDATA[<p><strong>AI_Writer_TISTORY</strong></p><p>AI 초안 생성부터 발행 전 검수까지 잇는 백엔드</p><p>티스토리 발행 자동화, AI 글쓰기, 검수 전 단계, 운영 로그를 정리하는 출판 워크플로 프로젝트입니다.</p><p>Track: Content &amp; Publishing · Stage: Scale · Status: Live Workflow</p><p>Next focus: 발행 승인 단계, SEO 검수, 실패 복구 로그</p><p>Live page: <a href="https://sheryloe.github.io/AI_Writer_TISTORY/">https://sheryloe.github.io/AI_Writer_TISTORY/</a></p><p>Wiki: <a href="https://github.com/sheryloe/AI_Writer_TISTORY/tree/main/wiki">https://github.com/sheryloe/AI_Writer_TISTORY/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/AI_Writer_TISTORY">https://github.com/sheryloe/AI_Writer_TISTORY</a></p>]]></description>
+    <category>Content &amp; Publishing</category>
     <category>Publishing Workflow</category>
     <category>Scale</category>
     <category>TypeScript</category>
@@ -173,8 +172,8 @@
     <link>https://sheryloe.github.io/AI_BISEO/</link>
     <guid isPermaLink="false">https://github.com/sheryloe/AI_BISEO#2026-03-16</guid>
     <pubDate>Mon, 16 Mar 2026 12:54:25 +0000</pubDate>
-    <description><![CDATA[<p><strong>AI_BISEO</strong></p><p>AI 비서 응답과 운영 자동화를 묶는 개인 Ops 루프</p><p>AI 비서 응답, Notion 로그, n8n 자동화, Telegram 알림 흐름을 하나의 운영 서비스로 엮는 프로젝트입니다.</p><p>Track: AI Automation · Stage: Operate · Status: Live Ops</p><p>Next focus: 운영용 키 분리, 실패 알림, 버전 비교 로그</p><p>Live page: <a href="https://sheryloe.github.io/AI_BISEO/">https://sheryloe.github.io/AI_BISEO/</a></p><p>Wiki: <a href="https://github.com/sheryloe/AI_BISEO/tree/main/wiki">https://github.com/sheryloe/AI_BISEO/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/AI_BISEO">https://github.com/sheryloe/AI_BISEO</a></p>]]></description>
-    <category>AI Automation</category>
+    <description><![CDATA[<p><strong>AI_BISEO</strong></p><p>AI 비서 응답과 운영 자동화를 묶는 개인 Ops 루프</p><p>AI 비서 응답, Notion 로그, n8n 자동화, Telegram 알림 흐름을 하나의 운영 서비스로 엮는 프로젝트입니다.</p><p>Track: AI Ops &amp; Agents · Stage: Operate · Status: Live Ops</p><p>Next focus: 운영용 키 분리, 실패 알림, 버전 비교 로그</p><p>Live page: <a href="https://sheryloe.github.io/AI_BISEO/">https://sheryloe.github.io/AI_BISEO/</a></p><p>Wiki: <a href="https://github.com/sheryloe/AI_BISEO/tree/main/wiki">https://github.com/sheryloe/AI_BISEO/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/AI_BISEO">https://github.com/sheryloe/AI_BISEO</a></p>]]></description>
+    <category>AI Ops &amp; Agents</category>
     <category>Automation Ops</category>
     <category>Operate</category>
     <category>TypeScript</category>
