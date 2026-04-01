@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio Home | Sheryloe Projects</title>
   <meta name="description" content="전체 포트폴리오 축과 작업 원칙을 짧게 정리한 소개 문서입니다.">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#070a0c">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="https://sheryloe.github.io/wiki/home.html">
   <meta property="og:type" content="article">
@@ -24,87 +24,237 @@
   <link rel="icon" type="image/svg+xml" href="https://sheryloe.github.io/assets/meta/icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=Work+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   <style type="text/tailwindcss">
     :root {
-      --border: #e2e8f0;
-      --card: #ffffff;
-      --primary: #0f172a;
-      --primary-foreground: #ffffff;
-      --secondary: #f8fafc;
+      --background: #070a0c;
+      --foreground: #e7e3e2;
+      --muted: #9aa0a2;
+      --border: #283137;
+      --card: rgba(18, 22, 26, 0.88);
+      --primary: #9f0303;
+      --primary-foreground: #ffddd7;
+      --secondary: rgba(30, 38, 43, 0.72);
     }
 
     body {
-      @apply min-h-screen bg-slate-50 text-slate-950 antialiased;
-      font-family: "Inter", "Noto Sans KR", sans-serif;
-      background-image:
-        radial-gradient(circle at top, rgba(148, 163, 184, 0.12), transparent 30rem),
-        linear-gradient(180deg, #f8fafc 0%, #f8fafc 100%);
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 12% -10%, rgba(153, 2, 2, 0.22), transparent 28rem),
+        radial-gradient(circle at 88% -10%, rgba(82, 103, 125, 0.2), transparent 24rem),
+        linear-gradient(180deg, #080b0d 0%, #06080a 100%);
+      color: var(--foreground);
+      font-family: "Work Sans", "Noto Sans KR", sans-serif;
     }
 
+    .grain-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.18;
+      background-image:
+        radial-gradient(circle at 22% 18%, rgba(180, 10, 10, 0.08), transparent 20rem),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 3px);
+      z-index: -1;
+    }
+
+    .command-top {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(15, 18, 22, 0.96), rgba(10, 12, 15, 0.94));
+      display: grid;
+      gap: 0.85rem;
+      grid-template-columns: minmax(0, 1fr);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(8px);
+    }
+
+    .command-brand h1 {
+      margin-top: 0.2rem;
+      color: #d01616;
+      font-family: "Space Grotesk", "Inter", sans-serif;
+      font-size: clamp(1.25rem, 2.3vw, 1.72rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+
+    .command-kicker {
+      color: #90a67a;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .command-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .command-status {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      color: #aeb5b7;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .command-status strong {
+      color: #f1eded;
+      margin-right: 0.3rem;
+      font-family: "Space Grotesk", "Inter", sans-serif;
+      font-size: 0.96rem;
+      letter-spacing: 0;
+    }
+
+    .app-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .left-rail,
+    .doc-panel,
     .shell {
-      @apply rounded-2xl border bg-white shadow-sm;
       border-color: var(--border);
+      background: var(--card);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(8px);
+    }
+
+    .left-rail {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      display: grid;
+      gap: 1rem;
+      align-content: start;
+    }
+
+    .hero-eyebrow {
+      color: #8ea56f;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      margin-top: 0.5rem;
+      color: #f3f0ef;
+      font-family: "Space Grotesk", "Inter", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .hero-summary {
+      margin-top: 0.65rem;
+      color: #aeb6b8;
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .doc-panel {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
     }
 
     .button {
       @apply inline-flex items-center justify-center rounded-lg border px-3.5 py-2 text-sm font-medium transition-colors;
-      border-color: var(--border);
-      background: var(--card);
-      color: #0f172a;
+      border-color: #334148;
+      background: rgba(26, 33, 38, 0.8);
+      color: #d3d9db;
     }
 
     .button:hover {
-      @apply bg-slate-50;
+      background: rgba(34, 42, 48, 0.95);
     }
 
     .button-primary {
-      background: var(--primary);
-      color: var(--primary-foreground);
-      border-color: var(--primary);
+      background: linear-gradient(90deg, #9f0303, #760606);
+      border-color: #9f0303;
+      color: #ffe2dd;
     }
 
     .button-primary:hover {
-      background: #020617;
+      background: linear-gradient(90deg, #b40808, #820909);
     }
 
     .section-label,
     .doc-badge {
       @apply inline-flex items-center rounded-md border px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.14em];
-      border-color: var(--border);
-      background: var(--secondary);
-      color: #334155;
+      border-color: #2f3940;
+      background: rgba(23, 29, 34, 0.86);
+      color: #97a2a7;
     }
 
     .doc-nav-link {
-      @apply block rounded-lg border px-3 py-2 text-sm text-slate-600 transition-colors;
+      @apply block rounded-lg border px-3 py-2 text-sm transition-colors;
       border-color: transparent;
+      color: #aeb6b8;
+      background: rgba(18, 24, 29, 0.5);
     }
 
     .doc-nav-link:hover {
-      @apply bg-slate-50 text-slate-950;
+      border-color: #334148;
+      background: rgba(25, 32, 37, 0.9);
+      color: #f0eceb;
     }
 
     .doc-nav-link.is-active {
-      @apply border-slate-200 bg-slate-100 text-slate-950;
+      border-color: #9f0303;
+      background: rgba(159, 3, 3, 0.8);
+      color: #ffe4df;
+    }
+
+    .note-card {
+      @apply rounded-xl border p-4;
+      border-color: #2a343a;
+      background: rgba(15, 20, 24, 0.85);
+    }
+
+    .note-card p {
+      @apply mt-2 text-sm leading-6;
+      color: #aeb6b8;
+    }
+
+    .doc-summary {
+      @apply mt-5 rounded-xl border px-4 py-3 text-sm leading-6;
+      border-color: #2a343a;
+      background: rgba(18, 24, 29, 0.84);
+      color: #aeb6b8;
     }
 
     .doc-content h1 {
-      @apply mt-8 text-2xl font-semibold tracking-[-0.04em] text-slate-950 first:mt-0;
+      @apply mt-8 text-2xl font-semibold tracking-[-0.04em] first:mt-0;
+      color: #f0eceb;
+      font-family: "Space Grotesk", "Inter", sans-serif;
     }
 
     .doc-content h2 {
-      @apply mt-8 text-xl font-semibold tracking-[-0.03em] text-slate-950;
+      @apply mt-8 text-xl font-semibold tracking-[-0.03em];
+      color: #f0eceb;
+      font-family: "Space Grotesk", "Inter", sans-serif;
     }
 
     .doc-content h3 {
-      @apply mt-6 text-lg font-semibold tracking-[-0.02em] text-slate-950;
+      @apply mt-6 text-lg font-semibold tracking-[-0.02em];
+      color: #ece8e7;
+      font-family: "Space Grotesk", "Inter", sans-serif;
     }
 
     .doc-content p,
     .doc-content li {
-      @apply mt-3 text-sm leading-7 text-slate-700;
+      @apply mt-3 text-sm leading-7;
+      color: #b8c0c2;
     }
 
     .doc-content ul {
@@ -112,16 +262,22 @@
     }
 
     .doc-content a {
-      @apply font-medium text-slate-900 underline underline-offset-4;
+      color: #ffe4df;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: 600;
     }
 
     .doc-content code {
-      @apply rounded bg-slate-100 px-1.5 py-0.5 text-[0.9em] text-slate-900;
+      @apply rounded px-1.5 py-0.5 text-[0.9em];
+      background: rgba(24, 31, 36, 0.95);
+      color: #ffc3ba;
     }
 
     .doc-table-wrap {
       @apply mt-4 overflow-x-auto rounded-xl border;
-      border-color: var(--border);
+      border-color: #2a343a;
+      background: rgba(15, 20, 24, 0.72);
     }
 
     .doc-table-wrap table {
@@ -131,43 +287,62 @@
     .doc-table-wrap th,
     .doc-table-wrap td {
       @apply border-b px-4 py-3 text-left align-top;
-      border-color: var(--border);
+      border-color: #2a343a;
+      color: #b6bdc0;
     }
 
     .doc-table-wrap th {
-      @apply bg-slate-50 font-semibold text-slate-900;
+      background: rgba(22, 29, 34, 0.92);
+      color: #ece8e7;
+      font-weight: 700;
+      font-family: "Space Grotesk", "Inter", sans-serif;
     }
 
-    .note-card {
-      @apply rounded-xl border bg-white p-4;
-      border-color: var(--border);
+    @media (min-width: 1024px) {
+      .command-top {
+        grid-template-columns: 1.1fr auto auto;
+        align-items: center;
+      }
+
+      .app-grid {
+        grid-template-columns: 280px minmax(0, 1fr);
+      }
     }
   </style>
 </head>
 <body>
-  <header class="mx-auto w-[min(calc(100%-24px),1220px)] py-6">
-    <div class="shell px-5 py-4">
-      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <div>
-          <span class="section-label">Wiki Document</span>
-          <h1 class="mt-3 text-2xl font-semibold tracking-[-0.04em] text-slate-950 md:text-3xl">Portfolio Home</h1>
-          <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-600">전체 포트폴리오 축과 작업 원칙을 짧게 정리한 소개 문서입니다.</p>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <a class="button" href="./">Central Wiki</a>
-          <a class="button" href="https://sheryloe.github.io/">Project Hub</a>
-          <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki/Home.md">Source</a>
-        </div>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <header class="mx-auto w-[min(calc(100%-24px),1320px)] pt-5">
+    <div class="command-top px-5 py-4">
+      <div class="command-brand">
+        <p class="command-kicker">Wiki Document</p>
+        <h1>Portfolio Home</h1>
+      </div>
+      <nav class="command-links">
+        <a class="button" href="./">Central Wiki</a>
+        <a class="button" href="https://sheryloe.github.io/">Project Hub</a>
+        <a class="button" href="https://github.com/sheryloe/sheryloe.github.io/tree/main/wiki/Home.md">Source</a>
+      </nav>
+      <div class="command-status">
+        <span><strong>12</strong>Repos</span>
+        <span><strong>Overview</strong>Doc Type</span>
       </div>
     </div>
   </header>
 
-  <main class="mx-auto grid w-[min(calc(100%-24px),1220px)] gap-4 pb-10 xl:grid-cols-[260px_minmax(0,1fr)]">
-    <aside class="space-y-4">
-      <section class="shell p-4 xl:sticky xl:top-6">
+  <main class="mx-auto w-[min(calc(100%-24px),1320px)] pb-10 pt-4 app-grid">
+    <aside class="left-rail">
+      <div>
+        <p class="hero-eyebrow">Published Wiki</p>
+        <h2 class="hero-title">Portfolio Home</h2>
+        <p class="hero-summary">전체 포트폴리오 축과 작업 원칙을 짧게 정리한 소개 문서입니다.</p>
+      </div>
+
+      <section>
         <div class="flex items-center justify-between">
           <span class="section-label">Documents</span>
-          <span class="text-xs text-slate-500">auto html</span>
+          <span class="text-xs text-[#869094]">auto html</span>
         </div>
         <nav class="mt-4 space-y-2">
               <a class="doc-nav-link" href="./">Central Wiki</a>
@@ -185,21 +360,21 @@
 
       <section class="note-card">
         <span class="section-label">Snapshot</span>
-        <p>공개 저장소 수: 11</p>
-        <p>생성 시각: 2026-04-01 07:40 UTC</p>
+        <p>공개 저장소 수: 12</p>
+        <p>생성 시각: 2026-04-01 08:32 UTC</p>
       </section>
     </aside>
 
-    <section class="shell p-5 md:p-6">
+    <section class="doc-panel">
       <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div class="flex flex-wrap gap-2">
           <span class="doc-badge">Overview</span>
           <span class="doc-badge">HTML Published</span>
         </div>
-        <p class="text-xs text-slate-500">generated 2026-04-01 07:40 UTC</p>
+        <p class="text-xs text-[#869094]">generated 2026-04-01 08:32 UTC</p>
       </div>
 
-      <div class="mt-5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-6 text-slate-700">
+      <div class="doc-summary">
         전체 포트폴리오 축과 작업 원칙을 짧게 정리한 소개 문서입니다.
       </div>
 
@@ -217,12 +392,12 @@
     </section>
   </main>
 
-  <footer class="mx-auto w-[min(calc(100%-24px),1220px)] pb-8">
+  <footer class="mx-auto w-[min(calc(100%-24px),1320px)] pb-8">
     <div class="shell px-5 py-4">
       <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
-          <strong class="text-sm font-semibold tracking-[-0.02em] text-slate-950">Sheryloe Projects</strong>
-          <p class="mt-1 text-sm text-slate-600">중앙 위키 문서를 정적 HTML 페이지로 퍼블리시한 문서 뷰입니다.</p>
+          <strong class="text-sm font-semibold tracking-[-0.02em] text-[#f0eceb]">Sheryloe Projects</strong>
+          <p class="mt-1 text-sm text-[#aeb6b8]">중앙 위키 문서를 정적 HTML 페이지로 퍼블리시한 문서 뷰입니다.</p>
         </div>
         <div class="flex flex-wrap gap-2">
           <a class="button" href="./">Wiki</a>

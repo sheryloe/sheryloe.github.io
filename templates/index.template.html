@@ -31,7 +31,7 @@ __GOOGLE_ANALYTICS_SNIPPET__
   <meta name="twitter:image:alt" content="__SOCIAL_IMAGE_ALT__">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=Work+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
   <script src="https://code.iconify.design/iconify-icon/3.1.1/iconify-icon.min.js"></script>
@@ -419,6 +419,398 @@ __GOOGLE_ANALYTICS_SNIPPET__
     .sheet-grid {
       @apply mt-5 grid gap-4 md:grid-cols-2;
     }
+
+    /* Dead-reckoning inspired structural skin */
+    :root {
+      --background: #070a0c;
+      --foreground: #e7e3e2;
+      --muted: #9aa0a2;
+      --border: #283137;
+      --card: rgba(18, 22, 26, 0.88);
+      --primary: #9f0303;
+      --primary-foreground: #ffddd7;
+      --secondary: rgba(30, 38, 43, 0.72);
+      --ring: #d51818;
+      --teal: #93ad76;
+      --amber: #be6224;
+      --ocean: #5c7493;
+      --slate: #7f8d93;
+      --rose: #c02d2d;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 12% -10%, rgba(153, 2, 2, 0.22), transparent 28rem),
+        radial-gradient(circle at 88% -10%, rgba(82, 103, 125, 0.2), transparent 24rem),
+        linear-gradient(180deg, #080b0d 0%, #06080a 100%);
+      color: var(--foreground);
+      font-family: "Work Sans", "Noto Sans KR", sans-serif;
+    }
+
+    .grain-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.18;
+      background-image:
+        radial-gradient(circle at 22% 18%, rgba(180, 10, 10, 0.08), transparent 20rem),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 3px);
+      z-index: -1;
+    }
+
+    .command-top {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(15, 18, 22, 0.96), rgba(10, 12, 15, 0.94));
+      display: grid;
+      gap: 0.85rem;
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .command-brand h1 {
+      margin-top: 0.2rem;
+      color: #d01616;
+      font-family: "Space Grotesk", "Inter", sans-serif;
+      font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+
+    .command-kicker {
+      color: #90a67a;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .command-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .command-status {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      color: #aeb5b7;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .command-status strong {
+      color: #f1eded;
+      margin-right: 0.3rem;
+      font-family: "Space Grotesk", "Inter", sans-serif;
+      font-size: 0.96rem;
+      letter-spacing: 0;
+    }
+
+    .app-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .left-rail,
+    .terminal-panel,
+    .shell {
+      border-color: var(--border);
+      background: var(--card);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(8px);
+    }
+
+    .left-rail {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      display: grid;
+      gap: 1rem;
+      align-content: start;
+    }
+
+    .hero-eyebrow {
+      color: #8ea56f;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      margin-top: 0.5rem;
+      color: #f3f0ef;
+      font-family: "Space Grotesk", "Inter", sans-serif;
+      font-size: 1.42rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .hero-title .block {
+      display: block;
+    }
+
+    .hero-summary {
+      margin-top: 0.65rem;
+      color: #aeb6b8;
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .rail-nav {
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .rail-tab {
+      width: 100%;
+      text-align: left;
+      justify-content: flex-start;
+      border: 1px solid #334047;
+      border-radius: 9px;
+      background: rgba(20, 26, 30, 0.62);
+      color: #c2c9cb;
+      font-family: "Space Grotesk", "Inter", sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    .rail-tab.is-active {
+      border-color: #9f0303;
+      background: linear-gradient(90deg, rgba(151, 2, 2, 0.92), rgba(108, 7, 7, 0.86));
+      color: #ffe3dd;
+    }
+
+    .rail-links {
+      display: grid;
+      gap: 0.5rem;
+      padding-top: 0.35rem;
+      border-top: 1px solid #263037;
+    }
+
+    .rail-foot {
+      border-top: 1px solid #263037;
+      padding-top: 0.75rem;
+    }
+
+    .rail-foot strong {
+      display: block;
+      margin-top: 0.4rem;
+      color: #f4f1f0;
+      font-family: "Space Grotesk", "Inter", sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .terminal-panel {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+    }
+
+    .journal-head {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .journal-generated {
+      margin-top: 0.7rem;
+      color: #869094;
+      font-size: 0.76rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .hud-grid {
+      margin-top: 1rem;
+      display: grid;
+      gap: 0.65rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hud-card {
+      border: 1px solid #2a343a;
+      border-radius: 10px;
+      background: rgba(16, 21, 25, 0.86);
+      padding: 0.75rem 0.9rem;
+    }
+
+    .hud-card .section-label {
+      color: #7f8a8f;
+    }
+
+    .hud-card strong {
+      display: block;
+      margin-top: 0.35rem;
+      color: #ede9e8;
+      font-family: "Space Grotesk", "Inter", sans-serif;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .button {
+      border-color: #334148;
+      background: rgba(26, 33, 38, 0.8);
+      color: #d3d9db;
+    }
+
+    .button:hover {
+      background: rgba(34, 42, 48, 0.95);
+    }
+
+    .button-primary {
+      background: linear-gradient(90deg, #9f0303, #760606);
+      border-color: #9f0303;
+      color: #ffe2dd;
+    }
+
+    .button-primary:hover {
+      background: linear-gradient(90deg, #b40808, #820909);
+    }
+
+    .tabs-list {
+      border-color: #2c363c;
+      background: rgba(18, 24, 28, 0.84);
+    }
+
+    .tab-trigger {
+      color: #9ea7aa;
+      font-family: "Space Grotesk", "Inter", sans-serif;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .tab-trigger.is-active {
+      background: rgba(159, 3, 3, 0.85);
+      color: #ffe4df;
+      box-shadow: none;
+    }
+
+    .feature-card,
+    .track-card,
+    .doc-card,
+    .timeline-card,
+    .recent-row,
+    .project-row,
+    .wiki-link,
+    .stack-card,
+    .info-card {
+      border-color: #2a343a;
+      background: rgba(15, 20, 24, 0.85);
+    }
+
+    .feature-body h3,
+    .track-card h3,
+    .doc-card h3,
+    .project-row-head strong,
+    .recent-main strong,
+    .wiki-link strong,
+    .stack-card strong,
+    .section-heading {
+      color: #f0eceb;
+      font-family: "Space Grotesk", "Inter", sans-serif;
+    }
+
+    .section-label,
+    .timeline-date,
+    .recent-main span,
+    .recent-date,
+    .wiki-link span {
+      color: #7f8a8e;
+    }
+
+    .feature-subtitle,
+    .feature-desc,
+    .doc-card p,
+    .track-card p,
+    .stack-card p,
+    .project-row-head p,
+    .project-row-next,
+    .recent-note,
+    .detail-grid dd {
+      color: #aeb6b8;
+    }
+
+    .status-pill,
+    .meta-pill,
+    .filter-chip,
+    .availability-chip,
+    .eyebrow {
+      border-color: #2f3940;
+      background: rgba(23, 29, 34, 0.86);
+      color: #97a2a7;
+    }
+
+    .filter-chip.is-active,
+    .availability-chip.is-active {
+      border-color: #9f0303;
+      background: rgba(159, 3, 3, 0.8);
+      color: #ffe4df;
+    }
+
+    .project-row-side,
+    .sheet-preview,
+    #repo-search,
+    #result-count {
+      border-color: #2a343a !important;
+      background: rgba(18, 24, 29, 0.84) !important;
+      color: #d2d8da !important;
+    }
+
+    #repo-search::placeholder {
+      color: #7f8a8f;
+    }
+
+    .sheet {
+      border-left-color: #2a343a;
+      background: rgba(12, 16, 20, 0.96);
+    }
+
+    .sheet-header {
+      border-bottom-color: #2a343a;
+    }
+
+    .sheet-content section {
+      border-color: #2a343a !important;
+      background: rgba(18, 24, 29, 0.84) !important;
+    }
+
+    @media (min-width: 1024px) {
+      .command-top {
+        grid-template-columns: 1.1fr auto auto;
+        align-items: center;
+      }
+
+      .app-grid {
+        grid-template-columns: 280px minmax(0, 1fr);
+      }
+
+      .journal-head {
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-between;
+      }
+
+      .hud-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .left-rail {
+        padding: 0.85rem;
+      }
+
+      .rail-nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
   </style>
   <script type="application/ld+json">
 __SCHEMA_JSON__
@@ -427,56 +819,93 @@ __SCHEMA_JSON__
      crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class="mx-auto w-[min(calc(100%-24px),1220px)] py-6">
-    <div class="shell px-5 py-4">
-      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <div>
-          <p class="section-label">__HERO_EYEBROW__</p>
-          <h1 class="mt-2 text-2xl font-semibold tracking-[-0.04em] text-slate-950 md:text-3xl">__HERO_TITLE_HTML__</h1>
-          <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-600">__HERO_SUMMARY__</p>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <a class="button" href="__SITE_URL__wiki/">Wiki</a>
-          <a class="button" href="__GITHUB_PROFILE__">GitHub</a>
-          <a class="button" href="__SITE_URL__rss.xml">RSS</a>
-        </div>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <header class="mx-auto w-[min(calc(100%-24px),1320px)] pt-5">
+    <div class="command-top px-5 py-4">
+      <div class="command-brand">
+        <p class="command-kicker">__HERO_EYEBROW__</p>
+        <h1>__SITE_NAME__</h1>
       </div>
-      <div class="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
-        <article class="info-card">
-          <span class="section-label">Public Repos</span>
-          <strong class="mt-2 block text-2xl font-semibold tracking-[-0.04em] text-slate-950">__PUBLIC_REPO_COUNT__</strong>
-        </article>
-        <article class="info-card">
-          <span class="section-label">Live Pages</span>
-          <strong class="mt-2 block text-2xl font-semibold tracking-[-0.04em] text-slate-950">__LIVE_PAGE_COUNT__</strong>
-        </article>
-        <article class="info-card">
-          <span class="section-label">Tracks</span>
-          <strong class="mt-2 block text-2xl font-semibold tracking-[-0.04em] text-slate-950">__TRACK_COUNT__</strong>
-        </article>
-        <article class="info-card">
-          <span class="section-label">Wiki Docs</span>
-          <strong class="mt-2 block text-2xl font-semibold tracking-[-0.04em] text-slate-950">__WIKI_DOC_COUNT__</strong>
-        </article>
-        <article class="info-card">
-          <span class="section-label">Last Update</span>
-          <strong class="mt-2 block text-2xl font-semibold tracking-[-0.04em] text-slate-950">__LATEST_PUSH_SHORT__</strong>
-        </article>
+      <nav class="command-links">
+        <a class="button" href="__SITE_URL__wiki/">Wiki</a>
+        <a class="button" href="__GITHUB_PROFILE__">GitHub</a>
+        <a class="button" href="__SITE_URL__rss.xml">RSS</a>
+        <a class="button" href="__SITE_URL__feed.xml">Atom</a>
+      </nav>
+      <div class="command-status">
+        <span><strong>__PUBLIC_REPO_COUNT__</strong>Repos</span>
+        <span><strong>__LIVE_PAGE_COUNT__</strong>Live</span>
+        <span><strong>__TRACK_COUNT__</strong>Tracks</span>
       </div>
     </div>
   </header>
 
-  <main class="mx-auto w-[min(calc(100%-24px),1220px)] pb-10">
-    <section class="shell p-4 md:p-5">
-      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+  <main class="mx-auto w-[min(calc(100%-24px),1320px)] pb-10 pt-4 app-grid">
+    <aside class="left-rail">
+      <div>
+        <p class="hero-eyebrow">__HERO_EYEBROW__</p>
+        <h2 class="hero-title">__HERO_TITLE_HTML__</h2>
+        <p class="hero-summary">__HERO_SUMMARY__</p>
+      </div>
+
+      <div class="rail-nav" role="tablist" aria-label="사이드 탭">
+        <button class="tab-trigger rail-tab is-active" type="button" role="tab" aria-selected="true" data-tab-target="overview">Overview</button>
+        <button class="tab-trigger rail-tab" type="button" role="tab" aria-selected="false" data-tab-target="projects">Projects</button>
+        <button class="tab-trigger rail-tab" type="button" role="tab" aria-selected="false" data-tab-target="docs">Docs</button>
+        <button class="tab-trigger rail-tab" type="button" role="tab" aria-selected="false" data-tab-target="activity">Activity</button>
+      </div>
+
+      <div class="rail-links">
+        <a class="button" href="__SITE_URL__wiki/">Open Central Wiki</a>
+        <a class="button" href="__WIKI_REPO_URL__">Wiki Source</a>
+        <a class="button" href="__SITE_URL__sitemap.xml">Sitemap</a>
+      </div>
+
+      <div class="rail-foot">
+        <p class="section-label">Last Update</p>
+        <strong>__LATEST_PUSH_SHORT__</strong>
+      </div>
+    </aside>
+
+    <section class="terminal-panel">
+      <div class="journal-head">
+        <div>
+          <p class="section-label">Command Deck</p>
+          <h2 class="section-heading mt-2 text-xl font-semibold tracking-[-0.03em]">Project Hub Control Surface</h2>
+        </div>
         <div class="tabs-list" role="tablist" aria-label="메인 탭">
           <button class="tab-trigger is-active" type="button" role="tab" aria-selected="true" data-tab-target="overview">Overview</button>
           <button class="tab-trigger" type="button" role="tab" aria-selected="false" data-tab-target="projects">Projects</button>
           <button class="tab-trigger" type="button" role="tab" aria-selected="false" data-tab-target="docs">Docs</button>
           <button class="tab-trigger" type="button" role="tab" aria-selected="false" data-tab-target="activity">Activity</button>
         </div>
-        <p class="text-xs text-slate-500">generated __GENERATED_LABEL__</p>
       </div>
+
+      <div class="hud-grid">
+        <article class="hud-card">
+          <span class="section-label">Public Repos</span>
+          <strong>__PUBLIC_REPO_COUNT__</strong>
+        </article>
+        <article class="hud-card">
+          <span class="section-label">Live Pages</span>
+          <strong>__LIVE_PAGE_COUNT__</strong>
+        </article>
+        <article class="hud-card">
+          <span class="section-label">Tracks</span>
+          <strong>__TRACK_COUNT__</strong>
+        </article>
+        <article class="hud-card">
+          <span class="section-label">Wiki Docs</span>
+          <strong>__WIKI_DOC_COUNT__</strong>
+        </article>
+        <article class="hud-card">
+          <span class="section-label">Last Update</span>
+          <strong>__LATEST_PUSH_SHORT__</strong>
+        </article>
+      </div>
+
+      <p class="journal-generated">generated __GENERATED_LABEL__</p>
 
       <div class="mt-5" data-tab-panel="overview">
         <section class="space-y-4">
