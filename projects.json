@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T09:01:21.940747Z",
+  "generated_at": "2026-04-01T09:05:49.049832Z",
   "site_url": "https://sheryloe.github.io/",
   "repository_count": 12,
   "live_pages_count": 10,
@@ -27,8 +27,8 @@
       "preview_path": "assets/previews/donggrigent.png",
       "preview_image": "",
       "preview_alt": "DonggriGent 프로젝트 미리보기",
-      "updated_at": "2026-04-01T08:57:09Z",
-      "pushed_at": "2026-04-01T08:57:05Z"
+      "updated_at": "2026-04-01T09:05:18Z",
+      "pushed_at": "2026-04-01T09:05:14Z"
     },
     {
       "name": "Automethemoney",
@@ -60,8 +60,8 @@
       "preview_path": "assets/previews/automethemoney.png",
       "preview_image": "https://sheryloe.github.io/assets/previews/automethemoney.png",
       "preview_alt": "Automethemoney 소개 페이지 첫 화면. 자동매매 전략과 운영 리포트 구조가 보입니다.",
-      "updated_at": "2026-04-01T08:41:09Z",
-      "pushed_at": "2026-04-01T08:41:05Z"
+      "updated_at": "2026-04-01T09:04:22Z",
+      "pushed_at": "2026-04-01T09:04:17Z"
     },
     {
       "name": "DonggriWorld",
@@ -74,7 +74,7 @@
       "live_url": "",
       "pages_url": "",
       "wiki_url": "https://github.com/sheryloe/DonggriWorld/tree/main/wiki",
-      "language": "Unknown",
+      "language": "TypeScript",
       "topics": [
         "planning",
         "product-discovery",
@@ -91,8 +91,8 @@
       "preview_path": "assets/previews/donggriworld.png",
       "preview_image": "",
       "preview_alt": "DonggriWorld 프로젝트 플레이스홀더. 서비스 구상 초기 단계를 보여주는 카드입니다.",
-      "updated_at": "2026-04-01T06:43:22Z",
-      "pushed_at": "2026-04-01T06:43:22Z"
+      "updated_at": "2026-04-01T09:03:42Z",
+      "pushed_at": "2026-04-01T09:03:39Z"
     },
     {
       "name": "BloggerGent",
