@@ -27,11 +27,15 @@
     <link>https://github.com/sheryloe/DonggriWorld</link>
     <guid isPermaLink="false">https://github.com/sheryloe/DonggriWorld#2026-04-01</guid>
     <pubDate>Wed, 01 Apr 2026 06:43:22 +0000</pubDate>
-    <description><![CDATA[<p><strong>DonggriWorld</strong></p><p>DonggriWorld</p><p>DonggriWorld</p><p>Track: Platform Docs · Stage: Build · Status: Repository</p><p>Next focus: 다음 개선 포인트를 문서화 중입니다.</p><p>Wiki: <a href="https://github.com/sheryloe/DonggriWorld/tree/main/wiki">https://github.com/sheryloe/DonggriWorld/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/DonggriWorld">https://github.com/sheryloe/DonggriWorld</a></p>]]></description>
-    <category>Platform Docs</category>
-    <category>Unknown</category>
+    <description><![CDATA[<p><strong>DonggriWorld</strong></p><p>서비스 아이디어를 제품 요구사항으로 구체화하는 신규 저장소</p><p>DonggriWorld의 초기 서비스 구상과 구조를 정리하는 공개 시드 저장소입니다.</p><p>Track: Service Products · Stage: Build · Status: Repository Seed</p><p>Next focus: README 서비스 명세, 기본 구조, 초기 데모 페이지</p><p>Wiki: <a href="https://github.com/sheryloe/DonggriWorld/tree/main/wiki">https://github.com/sheryloe/DonggriWorld/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/DonggriWorld">https://github.com/sheryloe/DonggriWorld</a></p>]]></description>
+    <category>Service Products</category>
+    <category>Service Seed</category>
     <category>Build</category>
     <category>Unknown</category>
+    <category>planning</category>
+    <category>product-discovery</category>
+    <category>roadmap</category>
+    <category>service-seed</category>
   </item>
   <item>
     <title>BloggerGent</title>
@@ -98,11 +102,15 @@
     <link>https://github.com/sheryloe/cloudflare-blog</link>
     <guid isPermaLink="false">https://github.com/sheryloe/cloudflare-blog#2026-03-17</guid>
     <pubDate>Tue, 17 Mar 2026 09:58:12 +0000</pubDate>
-    <description><![CDATA[<p><strong>cloudflare-blog</strong></p><p>TypeScript</p><p>설명이 아직 정리되지 않은 저장소입니다.</p><p>Track: Platform Docs · Stage: Build · Status: Repository</p><p>Next focus: 다음 개선 포인트를 문서화 중입니다.</p><p>Wiki: <a href="https://github.com/sheryloe/cloudflare-blog/tree/main/wiki">https://github.com/sheryloe/cloudflare-blog/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/cloudflare-blog">https://github.com/sheryloe/cloudflare-blog</a></p>]]></description>
+    <description><![CDATA[<p><strong>cloudflare-blog</strong></p><p>Public, Admin, API를 분리한 블로그 플랫폼 워크스페이스</p><p>Cloudflare 기반 블로그 플랫폼을 Public, Admin, API 레이어로 분리해 운영 UX를 다듬는 워크스페이스입니다.</p><p>Track: Platform Docs · Stage: Build · Status: Platform Repo</p><p>Next focus: 권한 분리, 미리보기, 맞춤 도메인 가이드</p><p>Wiki: <a href="https://github.com/sheryloe/cloudflare-blog/tree/main/wiki">https://github.com/sheryloe/cloudflare-blog/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/cloudflare-blog">https://github.com/sheryloe/cloudflare-blog</a></p>]]></description>
     <category>Platform Docs</category>
-    <category>TypeScript</category>
+    <category>Cloud Platform</category>
     <category>Build</category>
     <category>TypeScript</category>
+    <category>cloudflare</category>
+    <category>platform</category>
+    <category>rss</category>
+    <category>seo</category>
   </item>
   <item>
     <title>BloManagent</title>

@@ -12,9 +12,9 @@
 
 - AI 운영 자동화: `AI_BISEO`, `AI_Writer_TISTORY`, `BloggerGent`
 - 분석과 운영 도구: `BloManagent`, `Vibe_Cowork_Thinking`
-- 개인 서비스: `donggri_gagyeobu`, `Automethemoney`
+- 개인 서비스: `donggri_gagyeobu`, `Automethemoney`, `DonggriWorld`
 - 데스크톱 유틸리티: `Favorit`, `grid-crop-image`
-- 플랫폼 워크스페이스: `donggeuri-cloudflare-blog`
+- 플랫폼 워크스페이스: `cloudflare-blog`
 - 공개 허브와 문서: `sheryloe.github.io`
 
 ## 지금 보이는 방향

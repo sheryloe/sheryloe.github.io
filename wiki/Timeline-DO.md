@@ -35,8 +35,8 @@
 
 - 공개 저장소 전체를 기준으로 README를 한국어 서비스 설명 중심으로 재구성했습니다.
 - 중앙 위키에 서비스 맵, 날짜별 DO, 서비스 TODO를 묶어 정리했습니다.
-- `Automethemoney`, `donggeuri-cloudflare-blog`를 최신 상태로 가져와 작업 대상에 포함했습니다.
-- `AI_BISEO`, `AI_Writer_TISTORY`, `BloggerGent`, `BloManagent`, `Favorit`, `grid-crop-image`, `Vibe_Cowork_Thinking`, `donggeuri-cloudflare-blog`의 GitHub Pages를 주제별 테마로 다시 구성했습니다.
+- `Automethemoney`, `cloudflare-blog`를 최신 상태로 가져와 작업 대상에 포함했습니다.
+- `AI_BISEO`, `AI_Writer_TISTORY`, `BloggerGent`, `BloManagent`, `Favorit`, `grid-crop-image`, `Vibe_Cowork_Thinking`, `cloudflare-blog`의 GitHub Pages를 주제별 테마로 다시 구성했습니다.
 - `sheryloe.github.io` 루트 허브에 중앙 wiki 랜딩과 문서 허브를 노출하는 구조를 추가했습니다.
 - 각 공개 저장소에 `wiki/` 문서를 보강해 서비스 개요와 로드맵을 repo 단위로도 읽을 수 있게 정리했습니다.
 

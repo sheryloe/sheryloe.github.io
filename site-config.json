@@ -58,6 +58,7 @@
       "accent": "amber",
       "repositories": [
         "Automethemoney",
+        "DonggriWorld",
         "donggri_gagyeobu",
         "BloManagent"
       ]
@@ -82,7 +83,7 @@
       "icon": "solar:book-bookmark-linear",
       "accent": "slate",
       "repositories": [
-        "donggeuri-cloudflare-blog",
+        "cloudflare-blog",
         "sheryloe.github.io"
       ]
     }
@@ -309,12 +310,30 @@
       "accent": "amber",
       "featured": true
     },
-    "donggeuri-cloudflare-blog": {
+    "DonggriWorld": {
+      "track": "service-products",
+      "category": "Service Seed",
+      "subtitle": "서비스 아이디어를 제품 요구사항으로 구체화하는 신규 저장소",
+      "description": "DonggriWorld의 초기 서비스 구상과 구조를 정리하는 공개 시드 저장소입니다.",
+      "preview_alt": "DonggriWorld 프로젝트 플레이스홀더. 서비스 구상 초기 단계를 보여주는 카드입니다.",
+      "repo_topics": [
+        "planning",
+        "product-discovery",
+        "roadmap",
+        "service-seed"
+      ],
+      "status": "Repository Seed",
+      "next_focus": "README 서비스 명세, 기본 구조, 초기 데모 페이지",
+      "audience": "서비스 기획 / 제품 초기 설계",
+      "stage": "Build",
+      "accent": "amber"
+    },
+    "cloudflare-blog": {
       "track": "platform-docs",
       "category": "Cloud Platform",
       "subtitle": "Public, Admin, API를 분리한 블로그 플랫폼 워크스페이스",
       "description": "Cloudflare 기반 블로그 플랫폼을 Public, Admin, API 레이어로 분리해 운영 UX를 다듬는 워크스페이스입니다.",
-      "preview_alt": "donggeuri-cloudflare-blog 프로젝트 플레이스홀더. Cloudflare 기반 블로그 플랫폼 설명을 보여주는 카드입니다.",
+      "preview_alt": "cloudflare-blog 프로젝트 플레이스홀더. Cloudflare 기반 블로그 플랫폼 설명을 보여주는 카드입니다.",
       "repo_topics": [
         "cloudflare",
         "platform",
