@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Service TODO | Sheryloe Projects</title>
   <meta name="description" content="보안, 기능, 운영 관점에서 어떤 저장소를 다음에 어떻게 다듬어야 하는지 정리한 백로그입니다.">
-  <meta name="theme-color" content="#070a0c">
+  <meta name="theme-color" content="#eaf2fb">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="https://sheryloe.github.io/wiki/service-todo.html">
   <meta property="og:type" content="article">
@@ -28,22 +28,22 @@
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   <style type="text/tailwindcss">
     :root {
-      --background: #070a0c;
-      --foreground: #e7e3e2;
-      --muted: #9aa0a2;
-      --border: #283137;
-      --card: rgba(18, 22, 26, 0.88);
-      --primary: #9f0303;
-      --primary-foreground: #ffddd7;
-      --secondary: rgba(30, 38, 43, 0.72);
+      --background: #eff6ff;
+      --foreground: #0f172a;
+      --muted: #64748b;
+      --border: #d6e3f0;
+      --card: rgba(255, 255, 255, 0.94);
+      --primary: #2563eb;
+      --primary-foreground: #ffffff;
+      --secondary: rgba(241, 247, 255, 0.92);
     }
 
     body {
       min-height: 100vh;
       background:
-        radial-gradient(circle at 12% -10%, rgba(153, 2, 2, 0.22), transparent 28rem),
-        radial-gradient(circle at 88% -10%, rgba(82, 103, 125, 0.2), transparent 24rem),
-        linear-gradient(180deg, #080b0d 0%, #06080a 100%);
+        radial-gradient(circle at 10% -5%, rgba(147, 197, 253, 0.35), transparent 30rem),
+        radial-gradient(circle at 90% 0%, rgba(191, 219, 254, 0.4), transparent 28rem),
+        linear-gradient(180deg, #f4f8fc 0%, #edf4fb 100%);
       color: var(--foreground);
       font-family: "Work Sans", "Noto Sans KR", sans-serif;
     }
@@ -52,27 +52,27 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-      opacity: 0.18;
+      opacity: 0.12;
       background-image:
-        radial-gradient(circle at 22% 18%, rgba(180, 10, 10, 0.08), transparent 20rem),
-        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 3px);
+        radial-gradient(circle at 20% 16%, rgba(96, 165, 250, 0.12), transparent 22rem),
+        repeating-linear-gradient(0deg, rgba(148, 163, 184, 0.08), rgba(148, 163, 184, 0.08) 1px, transparent 1px, transparent 3px);
       z-index: -1;
     }
 
     .command-top {
       border: 1px solid var(--border);
       border-radius: 14px;
-      background: linear-gradient(180deg, rgba(15, 18, 22, 0.96), rgba(10, 12, 15, 0.94));
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 250, 255, 0.96));
       display: grid;
       gap: 0.85rem;
       grid-template-columns: minmax(0, 1fr);
-      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(8px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+      backdrop-filter: blur(6px);
     }
 
     .command-brand h1 {
       margin-top: 0.2rem;
-      color: #d01616;
+      color: #1e3a8a;
       font-family: "Space Grotesk", "Inter", sans-serif;
       font-size: clamp(1.25rem, 2.3vw, 1.72rem);
       font-weight: 800;
@@ -81,7 +81,7 @@
     }
 
     .command-kicker {
-      color: #90a67a;
+      color: #3b82f6;
       font-size: 0.68rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
@@ -99,13 +99,13 @@
       flex-wrap: wrap;
       gap: 0.75rem;
       font-size: 0.78rem;
-      color: #aeb5b7;
+      color: #64748b;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
     .command-status strong {
-      color: #f1eded;
+      color: #0f172a;
       margin-right: 0.3rem;
       font-family: "Space Grotesk", "Inter", sans-serif;
       font-size: 0.96rem;
@@ -122,8 +122,8 @@
     .shell {
       border-color: var(--border);
       background: var(--card);
-      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(8px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+      backdrop-filter: blur(6px);
     }
 
     .left-rail {
@@ -136,7 +136,7 @@
     }
 
     .hero-eyebrow {
-      color: #8ea56f;
+      color: #2563eb;
       font-size: 0.68rem;
       font-weight: 700;
       letter-spacing: 0.2em;
@@ -145,7 +145,7 @@
 
     .hero-title {
       margin-top: 0.5rem;
-      color: #f3f0ef;
+      color: #0f172a;
       font-family: "Space Grotesk", "Inter", sans-serif;
       font-size: 1.25rem;
       font-weight: 800;
@@ -156,7 +156,7 @@
 
     .hero-summary {
       margin-top: 0.65rem;
-      color: #aeb6b8;
+      color: #475569;
       font-size: 0.9rem;
       line-height: 1.65;
     }
@@ -169,92 +169,92 @@
 
     .button {
       @apply inline-flex items-center justify-center rounded-lg border px-3.5 py-2 text-sm font-medium transition-colors;
-      border-color: #334148;
-      background: rgba(26, 33, 38, 0.8);
-      color: #d3d9db;
+      border-color: #c8d9ec;
+      background: #ffffff;
+      color: #1e293b;
     }
 
     .button:hover {
-      background: rgba(34, 42, 48, 0.95);
+      background: #eff6ff;
     }
 
     .button-primary {
-      background: linear-gradient(90deg, #9f0303, #760606);
-      border-color: #9f0303;
-      color: #ffe2dd;
+      background: linear-gradient(90deg, #2563eb, #1d4ed8);
+      border-color: #2563eb;
+      color: #ffffff;
     }
 
     .button-primary:hover {
-      background: linear-gradient(90deg, #b40808, #820909);
+      background: linear-gradient(90deg, #1d4ed8, #1e40af);
     }
 
     .section-label,
     .doc-badge {
       @apply inline-flex items-center rounded-md border px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.14em];
-      border-color: #2f3940;
-      background: rgba(23, 29, 34, 0.86);
-      color: #97a2a7;
+      border-color: #d6e3f0;
+      background: #f1f6fc;
+      color: #4b5563;
     }
 
     .doc-nav-link {
       @apply block rounded-lg border px-3 py-2 text-sm transition-colors;
       border-color: transparent;
-      color: #aeb6b8;
-      background: rgba(18, 24, 29, 0.5);
+      color: #475569;
+      background: #f8fbff;
     }
 
     .doc-nav-link:hover {
-      border-color: #334148;
-      background: rgba(25, 32, 37, 0.9);
-      color: #f0eceb;
+      border-color: #bfdbfe;
+      background: #eef6ff;
+      color: #1e3a8a;
     }
 
     .doc-nav-link.is-active {
-      border-color: #9f0303;
-      background: rgba(159, 3, 3, 0.8);
-      color: #ffe4df;
+      border-color: #3b82f6;
+      background: #dbeafe;
+      color: #1e3a8a;
     }
 
     .note-card {
       @apply rounded-xl border p-4;
-      border-color: #2a343a;
-      background: rgba(15, 20, 24, 0.85);
+      border-color: #d6e3f0;
+      background: #ffffff;
     }
 
     .note-card p {
       @apply mt-2 text-sm leading-6;
-      color: #aeb6b8;
+      color: #475569;
     }
 
     .doc-summary {
       @apply mt-5 rounded-xl border px-4 py-3 text-sm leading-6;
-      border-color: #2a343a;
-      background: rgba(18, 24, 29, 0.84);
-      color: #aeb6b8;
+      border-color: #d6e3f0;
+      background: #f8fbff;
+      color: #475569;
     }
 
     .doc-content h1 {
       @apply mt-8 text-2xl font-semibold tracking-[-0.04em] first:mt-0;
-      color: #f0eceb;
+      color: #0f172a;
       font-family: "Space Grotesk", "Inter", sans-serif;
     }
 
     .doc-content h2 {
       @apply mt-8 text-xl font-semibold tracking-[-0.03em];
-      color: #f0eceb;
+      color: #0f172a;
       font-family: "Space Grotesk", "Inter", sans-serif;
     }
 
     .doc-content h3 {
       @apply mt-6 text-lg font-semibold tracking-[-0.02em];
-      color: #ece8e7;
+      color: #1f2937;
       font-family: "Space Grotesk", "Inter", sans-serif;
     }
 
     .doc-content p,
     .doc-content li {
       @apply mt-3 text-sm leading-7;
-      color: #b8c0c2;
+      color: #475569;
     }
 
     .doc-content ul {
@@ -262,7 +262,7 @@
     }
 
     .doc-content a {
-      color: #ffe4df;
+      color: #1d4ed8;
       text-decoration: underline;
       text-underline-offset: 4px;
       font-weight: 600;
@@ -270,14 +270,14 @@
 
     .doc-content code {
       @apply rounded px-1.5 py-0.5 text-[0.9em];
-      background: rgba(24, 31, 36, 0.95);
-      color: #ffc3ba;
+      background: #eaf2fb;
+      color: #1e40af;
     }
 
     .doc-table-wrap {
       @apply mt-4 overflow-x-auto rounded-xl border;
-      border-color: #2a343a;
-      background: rgba(15, 20, 24, 0.72);
+      border-color: #d6e3f0;
+      background: #f8fbff;
     }
 
     .doc-table-wrap table {
@@ -287,13 +287,13 @@
     .doc-table-wrap th,
     .doc-table-wrap td {
       @apply border-b px-4 py-3 text-left align-top;
-      border-color: #2a343a;
-      color: #b6bdc0;
+      border-color: #d6e3f0;
+      color: #475569;
     }
 
     .doc-table-wrap th {
-      background: rgba(22, 29, 34, 0.92);
-      color: #ece8e7;
+      background: #eef4fb;
+      color: #0f172a;
       font-weight: 700;
       font-family: "Space Grotesk", "Inter", sans-serif;
     }
@@ -342,7 +342,7 @@
       <section>
         <div class="flex items-center justify-between">
           <span class="section-label">Documents</span>
-          <span class="text-xs text-[#869094]">auto html</span>
+          <span class="text-xs text-slate-500">auto html</span>
         </div>
         <nav class="mt-4 space-y-2">
               <a class="doc-nav-link" href="./">Central Wiki</a>
@@ -361,7 +361,7 @@
       <section class="note-card">
         <span class="section-label">Snapshot</span>
         <p>공개 저장소 수: 12</p>
-        <p>생성 시각: 2026-04-01 08:49 UTC</p>
+        <p>생성 시각: 2026-04-01 09:01 UTC</p>
       </section>
     </aside>
 
@@ -371,7 +371,7 @@
           <span class="doc-badge">Roadmap</span>
           <span class="doc-badge">HTML Published</span>
         </div>
-        <p class="text-xs text-[#869094]">generated 2026-04-01 08:49 UTC</p>
+        <p class="text-xs text-slate-500">generated 2026-04-01 09:01 UTC</p>
       </div>
 
       <div class="doc-summary">
@@ -414,8 +414,8 @@
     <div class="shell px-5 py-4">
       <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
-          <strong class="text-sm font-semibold tracking-[-0.02em] text-[#f0eceb]">Sheryloe Projects</strong>
-          <p class="mt-1 text-sm text-[#aeb6b8]">중앙 위키 문서를 정적 HTML 페이지로 퍼블리시한 문서 뷰입니다.</p>
+          <strong class="text-sm font-semibold tracking-[-0.02em] text-slate-900">Sheryloe Projects</strong>
+          <p class="mt-1 text-sm text-slate-600">중앙 위키 문서를 정적 HTML 페이지로 퍼블리시한 문서 뷰입니다.</p>
         </div>
         <div class="flex flex-wrap gap-2">
           <a class="button" href="./">Wiki</a>
