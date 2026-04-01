@@ -67,12 +67,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://sheryloe.github.io/DonggriGent/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://sheryloe.github.io/Automethemoney/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -93,6 +87,12 @@
       <image:title>BloggerGent</image:title>
       <image:caption>BloggerGent 소개 페이지 첫 화면. 멀티 채널 블로그 발행 스튜디오 설명이 보입니다.</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/DonggriGent/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sheryloe.github.io/grid-crop-image/</loc>
