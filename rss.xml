@@ -5,8 +5,52 @@
     <link>https://sheryloe.github.io/</link>
     <description>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 02 Apr 2026 04:45:59 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2026 13:26:25 +0000</lastBuildDate>
     <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Automethemoney</title>
+    <link>https://sheryloe.github.io/Automethemoney/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/Automethemoney#2026-04-02</guid>
+    <pubDate>Thu, 02 Apr 2026 13:26:25 +0000</pubDate>
+    <description><![CDATA[<p><strong>Automethemoney</strong></p><p>전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔</p><p>자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.</p><p>Track: Finance &amp; Trading · Stage: Operate · Status: Live Console</p><p>Next focus: paper/live 권한 분리, 손실 경보, 전략별 비교</p><p>Live page: <a href="https://sheryloe.github.io/Automethemoney/">https://sheryloe.github.io/Automethemoney/</a></p><p>Wiki: <a href="https://github.com/sheryloe/Automethemoney/tree/main/wiki">https://github.com/sheryloe/Automethemoney/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/Automethemoney">https://github.com/sheryloe/Automethemoney</a></p>]]></description>
+    <category>Finance &amp; Trading</category>
+    <category>Trading Ops</category>
+    <category>Operate</category>
+    <category>Python</category>
+    <category>algorithmic-trading</category>
+    <category>dashboard</category>
+    <category>python</category>
+    <category>risk-control</category>
+  </item>
+  <item>
+    <title>cloudflare-blog</title>
+    <link>https://github.com/sheryloe/cloudflare-blog</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/cloudflare-blog#2026-04-02</guid>
+    <pubDate>Thu, 02 Apr 2026 13:18:21 +0000</pubDate>
+    <description><![CDATA[<p><strong>cloudflare-blog</strong></p><p>Public, Admin, API를 분리한 블로그 플랫폼 워크스페이스</p><p>Cloudflare 기반 블로그 플랫폼을 Public, Admin, API 레이어로 분리해 운영 UX를 다듬는 워크스페이스입니다.</p><p>Track: Platform &amp; Seeds · Stage: Build · Status: Platform Repo</p><p>Next focus: 권한 분리, 미리보기, 맞춤 도메인 가이드</p><p>Wiki: <a href="https://github.com/sheryloe/cloudflare-blog/tree/main/wiki">https://github.com/sheryloe/cloudflare-blog/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/cloudflare-blog">https://github.com/sheryloe/cloudflare-blog</a></p>]]></description>
+    <category>Platform &amp; Seeds</category>
+    <category>Cloud Platform</category>
+    <category>Build</category>
+    <category>TypeScript</category>
+    <category>cloudflare</category>
+    <category>platform</category>
+    <category>rss</category>
+    <category>seo</category>
+  </item>
+  <item>
+    <title>DonggriGent</title>
+    <link>https://sheryloe.github.io/DonggriGent/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/DonggriGent#2026-04-02</guid>
+    <pubDate>Thu, 02 Apr 2026 13:06:35 +0000</pubDate>
+    <description><![CDATA[<p><strong>DonggriGent</strong></p><p>운영 자동화/툴링을 위한 가벼운 웹 실험</p><p>개인 운영 흐름에서 반복되는 작업을 줄이기 위한 웹 기반 툴링/실험 저장소입니다.</p><p>Track: Platform &amp; Seeds · Stage: Operate · Status: Live Pages</p><p>Next focus: README/사용 시나리오 정리, 설정 가이드, 데모 흐름 보강</p><p>Live page: <a href="https://sheryloe.github.io/DonggriGent/">https://sheryloe.github.io/DonggriGent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/DonggriGent/tree/main/wiki">https://github.com/sheryloe/DonggriGent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/DonggriGent">https://github.com/sheryloe/DonggriGent</a></p>]]></description>
+    <category>Platform &amp; Seeds</category>
+    <category>Platform Utility</category>
+    <category>Operate</category>
+    <category>JavaScript</category>
+    <category>automation</category>
+    <category>tools</category>
+    <category>web</category>
+  </item>
   <item>
     <title>DonggriCompany</title>
     <link>https://github.com/sheryloe/DonggriCompany</link>
@@ -19,21 +63,6 @@
     <category>Unknown</category>
   </item>
   <item>
-    <title>Automethemoney</title>
-    <link>https://sheryloe.github.io/Automethemoney/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/Automethemoney#2026-04-02</guid>
-    <pubDate>Thu, 02 Apr 2026 00:00:36 +0000</pubDate>
-    <description><![CDATA[<p><strong>Automethemoney</strong></p><p>전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔</p><p>자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.</p><p>Track: Finance &amp; Trading · Stage: Operate · Status: Live Console</p><p>Next focus: paper/live 권한 분리, 손실 경보, 전략별 비교</p><p>Live page: <a href="https://sheryloe.github.io/Automethemoney/">https://sheryloe.github.io/Automethemoney/</a></p><p>Wiki: <a href="https://github.com/sheryloe/Automethemoney/tree/main/wiki">https://github.com/sheryloe/Automethemoney/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/Automethemoney">https://github.com/sheryloe/Automethemoney</a></p>]]></description>
-    <category>Finance &amp; Trading</category>
-    <category>Trading Ops</category>
-    <category>Operate</category>
-    <category>Python</category>
-    <category>algorithmic-trading</category>
-    <category>dashboard</category>
-    <category>python</category>
-    <category>risk-control</category>
-  </item>
-  <item>
     <title>DonggriGameBook</title>
     <link>https://github.com/sheryloe/DonggriGameBook</link>
     <guid isPermaLink="false">https://github.com/sheryloe/DonggriGameBook#2026-04-01</guid>
@@ -43,20 +72,6 @@
     <category>TypeScript</category>
     <category>Build</category>
     <category>TypeScript</category>
-  </item>
-  <item>
-    <title>DonggriGent</title>
-    <link>https://sheryloe.github.io/DonggriGent/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/DonggriGent#2026-04-01</guid>
-    <pubDate>Wed, 01 Apr 2026 16:00:35 +0000</pubDate>
-    <description><![CDATA[<p><strong>DonggriGent</strong></p><p>운영 자동화/툴링을 위한 가벼운 웹 실험</p><p>개인 운영 흐름에서 반복되는 작업을 줄이기 위한 웹 기반 툴링/실험 저장소입니다.</p><p>Track: Platform &amp; Seeds · Stage: Operate · Status: Live Pages</p><p>Next focus: README/사용 시나리오 정리, 설정 가이드, 데모 흐름 보강</p><p>Live page: <a href="https://sheryloe.github.io/DonggriGent/">https://sheryloe.github.io/DonggriGent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/DonggriGent/tree/main/wiki">https://github.com/sheryloe/DonggriGent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/DonggriGent">https://github.com/sheryloe/DonggriGent</a></p>]]></description>
-    <category>Platform &amp; Seeds</category>
-    <category>Platform Utility</category>
-    <category>Operate</category>
-    <category>JavaScript</category>
-    <category>automation</category>
-    <category>tools</category>
-    <category>web</category>
   </item>
   <item>
     <title>donggri_gagyeobu</title>
@@ -117,21 +132,6 @@
     <category>cpp</category>
     <category>launcher</category>
     <category>productivity</category>
-  </item>
-  <item>
-    <title>cloudflare-blog</title>
-    <link>https://github.com/sheryloe/cloudflare-blog</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/cloudflare-blog#2026-03-17</guid>
-    <pubDate>Tue, 17 Mar 2026 09:58:12 +0000</pubDate>
-    <description><![CDATA[<p><strong>cloudflare-blog</strong></p><p>Public, Admin, API를 분리한 블로그 플랫폼 워크스페이스</p><p>Cloudflare 기반 블로그 플랫폼을 Public, Admin, API 레이어로 분리해 운영 UX를 다듬는 워크스페이스입니다.</p><p>Track: Platform &amp; Seeds · Stage: Build · Status: Platform Repo</p><p>Next focus: 권한 분리, 미리보기, 맞춤 도메인 가이드</p><p>Wiki: <a href="https://github.com/sheryloe/cloudflare-blog/tree/main/wiki">https://github.com/sheryloe/cloudflare-blog/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/cloudflare-blog">https://github.com/sheryloe/cloudflare-blog</a></p>]]></description>
-    <category>Platform &amp; Seeds</category>
-    <category>Cloud Platform</category>
-    <category>Build</category>
-    <category>TypeScript</category>
-    <category>cloudflare</category>
-    <category>platform</category>
-    <category>rss</category>
-    <category>seo</category>
   </item>
   <item>
     <title>BloManagent</title>
