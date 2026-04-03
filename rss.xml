@@ -5,18 +5,43 @@
     <link>https://sheryloe.github.io/</link>
     <description>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 03 Apr 2026 09:08:36 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 17:38:01 +0000</lastBuildDate>
     <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <item>
     <title>DonggriCompany</title>
     <link>https://github.com/sheryloe/DonggriCompany</link>
     <guid isPermaLink="false">https://github.com/sheryloe/DonggriCompany#2026-04-03</guid>
-    <pubDate>Fri, 03 Apr 2026 09:08:36 +0000</pubDate>
+    <pubDate>Fri, 03 Apr 2026 17:38:01 +0000</pubDate>
     <description><![CDATA[<p><strong>DonggriCompany</strong></p><p>TypeScript</p><p>설명이 아직 정리되지 않은 저장소입니다.</p><p>Track: Platform &amp; Seeds · Stage: Build · Status: Repository</p><p>Next focus: 다음 개선 포인트를 문서화 중입니다.</p><p>Wiki: <a href="https://github.com/sheryloe/DonggriCompany/tree/codex/step2-complete/wiki">https://github.com/sheryloe/DonggriCompany/tree/codex/step2-complete/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/DonggriCompany">https://github.com/sheryloe/DonggriCompany</a></p>]]></description>
     <category>Platform &amp; Seeds</category>
     <category>TypeScript</category>
     <category>Build</category>
     <category>TypeScript</category>
+  </item>
+  <item>
+    <title>DonggriGameBook</title>
+    <link>https://github.com/sheryloe/DonggriGameBook</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/DonggriGameBook#2026-04-03</guid>
+    <pubDate>Fri, 03 Apr 2026 16:31:18 +0000</pubDate>
+    <description><![CDATA[<p><strong>DonggriGameBook</strong></p><p>DonggriWorld</p><p>DonggriWorld</p><p>Track: Platform &amp; Seeds · Stage: Build · Status: Repository</p><p>Next focus: 다음 개선 포인트를 문서화 중입니다.</p><p>Wiki: <a href="https://github.com/sheryloe/DonggriGameBook/tree/main/wiki">https://github.com/sheryloe/DonggriGameBook/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/DonggriGameBook">https://github.com/sheryloe/DonggriGameBook</a></p>]]></description>
+    <category>Platform &amp; Seeds</category>
+    <category>TypeScript</category>
+    <category>Build</category>
+    <category>TypeScript</category>
+  </item>
+  <item>
+    <title>DonggriGent</title>
+    <link>https://sheryloe.github.io/DonggriGent/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/DonggriGent#2026-04-03</guid>
+    <pubDate>Fri, 03 Apr 2026 15:45:21 +0000</pubDate>
+    <description><![CDATA[<p><strong>DonggriGent</strong></p><p>운영 자동화/툴링을 위한 가벼운 웹 실험</p><p>개인 운영 흐름에서 반복되는 작업을 줄이기 위한 웹 기반 툴링/실험 저장소입니다.</p><p>Track: Platform &amp; Seeds · Stage: Operate · Status: Live Pages</p><p>Next focus: README/사용 시나리오 정리, 설정 가이드, 데모 흐름 보강</p><p>Live page: <a href="https://sheryloe.github.io/DonggriGent/">https://sheryloe.github.io/DonggriGent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/DonggriGent/tree/main/wiki">https://github.com/sheryloe/DonggriGent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/DonggriGent">https://github.com/sheryloe/DonggriGent</a></p>]]></description>
+    <category>Platform &amp; Seeds</category>
+    <category>Platform Utility</category>
+    <category>Operate</category>
+    <category>JavaScript</category>
+    <category>automation</category>
+    <category>tools</category>
+    <category>web</category>
   </item>
   <item>
     <title>Automethemoney</title>
@@ -49,17 +74,6 @@
     <category>claude</category>
   </item>
   <item>
-    <title>DonggriGameBook</title>
-    <link>https://github.com/sheryloe/DonggriGameBook</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/DonggriGameBook#2026-04-02</guid>
-    <pubDate>Thu, 02 Apr 2026 22:50:51 +0000</pubDate>
-    <description><![CDATA[<p><strong>DonggriGameBook</strong></p><p>DonggriWorld</p><p>DonggriWorld</p><p>Track: Platform &amp; Seeds · Stage: Build · Status: Repository</p><p>Next focus: 다음 개선 포인트를 문서화 중입니다.</p><p>Wiki: <a href="https://github.com/sheryloe/DonggriGameBook/tree/main/wiki">https://github.com/sheryloe/DonggriGameBook/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/DonggriGameBook">https://github.com/sheryloe/DonggriGameBook</a></p>]]></description>
-    <category>Platform &amp; Seeds</category>
-    <category>TypeScript</category>
-    <category>Build</category>
-    <category>TypeScript</category>
-  </item>
-  <item>
     <title>BloggerGent</title>
     <link>https://sheryloe.github.io/BloggerGent/</link>
     <guid isPermaLink="false">https://github.com/sheryloe/BloggerGent#2026-04-02</guid>
@@ -84,20 +98,6 @@
     <category>Python</category>
     <category>Build</category>
     <category>Python</category>
-  </item>
-  <item>
-    <title>DonggriGent</title>
-    <link>https://sheryloe.github.io/DonggriGent/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/DonggriGent#2026-04-02</guid>
-    <pubDate>Thu, 02 Apr 2026 13:06:35 +0000</pubDate>
-    <description><![CDATA[<p><strong>DonggriGent</strong></p><p>운영 자동화/툴링을 위한 가벼운 웹 실험</p><p>개인 운영 흐름에서 반복되는 작업을 줄이기 위한 웹 기반 툴링/실험 저장소입니다.</p><p>Track: Platform &amp; Seeds · Stage: Operate · Status: Live Pages</p><p>Next focus: README/사용 시나리오 정리, 설정 가이드, 데모 흐름 보강</p><p>Live page: <a href="https://sheryloe.github.io/DonggriGent/">https://sheryloe.github.io/DonggriGent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/DonggriGent/tree/main/wiki">https://github.com/sheryloe/DonggriGent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/DonggriGent">https://github.com/sheryloe/DonggriGent</a></p>]]></description>
-    <category>Platform &amp; Seeds</category>
-    <category>Platform Utility</category>
-    <category>Operate</category>
-    <category>JavaScript</category>
-    <category>automation</category>
-    <category>tools</category>
-    <category>web</category>
   </item>
   <item>
     <title>donggri_gagyeobu</title>
