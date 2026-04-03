@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Sheryloe Projects Atom</title>
   <id>https://sheryloe.github.io/feed.xml</id>
-  <updated>2026-04-02T16:28:32Z</updated>
+  <updated>2026-04-03T01:11:07Z</updated>
   <link href="https://sheryloe.github.io/feed.xml" rel="self" />
   <link href="https://sheryloe.github.io/" rel="alternate" />
   <subtitle>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</subtitle>
@@ -10,12 +10,44 @@
     <name>sheryloe</name>
   </author>
   <entry>
+    <title>DonggriCompany</title>
+    <id>https://github.com/sheryloe/DonggriCompany</id>
+    <link href="https://github.com/sheryloe/DonggriCompany" />
+    <updated>2026-04-03T01:11:07Z</updated>
+    <published>2026-04-02T04:45:59Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;DonggriCompany&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;TypeScript&lt;/p&gt;&lt;p&gt;설명이 아직 정리되지 않은 저장소입니다.&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Build · Status: Repository&lt;/p&gt;&lt;p&gt;Next focus: 다음 개선 포인트를 문서화 중입니다.&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/DonggriCompany/tree/codex/step2-complete/wiki&quot;&gt;https://github.com/sheryloe/DonggriCompany/tree/codex/step2-complete/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/DonggriCompany&quot;&gt;https://github.com/sheryloe/DonggriCompany&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
     <title>Automethemoney</title>
     <id>https://github.com/sheryloe/Automethemoney</id>
     <link href="https://sheryloe.github.io/Automethemoney/" />
-    <updated>2026-04-02T16:28:32Z</updated>
+    <updated>2026-04-03T00:00:36Z</updated>
     <published>2026-03-04T12:59:41Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;Automethemoney&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔&lt;/p&gt;&lt;p&gt;자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.&lt;/p&gt;&lt;p&gt;Track: Finance &amp;amp; Trading · Stage: Operate · Status: Live Console&lt;/p&gt;&lt;p&gt;Next focus: paper/live 권한 분리, 손실 경보, 전략별 비교&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Automethemoney/&quot;&gt;https://sheryloe.github.io/Automethemoney/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/Automethemoney/tree/main/wiki&quot;&gt;https://github.com/sheryloe/Automethemoney/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Automethemoney&quot;&gt;https://github.com/sheryloe/Automethemoney&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>donggri-template</title>
+    <id>https://github.com/sheryloe/donggri-template</id>
+    <link href="https://sheryloe.github.io/donggri-template/" />
+    <updated>2026-04-02T23:44:35Z</updated>
+    <published>2026-03-16T02:10:55Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;donggri-template&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;SEO 최적화된 Cloudflare + Astro 기반 고성능 블로그 템플릿&lt;/p&gt;&lt;p&gt;SEO 최적화된 Cloudflare + Astro 기반 고성능 블로그 템플릿&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Operate · Status: Live Pages&lt;/p&gt;&lt;p&gt;Next focus: 다음 개선 포인트를 문서화 중입니다.&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/donggri-template/&quot;&gt;https://sheryloe.github.io/donggri-template/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/donggri-template/tree/main/wiki&quot;&gt;https://github.com/sheryloe/donggri-template/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/donggri-template&quot;&gt;https://github.com/sheryloe/donggri-template&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>DonggriGameBook</title>
+    <id>https://github.com/sheryloe/DonggriGameBook</id>
+    <link href="https://github.com/sheryloe/DonggriGameBook" />
+    <updated>2026-04-02T22:50:51Z</updated>
+    <published>2026-04-01T06:43:22Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;DonggriGameBook&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;DonggriWorld&lt;/p&gt;&lt;p&gt;DonggriWorld&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Build · Status: Repository&lt;/p&gt;&lt;p&gt;Next focus: 다음 개선 포인트를 문서화 중입니다.&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/DonggriGameBook/tree/main/wiki&quot;&gt;https://github.com/sheryloe/DonggriGameBook/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/DonggriGameBook&quot;&gt;https://github.com/sheryloe/DonggriGameBook&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>BloggerGent</title>
+    <id>https://github.com/sheryloe/BloggerGent</id>
+    <link href="https://sheryloe.github.io/BloggerGent/" />
+    <updated>2026-04-02T22:26:56Z</updated>
+    <published>2026-03-15T05:48:44Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;BloggerGent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;멀티 채널 블로그 운영을 위한 AI 발행 스튜디오&lt;/p&gt;&lt;p&gt;여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.&lt;/p&gt;&lt;p&gt;Track: Content &amp;amp; Publishing · Stage: Scale · Status: Live Studio&lt;/p&gt;&lt;p&gt;Next focus: 승인 단계, 콘텐츠 캘린더, 발행 QA 체크리스트&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/BloggerGent/&quot;&gt;https://sheryloe.github.io/BloggerGent/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/BloggerGent/tree/main/wiki&quot;&gt;https://github.com/sheryloe/BloggerGent/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/BloggerGent&quot;&gt;https://github.com/sheryloe/BloggerGent&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
     <title>polymethemarket</title>
@@ -26,14 +58,6 @@
     <summary type="html">&lt;p&gt;&lt;strong&gt;polymethemarket&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Python&lt;/p&gt;&lt;p&gt;설명이 아직 정리되지 않은 저장소입니다.&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Build · Status: Repository&lt;/p&gt;&lt;p&gt;Next focus: 다음 개선 포인트를 문서화 중입니다.&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/polymethemarket/tree/donggri/paper-venue-bybit-binance/wiki&quot;&gt;https://github.com/sheryloe/polymethemarket/tree/donggri/paper-venue-bybit-binance/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/polymethemarket&quot;&gt;https://github.com/sheryloe/polymethemarket&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
-    <title>cloudflare-blog</title>
-    <id>https://github.com/sheryloe/cloudflare-blog</id>
-    <link href="https://github.com/sheryloe/cloudflare-blog" />
-    <updated>2026-04-02T13:18:21Z</updated>
-    <published>2026-03-16T02:10:55Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;cloudflare-blog&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Public, Admin, API를 분리한 블로그 플랫폼 워크스페이스&lt;/p&gt;&lt;p&gt;Cloudflare 기반 블로그 플랫폼을 Public, Admin, API 레이어로 분리해 운영 UX를 다듬는 워크스페이스입니다.&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Build · Status: Platform Repo&lt;/p&gt;&lt;p&gt;Next focus: 권한 분리, 미리보기, 맞춤 도메인 가이드&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/cloudflare-blog/tree/main/wiki&quot;&gt;https://github.com/sheryloe/cloudflare-blog/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/cloudflare-blog&quot;&gt;https://github.com/sheryloe/cloudflare-blog&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
     <title>DonggriGent</title>
     <id>https://github.com/sheryloe/DonggriGent</id>
     <link href="https://sheryloe.github.io/DonggriGent/" />
@@ -42,36 +66,12 @@
     <summary type="html">&lt;p&gt;&lt;strong&gt;DonggriGent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;운영 자동화/툴링을 위한 가벼운 웹 실험&lt;/p&gt;&lt;p&gt;개인 운영 흐름에서 반복되는 작업을 줄이기 위한 웹 기반 툴링/실험 저장소입니다.&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Operate · Status: Live Pages&lt;/p&gt;&lt;p&gt;Next focus: README/사용 시나리오 정리, 설정 가이드, 데모 흐름 보강&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/DonggriGent/&quot;&gt;https://sheryloe.github.io/DonggriGent/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/DonggriGent/tree/main/wiki&quot;&gt;https://github.com/sheryloe/DonggriGent/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/DonggriGent&quot;&gt;https://github.com/sheryloe/DonggriGent&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
-    <title>DonggriCompany</title>
-    <id>https://github.com/sheryloe/DonggriCompany</id>
-    <link href="https://github.com/sheryloe/DonggriCompany" />
-    <updated>2026-04-02T04:45:59Z</updated>
-    <published>2026-04-02T04:45:59Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;DonggriCompany&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Unknown&lt;/p&gt;&lt;p&gt;설명이 아직 정리되지 않은 저장소입니다.&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Build · Status: Repository&lt;/p&gt;&lt;p&gt;Next focus: 다음 개선 포인트를 문서화 중입니다.&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/DonggriCompany/tree/main/wiki&quot;&gt;https://github.com/sheryloe/DonggriCompany/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/DonggriCompany&quot;&gt;https://github.com/sheryloe/DonggriCompany&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>DonggriGameBook</title>
-    <id>https://github.com/sheryloe/DonggriGameBook</id>
-    <link href="https://github.com/sheryloe/DonggriGameBook" />
-    <updated>2026-04-01T22:12:58Z</updated>
-    <published>2026-04-01T06:43:22Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;DonggriGameBook&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;DonggriWorld&lt;/p&gt;&lt;p&gt;DonggriWorld&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Build · Status: Repository&lt;/p&gt;&lt;p&gt;Next focus: 다음 개선 포인트를 문서화 중입니다.&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/DonggriGameBook/tree/main/wiki&quot;&gt;https://github.com/sheryloe/DonggriGameBook/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/DonggriGameBook&quot;&gt;https://github.com/sheryloe/DonggriGameBook&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
     <title>donggri_gagyeobu</title>
     <id>https://github.com/sheryloe/donggri_gagyeobu</id>
     <link href="https://sheryloe.github.io/donggri_gagyeobu/" />
     <updated>2026-04-01T15:48:22Z</updated>
     <published>2020-04-06T13:05:43Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;donggri_gagyeobu&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;자산 흐름과 예산을 브라우저에서 관리하는 개인 가계부&lt;/p&gt;&lt;p&gt;자산, 카드 결제 예정, 예산, 소비 흐름을 브라우저에서 바로 관리할 수 있게 정리한 개인 재무 서비스입니다.&lt;/p&gt;&lt;p&gt;Track: Finance &amp;amp; Trading · Stage: Operate · Status: Live Service&lt;/p&gt;&lt;p&gt;Next focus: 예산 알림, 가족 공유 모드, 백업 검증 자동화&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/donggri_gagyeobu/&quot;&gt;https://sheryloe.github.io/donggri_gagyeobu/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki&quot;&gt;https://github.com/sheryloe/donggri_gagyeobu/tree/master/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/donggri_gagyeobu&quot;&gt;https://github.com/sheryloe/donggri_gagyeobu&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>BloggerGent</title>
-    <id>https://github.com/sheryloe/BloggerGent</id>
-    <link href="https://sheryloe.github.io/BloggerGent/" />
-    <updated>2026-04-01T13:18:39Z</updated>
-    <published>2026-03-15T05:48:44Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;BloggerGent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;멀티 채널 블로그 운영을 위한 AI 발행 스튜디오&lt;/p&gt;&lt;p&gt;여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.&lt;/p&gt;&lt;p&gt;Track: Content &amp;amp; Publishing · Stage: Scale · Status: Live Studio&lt;/p&gt;&lt;p&gt;Next focus: 승인 단계, 콘텐츠 캘린더, 발행 QA 체크리스트&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/BloggerGent/&quot;&gt;https://sheryloe.github.io/BloggerGent/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/BloggerGent/tree/main/wiki&quot;&gt;https://github.com/sheryloe/BloggerGent/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/BloggerGent&quot;&gt;https://github.com/sheryloe/BloggerGent&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
     <title>grid-crop-image</title>
