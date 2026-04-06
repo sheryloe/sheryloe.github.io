@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Sheryloe Projects Atom</title>
   <id>https://sheryloe.github.io/feed.xml</id>
-  <updated>2026-04-06T07:48:47Z</updated>
+  <updated>2026-04-06T12:52:48Z</updated>
   <link href="https://sheryloe.github.io/feed.xml" rel="self" />
   <link href="https://sheryloe.github.io/" rel="alternate" />
   <subtitle>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</subtitle>
@@ -10,28 +10,28 @@
     <name>sheryloe</name>
   </author>
   <entry>
+    <title>Automethemoney</title>
+    <id>https://github.com/sheryloe/Automethemoney</id>
+    <link href="https://sheryloe.github.io/Automethemoney/" />
+    <updated>2026-04-06T12:52:48Z</updated>
+    <published>2026-03-04T12:59:41Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Automethemoney&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔&lt;/p&gt;&lt;p&gt;자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.&lt;/p&gt;&lt;p&gt;Track: Finance &amp;amp; Trading · Stage: Operate · Status: Live Console&lt;/p&gt;&lt;p&gt;Next focus: paper/live 권한 분리, 손실 경보, 전략별 비교&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Automethemoney/&quot;&gt;https://sheryloe.github.io/Automethemoney/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/Automethemoney/tree/main/wiki&quot;&gt;https://github.com/sheryloe/Automethemoney/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Automethemoney&quot;&gt;https://github.com/sheryloe/Automethemoney&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>DonggriGameBook</title>
+    <id>https://github.com/sheryloe/DonggriGameBook</id>
+    <link href="https://github.com/sheryloe/DonggriGameBook" />
+    <updated>2026-04-06T11:52:23Z</updated>
+    <published>2026-04-01T06:43:22Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;DonggriGameBook&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;DonggriWorld&lt;/p&gt;&lt;p&gt;DonggriWorld&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Build · Status: Repository&lt;/p&gt;&lt;p&gt;Next focus: 다음 개선 포인트를 문서화 중입니다.&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/DonggriGameBook/tree/main/wiki&quot;&gt;https://github.com/sheryloe/DonggriGameBook/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/DonggriGameBook&quot;&gt;https://github.com/sheryloe/DonggriGameBook&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
     <title>DonggriCompany</title>
     <id>https://github.com/sheryloe/DonggriCompany</id>
     <link href="https://github.com/sheryloe/DonggriCompany" />
     <updated>2026-04-06T07:48:47Z</updated>
     <published>2026-04-02T04:45:59Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;DonggriCompany&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;TypeScript&lt;/p&gt;&lt;p&gt;설명이 아직 정리되지 않은 저장소입니다.&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Build · Status: Repository&lt;/p&gt;&lt;p&gt;Next focus: 다음 개선 포인트를 문서화 중입니다.&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/DonggriCompany/tree/codex/step2-complete/wiki&quot;&gt;https://github.com/sheryloe/DonggriCompany/tree/codex/step2-complete/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/DonggriCompany&quot;&gt;https://github.com/sheryloe/DonggriCompany&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>DonggriGameBook</title>
-    <id>https://github.com/sheryloe/DonggriGameBook</id>
-    <link href="https://github.com/sheryloe/DonggriGameBook" />
-    <updated>2026-04-06T06:57:31Z</updated>
-    <published>2026-04-01T06:43:22Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;DonggriGameBook&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;DonggriWorld&lt;/p&gt;&lt;p&gt;DonggriWorld&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Build · Status: Repository&lt;/p&gt;&lt;p&gt;Next focus: 다음 개선 포인트를 문서화 중입니다.&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/DonggriGameBook/tree/main/wiki&quot;&gt;https://github.com/sheryloe/DonggriGameBook/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/DonggriGameBook&quot;&gt;https://github.com/sheryloe/DonggriGameBook&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
-    <title>Automethemoney</title>
-    <id>https://github.com/sheryloe/Automethemoney</id>
-    <link href="https://sheryloe.github.io/Automethemoney/" />
-    <updated>2026-04-06T00:00:34Z</updated>
-    <published>2026-03-04T12:59:41Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;Automethemoney&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔&lt;/p&gt;&lt;p&gt;자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.&lt;/p&gt;&lt;p&gt;Track: Finance &amp;amp; Trading · Stage: Operate · Status: Live Console&lt;/p&gt;&lt;p&gt;Next focus: paper/live 권한 분리, 손실 경보, 전략별 비교&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Automethemoney/&quot;&gt;https://sheryloe.github.io/Automethemoney/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/Automethemoney/tree/main/wiki&quot;&gt;https://github.com/sheryloe/Automethemoney/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Automethemoney&quot;&gt;https://github.com/sheryloe/Automethemoney&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
     <title>BloggerGent</title>
