@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://sheryloe.github.io/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -13,7 +13,7 @@
   </url>
   <url>
     <loc>https://sheryloe.github.io/portfolio/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -24,7 +24,7 @@
   </url>
   <url>
     <loc>https://sheryloe.github.io/wiki/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -35,7 +35,7 @@
   </url>
   <url>
     <loc>https://sheryloe.github.io/wiki/agents.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://sheryloe.github.io/wiki/home.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://sheryloe.github.io/wiki/repository-service-map.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -68,7 +68,7 @@
   </url>
   <url>
     <loc>https://sheryloe.github.io/wiki/timeline-do.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -79,7 +79,7 @@
   </url>
   <url>
     <loc>https://sheryloe.github.io/wiki/service-todo.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -90,13 +90,24 @@
   </url>
   <url>
     <loc>https://sheryloe.github.io/wiki/public-repo-audit.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
       <image:loc>https://sheryloe.github.io/assets/meta/root-hub-social.png</image:loc>
       <image:title>Public Repo Audit</image:title>
       <image:caption>공개 저장소 전반의 보안/온보딩 점검과 우선순위 수정 내역을 정리한 문서입니다.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sheryloe.github.io/Automethemoney/</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://sheryloe.github.io/assets/previews/automethemoney.png</image:loc>
+      <image:title>Automethemoney</image:title>
+      <image:caption>Automethemoney 소개 페이지 첫 화면. 자동매매 전략과 운영 리포트 구조가 보입니다.</image:caption>
     </image:image>
   </url>
   <url>
@@ -108,17 +119,6 @@
       <image:loc>https://sheryloe.github.io/assets/previews/bloggergent.png</image:loc>
       <image:title>BloggerGent</image:title>
       <image:caption>BloggerGent 소개 페이지 첫 화면. 멀티 채널 블로그 발행 스튜디오 설명이 보입니다.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sheryloe.github.io/Automethemoney/</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://sheryloe.github.io/assets/previews/automethemoney.png</image:loc>
-      <image:title>Automethemoney</image:title>
-      <image:caption>Automethemoney 소개 페이지 첫 화면. 자동매매 전략과 운영 리포트 구조가 보입니다.</image:caption>
     </image:image>
   </url>
   <url>
