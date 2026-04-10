@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-10T03:26:35.171459Z",
+  "generated_at": "2026-04-10T07:51:53.567839Z",
   "site_url": "https://sheryloe.github.io/",
-  "repository_count": 14,
+  "repository_count": 13,
   "live_pages_count": 11,
   "repositories": [
     {
@@ -95,32 +95,6 @@
       "preview_alt": "DonggriGameBook 프로젝트 미리보기",
       "updated_at": "2026-04-06T11:50:41Z",
       "pushed_at": "2026-04-09T04:36:30Z"
-    },
-    {
-      "name": "DonggriCompany",
-      "track": "platform",
-      "track_title": "Platform & Seeds",
-      "category": "TypeScript",
-      "subtitle": "TypeScript",
-      "description": "",
-      "repo_url": "https://github.com/sheryloe/DonggriCompany",
-      "live_url": "",
-      "pages_url": "",
-      "wiki_url": "https://github.com/sheryloe/DonggriCompany/tree/main/wiki",
-      "language": "TypeScript",
-      "topics": [],
-      "status": "Repository",
-      "stage": "Build",
-      "audience": "사용자와 운영자를 위한 공개 저장소",
-      "next_focus": "다음 개선 포인트를 문서화 중입니다.",
-      "has_pages": false,
-      "availability": "repo",
-      "featured": false,
-      "preview_path": "assets/previews/donggricompany.png",
-      "preview_image": "",
-      "preview_alt": "DonggriCompany 프로젝트 미리보기",
-      "updated_at": "2026-04-06T14:33:19Z",
-      "pushed_at": "2026-04-08T01:18:21Z"
     },
     {
       "name": "DonggriGent",
