@@ -2,3 +2,7 @@ __pycache__/
 *.py[cod]
 logs/
 .capture-logs/
+
+# Codex optimization gate (2026-04-10)
+.codex/
+.codex
