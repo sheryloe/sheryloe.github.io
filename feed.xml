@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Sheryloe Projects Atom</title>
   <id>https://sheryloe.github.io/feed.xml</id>
-  <updated>2026-04-14T14:01:40Z</updated>
+  <updated>2026-04-14T14:41:07Z</updated>
   <link href="https://sheryloe.github.io/feed.xml" rel="self" />
   <link href="https://sheryloe.github.io/" rel="alternate" />
   <subtitle>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</subtitle>
@@ -13,7 +13,7 @@
     <title>Automethemoney</title>
     <id>https://github.com/sheryloe/Automethemoney</id>
     <link href="https://sheryloe.github.io/Automethemoney/" />
-    <updated>2026-04-14T14:01:40Z</updated>
+    <updated>2026-04-14T14:41:07Z</updated>
     <published>2026-03-04T12:59:41Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;Automethemoney&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;전략, 리스크, 리포트를 한 화면에 모으는 운영 콘솔&lt;/p&gt;&lt;p&gt;자동매매 전략 상태, 일별 손익, 시그널 해석, Supabase 기반 운영 흐름을 함께 다루는 트레이딩 콘솔입니다.&lt;/p&gt;&lt;p&gt;Track: Finance &amp;amp; Trading · Stage: Operate · Status: Live Console&lt;/p&gt;&lt;p&gt;Next focus: paper/live 권한 분리, 손실 경보, 전략별 비교&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/Automethemoney/&quot;&gt;https://sheryloe.github.io/Automethemoney/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/Automethemoney/tree/main/wiki&quot;&gt;https://github.com/sheryloe/Automethemoney/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/Automethemoney&quot;&gt;https://github.com/sheryloe/Automethemoney&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
