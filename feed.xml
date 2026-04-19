@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Sheryloe Projects Atom</title>
   <id>https://sheryloe.github.io/feed.xml</id>
-  <updated>2026-04-17T07:36:34Z</updated>
+  <updated>2026-04-19T15:55:28Z</updated>
   <link href="https://sheryloe.github.io/feed.xml" rel="self" />
   <link href="https://sheryloe.github.io/" rel="alternate" />
   <subtitle>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</subtitle>
@@ -13,7 +13,7 @@
     <title>BloggerGent</title>
     <id>https://github.com/sheryloe/BloggerGent</id>
     <link href="https://sheryloe.github.io/BloggerGent/" />
-    <updated>2026-04-17T07:36:34Z</updated>
+    <updated>2026-04-19T15:55:28Z</updated>
     <published>2026-03-15T05:48:44Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;BloggerGent&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;멀티 채널 블로그 운영을 위한 AI 발행 스튜디오&lt;/p&gt;&lt;p&gt;여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.&lt;/p&gt;&lt;p&gt;Track: Content &amp;amp; Publishing · Stage: Scale · Status: Live Studio&lt;/p&gt;&lt;p&gt;Next focus: 승인 단계, 콘텐츠 캘린더, 발행 QA 체크리스트&lt;/p&gt;&lt;p&gt;Live page: &lt;a href=&quot;https://sheryloe.github.io/BloggerGent/&quot;&gt;https://sheryloe.github.io/BloggerGent/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/BloggerGent/tree/main/wiki&quot;&gt;https://github.com/sheryloe/BloggerGent/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/BloggerGent&quot;&gt;https://github.com/sheryloe/BloggerGent&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
