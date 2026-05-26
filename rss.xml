@@ -5,8 +5,23 @@
     <link>https://sheryloe.github.io/</link>
     <description>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Sat, 23 May 2026 04:19:45 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 01:38:58 +0000</lastBuildDate>
     <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>BloggerGent</title>
+    <link>https://sheryloe.github.io/BloggerGent/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/BloggerGent#2026-05-26</guid>
+    <pubDate>Tue, 26 May 2026 01:38:58 +0000</pubDate>
+    <description><![CDATA[<p><strong>BloggerGent</strong></p><p>멀티 채널 블로그 운영을 위한 AI 발행 스튜디오</p><p>여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.</p><p>Track: Content &amp; Publishing · Stage: Scale · Status: Live Studio</p><p>Next focus: 승인 단계, 콘텐츠 캘린더, 발행 QA 체크리스트</p><p>Live page: <a href="https://sheryloe.github.io/BloggerGent/">https://sheryloe.github.io/BloggerGent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/BloggerGent/tree/main/wiki">https://github.com/sheryloe/BloggerGent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloggerGent">https://github.com/sheryloe/BloggerGent</a></p>]]></description>
+    <category>Content &amp; Publishing</category>
+    <category>Publishing Studio</category>
+    <category>Scale</category>
+    <category>Python</category>
+    <category>ai-publishing</category>
+    <category>blogger</category>
+    <category>content-ops</category>
+    <category>editorial-workflow</category>
+  </item>
   <item>
     <title>DonggriCompany</title>
     <link>https://github.com/sheryloe/DonggriCompany</link>
@@ -17,21 +32,6 @@
     <category>TypeScript</category>
     <category>Build</category>
     <category>TypeScript</category>
-  </item>
-  <item>
-    <title>BloggerGent</title>
-    <link>https://sheryloe.github.io/BloggerGent/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/BloggerGent#2026-05-10</guid>
-    <pubDate>Sun, 10 May 2026 18:22:56 +0000</pubDate>
-    <description><![CDATA[<p><strong>BloggerGent</strong></p><p>멀티 채널 블로그 운영을 위한 AI 발행 스튜디오</p><p>여러 Blogger 계열 채널을 서비스처럼 운영하기 위해 발행 흐름, 검수 단계, 채널 전략을 묶는 콘텐츠 스튜디오입니다.</p><p>Track: Content &amp; Publishing · Stage: Scale · Status: Live Studio</p><p>Next focus: 승인 단계, 콘텐츠 캘린더, 발행 QA 체크리스트</p><p>Live page: <a href="https://sheryloe.github.io/BloggerGent/">https://sheryloe.github.io/BloggerGent/</a></p><p>Wiki: <a href="https://github.com/sheryloe/BloggerGent/tree/main/wiki">https://github.com/sheryloe/BloggerGent/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/BloggerGent">https://github.com/sheryloe/BloggerGent</a></p>]]></description>
-    <category>Content &amp; Publishing</category>
-    <category>Publishing Studio</category>
-    <category>Scale</category>
-    <category>Python</category>
-    <category>ai-publishing</category>
-    <category>blogger</category>
-    <category>content-ops</category>
-    <category>editorial-workflow</category>
   </item>
   <item>
     <title>DonggriGameBook</title>
