@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Sheryloe Projects Atom</title>
   <id>https://sheryloe.github.io/feed.xml</id>
-  <updated>2026-09-03T02:28:48Z</updated>
+  <updated>2026-09-04T08:16:31Z</updated>
   <link href="https://sheryloe.github.io/feed.xml" rel="self" />
   <link href="https://sheryloe.github.io/" rel="alternate" />
   <subtitle>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</subtitle>
@@ -10,20 +10,20 @@
     <name>sheryloe</name>
   </author>
   <entry>
-    <title>pocketforge-relay</title>
-    <id>https://github.com/sheryloe/pocketforge-relay</id>
-    <link href="https://github.com/sheryloe/pocketforge-relay" />
-    <updated>2026-09-03T02:28:48Z</updated>
-    <published>2026-08-12T01:03:52Z</published>
-    <summary type="html">&lt;p&gt;&lt;strong&gt;pocketforge-relay&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;An open, mobile-first control plane for the code → build → artifact → verify loop, with provider-neutral agents and self-hosted runners.&lt;/p&gt;&lt;p&gt;An open, mobile-first control plane for the code → build → artifact → verify loop, with provider-neutral agents and self-hosted runners.&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Build · Status: Repository&lt;/p&gt;&lt;p&gt;Next focus: 다음 개선 포인트를 문서화 중입니다.&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/pocketforge-relay/tree/main/wiki&quot;&gt;https://github.com/sheryloe/pocketforge-relay/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/pocketforge-relay&quot;&gt;https://github.com/sheryloe/pocketforge-relay&lt;/a&gt;&lt;/p&gt;</summary>
-  </entry>
-  <entry>
     <title>DonggriCompany</title>
     <id>https://github.com/sheryloe/DonggriCompany</id>
     <link href="https://github.com/sheryloe/DonggriCompany" />
-    <updated>2026-08-12T16:11:59Z</updated>
+    <updated>2026-09-04T08:16:31Z</updated>
     <published>2026-04-02T04:45:59Z</published>
     <summary type="html">&lt;p&gt;&lt;strong&gt;DonggriCompany&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;TypeScript&lt;/p&gt;&lt;p&gt;설명이 아직 정리되지 않은 저장소입니다.&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Build · Status: Repository&lt;/p&gt;&lt;p&gt;Next focus: 다음 개선 포인트를 문서화 중입니다.&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/DonggriCompany/tree/main/wiki&quot;&gt;https://github.com/sheryloe/DonggriCompany/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/DonggriCompany&quot;&gt;https://github.com/sheryloe/DonggriCompany&lt;/a&gt;&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title>pocketforge-relay</title>
+    <id>https://github.com/sheryloe/pocketforge-relay</id>
+    <link href="https://github.com/sheryloe/pocketforge-relay" />
+    <updated>2026-09-04T08:04:21Z</updated>
+    <published>2026-08-12T01:03:52Z</published>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;pocketforge-relay&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;An open, mobile-first control plane for the code → build → artifact → verify loop, with provider-neutral agents and self-hosted runners.&lt;/p&gt;&lt;p&gt;An open, mobile-first control plane for the code → build → artifact → verify loop, with provider-neutral agents and self-hosted runners.&lt;/p&gt;&lt;p&gt;Track: Platform &amp;amp; Seeds · Stage: Build · Status: Repository&lt;/p&gt;&lt;p&gt;Next focus: 다음 개선 포인트를 문서화 중입니다.&lt;/p&gt;&lt;p&gt;Wiki: &lt;a href=&quot;https://github.com/sheryloe/pocketforge-relay/tree/main/wiki&quot;&gt;https://github.com/sheryloe/pocketforge-relay/tree/main/wiki&lt;/a&gt;&lt;/p&gt;&lt;p&gt;GitHub: &lt;a href=&quot;https://github.com/sheryloe/pocketforge-relay&quot;&gt;https://github.com/sheryloe/pocketforge-relay&lt;/a&gt;&lt;/p&gt;</summary>
   </entry>
   <entry>
     <title>DonggriGameBook</title>
