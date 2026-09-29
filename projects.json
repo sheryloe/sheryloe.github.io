@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-29T05:20:11.061623Z",
+  "generated_at": "2026-09-29T12:33:19.596099Z",
   "site_url": "https://sheryloe.github.io/",
-  "repository_count": 16,
+  "repository_count": 15,
   "live_pages_count": 10,
   "repositories": [
     {
@@ -119,32 +119,6 @@
       "preview_alt": "DonggriGameBook 프로젝트 미리보기",
       "updated_at": "2026-08-09T22:30:07Z",
       "pushed_at": "2026-08-09T22:29:49Z"
-    },
-    {
-      "name": "TESTAX",
-      "track": "platform",
-      "track_title": "Platform & Seeds",
-      "category": "Unknown",
-      "subtitle": "Unknown",
-      "description": "",
-      "repo_url": "https://github.com/sheryloe/TESTAX",
-      "live_url": "",
-      "pages_url": "",
-      "wiki_url": "https://github.com/sheryloe/TESTAX/tree/main/wiki",
-      "language": "Unknown",
-      "topics": [],
-      "status": "Repository",
-      "stage": "Build",
-      "audience": "사용자와 운영자를 위한 공개 저장소",
-      "next_focus": "다음 개선 포인트를 문서화 중입니다.",
-      "has_pages": false,
-      "availability": "repo",
-      "featured": false,
-      "preview_path": "assets/previews/testax.png",
-      "preview_image": "",
-      "preview_alt": "TESTAX 프로젝트 미리보기",
-      "updated_at": "2026-04-28T00:47:40Z",
-      "pushed_at": "2026-04-28T09:04:02Z"
     },
     {
       "name": "donggri_gagyeobu",
