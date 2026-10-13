@@ -5,13 +5,28 @@
     <link>https://sheryloe.github.io/</link>
     <description>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 12 Oct 2026 06:08:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 07:46:52 +0000</lastBuildDate>
     <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>grid-crop-image</title>
+    <link>https://sheryloe.github.io/grid-crop-image/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/grid-crop-image#2026-10-13</guid>
+    <pubDate>Tue, 13 Oct 2026 07:46:52 +0000</pubDate>
+    <description><![CDATA[<p><strong>grid-crop-image</strong></p><p>스크린샷 자르기와 분할 저장을 빠르게 끝내는 유틸리티</p><p>스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용까지 지원하는 Windows 이미지 워크플로 도구입니다.</p><p>Track: Desktop Utilities · Stage: Refine · Status: Live Utility</p><p>Next focus: 배치 처리, OCR 보조, Undo/Redo</p><p>Live page: <a href="https://sheryloe.github.io/grid-crop-image/">https://sheryloe.github.io/grid-crop-image/</a></p><p>Wiki: <a href="https://github.com/sheryloe/grid-crop-image/tree/main/wiki">https://github.com/sheryloe/grid-crop-image/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/grid-crop-image">https://github.com/sheryloe/grid-crop-image</a></p>]]></description>
+    <category>Desktop Utilities</category>
+    <category>Image Workflow</category>
+    <category>Refine</category>
+    <category>Python</category>
+    <category>desktop-app</category>
+    <category>image-cropping</category>
+    <category>image-processing</category>
+    <category>pillow</category>
+  </item>
   <item>
     <title>drag-translate</title>
     <link>https://github.com/sheryloe/drag-translate</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/drag-translate#2026-10-12</guid>
-    <pubDate>Mon, 12 Oct 2026 06:08:16 +0000</pubDate>
+    <guid isPermaLink="false">https://github.com/sheryloe/drag-translate#2026-10-13</guid>
+    <pubDate>Tue, 13 Oct 2026 07:43:17 +0000</pubDate>
     <description><![CDATA[<p><strong>drag-translate</strong></p><p>마우스로 선택한 문장 옆에서 Papago·Google 번역을 기본 브라우저로 여는 Windows 상주 프로그램.</p><p>마우스로 선택한 문장 옆에서 Papago·Google 번역을 기본 브라우저로 여는 Windows 상주 프로그램.</p><p>Track: Platform &amp; Seeds · Stage: Build · Status: Repository</p><p>Next focus: 다음 개선 포인트를 문서화 중입니다.</p><p>Wiki: <a href="https://github.com/sheryloe/drag-translate/tree/main/wiki">https://github.com/sheryloe/drag-translate/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/drag-translate">https://github.com/sheryloe/drag-translate</a></p>]]></description>
     <category>Platform &amp; Seeds</category>
     <category>JavaScript</category>
@@ -124,21 +139,6 @@
     <category>astro</category>
     <category>blog-template</category>
     <category>claude</category>
-  </item>
-  <item>
-    <title>grid-crop-image</title>
-    <link>https://sheryloe.github.io/grid-crop-image/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/grid-crop-image#2026-03-31</guid>
-    <pubDate>Tue, 31 Mar 2026 08:54:05 +0000</pubDate>
-    <description><![CDATA[<p><strong>grid-crop-image</strong></p><p>스크린샷 자르기와 분할 저장을 빠르게 끝내는 유틸리티</p><p>스크린샷 붙여넣기, 다중 영역 선택, JSON 레이아웃 재사용까지 지원하는 Windows 이미지 워크플로 도구입니다.</p><p>Track: Desktop Utilities · Stage: Refine · Status: Live Utility</p><p>Next focus: 배치 처리, OCR 보조, Undo/Redo</p><p>Live page: <a href="https://sheryloe.github.io/grid-crop-image/">https://sheryloe.github.io/grid-crop-image/</a></p><p>Wiki: <a href="https://github.com/sheryloe/grid-crop-image/tree/main/wiki">https://github.com/sheryloe/grid-crop-image/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/grid-crop-image">https://github.com/sheryloe/grid-crop-image</a></p>]]></description>
-    <category>Desktop Utilities</category>
-    <category>Image Workflow</category>
-    <category>Refine</category>
-    <category>Python</category>
-    <category>desktop-app</category>
-    <category>image-cropping</category>
-    <category>image-processing</category>
-    <category>pillow</category>
   </item>
   <item>
     <title>Favorit</title>
