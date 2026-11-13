@@ -5,8 +5,23 @@
     <link>https://sheryloe.github.io/</link>
     <description>AI 자동화, 트레이딩, 퍼블리싱, 개인 금융, 데스크톱 유틸리티까지 공개 저장소와 문서를 한곳에서 정리한 허브입니다. 탭 기반 탐색, 프로젝트 상세 시트, 중앙 위키 HTML 문서로 핵심 흐름을 차분하게 읽을 수 있습니다.</description>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 13 Oct 2026 07:46:52 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 06:08:50 +0000</lastBuildDate>
     <atom:link href="https://sheryloe.github.io/rss.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>donggri-template</title>
+    <link>https://sheryloe.github.io/donggri-template/</link>
+    <guid isPermaLink="false">https://github.com/sheryloe/donggri-template#2026-11-13</guid>
+    <pubDate>Fri, 13 Nov 2026 06:08:50 +0000</pubDate>
+    <description><![CDATA[<p><strong>donggri-template</strong></p><p>SEO 최적화된 Cloudflare + Astro 기반 고성능 블로그 템플릿</p><p>SEO 최적화된 Cloudflare + Astro 기반 고성능 블로그 템플릿</p><p>Track: Platform &amp; Seeds · Stage: Operate · Status: Live Pages</p><p>Next focus: 다음 개선 포인트를 문서화 중입니다.</p><p>Live page: <a href="https://sheryloe.github.io/donggri-template/">https://sheryloe.github.io/donggri-template/</a></p><p>Wiki: <a href="https://github.com/sheryloe/donggri-template/tree/main/wiki">https://github.com/sheryloe/donggri-template/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/donggri-template">https://github.com/sheryloe/donggri-template</a></p>]]></description>
+    <category>Platform &amp; Seeds</category>
+    <category>TypeScript</category>
+    <category>Operate</category>
+    <category>TypeScript</category>
+    <category>agent</category>
+    <category>astro</category>
+    <category>blog-template</category>
+    <category>claude</category>
+  </item>
   <item>
     <title>grid-crop-image</title>
     <link>https://sheryloe.github.io/grid-crop-image/</link>
@@ -124,21 +139,6 @@
     <category>automation</category>
     <category>tools</category>
     <category>web</category>
-  </item>
-  <item>
-    <title>donggri-template</title>
-    <link>https://sheryloe.github.io/donggri-template/</link>
-    <guid isPermaLink="false">https://github.com/sheryloe/donggri-template#2026-04-02</guid>
-    <pubDate>Thu, 02 Apr 2026 23:44:35 +0000</pubDate>
-    <description><![CDATA[<p><strong>donggri-template</strong></p><p>SEO 최적화된 Cloudflare + Astro 기반 고성능 블로그 템플릿</p><p>SEO 최적화된 Cloudflare + Astro 기반 고성능 블로그 템플릿</p><p>Track: Platform &amp; Seeds · Stage: Operate · Status: Live Pages</p><p>Next focus: 다음 개선 포인트를 문서화 중입니다.</p><p>Live page: <a href="https://sheryloe.github.io/donggri-template/">https://sheryloe.github.io/donggri-template/</a></p><p>Wiki: <a href="https://github.com/sheryloe/donggri-template/tree/main/wiki">https://github.com/sheryloe/donggri-template/tree/main/wiki</a></p><p>GitHub: <a href="https://github.com/sheryloe/donggri-template">https://github.com/sheryloe/donggri-template</a></p>]]></description>
-    <category>Platform &amp; Seeds</category>
-    <category>TypeScript</category>
-    <category>Operate</category>
-    <category>TypeScript</category>
-    <category>agent</category>
-    <category>astro</category>
-    <category>blog-template</category>
-    <category>claude</category>
   </item>
   <item>
     <title>Favorit</title>
